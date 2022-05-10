@@ -1,0 +1,204 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+        #loadingBar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width: 100vw;
+            height: 100vh;
+            background-color:rgba(200,200,200,0.8);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity:1;
+        }
+
+        #bar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:20px;
+            height:20px;
+            margin:auto auto auto auto;
+            border-radius:11px;
+            border:2px solid rgba(30,30,30,0.05);
+            background: rgb(0, 173, 246); /* Old browsers */
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+        }
+
+        #border {
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:500px;
+            height:23px;
+            margin:auto auto auto auto;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+        #text {
+            position:absolute;
+            top:8px;
+            left:530px;
+            width:30px;
+            height:50px;
+            margin:auto auto auto auto;
+            font-size:22px;
+            color: #000000;
+        }
+
+        div.outerBorder {
+            position:relative;
+            top:400px;
+            width:600px;
+            height:44px;
+            margin:auto auto auto auto;
+            border:8px solid rgba(0,0,0,0.1);
+            background: rgb(252,252,252); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+            border-radius:72px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+<div id="loadingBar">
+    <div class="outerBorder">
+        <div id="text">0%</div>
+        <div id="border">
+            <div id="bar"></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://neogoma.com", "label": "https://neogoma.com", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#use-case", "label": "https://neogoma.com/#use-case", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#Technology", "label": "https://neogoma.com/#Technology", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#company", "label": "https://neogoma.com/#company", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com/register", "label": "https://stardust.neogoma.com/register", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#videoTutorial", "label": "https://neogoma.com/#videoTutorial", "shape": "dot", "size": 10}, {"id": "https://ar3a.app", "label": "https://ar3a.app", "shape": "dot", "size": 10}, {"id": "https://www.coolhobo.com/en/home", "label": "https://www.coolhobo.com/en/home", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#contact", "label": "https://neogoma.com/#contact", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/coolhobo/jobs", "label": "https://angel.co/company/coolhobo/jobs", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com", "label": "https://stardust.neogoma.com", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com/login", "label": "https://stardust.neogoma.com/login", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#page-top", "label": "https://ar3a.app/#page-top", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#download", "label": "https://ar3a.app/#download", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#features", "label": "https://ar3a.app/#features", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#contact", "label": "https://ar3a.app/#contact", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/privacy.html", "label": "https://neogoma.com/privacy.html", "shape": "dot", "size": 10}, {"id": "https://angel.co", "label": "https://angel.co", "shape": "dot", "size": 10}, {"id": "https://angel.co/jobs", "label": "https://angel.co/jobs", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/home", "label": "https://angel.co/recruit/home", "shape": "dot", "size": 10}, {"id": "https://angel.co/invest/start", "label": "https://angel.co/invest/start", "shape": "dot", "size": 10}, {"id": "https://angel.co/blog", "label": "https://angel.co/blog", "shape": "dot", "size": 10}, {"id": "https://angel.co/venture-funds", "label": "https://angel.co/venture-funds", "shape": "dot", "size": 10}, {"id": "https://angel.co/salaries", "label": "https://angel.co/salaries", "shape": "dot", "size": 10}, {"id": "https://angel.co/login", "label": "https://angel.co/login", "shape": "dot", "size": 10}, {"id": "https://angel.co/join?source=company+profile\u0026source_content=global_header_join_text", "label": "https://angel.co/join?source=company+profile\u0026source_content=global_header_join_text", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/coolhobo", "label": "https://angel.co/company/coolhobo", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/coolhobo/people", "label": "https://angel.co/company/coolhobo/people", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/coolhobo/funding", "label": "https://angel.co/company/coolhobo/funding", "shape": "dot", "size": 10}, {"id": "https://angel.co/jobs?slug=coolhobo", "label": "https://angel.co/jobs?slug=coolhobo", "shape": "dot", "size": 10}, {"id": "http://www.coolhobo.com", "label": "http://www.coolhobo.com", "shape": "dot", "size": 10}, {"id": "https://www.coolhobo.com/blog", "label": "https://www.coolhobo.com/blog", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/fastlane-5", "label": "https://angel.co/company/fastlane-5", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/zhenhub", "label": "https://angel.co/company/zhenhub", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/makeship", "label": "https://angel.co/company/makeship", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/greenhouse", "label": "https://angel.co/company/greenhouse", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/himas-tech", "label": "https://angel.co/company/himas-tech", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/cowise", "label": "https://angel.co/company/cowise", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/getsuperbook", "label": "https://angel.co/company/getsuperbook", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/247tickets", "label": "https://angel.co/company/247tickets", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/etho", "label": "https://angel.co/company/etho", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/meitu", "label": "https://angel.co/company/meitu", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/icomputinglabs", "label": "https://angel.co/company/icomputinglabs", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/schmiede-one", "label": "https://angel.co/company/schmiede-one", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/sidechef", "label": "https://angel.co/company/sidechef", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/erudite-institution-2", "label": "https://angel.co/company/erudite-institution-2", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/wowsome", "label": "https://angel.co/company/wowsome", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/nilasphere-ug", "label": "https://angel.co/company/nilasphere-ug", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/click-labs", "label": "https://angel.co/company/click-labs", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/spirit-corporate-sports-fitness", "label": "https://angel.co/company/spirit-corporate-sports-fitness", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/neurable", "label": "https://angel.co/company/neurable", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/lalamoveglobal", "label": "https://angel.co/company/lalamoveglobal", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections/20-companies-building-our-remote-first-future", "label": "https://angel.co/job-collections/20-companies-building-our-remote-first-future", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections/companies-that-hire-coding-bootcamp-graduates", "label": "https://angel.co/job-collections/companies-that-hire-coding-bootcamp-graduates", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections/junior-software-engineer-jobs", "label": "https://angel.co/job-collections/junior-software-engineer-jobs", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections/yc-startups-that-are-aggressively-hiring", "label": "https://angel.co/job-collections/yc-startups-that-are-aggressively-hiring", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections/20-female-founded-jobs-to-join-in-2018", "label": "https://angel.co/job-collections/20-female-founded-jobs-to-join-in-2018", "shape": "dot", "size": 10}, {"id": "https://angel.co/job-collections", "label": "https://angel.co/job-collections", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/ai-machine-learning", "label": "https://angel.co/today/topics/ai-machine-learning", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/business", "label": "https://angel.co/today/topics/business", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/data-analytics", "label": "https://angel.co/today/topics/data-analytics", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/design", "label": "https://angel.co/today/topics/design", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/hardware-gadgets", "label": "https://angel.co/today/topics/hardware-gadgets", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/management", "label": "https://angel.co/today/topics/management", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/marketing-sales", "label": "https://angel.co/today/topics/marketing-sales", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/product-management", "label": "https://angel.co/today/topics/product-management", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/productivity", "label": "https://angel.co/today/topics/productivity", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/programming", "label": "https://angel.co/today/topics/programming", "shape": "dot", "size": 10}, {"id": "https://angel.co/today/topics/vc-fundraising", "label": "https://angel.co/today/topics/vc-fundraising", "shape": "dot", "size": 10}, {"id": "https://angel.co/today", "label": "https://angel.co/today", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/software-engineer", "label": "https://angel.co/role/r/software-engineer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/product-manager", "label": "https://angel.co/role/r/product-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/data-analyst", "label": "https://angel.co/role/r/data-analyst", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/product-designer", "label": "https://angel.co/role/r/product-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/graphic-designer", "label": "https://angel.co/role/r/graphic-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/ui-ux-designer", "label": "https://angel.co/role/r/ui-ux-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/operations-manager", "label": "https://angel.co/role/r/operations-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/growth-marketer", "label": "https://angel.co/role/r/growth-marketer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/account-manager", "label": "https://angel.co/role/r/account-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/sales-manager", "label": "https://angel.co/role/r/sales-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/financial-analyst", "label": "https://angel.co/role/r/financial-analyst", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/r/hr-manager", "label": "https://angel.co/role/r/hr-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/remote", "label": "https://angel.co/remote", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/new-york", "label": "https://angel.co/location/new-york", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/san-francisco", "label": "https://angel.co/location/san-francisco", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/austin", "label": "https://angel.co/location/austin", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/boston", "label": "https://angel.co/location/boston", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/district-of-columbia", "label": "https://angel.co/location/district-of-columbia", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/denver", "label": "https://angel.co/location/denver", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/seattle", "label": "https://angel.co/location/seattle", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/chicago", "label": "https://angel.co/location/chicago", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/india", "label": "https://angel.co/location/india", "shape": "dot", "size": 10}, {"id": "https://angel.co/location/united-states", "label": "https://angel.co/location/united-states", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/software-engineer", "label": "https://angel.co/role/software-engineer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/product-manager", "label": "https://angel.co/role/product-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/data-analyst", "label": "https://angel.co/role/data-analyst", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/product-designer", "label": "https://angel.co/role/product-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/graphic-designer", "label": "https://angel.co/role/graphic-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/ui-ux-designer", "label": "https://angel.co/role/ui-ux-designer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/operations-manager", "label": "https://angel.co/role/operations-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/growth-marketer", "label": "https://angel.co/role/growth-marketer", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/account-manager", "label": "https://angel.co/role/account-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/sales-manager", "label": "https://angel.co/role/sales-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/financial-analyst", "label": "https://angel.co/role/financial-analyst", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/hr-manager", "label": "https://angel.co/role/hr-manager", "shape": "dot", "size": 10}, {"id": "https://angel.co/directory/jobs/roles", "label": "https://angel.co/directory/jobs/roles", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/software-engineer/san-francisco", "label": "https://angel.co/role/l/software-engineer/san-francisco", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/software-engineer/new-york", "label": "https://angel.co/role/l/software-engineer/new-york", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/software-engineer/los-angeles", "label": "https://angel.co/role/l/software-engineer/los-angeles", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/product-manager/san-francisco", "label": "https://angel.co/role/l/product-manager/san-francisco", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/product-manager/new-york", "label": "https://angel.co/role/l/product-manager/new-york", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/product-manager/los-angeles", "label": "https://angel.co/role/l/product-manager/los-angeles", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/frontend-engineer/san-francisco", "label": "https://angel.co/role/l/frontend-engineer/san-francisco", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/frontend-engineer/new-york", "label": "https://angel.co/role/l/frontend-engineer/new-york", "shape": "dot", "size": 10}, {"id": "https://angel.co/role/l/frontend-engineer/los-angeles", "label": "https://angel.co/role/l/frontend-engineer/los-angeles", "shape": "dot", "size": 10}, {"id": "https://angel.co/candidates/overview", "label": "https://angel.co/candidates/overview", "shape": "dot", "size": 10}, {"id": "https://angel.co/candidates/featured", "label": "https://angel.co/candidates/featured", "shape": "dot", "size": 10}, {"id": "https://angel.co/candidates/remote", "label": "https://angel.co/candidates/remote", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/overview", "label": "https://angel.co/recruit/overview", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/products/starter", "label": "https://angel.co/recruit/products/starter", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/products/recruit-pro", "label": "https://angel.co/recruit/products/recruit-pro", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/products/curated", "label": "https://angel.co/recruit/products/curated", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/products/curated-global", "label": "https://angel.co/recruit/products/curated-global", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/products/remote", "label": "https://angel.co/recruit/products/remote", "shape": "dot", "size": 10}, {"id": "https://angel.co/recruit/pricing", "label": "https://angel.co/recruit/pricing", "shape": "dot", "size": 10}, {"id": "https://angel.co/v/venture/invest", "label": "https://angel.co/v/venture/invest", "shape": "dot", "size": 10}, {"id": "https://angel.co/company/angellist/jobs", "label": "https://angel.co/company/angellist/jobs", "shape": "dot", "size": 10}, {"id": "https://angel.co/terms", "label": "https://angel.co/terms", "shape": "dot", "size": 10}, {"id": "https://angel.co/privacy", "label": "https://angel.co/privacy", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#use-case", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#Technology", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#company", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://stardust.neogoma.com/register", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#videoTutorial", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://ar3a.app", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://www.coolhobo.com/en/home", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#contact", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://angel.co/company/coolhobo/jobs", "weight": 1}, {"from": "https://stardust.neogoma.com/register", "label": 1, "to": "https://stardust.neogoma.com", "weight": 1}, {"from": "https://stardust.neogoma.com/register", "label": 1, "to": "https://stardust.neogoma.com/login", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#page-top", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#download", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#features", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#contact", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://neogoma.com/privacy.html", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/jobs", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/home", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/invest/start", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/blog", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/venture-funds", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/salaries", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/login", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/join?source=company+profile\u0026source_content=global_header_join_text", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/coolhobo", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/coolhobo/people", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/coolhobo/funding", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/jobs?slug=coolhobo", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "http://www.coolhobo.com", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://www.coolhobo.com/blog", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/fastlane-5", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/zhenhub", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/makeship", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/greenhouse", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/himas-tech", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/cowise", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/getsuperbook", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/247tickets", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/etho", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/meitu", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/icomputinglabs", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/schmiede-one", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/sidechef", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/erudite-institution-2", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/wowsome", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/nilasphere-ug", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/click-labs", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/spirit-corporate-sports-fitness", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/neurable", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/lalamoveglobal", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections/20-companies-building-our-remote-first-future", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections/companies-that-hire-coding-bootcamp-graduates", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections/junior-software-engineer-jobs", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections/yc-startups-that-are-aggressively-hiring", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections/20-female-founded-jobs-to-join-in-2018", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/job-collections", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/ai-machine-learning", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/business", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/data-analytics", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/design", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/hardware-gadgets", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/management", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/marketing-sales", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/product-management", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/productivity", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/programming", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today/topics/vc-fundraising", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/today", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/software-engineer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/product-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/data-analyst", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/product-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/graphic-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/ui-ux-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/operations-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/growth-marketer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/account-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/sales-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/financial-analyst", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/r/hr-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/remote", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/new-york", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/san-francisco", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/austin", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/boston", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/district-of-columbia", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/denver", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/seattle", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/chicago", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/india", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/location/united-states", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/software-engineer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/product-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/data-analyst", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/product-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/graphic-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/ui-ux-designer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/operations-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/growth-marketer", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/account-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/sales-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/financial-analyst", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/hr-manager", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/directory/jobs/roles", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/software-engineer/san-francisco", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/software-engineer/new-york", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/software-engineer/los-angeles", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/product-manager/san-francisco", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/product-manager/new-york", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/product-manager/los-angeles", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/frontend-engineer/san-francisco", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/frontend-engineer/new-york", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/role/l/frontend-engineer/los-angeles", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/candidates/overview", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/candidates/featured", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/candidates/remote", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/overview", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/products/starter", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/products/recruit-pro", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/products/curated", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/products/curated-global", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/products/remote", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/recruit/pricing", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/v/venture/invest", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/company/angellist/jobs", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/terms", "weight": 1}, {"from": "https://angel.co/company/coolhobo/jobs", "label": 1, "to": "https://angel.co/privacy", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+        network.on("stabilizationProgress", function(params) {
+      		document.getElementById('loadingBar').removeAttribute("style");
+	        var maxWidth = 496;
+	        var minWidth = 20;
+	        var widthFactor = params.iterations/params.total;
+	        var width = Math.max(minWidth,maxWidth * widthFactor);
+
+	        document.getElementById('bar').style.width = width + 'px';
+	        document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+	    });
+	    network.once("stabilizationIterationsDone", function() {
+	        document.getElementById('text').innerHTML = '100%';
+	        document.getElementById('bar').style.width = '496px';
+	        document.getElementById('loadingBar').style.opacity = 0;
+	        // really clean the dom element
+	        setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+	    });
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://placenote.com", "label": "https://placenote.com", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com", "label": "https://docs.placenote.com", "shape": "dot", "size": 10}, {"id": "https://answers.placenote.com", "label": "https://answers.placenote.com", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog", "label": "https://placenote.com/blog", "shape": "dot", "size": 10}, {"id": "https://dabble.so", "label": "https://dabble.so", "shape": "dot", "size": 10}, {"id": "https://placenote.com/scanning", "label": "https://placenote.com/scanning", "shape": "dot", "size": 10}, {"id": "https://developer.placenote.com", "label": "https://developer.placenote.com", "shape": "dot", "size": 10}, {"id": "https://placenote.com/pricing", "label": "https://placenote.com/pricing", "shape": "dot", "size": 10}, {"id": "https://placenote.com/about-the-sdk", "label": "https://placenote.com/about-the-sdk", "shape": "dot", "size": 10}, {"id": "https://placenote.com/annotations", "label": "https://placenote.com/annotations", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote", "label": "https://medium.com/placenote", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/unity/unity-getting-started", "label": "https://docs.placenote.com/unity/unity-getting-started", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/swift/swift-getting-started", "label": "https://docs.placenote.com/swift/swift-getting-started", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/getting-started", "label": "https://docs.placenote.com/getting-started", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/whats-new-in-sdk-1.8", "label": "https://docs.placenote.com/whats-new-in-sdk-1.8", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/supported-devices", "label": "https://docs.placenote.com/supported-devices", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/unity/build-the-sample-apps", "label": "https://docs.placenote.com/unity/build-the-sample-apps", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/signup", "label": "https://placenote.com/blog/signup", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/sunsetting-placenote-sdk-and-our-new-product-launch", "label": "https://placenote.com/blog/sunsetting-placenote-sdk-and-our-new-product-launch", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/author/neil", "label": "https://placenote.com/blog/author/neil", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/an-intro-to-3d-coordinate-frames-for-augmented-reality", "label": "https://placenote.com/blog/an-intro-to-3d-coordinate-frames-for-augmented-reality", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/author/nav", "label": "https://placenote.com/blog/author/nav", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/real-world-cursor-with-arkit-hittest", "label": "https://placenote.com/blog/real-world-cursor-with-arkit-hittest", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/ar-designers-should-look", "label": "https://placenote.com/blog/ar-designers-should-look", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/author/avery", "label": "https://placenote.com/blog/author/avery", "shape": "dot", "size": 10}, {"id": "https://placenote.com/blog/sdk-1-8-release-announcement", "label": "https://placenote.com/blog/sdk-1-8-release-announcement", "shape": "dot", "size": 10}, {"id": "https://ghost.org", "label": "https://ghost.org", "shape": "dot", "size": 10}, {"id": "https://www.dabble.so/cart", "label": "https://www.dabble.so/cart", "shape": "dot", "size": 10}, {"id": "https://www.dabble.so/#page", "label": "https://www.dabble.so/#page", "shape": "dot", "size": 10}, {"id": "https://www.dabble.so", "label": "https://www.dabble.so", "shape": "dot", "size": 10}, {"id": "https://app.dabble.so", "label": "https://app.dabble.so", "shape": "dot", "size": 10}, {"id": "https://www.dabble.so/ecommerce", "label": "https://www.dabble.so/ecommerce", "shape": "dot", "size": 10}, {"id": "https://www.dabble.so/labs", "label": "https://www.dabble.so/labs", "shape": "dot", "size": 10}, {"id": "https://blog.dabble.so", "label": "https://blog.dabble.so", "shape": "dot", "size": 10}, {"id": "https://placenote.com/persistentar", "label": "https://placenote.com/persistentar", "shape": "dot", "size": 10}, {"id": "https://placenote.com/docs", "label": "https://placenote.com/docs", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/unity", "label": "https://docs.placenote.com/unity", "shape": "dot", "size": 10}, {"id": "https://docs.placenote.com/swift", "label": "https://docs.placenote.com/swift", "shape": "dot", "size": 10}, {"id": "https://medium.com", "label": "https://medium.com", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/tagged/release-notes", "label": "https://medium.com/placenote/tagged/release-notes", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/tagged/tutorial", "label": "https://medium.com/placenote/tagged/tutorial", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/tagged/design", "label": "https://medium.com/placenote/tagged/design", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/placenote-sdk-1-6-9-is-released-85273b1345d7?source=collection_home---4------0-----------------------", "label": "https://medium.com/placenote/placenote-sdk-1-6-9-is-released-85273b1345d7?source=collection_home---4------0-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/placenote-sdk-1-6-8-is-here-7e0de35e1744?source=collection_home---4------1-----------------------", "label": "https://medium.com/placenote/placenote-sdk-1-6-8-is-here-7e0de35e1744?source=collection_home---4------1-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/saving-arkit-planes-and-meshes-across-multiple-sessions-using-placenotesdk-fd3ebaa86d2a?source=collection_home---4------2-----------------------", "label": "https://medium.com/placenote/saving-arkit-planes-and-meshes-across-multiple-sessions-using-placenotesdk-fd3ebaa86d2a?source=collection_home---4------2-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/markerless-persistent-rendering-of-scnodes-using-arkit-and-placenote-sdk-9c61f033bfd9?source=collection_home---4------3-----------------------", "label": "https://medium.com/placenote/markerless-persistent-rendering-of-scnodes-using-arkit-and-placenote-sdk-9c61f033bfd9?source=collection_home---4------3-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/what-does-it-mean-to-be-a-location-based-augmented-reality-app-61e481bada57?source=collection_home---4------4-----------------------", "label": "https://medium.com/placenote/what-does-it-mean-to-be-a-location-based-augmented-reality-app-61e481bada57?source=collection_home---4------4-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/practical-design-considerations-for-augmented-reality-apps-on-mobile-phones-517469f4a09c?source=collection_home---4------5-----------------------", "label": "https://medium.com/placenote/practical-design-considerations-for-augmented-reality-apps-on-mobile-phones-517469f4a09c?source=collection_home---4------5-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/reality-is-broken-so-design-a-new-one-d399a9426bb4?source=collection_home---4------6-----------------------", "label": "https://medium.com/placenote/reality-is-broken-so-design-a-new-one-d399a9426bb4?source=collection_home---4------6-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/latest", "label": "https://medium.com/placenote/latest", "shape": "dot", "size": 10}, {"id": "https://medium.com/placenote/archive", "label": "https://medium.com/placenote/archive", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://placenote.com", "label": 1, "to": "https://docs.placenote.com", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://answers.placenote.com", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://placenote.com/blog", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://dabble.so", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://placenote.com/scanning", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://developer.placenote.com", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://placenote.com/pricing", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://placenote.com/about-the-sdk", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://placenote.com/annotations", "weight": 1}, {"from": "https://placenote.com", "label": 1, "to": "https://medium.com/placenote", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/unity/unity-getting-started", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/swift/swift-getting-started", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/getting-started", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/whats-new-in-sdk-1.8", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/supported-devices", "weight": 1}, {"from": "https://docs.placenote.com", "label": 1, "to": "https://docs.placenote.com/unity/build-the-sample-apps", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/signup", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/sunsetting-placenote-sdk-and-our-new-product-launch", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/author/neil", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/an-intro-to-3d-coordinate-frames-for-augmented-reality", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/author/nav", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/real-world-cursor-with-arkit-hittest", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/ar-designers-should-look", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/author/avery", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://placenote.com/blog/sdk-1-8-release-announcement", "weight": 1}, {"from": "https://placenote.com/blog", "label": 1, "to": "https://ghost.org", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://www.dabble.so/cart", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://www.dabble.so/#page", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://www.dabble.so", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://app.dabble.so", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://www.dabble.so/ecommerce", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://www.dabble.so/labs", "weight": 1}, {"from": "https://dabble.so", "label": 1, "to": "https://blog.dabble.so", "weight": 1}, {"from": "https://placenote.com/scanning", "label": 1, "to": "https://placenote.com/persistentar", "weight": 1}, {"from": "https://developer.placenote.com", "label": 1, "to": "https://placenote.com/docs", "weight": 1}, {"from": "https://placenote.com/about-the-sdk", "label": 1, "to": "https://docs.placenote.com/unity", "weight": 1}, {"from": "https://placenote.com/about-the-sdk", "label": 1, "to": "https://docs.placenote.com/swift", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/tagged/release-notes", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/tagged/tutorial", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/tagged/design", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/placenote-sdk-1-6-9-is-released-85273b1345d7?source=collection_home---4------0-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/placenote-sdk-1-6-8-is-here-7e0de35e1744?source=collection_home---4------1-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/saving-arkit-planes-and-meshes-across-multiple-sessions-using-placenotesdk-fd3ebaa86d2a?source=collection_home---4------2-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/markerless-persistent-rendering-of-scnodes-using-arkit-and-placenote-sdk-9c61f033bfd9?source=collection_home---4------3-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/what-does-it-mean-to-be-a-location-based-augmented-reality-app-61e481bada57?source=collection_home---4------4-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/practical-design-considerations-for-augmented-reality-apps-on-mobile-phones-517469f4a09c?source=collection_home---4------5-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/reality-is-broken-so-design-a-new-one-d399a9426bb4?source=collection_home---4------6-----------------------", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/latest", "weight": 1}, {"from": "https://medium.com/placenote", "label": 1, "to": "https://medium.com/placenote/archive", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

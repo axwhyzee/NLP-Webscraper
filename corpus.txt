@@ -1,0 +1,21 @@
+indoor 
+navigation
+analytics
+mapping
+location
+AR
+map
+positioning
+searchable
+augmented reality
+latency
+frequency
+reliability
+control
+system
+autonomous
+
+
+clients
+client
+customers

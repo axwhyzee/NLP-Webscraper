@@ -1,0 +1,854 @@
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Kudan has been providing proprietary Artificial Perception technologies based on SLAM to enable use cases with significant market potential and impact on our lives such as autonomous driving, robotics, AR/VR and smart cities
+History
+Born global
+Our Vision
+Provide eyes for all future machines
+Kudan has aspired to be an irreplaceable provider of eyes for all future machines and devices, disrupting both industrial landscapes and consumer lives. Our technology provides a critical component for these systems, enabling machines to perceive the world.
+What we offer
+Artificial Perception (AP) algorithm for multiple critical future technologies
+Kudan has accelerated the evolution of multiple disruptive technologies such as AR/VR, autonomous driving, robotics, and smart cities, by developing computer software algorithms classified as Artificial Perception (AP).
+Over the years, Artificial Intelligence (AI) has become the backbone technology as the brain for machines, however, it only consists of functionality for learning semantic information. Current machines are extending their capabilities from closed virtual worlds to the real-world, which requires instinctive spatial understanding.
+We are working to fill in this missing piece by developing AP algorithms that are the machine equivalent of human eyes. With the combination of AP and AI, machines are getting closer to sensing and interacting with the world like humans do, utilizing both the eyes and the brain.
+Localization and mapping software based on SLAM
+We offer commercial-grade localization and mapping software based on a technology called SLAM (Simultaneous localization and mapping). This technology enables machines and devices to understand where they are, how they are moving and the structure of their environment. Perception of their surroundings is a critical ability for machines and ultimately autonomous decisions will depend on the quality of this information.
+Company Overview
+Company Name Kudan Inc.
+Establishment November 19, 2014
+Stock Listing Tokyo Stock Exchange Growth Market (Security Code: 4425)
+Board Members Managing Director & CEO：Daiu Ko
+Managing Director：Tomo Ohno
+Director ：Ken Iizuka
+External Director：Yusuke Shibata
+External Director, Audit & Supervisory Committee Member：Shinichi Misawa
+External Director, Audit & Supervisory Committee Member：Takayuki Murai
+External Director, Audit & Supervisory Committee Member：Hisanori Oguri
+Capital 747 million JPY (as of December 31, 2021)
+Company Business R&D and provision of algorithms and embedded technologies for Artificial Perception
+Headquarter 2-10-15 Shibuya, Shibuya-ku Tokyo, 150-0002, Japan
+Group Company Kudan Limited（Bristol, England )
+Kudan USA LLC (California, USA)
+Kudan Vision Inc. (Tokyo, Japan)
+Artisense Corporation (California, USA)
+Artisense GmbH (Munich, Germany)
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+GrandSLAM, our localization and mapping software, has commercial grade performance and can exploit the full potential of a large number of sensors to bring value no-matter your configuration or use case.
+Demo videos
+  　　   　　 Demo videos available on our YouTube channel
+GrandSLAM
+Localization and mapping/ SLAM with all sensors for maximum performance
+Accepts a wide range of sensor data such as camera, ToF, Lidar, IMU, GNSS, and wheel odometry. A camera or Lidar can currently be used as the primary sensor.
+Provides commercial grade performance: High accuracy, low processing time, maximum robustness, huge map scalability, robust system stability, low integration complexity, cross-platform portability.
+Unlocks the full potential of your system with significant performance gains against alternative approaches.
+Sensor configuration freedom and incomparable performance on your hardware
+Ultimate flexibility of sensor requirements and configuration, no need to use expensive or complex sensors.
+Solution to the most critical multi-sensor system pain point, our technology can enable synchronization and calibration between all sensors.
+Visual SLAM
+Commercial grade, faster processing, lower memory, higher accuracy, and greater robustness
+Kudan has extensively developed and tested its proprietary visual SLAM for use in a commercial setting.
+Open source and other commercial algorithms struggle in many common use cases and scenarios.
+KudanSLAM achieves much faster processing time, higher accuracy and more robustness in dynamic situations.
+Reference datasets are available here (Dataset 1 – a visual sequence targeting indoor robots, Dataset 2 – a visual sequence targeting AR/VR)
+Lidar SLAM
+Overcome typical Lidar localization and mapping problems with higher accuracy, reduced map size, and lower latency
+Leverages our deep expertise in visual SLAM to reach groundbreaking performance, including 1cm-level accuracy, and greater than 300x lighter map size over raw Lidar data.
+Almost zero pose estimation latency when combining with an IMU.
+Compatible with many different types of Lidar technology such as, spinning, solid state, and prizm based.
+Ability to correct motion blur in the Lidar data stream while mapping resulting in sharper point clouds and improved post AI process such as object recognition
+Reference dataset is available here
+(Dataset – a dataset targeting autonomous driving, outdoor robotics: coming soon)
+SLAM X AI
+Artisense’s GN-net relocalization: AI-enabled (re)localization that is incredibly robust to scenery changes
+Overcomes the challenge of how to localize a vehicle or machine when the scenery or conditions change over time.
+Uses “deep-features” identified by AI for matching correct locations even when their appearance is different.
+Map can be updated automatically to include any changes that are detected.
+Tight coupling and Time synchronization
+Integrate all the sensor information into one system rather than just “filtering” them with accurate time synchronization
+Common sensor fusion approach is a “loose-coupling” of sensors, while Kudan and Artisense use “tight-coupling”.
+The Kudan group has developed the only system that uses tight-coupling of all sensors including camera, Lidar, GNSS and IMU.
+Problematic issues of proper time synchronization are solved with micro-second level synchronization between all sensors.
+Unparalleled robustness and accuracy for a wide range of use cases.
+Extrinsic calibration and motion blur correction
+Enabling LiDAR OEMs and users to achieve better extrinsic calibrations and correct motion blur using our extensive computer vision capability leading to more accurate maps and improved recognition performance
+Lack of accurate extrinsic calibrations and motion blur cause highly visible degradation to LiDAR point clouds in all applicable use cases.
+Accurate localization and understanding of vehicle / machine ego-motion can provide better extrinsic calibrations between sensors and sharper point cloud maps even with high-speed movement or fast rotation.
+Applicable to more than just SLAM, the improved calibration and point clouds are also applicable to image recognition, resulting in increased safety and system reliability.
+Map handling
+Practical functionality for large scale map management
+Simple to use map handling such as loading, merging, splitting, saving, and unloading.
+Multiple maps can be loaded to cover the same area, allowing unmatched performance against changing scenery.
+Maps can be loaded and unloaded into Kudan software while running allowing for unlimited scale maps.
+Processor and sensor optimization
+Unprecedented speed and other performance gains at low power through processor and sensor optimization
+Kudan has been proactively working with sensor and processor players to optimize KudanSLAM algorithms.
+Provides unparalleled speed, robustness, accuracy and power consumption when combined with specific processors / sensors.
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Kudan has already been demonstrating outstanding capability in important use cases.
+Autonomous driving/
+HD map
+Robotics
+Drones/ UAV
+Inspection/ surveying/ mapping
+AR / VR
+Smart city /
+IoT/ 5G
+Autonomous driving/ HD map
+  More safety, more reliability, and more scalability
+Provides a critical element of autonomous driving; accurate location, supported by available GNSS data but still effective in GNSS denied environments.
+Works in parallel with existing software with a “software fusion” approach to enable greater safety and reliability.
+State-of-the-art relocalization using “GN-net” massively expands autonomous driving capability in tough situations (e.g. bad weather, summer vs winter season).
+Brings more robustness to HD maps by integrating maps created by Kudan / Artisense SLAM.
+Benefits of Kudan software
+More accurate location and robustness from tightly-coupled Visual-Lidar SLAM.
+Significantly lighter Lidar map (original raw data can be reduced by more than 300x).
+Ultra-low-latency localization using IMU fusion (data rate can be greater than 1000Hz).
+And many more features!
+Example projects
+localization software for autonomous vehicles, robo taxis.
+Autonomous vehicle parking solution.
+Kudan software and sensors packaged as a single SLAM sensor module.
+Lidar calibration tool leveraging SLAM.
+Integrate map layers created by KudanSLAM into existing HD map layers.
+Relevant Demo
+Artisense, a Kudan group company, demonstrating its lane-level accurate positioning in a multi-floor parking lot and urban environment
+Lane Level AR Navigation Demo by NNG, HERE & Artisense
+LIDAR SLAM vs. GPS
+Industrial Robotics
+  More robustness and/or lower required HW cost
+Robust localization and accurate mapping, even against dynamic environments with moving people and changing scenery.
+Multiple functions to easily handle very large scale maps.
+Benefits Kudan software brings
+More accurate location and robustness from tightly-coupled Visual-Lidar SLAM.
+Significantly lighter Lidar map (original raw data can be reduced by more than 300x).
+Large-scale and robot-model agnostic solutions.
+Lower required sensor cost.
+And many more features!
+Example projects
+localization software for indoor autonomous mobile robots in warehouses, retail stores, offices, power plants, and others.
+Outdoor delivery robots development.
+Kudan software and sensors packaged as a single SLAM sensor module.
+Retrofitting existing machinery with Kudan software to enable autonomy.
+Relevant Demo
+Running indoors on Qualcomm Robotics RB5 with Intel Realsense
+Localising with multiple vehicles in one map
+LIDAR SLAM vs. GPS
+Consumer Robotics
+More robustness and accuracy on constrained devices
+Benefits Kudan software brings
+Flexible sensor setup (leveraging multiple types of cameras while fusing with other sensors)
+Ability to run on low grade processor and small memory footprint (eg. Raspberry Pi 4)
+Map and relocalize across multiple rooms or spaces
+Fast, accurate and robust tracking even in dynamic environments
+And many more features!
+Example projects
+Consumer vacuum cleaning robots
+Home security, educational, service and companion robots
+Micro drones
+Relevant Demo
+RGB-D SLAM
+Performance against ORB-SLAM2
+Live real-time SLAM on a smartphone
+Map streaming to work with memory-constrained hardware
+Drones/ UAV
+
+Robust and accurate localization with cost effective sensor setup
+KudanSLAM runs on lower grade CPUs, even without a GPU, but will accelerate with higher grade ones.
+Accurate in GNSS-denied areas, but can take advantage of them when available.
+Handles dynamic 3D scene-movement.
+Benefits Kudan software brings
+Save on hardware cost, leveraging affordable processors and sensors.
+Wider effectiveness including underground environments and crowded downtown areas (e.g. Tokyo, Miami, New York).
+Flexibility on sensor types and their combinations.
+Higher productivity thanks to real-time processing capability.
+And many more features!
+Example projects
+Mobile mapping systems and drones with lower grade INS/GNSS
+Integrate Kudan software into an existing surveying solution.
+Surveying conducted in urban metropolitan areas.
+Relevant Demo
+Running an indoor drone dataset on Qualcomm Robotics RB5 – 100% tracking
+Inspection/ surveying/ mapping
+
+Better mapping with affordable sensor setup and applicable to more situations
+No need for an expensive GNSS/INS as the main localization approach.
+Enables surveying players to go surpass current limitations at a much more affordable cost.
+Benefits Kudan software brings
+More accurate 3D reconstruction and maps.
+Wider effectiveness including underground environments and crowded downtown areas (e.g. Tokyo, Miami, New York).
+Lower required sensor cost.
+Higher productivity thanks to real-time processing capability.
+And many more features!
+Example projects
+Mobile mapping systems development for drones with lower grade INS/GNSS.
+Integrate Kudan software into an existing surveying solution.
+Surveying conducted in urban metropolitan areas.
+Relevant Demo
+Artisense, a Kudan group company, demonstrating its lane-level accurate positioning in a multi-floor parking lot and urban environment
+LIDAR SLAM vs. GPS
+AR / VR
+
+Larger-scale, interactive and user-friendly AR/VR solutions
+Greater capability than other SDKs; unlimited map scale, cross-platform compatibility, increased robustness and accuracy.
+Benefit Kudan software brings
+Larger scale map usage such as multi-story shopping malls, large plants, and even an entire city.
+Robustness against scenery changes and dynamic objects.
+Easier to keep maps up-to-date.
+And many more features!
+Example projects
+AR glasses development for consumer head mount displays, medical industry clients, construction clients, and others.
+AR navigation applications development for indoor facilities (stations, shopping malls).
+Relevant Demo
+RGB-D SLAM
+Performance against ORB-SLAM2
+Live real-time SLAM on a smartphone
+Smart cities / IoT
+
+Multiple users consume single cloud map created by Kudan software and update this map continuously
+Enables a single map to serve multiple user devices and multiple use cases.
+Maps locations can also be recognized and expanded by multiple types of device.
+Benefit Kudan software brings
+Larger scale map usage such as an entire city.
+No need to create a map for each robot or use case, one map can be shared.
+Example projects
+AR cloud map to allow internal building localization and navigation overlays on a user’s device.
+Integrating maps created by Kudan software into the new smart city development project.
+5G
+
+Showcase 5G’s low latency benefit with KudanSLAM
+Empower applications such as AR/VR and autonomous driving with next generation SLAM technology.
+Benefit Kudan software brings with 5G
+Improved user experience in AR/VR with lower latency and increased robustness.
+More safety in autonomous driving / vehicle communication scenarios.
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+All the important news about Kudan
+Categories
+Blog
+Media
+Press Release
+     How to Select the Best 3D Lidar for SLAM
+Blog
+05.09.2022
+Kudan 3D-Lidar SLAM (KdLidar) in action：Long narrow corridors
+Press Release
+05.02.2022
+The Camera Basics for Visual SLAM
+Blog
+04.25.2022
+Kudan and Artisense demonstrating its latest SLAM software at AUVSI XPONENTIAL 2022
+Press Release
+04.14.2022
+3D lidar SLAM: The Basics
+Blog
+04.06.2022
+Kudan 3D-Lidar SLAM (KdLidar) in action: In a subterranean cave for geospatial applications
+Blog
+03.30.2022
+Kudan Visual SLAM (KdVisual) in action: In an operating factory for autonomous mobile robots
+Blog
+03.23.2022
+Kudan 3D-Lidar SLAM (KdLidar) in action: In a shopping mall for autonomous cleaning or service robots
+Blog
+03.18.2022
+Kudan will be at Intel’s “Intel IoT Planet ~ Robotics Week” event in Japan to introduce the benefits brought by our 3D SLAM Software to Autonomous Mobile Robots
+Press Release
+03.04.2022
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+NEXT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+HOME
+IR TOP
+IR NEWS
+IR LIBRARY
+EN
+Kudan Inc. is listed on ”MOTHERS" (Market of The High-growth and Emerging Stocks) of the Tokyo Stock Exchange. (code: 4425) This IR page includes the information for investors.
+IR NEWS
+05.02.2022DisclosureKudan 3D-Lidar SLAM (KdLidar) in action: Long narrow corridors(437KB)
+04.14.2022DisclosureKudan and Artisense demonstrating its latest SLAM software at AUVSI XPONENTIAL 2022(331KB)
+03.30.2022DisclosureKudan 3D-Lidar SLAM (KdLidar) in action: In a subterranean cave for geospatial applications(351KB)
+03.23.2022DisclosureKudan Visual SLAM (KdVisual) in action: In an operating factory for autonomous mobile robots(349KB)
+03.18.2022DisclosureKudan 3D-Lidar SLAM (KdLidar) in action: In a shopping mall for autonomous cleaning or service robots(369KB)
+Read more
+Management Information
+About Kudan
+Company Overview
+Kudan MEMBER
+Corporate Governance
+Financial Information
+Financial Highlights
+Business Performance
+Financial Data
+Cash Flow
+IR Library
+IR Library
+Financial Results
+Presentation
+Timely Disclosure Information
+Stock Information
+Stock Information
+Stock Quote
+Other
+IR Calender
+FAQ
+Disclosure Policy
+IR Disclaimer
+Contact
+IR Inquiry
+© 2018 KUDAN
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Kudan is actively seeking motivated computer vision engineers and strong business development managers
+Computer Vision Engineer
+DevOps Engineer
+C++ Software Engineer
+Software Test Engineer
+Computer Vision Engineer
+Kudan in Bristol, UK
+At Kudan, we’re constantly pushing the cutting edge of computer vision technology. To always keep moving forward we evaluate state-of-the-art approaches to machine vision, together with performing groundbreaking research.
+We are looking to expand our team with engineers who are passionate about state of the art computer vision to help us continue to produce leading SLAM software for the global market.
+You will be jointly responsible for the complete pipeline of visual processing from sensor evaluation and selection, through data processing pipelines, to SLAM evaluation tools. You will be aiding our team by implementing existing research approaches as well as performing research and development of our SLAM software.
+You will be working with a team of best-in-class computer vision software engineers to ensure best performance of our SLAM software. Your work will ensure that we deliver the best mass market SLAM system. Ideally you would be interested in having a generalist approach, picking up ad-hoc tasks as well, to make sure your team can do their job.
+Job Responsibilities
+Develop a thorough understanding of our SLAM stack and develop ideas for its improvement across all aspects of the algorithms involved
+Implement state-of-the-art computer vision algorithms for SLAM.
+Ensure code is well tested by creating appropriate unit tests.
+Share ideas within the team and provide an explanation of new algorithms.
+Minimum Skill Requirements
+Either a Bachelor’s or Master’s in Electrical Engineering, Computer Science or a related field or significant personal software development experience.
+Experience in working with SLAM technologies or other computer vision concepts.
+Good working knowledge of C++.
+Minimum 2 years of experience in building complex software as part of a team.
+Excellent problem-solving skills.
+Excellent written and verbal communication skills.
+Nice to haves
+Experience with open-source libraries e.g. OpenCV, Eigen, Ceres, or g2o.
+Experience of optimization, numerical linear algebra, probabilistic estimation, and sensor fusion.
+Some experience with embedded software platforms.
+Game engine development experience.
+Experience with Test Driven Development (TDD).
+Benefits
+A fun, supportive and engaging environment.
+Opportunity to work on cutting edge technologies with the top talent in the field.
+Competitive compensation package with 28 days holiday plus 8 bank holidays.
+Internal mentoring and training initiatives.
+Flexible working hours.
+Generous pension scheme.
+Your choice of hardware.
+Weekly company lunches and office snacks.
+Sponsorship for various types of visas.
+Freedom to come up with new ideas and install your own processes.
+To Apply
+Please click this “contact us” with the subject “Computer Vision Engineer” and include your relevant experience and background in the message field.
+Contact us
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Please select the category of inquiries and fill out the inquiry form.
+The personal information you have entered will be used only for Kudan to respond to your inquiries, not for any other purpose without your consent.
+For more details, please refer to "Privacy Policy" below.
+Categories
+General
+Career
+IR
+Company Name
+Department
+Name
+Email
+Phone Number
+Subject
+Message
+Send
+Privacy Policy
+This website is provided by Kudan Inc., Kudan Limited and Kudan USA LLC.
+
+The security of your personal information is important to us. This Privacy Policy is designed to help you feel more confident about the privacy and security of your information when using our website or accessing any of our services (our Service).
+
+By using our Service you agree to the collection and use of your personal information by us in accordance with this Privacy Policy. If you do not agree to the terms of this Privacy Policy, please do not provide us with any information and do not use the Services.
+
+This Privacy Policy sets out the basis on which we process any personal information we collect from you, or that you provide to us through the Service.
+
+If you have any questions or suggestions regarding our Privacy Policy, please contact us at:
+contact@kudan.eu.
+1. INFORMATION WE MAY COLLECT FROM YOU
+1.1
+We may collect and process the following information about you:
+1.1.1
+information that you provide when registering for our Service;
+1.1.2
+information that you post on our website, for example, as comments to our blogs.
+We do not accept any liability for any information that you voluntarily choose to be public through such actions;
+1.1.3
+information that you authorise a third party (eg a social network such as Facebook) to share with us, such as your email address or other information that may identify you;
+1.1.4
+correspondence, or a record of it, if you should contact us, including any CV or resumé that you may submit through the website; and
+1.1.5
+statistical data about your browsing actions and patterns, which does not identify you. This means information about your computer and your use of our Services,
+including (where available) your IP address, unique mobile device identifier (UDID),
+International Mobile Equipment ID (IMEI), Android ID, device MAC address, browser information, operating system, timestamps, the pages that you request, applications downloaded, traffic data, location data, weblogs and other communication data, and the resources that you access.
+2. HOW WE USE YOUR INFORMATION
+2.1
+We use information held about you in the following ways:
+2.1.1
+to ensure that the Service is presented in the most effective manner for you and for your computer;
+2.1.2
+to identify you when you use the Service;
+2.1.3
+to answer your questions and improve the Service;
+2.1.4
+to notify you about changes to our Service;
+2.1.5
+to provide you with updates and other information about special offers and new features of our Service;
+2.1.6
+to ensure that you are using the Service in accordance with its terms and applicable law, including to investigate and prevent suspected illegal activities where we deem necessary; and
+2.1.7
+for marketing purposes where you agree to this.
+3. HOW WE SHARE YOUR INFORMATION
+3.1
+We may share your personal information with third parties in the following circumstances:
+3.1.1
+for marketing purposes where you consent to this;
+3.1.2
+to other members of the our group of companies (including Kudan Inc) for the purpose of managing or administering certain aspects of our Service (including to investigate and prevent suspected illegal activities); for analytics purposes; and to help us develop new services;
+3.1.3
+to protect the rights, property or safety of us or other Service users;
+3.1.4
+where we are obliged, or permitted, to do so by applicable law, regulations or by any regulatory or government authority; or
+3.1.5
+if we (or substantially all of our assets) are acquired by a third party, in which case personal information held by us about our users will be one of the transferred assets.
+3.1
+We may pass aggregated information to third parties about how our users use our Service but this will not include information which could be used to identify you.
+4. WHERE WE STORE YOUR INFORMATION
+4.1
+We take appropriate organisational and technical measures to protect your personal information that we hold. We limit access to your personal information to those who we believe reasonably need to come into contact with that information in order to carry out their jobs.
+4.2
+The data that we collect from you may be transferred to, and stored at, a destination outside the European Economic Area (EEA). It may also be processed by persons operating outside the EEA who work for us, one of our associated companies or a third party engaged by us. By submitting your personal information to us, you agree to such transfer, storing or processing. We will take all steps reasonably necessary to ensure that your personal information is treated securely at all times and in accordance with this Privacy Policy.
+4.3
+Unfortunately, the transmission of information via the internet is not completely secure.
+Although we will do our best to protect your personal information, we cannot guarantee the security of your information transmitted to our Service and any transmission is at your own risk.
+4.4
+We will retain your information for as long as is necessary to fulfill any of the services we provide or to comply with applicable legislation, regulatory requests and relevant orders from competent courts.
+5. COOKIES
+5.1
+We use cookies and similar technologies on our website to optimize our Service. You can control which cookies you get and which you keep on your device through your browser settings. Unless you have adjusted your browser settings so that it will refuse our cookies,
+our system will issue cookies when you visit our website. However, if you do not accept cookies you may not be able to take advantage of many of the features of the Service.
+5.2
+We use cookies to keep track of the pages you and other visitors have been to on our Service, including serving advertisements which we believe are most likely to be of interest to you.
+5.3
+We use the following cookies on our website
+Cookie name Purpose Further information
+PHPSESSID Enables websites to store
+serialised state data On the website it is used to establish a user session and to pass state data via a temporary cookie
+__unam Used for Google Analytics  
+_ga Used for Google Analytics 2 years expiration
+cbc_country_code Identifies the location of your computer or device to identify your preferred market  
+cbc_country_name Identifies the location of your computer or device to identify your preferred market  
+5.4
+All of the major browsers offer tips and guidance for managing the cookies available on your browser. There are also lots of different third party browser plug-ins and extensions available which you can download to make it easier to see and control your cookies.
+5.5
+You can find out more about internet advertising by visiting the following websites:
+www.allaboutcookies.org, www.yourchoicesonline.eu, and www.networkadvertising.org.
+Some of these sites enable you to opt out of online behavioural advertising and other tracking cookies (in addition to the control settings on your browser).
+6. LINKS
+Our Service may contain links to and from other websites and services. We are not responsible for the privacy practices or the content of any third party sites. Please check the individual privacy policy of any such websites or services before you submit any personal information to them.
+7. ADVERTISERS
+We may from time to time use third party advertisers or sponsors on our Service. In the event that we do so we will not disclose identifiable information about individuals but we
+may provide them with aggregated information about our users. We may also use such aggregated information to help advertisers reach the kind of audience they want to target (for example, men in London). We may make use of the personal information we have collected from you to enable us to comply with our advertisers' and sponsors' wishes by displaying their advertisement to that target audience.
+8. KEEPING YOUR ACCOUNT SECURE
+8.1
+Where we have given you (or where you have chosen) a password which enables you to access certain parts of the Service, you are responsible for keeping this password confidential and you are responsible for any misuse of such information. You must change your password on a regular basis and must not share your password with anyone.
+8.2
+You are solely responsible for the security and confidentiality of your account. Please ensure that you do not allow anyone else to access the Service in your name and sign off after you have finished accessing your account.
+8.3
+You are responsible for all orders, and for the accuracy of all information, sent via the internet using your user ID, password or any other personal identification used to identify you on the Service.
+8.4
+You will be liable to us for all orders or transactions placed by use of your user ID and password, even if such use might be wrongful. We will not be liable to you for any loss that you may incur as a result of misuse of your user ID and password, and we accept no liability resulting from its unauthorised use, whether fraudulent or otherwise
+9. MARKETING
+With your permission, we may send you information about other products and services that may be of interest to you. You have the right to ask us not to process your personal information for marketing purposes. You can exercise your right to opt out of such processing by checking certain boxes on the forms or registration pages we use to collect your information. You can also exercise this right at any time by contacting us by post or email at the address set out below.
+10. ACCESS TO INFORMATION
+You have the right to access information held about you. Your right of access can be exercised in accordance with UK data protection laws. Any access request may be subject to a small administrative fee to meet our costs in providing you with details of the information we hold about you. Contact us at: contact@kudan.eu for details.
+11. CHANGES TO OUR PRIVACY POLICY
+We occasionally modify our Privacy Policy and any changes we may make to it in the future will be posted on this page and, where appropriate, notified to you by e-mail or other message.
+– Last updated 20 February 2020
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+世界最先端の商用グレード自己位置認識＆環境地図作成テクノロジー
+従来のセンサフュージョンを超え、センサの潜在能力を開放
+カメラ
+LiDAR
+IMU
+GNSS
+レーダー
+ToF
+オドメトリ
+and
+more
+ソリューション提供領域（例）
+自動運転 /
+HDマップ
+ロボティクス
+ドローン /
+無人航空機
+検査 / 調査/
+地図作成
+AR / VR
+スマートシティ/
+IoT/ 5G
+and
+more
+
+
+
+
+
+我々は、様々な企業様との強固な関係によってコンピュータービジョン領域のエコシステムを構築し、お客様のプロダクトや事業の開発をご支援します。
+Sensor/ Processor
+Integration
+Vertical specific
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT
+Home
+Businesses & Products
+
+About Sony Group
+
+
+
+
+Technology
+Employees
+Sustainability
+
+Design
+Investor Relations
+Contact Us
+Careers
+FUTURE PROOF: What Is the Future of Creative Prototyping?
+Brand
+See how a new generation of cameras, smartphones & production tools allow for a more collaborative creative process
+slide 1
+slide 2
+slide 3
+slide 4
+slide 5
+see previous panel
+see next panel
+English Japanese
+How Sony is responding to COVID-19
+Latest News
+Latest News
+view index
+Important Notice
+Businesses & Products
+Businesses & Products
+PlayStation: Games & Network Services
+Music
+Pictures: Movies & TV Shows
+Consumer Electronics
+Imaging & Sensing Solutions
+Financial Services
+About Sony Group
+About Sony Group
+Sony's Purpose & Values
+News Releases
+Corporate Blog
+Our Business
+New Initiatives
+Brand
+Corporate Report
+History
+Corporate Data
+Affiliated Companies
+Technology
+Technology
+Imaging and Sensing
+Sony CSL
+Sony AI Inc.
+AI Initiatives
+Sony Innovation Fund
+VISION-S
+New Initiatives
+R&D Center
+Employees
+Employees
+Careers
+World Map
+Sustainability
+Sustainability
+Environment
+Social Contribution
+Diversity, Equity & Inclusion
+Accessibility
+Sustainability Report
+Sony and Sustainability
+Message from the CEO
+Response to COVID-19
+Design
+Design
+Philosophy
+Stories
+Interviews & Lectures
+Gallery
+News
+Investor Relations
+Investor Relations
+IR News
+IR Library
+Corporate Report
+Earnings Releases
+Corporate Bonds & Ratings
+Terms and Conditions
+Privacy Policy
+Cookie Policy
+About this Site
+Site Map
+Copyright 2022 Sony Group Corporation
+Sony uses Strictly Necessary Cookies to operate this website. These cookies are essential, and will always remain active. Sony also uses Optional Cookies to improve site functionality, analyze usage, and interact with third parties.
+By clicking "Accept Optional Cookies,"you agree to the placement of Optional Cookies on your device. By clicking “Decline Optional Cookies," you withdraw your consent to the use of Optional Cookies. You can manage your cookie preferences at any time by clicking "Customize Cookies." Depending on your selected cookie preferences, the full functionality of this website may not be available.
+Review ourCookies Policy for more information.
+Customize Cookies Decline Optional Cookies Accept Optional Cookies
+A New World of Innovation
+Where Chips, Software and Their Intersection Are Keys to Success
+The Future of Possibilities
+There has been a fundamental shift in product development. Not merely a revolution in materials or design, but a revolution of possibilities. Thriving in a New World of Innovation defined by scale and systemic complexity depends on co-optimizing software and chips.
+Discover More
+Achieve Your Unique Application Demands
+Industries
+|
+Technologies
+Automotive
+Create & own your automotive innovation, from software to silicon.
+HPC & Data Center
+Accelerate development of AI, server, edge computing, networking & storage SoCs.
+Aerospace & Defense
+Automate mission-critical silicon, software & optics development.
+Financial Services
+Protect sensitive customer & financial data from security threats.
+Optical
+Industry-leading optical design, illumination design & photonic design software.
+Memory
+Shift left with the industry’s most complete, end-to-end development flow.
+Mobile/5G
+Meet speed, bandwidth & data demands for blazingly fast 5G chipsets.
+Internet of Things
+Address evolving requirements for processing power, energy & security.
+Made in the Cloud!
+Helping you understand the case for IC hardware development in the cloud
+Download Paper →
+Silicon Lifecycle Management
+Making silicon visible through ongoing intelligent analysis & measurement
+Download Paper →
+2022 Gartner® Magic Quadrant™ for Application Security Testing
+Leader for the 6th year in a row
+Download Report →
+Expand Your Expertise
+Deepen your knowledge by diving into our insightful reports and webinars.
+Your Innovation, Your Community
+For over 30 years, SNUG has connected users and technical experts to share best practices for tackling design and verification challenges. This year, SNUG Silicon Valley will once again be offered as a fully Virtual Experience. By attending SNUG, you will gain knowledge to use on current projects from the global community and discover ideas to spark future innovations.
+Throughout the 2-day virtual experience, you will be able to attend industry-leading keynotes, special sessions and panels, and explore an expansive offering of technical tracks from users and Synopsys experts.
+Explore SNUGView All Events
+SNUG Silicon Valley 2022
+A Virtual Experience
+March 30 - 31, 2022
+Thanks for attending!
+Click below to access what you missed.
+
+
+
+
+Access on-Demand
+What We’re About
+With the most advanced chip design, verification, IP integration, and software security and quality solutions, we’re driving a new era of innovation.
+About Us
+Our Commitment
+We aim to influence positive social and environmental change across the world—from our employees and partners to our customers and beyond.
+Sustainability
+Join Us
+Our employees’ passions spark our greatest ideas. Unlock your exciting future. Explore careers and make your mark in the world of Smart Everything with Synopsys.
+Careers
+Celebrating Inclusion and Diversity
+Learn More
+Popular Resources
+SolvNetPlus
+SNUG
+Blogs
+Events
+1
+2
+Connect with Us
+Reach Out Today
+Corporate Headquarters
+690 East Middlefield Road
+Mountain View, CA 94043
+Customer Support
+650-584-5000
+800-541-7737
+Worldwide Location
+View our office locations
+Products
+Application Security
+Semiconductor IP
+Verification
+Design
+Silicon Engineering
+Resources
+Solutions
+Services
+Support
+Community
+Manage Subscriptions
+Corporate
+About Us
+Careers
+CSR Report
+Inclusion & Diversity
+Investor Relations
+Contact Us
+Legal
+Privacy
+Trademarks & Brands
+Software Integrity Agreements
+©2022 Synopsys, Inc. All Rights Reserved
+Follow

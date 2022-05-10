@@ -1,0 +1,474 @@
+Homepage
+Sign inGet started
+Follow
+Unlocking the Future with Semantic 3D Maps
+Unlocking the Future with Semantic 3D Maps
+For want of a map
+Ryan Measel
+May 20, 2019
+The Technology That Will Save the Scooter Business
+The Technology That Will Save the Scooter Business
+Mobility is the name of the game. People want to get places fast and easy. For last mile travel, there is nothing faster or easier than a…
+Jameson Detweiler
+Nov 6, 2018
+Proposing an Open Camera Positioning Standard
+Proposing an Open Camera Positioning Standard
+Camera positioning is the next evolution of GPS. GPS was deemed too valuable to society to remain proprietary, and camera positioning…
+Ryan Measel
+Jun 1, 2018
+HOMEBLOGGET IN TOUCH
+Introducing CPS
+The Camera-Powered GPS Replacement
+Get in TouchSign Up for Updates
+Know Exactly
+Where Your
+Users Are
+
+Fantasmo’s CPS provides hyper-accurate positioning that is an order improvement over GPS. Unlike GPS it works well in cities and indoor, and it does not require any infrastructure such as satellites, beacons or radios. All you need is an inexpensive camera and a data connection.
+
+CPS is the next evolution of positioning technology, and it will unlock new capabilities for your applications.
+Applications
+Micromobility
+Stop losing track of scooters and bikes
+Make it easy for riders and chargers to find vehicles
+Reduce theft and loss
+Prevent sidewalk riding and illegal parking
+Enforce compliance with local ordinances
+Robotics
+Give robots the ability to navigate just like humans
+Enable full autonomony
+Restrict navigation to only safe areas
+Localize with an inexpensive camera instead of LIDAR
+A kidnapped robot is no longer a problem
+Mobile
+Know exactly where you are
+Provide a blue dot that is always accurate
+Enable location based Augmented Reality
+Create massively multiplayer AR experiences
+Auto
+Improve city based navigation experiences
+Always know what lane the car is in
+Tell ride share riders precisely where their ride is
+Localization solution for autonomous vehicles
+GPS vs. CPS
+Copyright © 2022 Fantasmo Studios, Inc.
+Our story
+Membership
+Write
+Sign In
+Get started
+Stay curious.
+Discover stories, thinking, and expertise from writers on any topic.
+Start reading
+TRENDING ON MEDIUM
+01
+Marc-André Giroux
+GraphQL is a Trap?
+May 6
+·
+6 min read
+02
+Cory Doctorow
+About those kill-switched Ukrainian tractors
+May 8
+·
+12 min read
+03
+Nitin Sharma
+in
+JavaScript in Plain English
+11 Stupidly Simple Side Hustles to Earn Extra Money as a Programmer
+May 4
+·
+11 min read
+04
+Sean Kernan
+Johnny Depp Will Likely Lose His $50M Defamation Case
+Apr 30
+·
+5 min read
+05
+Eryk Lewinson
+in
+Towards Data Science
+PyScript — unleash the power of Python in your browser
+May 2
+·
+5 min read
+06
+Ryan Holiday
+18 Little Stories That Will Have Massive Impact On Your Life
+May 5
+·
+11 min read
+Ryan Fan
+in
+Invisible Illness
+Can Linkin Park Ever Replace Chester Bennington?
+For now, the answer is no.
+May 10
+·
+4 min read
+·
+Music
+Susan Orlean
+Why Write?
+How asking yourself this question often can help you do it better
+May 10
+·
+4 min read
+·
+Writing
+Carter Mueller
+How Lying Affects Linguistic Expression
+May 5
+·
+9 min read
+·
+Linguistics
+Dan Kadlec
+Other People’s Anger
+Take a breath. Those online insults might make you laugh.
+May 10
+·
+6 min read
+·
+Social Media
+Dr. Linda Dahl
+Is Allergy Season Getting Worse Every Year?
+Every spring, the news outlets seem to recycle the same message: This is the worst allergy season on record. At first glance, the headlines…
+May 9
+·
+4 min read
+·
+Allergies
+Cory Doctorow
+About those kill-switched Ukrainian tractors
+What John Deere did to Russian looters, anyone can do to farmers, anywhere.
+May 8
+·
+12 min read
+·
+Ukraine
+Clive Thompson
+The Return of 1980s-Era Nuclear-Strike Maps
+I grew up with maps showing how cities would be obliterated by a nuke. They’re back
+May 9
+·
+8 min read
+·
+Nuclear Weapons
+Danielle Dick, Ph.D.
+How to Grow Your Child’s Social Skills
+Strategies to help your child with their emotional intelligence
+May 9
+·
+3 min read
+Will Leitch
+The College Kids Are Back to Normal
+At least campus bars are headling
+May 9
+·
+4 min read
+·
+Covid 19
+Jeff Marzick
+What About the “Woke” Right?
+It’s time to call out which side is the real “woke” side
+May 6
+·
+5 min read
+·
+Politics
+DISCOVER MORE OF WHAT MATTERS TO YOU
+Self
+Relationships
+Data Science
+Programming
+Productivity
+Javascript
+Machine Learning
+Politics
+Health
+Help
+Status
+Writers
+Blog
+Careers
+Privacy
+Terms
+About
+Knowable
+Sign In
+Get started
+Published in
+Fantasmo
+Ryan Measel
+Follow
+May 21, 2019
+·
+3 min read
+Unlocking the Future with Semantic 3D Maps
+For Want of a Map
+In a vacuum, positioning is useless no matter its precision. For instance a GPS coordinate such as `33°59'27.5"N 118°28'01.1"W` won’t do you any good unless you have a map which tells you that location is on Abbot Kinney Blvd in Venice, California.
+With a map, there is all manner of useful information that can be obtained about a location:
+What shops are nearby?
+What is the shortest walking path to the beach?
+Where are the good Instagram spots?
+Positioning only becomes useful when it corresponds to a map. It then follows that the resolution of the map matters as much as the precision of the position.
+Precision and Batteries Not Included
+As it stands today, maps are sufficient for GPS, because GPS is not that precise. It varies by meters. In dense urban areas like Manhattan and San Francisco, GPS can be off by half a block! Even though maps provided by Google, Apple, OpenStreetMaps, and others are not sub-meter accurate, they are still good enough to serve GPS. For the automotive navigation use case, it works well in fact. Cars are large and have constrained motion, so they can be “snapped” to a road.
+What happens though when the use case demands more? What happens when GPS is not enough?
+A robot cannot be “snapped” to a road. It travels on sidewalks and needs to know where the location of curb-cuts and ramps — down to the centimeter. E-scooters have restricted speed zones along pedestrian paths. Persistent augmented reality content is not even possible.
+This emerging class of spatial applications such as augmented reality, pedestrian navigation, robotics, and micromobility require sub-meter positioning. Such precision cannot be achieved through GPS or other infrastructure-based solutions. Fantasmo has created Camera Positioning System (CPS) for exactly this need.
+Comparing Fantasmo’s CPS (Green) to GPS (Red) on a mobile device in downtown San Francisco. CPS vastly outperforms GPS which degrades harshly in the dense urban environment.
+Precise Positioning Requires Precise Maps
+A high resolution map is needed to take advantage of the hyper-accurate positioning enabled by CPS. Coincidentally, camera positioning requires the generation of a 3D map. Fantasmo’s map generation pipeline produces semantic 3D maps that are world-scale with centimeter-level precision.
+A 3D map in Venice, California that includes all the semantic features spatial applications needs to operate.
+The world is 3D, and our maps should reflect that. There is a wealth of semantic context that can be derived from 3D maps. It is possible to know the width of the road, the height of sidewalk curbs, the location of doorways, etc. All of this information can be embedded into the map to provide rich context for spatial applications.
+By combining Fantasmo CPS and semantic 3D maps, applications unlock features that were never before possible. A demonstration is shown in the video below. A semantic 3D map was generated for Abbot Kinney Blvd that is label with street zones (i.e., sidewalk, parking spot, and road) and store fronts. Images taken with the mobile phone are used to determine the hyper-accurate position of the device. The position is precise enough to understand its semantic zone even when the zone is no wider than a meter.
+A demonstration of the combination of Fantasmo CPS and semantic 3D maps.
+Unlocking the Future
+Spatial applications need both semantic 3D maps and hyper-accurate positioning to operate at the level we expect. Fantasmo provides a full end-to-end solution for 3D maps and positioning. This technology is not limited to outdoor use either. Our solution is well suited for indoor applications as well where alternative mapping and positioning solutions are even more restricted. In future posts, we will explore how maps push indoors.
+If you are interested in enabling 3D maps and hyper-accurate positioning for your application — whether it be indoor or outdoor — reach out to us at hello@fantasmo.io.
+368
+368
+More from Fantasmo
+Follow
+Reinventing maps for micro-mobility, AR, and robots
+Read more from Fantasmo
+AboutHelpTermsPrivacy
+Sign In
+Get started
+Ryan Measel
+Follow
+Home
+Published in Fantasmo
+·May 21, 2019
+Unlocking the Future with Semantic 3D Maps
+For Want of a Map In a vacuum, positioning is useless no matter its precision. For instance a GPS coordinate such as `33°59'27.5"N 118°28'01.1"W` won’t do you any good unless you have a map which tells you that location is on Abbot Kinney Blvd in Venice, California. With a map, there is all manner of…
+Augmented Reality
+3 min read
+Published in Fantasmo
+·Jun 2, 2018
+Proposing an Open Camera Positioning Standard
+Camera positioning is the next evolution of GPS. GPS was deemed too valuable to society to remain proprietary, and camera positioning should be no different. An open standard and framework is needed to facilitate cross-platform functionality and speed development towards universal mapping and localization for spatial applications. Introduction Camera positioning is…
+Augmented Reality
+4 min read
+Sign In
+Get started
+Published in
+Fantasmo
+Jameson Detweiler
+Follow
+Nov 7, 2018
+·
+3 min read
+The Technology That Will Save the Scooter Business
+Mobility is the name of the game. People want to get places fast and easy. For last mile travel, there is nothing faster or easier than a scooter. Bird and Lime have shown how simple it was to “onboard” a city, seemingly overnight. Their success and the ease of entering the market has inspired a myriad of competitors/copycats. Dozens of companies are now rushing to litter every street corner with a white-labeled scooter to scrounge for their piece of the pie.
+It’s unclear how many mobility solutions the market can bear, but it is crystal clear that cities are unwilling to find out. The deluge of scooters have plagued cities with as many problems as they are solving. Chief among these issues are inappropriate parking and riding in areas where motorized vehicles are restricted such as sidewalks and other pedestrian-only areas. Both of these issues pose a serious danger to pedestrians, other motorized vehicles, and city infrastructure.
+Despite the issues, cities still want to find mobility solutions, because there are real benefits. Santa Monica Planning Director, David Martin, stated in August that the city seeks to “identify innovative solutions that help create a viable, well-operated long-term shared mobility program in Santa Monica.” They want to play ball on their terms and that means regulation. Cities, including Santa Monica, are now beginning to restrict which mobility companies can operate within their limits.
+Cities are now a customer just as much as the riders.
+And it is important that the scooter companies improve their valuable proposition to the cities. There are two ways to accomplish this. The first is to continue to provide the valuable transportation service to riders while preventing the riders from driving and parking illegally. The second is to provide valuable data that can be collected by scooters about the cities they operate in such as traffic and road conditions.
+Both of these can be achieved by adding cameras to scooters, or more specifically, by using cameras to provide precise mapping and positioning. 2D images captured can be leveraged to build out semantic, 3D maps of cities and provide a hyper-accurate position of the scooter. So-called visual positioning is more precise than GPS and has centimeter level accuracy in dense urban environments — a notoriously bad environment for GPS. Visual positioning is accurate enough that a scooter can know when it is in prohibited zone even if the zone is only as wide as a sidewalk.
+At Fantasmo we have been developing the Camera Positioning Standard (CPS) for precisely this type of application. GPS will not be enough to bring us into the age of the “Spatial Web” where augmented reality is everywhere, robots live and work alongside us, and scooters are an everyday part of our lives.
+Comparison of Fantasmo’s CPS vs Traditional GPS
+Our CPS solution provides the ability to find the position of a scooter accurately enough to know if a scooter is being ridden legally on the street or illegally on a sidewalk.
+Riders and Chargers Can Find Their Scooters More Quickly in AR
+This creates a better experience for everyone. Cities will have a wider variety of more sustainable mobility options. They will also have better intelligence about what is happening in the city. Riders and chargers will be able to find their scooters much faster. Scooter companies will have a better understanding of the location of their fleets, reduce losses, and, most importantly, provide the optimal scooter experience for riders, non-riders, and cities alike.
+The quickest way for a scooter company to lose is to ignore these problems and not treat the city as a customer. Cities want to see more sustainable mobility solutions, but it must be done in a safe and responsible way.
+If you’re interested in discussing CPS and how it could improve your application, please reach out.
+417
+417
+More from Fantasmo
+Follow
+Reinventing maps for micro-mobility, AR, and robots
+Read more from Fantasmo
+AboutHelpTermsPrivacy
+Sign In
+Get started
+Jameson Detweiler
+Home
+Published in Fantasmo
+·Nov 7, 2018
+The Technology That Will Save the Scooter Business
+Mobility is the name of the game. People want to get places fast and easy. For last mile travel, there is nothing faster or easier than a scooter. Bird and Lime have shown how simple it was to “onboard” a city, seemingly overnight. Their success and the ease of entering…
+Transportation
+3 min read
+Aug 17, 2018
+The Bootstrap Problem of 3D Spatial Maps
+TL;DR. Building a 3D map of the world is essential to unlocking the potential of a range of industries including augmented reality, robotics. Today, the network for 3D geospatial data faces a bootstrap problem that is not only slowing development, but creating a fractured landscapes of walled data gardens. Network…
+Augmented Reality
+4 min read
+Aug 10, 2018
+Why The Crypto Community Should Care About Geospatial: A Background Primer
+As crypto prices remain highly volatile, the long term players are more concerned with figuring out which uses of blockchain and distributed ledger technology are actually going to have a meaningful impact. Geospatial applications ranging from augmented reality to robotics to autonomous vehicles are an area where the use of…
+Blockchain
+6 min read
+May 30, 2018
+The Push for Open AR Standards
+As the augmented reality community comes together at Augmented World Expo 2018 this week, the key question is whether our industry stays locked in competitive silos or finds ways to develop shared standards that can accelerate technology development. A few weeks ago, Google dazzled audiences at its annual I/O conference…
+Augmented Reality
+4 min read
+May 9, 2018
+The Planet is the Platform: Toward a Decentralized Infrastructure for 3D Spatial Maps
+The most important dataset that will be built in the coming decade is the sub-centimeter 3D map of the world, indoors and out. …
+Augmented Reality
+4 min read
+Mar 12, 2015
+The Future Is Just Around the Corner
+And everything is integrated — It has been less than a decade since the original iPhone came out, and today over half of all adults in the United States own a smartphone. The first truly mass marketed personal computer came out 30 years before in 1977. It took a full three decades to move from…
+Augmented Reality
+7 min read
+Sign In
+Get started
+Published in
+Fantasmo
+Ryan Measel
+Follow
+Jun 2, 2018
+·
+4 min read
+Proposing an Open Camera Positioning Standard
+Camera positioning is the next evolution of GPS. GPS was deemed too valuable to society to remain proprietary, and camera positioning should be no different. An open standard and framework is needed to facilitate cross-platform functionality and speed development towards universal mapping and localization for spatial applications.
+Introduction
+Camera positioning is the next evolution of GPS.
+Camera-based techniques provide centimeter-level, 6 Degree-of-Freedom positioning that is well beyond the accuracy of other methods. From a single image, position and orientation can each be calculated along three axes. And unlike GPS, it works indoors and out. A multitude of current and emerging industries fundamentally require this capability:
+• Augmented Reality
+• Autonomous Robotics
+• Indoor Navigation
+• Accessibility
+• Emergency Response
+• Real World Search
+• Checkout-Free Shopping
+• Connected Home
+• Smart Cities
+• Autonomous Vehicles
+The primary constraint of camera positioning is that it requires a machine-readable map of visually distinct features. Such maps can be built from a variety of input data types — 2D images, RGB-D images, and 3D point clouds — captured by image and depth sensors on mobile devices, IoT devices, robotics, and other platforms. These platforms share the same goal: build visual maps and calculate precise positioning from them.
+An example of visual features detected in an image. These features are stored in a machine-readable format for camera positioning.
+Why not share the maps?
+In 2000, President Clinton issued a directive to make GPS unrestricted for public use. It was deemed a “global utility” that “benefits users around the world in many different applications” [1]. The next evolution should not be any different.
+Interoperability between camera-equipped platforms improves coverage, update frequency, and development time. It facilitates a network effect of sensors. Mapping and positioning should not have to be the core competency of spatial application developers, but without interoperable maps, the technology and dataset will need to be built over and over again on every platform.
+Google and many other companies are currently amassing their own proprietary datasets to use for visual positioning. The only companies that believe proprietary maps are a good solution are those that believe they can be the one to own them. While the walled garden may be convenient for developers to start, it allows single entities to dictate where and how the maps are used not to mention security and privacy considerations.
+Camera Positioning Standard
+An open standard is needed to facilitate cross-platform functionality and speed development towards universal mapping and localization for spatial applications. We are proud to propose the Camera Positioning Standard (C.P.S.) in advancement of this objective.
+C.P.S. is infrastructure for spatial applications. The standard comprises a suite of machine-readable map data and messaging formats. It enables cross-platform exchange of heterogeneous, visual data that can be leveraged by existing and future localization techniques, including classification, regression, learning, and more. The full framework will include data format specifications and performant reference implementations compatible with common computer vision platforms.
+Camera positioning allows for centimeter-level accuracy with 6 Degrees of Freedom and requires a machine-readable map.
+Principles
+Inspired by the principles of GRPC [2], C.P.S. should subscribe to the following:
+Free and Open — Fundamental features must be free for all to use. Release all artifacts as open-source efforts with licensing that should facilitate and not impede adoption.
+Interoperability — The framework must be platform agnostic so that it can be created and consumed by any camera-enabled platform.
+General Purpose — The data formats should be applicable to a broad class of use-cases and localization approaches.
+Performant — The data formats should be designed for efficient I/O, including support for parallel processing frameworks.
+Unambiguous — Coordinate systems and reference frames should be consistent to ease interfacing with native applications and frameworks.
+Coverage and Simplicity — The framework should be available on every common computer vision development platform and easily extensible to other platforms of choice. It should be viable on CPU and memory-limited devices.
+Moving Forward
+At Fantasmo, we are far along in development of a proposal for a feature-based map format along with an accompanying C++ reference implementation. The reference implementation will include an encoder and decoder with a concise API . We plan to release the reference implementation in July, with the specification draft following at the end of Q3.
+Additional specifications and implementations will be developed with the community. Likely additional platforms include Python, iOS, Android, and ROS.
+Get Involved
+C.P.S. is a community-driven, open standard. We need help from you to build it!
+Visit camerapositioning.io for news and updates.
+Join the Slack community to share what applications you are building and what platforms could benefit from C.P.S.
+Join the mailing list to be the first to know about releases.
+Contribute code to the Github (coming soon).
+We look forward to making the next evolution of positioning free and open with you!
+741
+741
+More from Fantasmo
+Follow
+Reinventing maps for micro-mobility, AR, and robots
+Read more from Fantasmo
+Recommended from Medium
+Intertech, Inc.
+Cracked Codes, Morning Habits, & More…
+Rajdeep Bhattacharya
+in
+The Lenskart Blog
+Lenskart’s Devops Journey — Part 1
+Asokan Narthanan
+Introduction to SASS
+Gursimar Singh
+Configurating Hadoop Cluster using Ansible
+Zkycom
+Data Visualisation — Basics with matplotlib and plotly Static 2D Plotting — Part 1
+Nishant Painter
+What are Design Patterns ?
+Armand Ruiz
+Upload data and create Data Frames in Jupyter Notebooks
+Varun Singh Negi
+in
+Big Data Center of Excellence
+In- Built Data Structure that might entice you(Java Edition)
+AboutHelpTermsPrivacy
+Homepage
+Sign inGet started
+Follow
+LatestTrending
+Ryan Measel in Fantasmo
+May 21, 2019
+Unlocking the Future with Semantic 3D Maps
+For Want of a Map
+Read more…
+368
+Jameson Detweiler in Fantasmo
+Nov 7, 2018
+The Technology That Will Save the Scooter Business
+Read more…
+417
+Ryan Measel in Fantasmo
+Jun 2, 2018
+Proposing an Open Camera Positioning Standard
+Camera positioning is the next evolution of GPS. GPS was deemed too valuable to…
+Read more…
+741
+About
+Fantasmo
+Reinventing maps for micro-mobility, AR, and robots
+More information
+FOLLOWERS
+201
+ELSEWHERE
+Homepage
+Sign inGet started
+Archive of stories published by Fantasmo
+All
+Sort by most read
+Ryan Measel in Fantasmo
+Jun 2, 2018
+Proposing an Open Camera Positioning Standard
+Camera positioning is the next evolution of GPS. GPS was deemed too valuable to…
+Read more…
+741
+Ryan Measel in Fantasmo
+May 21, 2019
+Unlocking the Future with Semantic 3D Maps
+For Want of a Map
+Read more…
+368
+Jameson Detweiler in Fantasmo
+Nov 7, 2018
+The Technology That Will Save the Scooter Business
+Read more…
+417
+About
+Fantasmo
+Reinventing maps for micro-mobility, AR, and robots
+More information
+Tags
+Gps
+Positioning
+Mobility
+Scooters
+Transportation
+Micromobility
+Robotics
+Camera Positioning
+3d Mapping
+Augmented Reality
+Editors
+Jameson Detweiler
+Ryan Measel
+Ilan Penn
+Justin Medina
+Writers
+Ryan Measel

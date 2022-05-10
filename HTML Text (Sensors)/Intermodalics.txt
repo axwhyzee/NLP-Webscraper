@@ -1,0 +1,380 @@
+Intermodalics is a robotics software development firm, working for businesses world-wide, from our offices in Leuven, Belgium. We assist our customers in their product development journey, from technology exploration to product launch and beyond.
+VISUAL POSITIONING
+We are leading our customers towards precise, beacon-less indoor positioning and navigation, using only camera technology.
+TECHNOLOGIES
+Visual Positioning
+Visual-Inertial Odometry (VIO)
+Real-Time Asset Tracking
+NAVIGATION & CONTROL
+Sense-Plan-Act, the building blocks of robot autonomy. We simulate and create autonomous systems that keep going both indoor and outdoor.
+TECHNOLOGIES
+Visual & 3D Slam
+Optimal control and planning
+Robot Operating System - ROS
+  LEARN MORE
+Some of our clients
+Supporting you
+AT YOUR SERVICE
+Our services range from full project to embedded teams
+EMBEDDED TEAM
+We work together with software/hardware companies world-wide. Often, day-to-day interactions by onboarding our expertise into your development team is the best way to move your product forward.
+FULL PROJECT 
+When all you need is a solution to your problem, we take care of your project, end-to-end. This doesn't remove your involvement or control.
+You own the project, we provide the solution !
+  WORKING
+TOGETHER
+Tailored to your needs !
+CONTRACT DEVELOPMENT
+ We create software which adds specific capabilities to your application.
+OPEN INNOVATION &
+CO-DEVELOPMENT
+Share benefits and risks of a technological solution with a partner or consortium
+LICENSING
+ We offer licenses to our existing software capabilities.
+MEET OUR TEAM
+CONTACT US
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+LOCATE, NAVIGATE, TRACK
+Using a small camera, we give you position and orientation information of your assets.
+What is Visual Positioning ?
+The camera of a tracking unit. Each tracking unit consists of a camera connected to a small onboard computer.
+Visual positioning is finding out your position and orientation by means of a camera. It’s usually used in large areas such as warehouses, production halls, supermarkets, airports or large public spaces :
+You mount a tracking unit on your asset you want to track.
+The camera learns your environment on the fly and builds a map.
+It will offer you the position and orientation of the tracked asset in your map.
+There is no need for markers, beacons or extra installations.
+CHOOSE YOUR INDUSTRY
+INTRA-LOGISTICS
+Track and trace the location of all your assets in warehouses and production areas. Read more…
+SYSTEM INTEGRATORS
+Augment your solution with real-time location information. 
+Read more…
+ROBOTICS & OEMS
+Allow your portable device or mobile robot to know its position indoors. Read more…
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+INTERMODALICS
+HOME
+VISUAL POSITIONING
+WHAT WE DO
+TEAM
+JOIN US!
+CONTACT US
+VISUAL POSITIONING, SLAM
+AND NAVIGATION
+CAMERA BASED NAVIGATION
+We allow your portable device or mobile robot to know its position indoors.
+ We are experts in reliable mapping and visual slam.
+YOUR HARDWARE
+Our software runs on your hardware
+SUPPORT SERVICES
+We offer dedicated engineers to facilitate integration and meet project deadlines
+WORLDWIDE
+We serve customers around the globe
+The Intermodalics Visual Positioning System - VPS - only needs a camera and IMU (Inertial Measurement Unit) to do its magic. Using this sensors set, it will learn and map the environment and locate itself in it. When it revisits a mapped area, the technology will relocate your device instantly in that map.
+Additional onboard sensors (GPS, odometry or laser), can enhance positioning using sensor fusion.
+LOCALIZATION
+Accurately track your position
+Locate with respect to a reference map
+SLAM
+On the fly reference map creation
+Overlay with a floor plan or annotate maps
+manually or based on database information
+Share maps across devices
+Extend and update maps as the environment changes
+Position tracking in a low-light environment.
+Large scale visual map creation & updates (picture scale: supermarket size).
+Product development support
+Visual positioning or V-slam offers the flexibility to work with your specific application. We integrate novel localisation, navigation and slam algorithms with mobile robots, AGV/AMRs or any vehicle. 
+VPS +SLAM, +SCAN, +NAV
+Visual positioning allows your device to localize virtually anything in a map. Navigate a mobile robot, scan a room in 3D or augment your indoor sensors with position information!  We can offer you access to the rich data which vision systems provide.
+OBSTACLE DETECTION, AVOIDANCE AND NAVIGATION
+In combination with 3D cameras, this allows mobile robots to follow a path and detect and avoid obstacles.
+FLOOR PLAN GENERATION AND
+3D RECONSTRUCTION
+Attaching a visual positioning system to a 3D camera allows for mapping rooms in 3D in an affordable way.
+POSITION TRACKING FOR AUGMENTED REALITY AND VR
+Augment mobile devices with position tracking such that they can offer immersive experiences.
+Get in touch… get your product going !
+Name *
+First Name
+Last Name
+Email *
+Company Name *
+Message *
+We typically reply to your question within 1  business day.
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+INTERMODALICS
+HOME
+VISUAL POSITIONING
+WHAT WE DO
+TEAM
+JOIN US!
+CONTACT US
+REAL-TIME
+POSITION TRACKING IN
+INTRALOGISTICS
+TRACK ALL YOUR FLOWS
+Using a small camera, we track and trace the location of all your assets.
+ACCURATE
+cm-range relative accuracy
+
+up to 30cm absolute accuracy
+
+3D position + 3D orientation
+LOW COST
+no beacon or anchor costs
+
+learns & maps on the fly
+
+affordable for warehouses
+ANYWHERE
+indoor and outdoor
+
+in between racks
+expedition - storing - loading areas
+PALLET-LEVEL TRACING
+Track and trace pick-up and drop-off locations of loaded pallets in intralogistics
+FLEET-LEVEL TRACKING
+Augment your existing forklift fleet to track & trace their daily movements
+GOODS-LEVEL TRACING
+When paired with RFID, inbound and outbound goods can be tracked fully automatically
+Our offer
+We provide tracking units that each have a camera with a small computer included.
+You mount a tracking unit on each forklift
+The camera learns your warehouse on the fly
+It will tell your WMS/ERP/YMS where each truck, colli or pallet is moving to.
+Our solution has the same hardware installation cost for 5.000m2 or 100.000m2 
+Position tracking in repetitive environments
+Keeps working in changing environments such as expedition areas
+Getting started
+Starting with Visual Positioning needs only a few steps:
+Map your warehouse by driving around one tracking unit
+Store this visual map on your local map server
+Align and annotate the visual map with a floorplan
+Upload the visual maps to other tracking units
+Show tracking data in a GUI and/or send it to your WMS
+Applications
+In most cases, a real-time localisation system is mounted on the vehicles which are driving around in warehouses or factories. You can use them stand-alone for analyzing heat-maps or spaghetti-diagrams, or integrate them with a Warehouse Management System for track-and-trace purposes. In the latter case, additional automated colli or pallet code scanning is required to link the trace code to the pick-up and drop-of location.
+HEAT MAPS AND SPAGHETTI DIAGRAMS
+TRACK AND TRACING
+INVENTORY LOCATION AND COUNTING
+Get in touch… upgrade your intralogistics !
+Name *
+First Name
+Last Name
+Email *
+Your Company *
+Message *
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+FULL 6D POSITION AND ORIENTATION
+We augment your solution with real-time location information
+ACCURATE
+cm-range relative accuracy
+
+5cm to 30cm absolute accuracy
+
+position + orientation
+OPEN INTERFACE
+easy REST API to rovers
+
+no need for permanent Wifi
+
+multi-rover tracking
+AFFORDABLE
+no beacon or anchor costs
+
+learns & maps on the fly
+
+highly scalable
+Our visual RTLS allows for integration into your application or indoor/outdoor positioning platform, and does not require your customer to invest in antenna or beacon infrastructure. 
+As a software provider, Intermodalics allows you to work with 3rd party sensor sets (camera + IMU) to integrate into your product offering and allows you to get position information such that you can focus on the application logic.
+Our software takes care of the learning & mapping process, real-time location calculations, device management and map updating.
+FOR - LOGISTICS
+Learn more about indoor positioning for logistics :
+LEARN MORE
+LOCALIZATION
+Accurately track your position
+Locate with respect to a reference map
+MAPPING
+Ease of use with on the fly reference map creation
+Overlay with a floor plan or annotate maps
+manually or based on database information
+Share maps across devices
+Extend and update maps
+Position tracking in a low-light environment.
+Large scale map creation & updates (picture scale: supermarket size).
+Integration support
+Visual positioning offers the flexibility to work with your specific application.  We offer the integration support with your tracking platform, WMS solution or customer application and help you choose the best sensor set.
+Typical Applications
+Visual Positioning is best fit for battery-operated assets that get daily charged: mobile robots, indoor vehicles or electrified carts and trolleys. 
+INDOOR VEHICLE POSITION TRACKING
+OR NAVIGATION
+BARCODE SCANNER WITH 3D POSITON INFORMATION
+Get in touch… get started with Visual Positioning !
+Name *
+First Name
+Last Name
+Email *
+Company Name *
+Message *
+We typically reply to your question within 1 business day.
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+Since 2010, Intermodalics is developing software capabilities for autonomous and intelligent systems. Our customers are high-tech companies, start-ups and research institutes world-wide.
+ ROBOTICS
+Today, most robots are not aware of what’s happening around them. They can’t see who or what’s nearby and fail to detect or respond to changes in the environment. We add awareness and decision-making capabilities which enable robots to operate more autonomously.
+DIGITAL INTELLIGENCE
+Our customers are looking for ways to give meaning to their data. With sensors becoming ubiquitous, and providing a continuous stream of data, they need systems that can process and take actions on that data.  We create intelligent software that gives us meaningful data:  find out where things and people are, and support them in getting better together.
+VISUAL POSITIONING SOLUTIONS
+Using a small camera, our VPS software learns your environment and knows its position and orientation in that environment. We augment existing infrastructure and assets with position information and integrate it with the internet-of-things.
+MARKETS AND APPLICATIONS - SOME EXAMPLES OF OUR WORK
+AUGMENTED REALITY
+We supported the Project Tango team to track the 3D motion of a mobile device using it's own camera's (VIO). Applications are 3D modeling, indoor navigation and augmented reality.
+ROBOTIC SHELF INSPECTION AND PICKING
+We assist our customers in scanning, taking inventory and picking from shelves in warehouses and shops.
+SAFE POWERED PYLON INSPECTIONS
+Together with our research partners,  KU Leuven and UGent, we performed drone missions to safely inspect the insulation of powered electricity pylons of Belgium's grid operator Elia.
+SUPPORTING SPACE MISSIONS
+For over five years, we support the USA space agency NASA at Goddard Space Flight Centre, Greenbelt, Maryland. Intermodalics supports the NASA Robotics Demonstration and Test team of Goddard Satellite Servicing Projects Division on-site and off-site with designing and upgrading their robotic technology software.
+DEEP LEARNING
+Deep Learning offers the most scalable and reliable solution to date for object detection and classification in images. Our team is highly qualified for dataset generation, designing convolutional neural network (CNN) architectures and network training.
+INDOOR LOCALISATION AND STOCK COUNTING
+We developed for logistics service provider H.Essers a vision based indoor positioning system and stock counting solution to enable automated guided vehicles (AGV) to autonomously localise pallets in a warehouse and to compare the information with the stock in a warehouse management system (WMS). 
+TANGO ROS STREAMER
+We created an Android App which streams Tango VIO and 3D scanning data to ROS ! The app and code are freely available for download in the Play Store and Github. More information can be found on the ROS wiki page.
+GET IN CONTACT
+Share with us your ideas! Fill out the form below and we will get back to you.
+Name *
+First Name
+Last Name
+Email Address *
+Your interest *
+Your idea *
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+OUR TEAM DNA
+A team of world-class robotics experts
+at your service.
+DEEP TECH
+PhDMSc
+BROAD TECH
+RoboticsComputer ScienceControl & AutomationMath. EngineeringElectrical Engineering
+INTERNATIONAL
+BelgiumGermanyFranceSouth KoreaRest of Europe
+Peter Soetens, CEO
+Dominick Vanthienen, CTO
+Susanne Knösels, HR & Office Manager
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+At Intermodalics, we believe that you should enjoy what you do. For us, work is about having fun, being challenged, and finding balance. We define our success based on both the quality of the work we deliver, and the quality of the lives we lead.
+
+When you work at Intermodalics, you will help solve problems on the edge of what is possible. You will have time to take space from difficult problems, to mull things over in the shower, and to think deeply about your work. We focus on making the right decisions and on the quality of our products.
+OPEN POSITIONS
+Free solicitation - typical profile we are looking for
+VSLAM Engineer
+Senior Software Developer Robotics
+Senior Computer Vision Engineer
+OUR VALUES : FLOW!
+FLOW defines who we are, what we do and how we interact with our colleagues and customers. Especially in the most challenging circumstances.
+Flexibility
+In a high tech environment things change continuously, we iterate and adjust to overcome the problems we encounter. We realize that your personal life is no different and support you fully in finding a healthy work-life balance. Telework is just one of the ways this is implemented.
+Open Communication
+You can get very little done when there’s an elephant in the room ! Things don’t always work out as intended, or expectations were not alligned. We’re sharing our thoughts, and  respect all opinions.
+Learning
+Our team is diverse in terms of expertise and culture. But our common culture is that we encourage everybody to learn from each other. We have regular FLOW-moments to enhance this knowledge transfer, such as Lightning talks and Academy sessions.
+Working Together
+We are working on things no single person can achieve alone. We always team up to find the best mix of competences for a given task. Things are always better when we’re working together !
+  Location
+Located in Leuven, a small city in Belgium known for its universities and student life, we are at a stone's throw from Brussels. Our location is perfect to discover Europe in your free time. The majority of our employees come to work by bike or public transportation. 
+EMPLOYEE TESTIMONIALS
+We would like to share some employee testimonials with you because we value our employee’s happiness. 
+And yes, we are proud when we receive positive feedback from their side! 
+Johannes, who did his internship in the team in 2018, wrote the following in his report:
+”During these eight months, I learned a lot about multiple computer vision concepts, but also about the general working  of a private company and the working in a software developer team. I realize that I was given a lot of opportunities, responsibility and trust. Having access to the full code base and being allowed to work in it, is something I don't expect  to  be possible in most companies. The guidance of my supervisors and other members of the developer team, was great.  They were involved, knew what I was doing, helped in case of problems, brought ideas and steered me to the right direction if needed, while still giving me a lot of  freedom and responsibility. I could not wish for a better internship environment.”
+  “At the company, we're part of an amazing team working on fascinating projects that push the limit of what's possible in robotics. We have a unique environment for professional and personal growth, and we take great care in making this the best possible place to work in.”
+Adolfo - Senior Roboticist
+"My position is a mix of technical and commercial responsibilities which makes my job interesting and challenging. I love the variety and opportunities and I get to learn while doing.”
+Rob - Application Support engineer
+"Working at Intermodalics allowed me to improve my skills, while enjoying a friendly and respectful environment."
+Ana Rita - Application support engineer
+“As a world traveler Intermodalics gives me the opportunity to work remotely, even from the other side of the globe. Where else can you say working feels like vacation?”
+Achim - Roboticist
+<br/>
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+SHARE WITH US YOUR IDEAS!
+From invention to
+market expansion
+WHAT ARE YOUR MILESTONES?
+From next year to
+next week  
+TELL US WHAT
+YOU NEED !
+From prototype to
+tailor made software
+Name *
+First Name
+Last Name
+Email Address *
+Your interest *
+Your question *
+CALL OR VISIT
+Gaston Geenslaan 9
+3001, Leuven, Belgium
++32 16 584 180
+ EMAIL
+General Inquiries
+info@intermodalics.eu
+Development Team
+development@intermodalics.eu
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.
+VISUAL POSITIONING, SLAM
+AND NAVIGATION
+CAMERA BASED NAVIGATION
+We allow your portable device or mobile robot to know its position indoors.
+ We are experts in reliable mapping and visual slam.
+YOUR HARDWARE
+Our software runs on your hardware
+SUPPORT SERVICES
+We offer dedicated engineers to facilitate integration and meet project deadlines
+WORLDWIDE
+We serve customers around the globe
+The Intermodalics Visual Positioning System - VPS - only needs a camera and IMU (Inertial Measurement Unit) to do its magic. Using this sensors set, it will learn and map the environment and locate itself in it. When it revisits a mapped area, the technology will relocate your device instantly in that map.
+Additional onboard sensors (GPS, odometry or laser), can enhance positioning using sensor fusion.
+LOCALIZATION
+Accurately track your position
+Locate with respect to a reference map
+SLAM
+On the fly reference map creation
+Overlay with a floor plan or annotate maps
+manually or based on database information
+Share maps across devices
+Extend and update maps as the environment changes
+Position tracking in a low-light environment.
+Large scale visual map creation & updates (picture scale: supermarket size).
+Product development support
+Visual positioning or V-slam offers the flexibility to work with your specific application. We integrate novel localisation, navigation and slam algorithms with mobile robots, AGV/AMRs or any vehicle. 
+VPS +SLAM, +SCAN, +NAV
+Visual positioning allows your device to localize virtually anything in a map. Navigate a mobile robot, scan a room in 3D or augment your indoor sensors with position information!  We can offer you access to the rich data which vision systems provide.
+OBSTACLE DETECTION, AVOIDANCE AND NAVIGATION
+In combination with 3D cameras, this allows mobile robots to follow a path and detect and avoid obstacles.
+FLOOR PLAN GENERATION AND
+3D RECONSTRUCTION
+Attaching a visual positioning system to a 3D camera allows for mapping rooms in 3D in an affordable way.
+POSITION TRACKING FOR AUGMENTED REALITY AND VR
+Augment mobile devices with position tracking such that they can offer immersive experiences.
+Get in touch… get your product going !
+Name *
+First Name
+Last Name
+Email *
+Company Name *
+Message *
+We typically reply to your question within 1  business day.
+© Intermodalics 2022
+By using this website, you agree to our use of cookies. We use cookies to provide you with a great experience and to help our website run effectively.

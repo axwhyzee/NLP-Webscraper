@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://www.intermodalics.eu/", "label": "https://www.intermodalics.eu/", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/#", "label": "https://www.intermodalics.eu/#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps", "label": "https://www.intermodalics.eu/vps", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "label": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps/logistics", "label": "https://www.intermodalics.eu/vps/logistics", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/indoor-positioning", "label": "https://www.intermodalics.eu/indoor-positioning", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/what-we-do", "label": "https://www.intermodalics.eu/what-we-do", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/team", "label": "https://www.intermodalics.eu/team", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/join-us", "label": "https://www.intermodalics.eu/join-us", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/contact", "label": "https://www.intermodalics.eu/contact", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/visual-positioning-technology", "label": "https://www.intermodalics.eu/visual-positioning-technology", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps#", "label": "https://www.intermodalics.eu/vps#", "shape": "dot", "size": 10}, {"id": "https://github.com/intermodalics", "label": "https://github.com/intermodalics", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps#header", "label": "https://www.intermodalics.eu/vps#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/visual-positioning-slam-navigation#", "label": "https://www.intermodalics.eu/visual-positioning-slam-navigation#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/project-tango", "label": "https://www.intermodalics.eu/project-tango", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/visual-positioning-slam-navigation#header", "label": "https://www.intermodalics.eu/visual-positioning-slam-navigation#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps/logistics#", "label": "https://www.intermodalics.eu/vps/logistics#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/vps/logistics#header", "label": "https://www.intermodalics.eu/vps/logistics#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/indoor-positioning#", "label": "https://www.intermodalics.eu/indoor-positioning#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/indoor-positioning#header", "label": "https://www.intermodalics.eu/indoor-positioning#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/what-we-do#", "label": "https://www.intermodalics.eu/what-we-do#", "shape": "dot", "size": 10}, {"id": "http://pickit3d.com/", "label": "http://pickit3d.com/", "shape": "dot", "size": 10}, {"id": "http://www.elia.be/", "label": "http://www.elia.be/", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/markets-and-applications/2f2cau7sor58w1l7eqzobzw0alda3h", "label": "https://www.intermodalics.eu/markets-and-applications/2f2cau7sor58w1l7eqzobzw0alda3h", "shape": "dot", "size": 10}, {"id": "http://sspd.gsfc.nasa.gov/", "label": "http://sspd.gsfc.nasa.gov/", "shape": "dot", "size": 10}, {"id": "https://www.essers.com/en/innovation-leads-h-essers-to-100-stock-accuracy-2/", "label": "https://www.essers.com/en/innovation-leads-h-essers-to-100-stock-accuracy-2/", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/markets-and-applications/2018/4/13/tango-ros-streamer", "label": "https://www.intermodalics.eu/markets-and-applications/2018/4/13/tango-ros-streamer", "shape": "dot", "size": 10}, {"id": "https://github.com/Intermodalics/tango_ros", "label": "https://github.com/Intermodalics/tango_ros", "shape": "dot", "size": 10}, {"id": "http://wiki.ros.org/tango_ros_streamer", "label": "http://wiki.ros.org/tango_ros_streamer", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/what-we-do#header", "label": "https://www.intermodalics.eu/what-we-do#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/team#", "label": "https://www.intermodalics.eu/team#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/join-us#", "label": "https://www.intermodalics.eu/join-us#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/senior-slam-engineer", "label": "https://www.intermodalics.eu/senior-slam-engineer", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/senior-software-developer-robotics", "label": "https://www.intermodalics.eu/senior-software-developer-robotics", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/senior-computer-vision-engineer-2", "label": "https://www.intermodalics.eu/senior-computer-vision-engineer-2", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/join-us#header", "label": "https://www.intermodalics.eu/join-us#header", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/contact#", "label": "https://www.intermodalics.eu/contact#", "shape": "dot", "size": 10}, {"id": "https://www.intermodalics.eu/contact#header", "label": "https://www.intermodalics.eu/contact#header", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/#", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/vps", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/vps/logistics", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/indoor-positioning", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/what-we-do", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/team", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/join-us", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/contact", "weight": 1}, {"from": "https://www.intermodalics.eu/", "label": 1, "to": "https://www.intermodalics.eu/visual-positioning-technology", "weight": 1}, {"from": "https://www.intermodalics.eu/vps", "label": 1, "to": "https://www.intermodalics.eu/vps#", "weight": 1}, {"from": "https://www.intermodalics.eu/vps", "label": 1, "to": "https://github.com/intermodalics", "weight": 1}, {"from": "https://www.intermodalics.eu/vps", "label": 1, "to": "https://www.intermodalics.eu/vps#header", "weight": 1}, {"from": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "label": 1, "to": "https://www.intermodalics.eu/visual-positioning-slam-navigation#", "weight": 1}, {"from": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "label": 1, "to": "https://www.intermodalics.eu/project-tango", "weight": 1}, {"from": "https://www.intermodalics.eu/visual-positioning-slam-navigation", "label": 1, "to": "https://www.intermodalics.eu/visual-positioning-slam-navigation#header", "weight": 1}, {"from": "https://www.intermodalics.eu/vps/logistics", "label": 1, "to": "https://www.intermodalics.eu/vps/logistics#", "weight": 1}, {"from": "https://www.intermodalics.eu/vps/logistics", "label": 1, "to": "https://www.intermodalics.eu/vps/logistics#header", "weight": 1}, {"from": "https://www.intermodalics.eu/indoor-positioning", "label": 1, "to": "https://www.intermodalics.eu/indoor-positioning#", "weight": 1}, {"from": "https://www.intermodalics.eu/indoor-positioning", "label": 1, "to": "https://www.intermodalics.eu/indoor-positioning#header", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://www.intermodalics.eu/what-we-do#", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "http://pickit3d.com/", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "http://www.elia.be/", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://www.intermodalics.eu/markets-and-applications/2f2cau7sor58w1l7eqzobzw0alda3h", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "http://sspd.gsfc.nasa.gov/", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://www.essers.com/en/innovation-leads-h-essers-to-100-stock-accuracy-2/", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://www.intermodalics.eu/markets-and-applications/2018/4/13/tango-ros-streamer", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://github.com/Intermodalics/tango_ros", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "http://wiki.ros.org/tango_ros_streamer", "weight": 1}, {"from": "https://www.intermodalics.eu/what-we-do", "label": 1, "to": "https://www.intermodalics.eu/what-we-do#header", "weight": 1}, {"from": "https://www.intermodalics.eu/team", "label": 1, "to": "https://www.intermodalics.eu/team#", "weight": 1}, {"from": "https://www.intermodalics.eu/join-us", "label": 1, "to": "https://www.intermodalics.eu/join-us#", "weight": 1}, {"from": "https://www.intermodalics.eu/join-us", "label": 1, "to": "https://www.intermodalics.eu/senior-slam-engineer", "weight": 1}, {"from": "https://www.intermodalics.eu/join-us", "label": 1, "to": "https://www.intermodalics.eu/senior-software-developer-robotics", "weight": 1}, {"from": "https://www.intermodalics.eu/join-us", "label": 1, "to": "https://www.intermodalics.eu/senior-computer-vision-engineer-2", "weight": 1}, {"from": "https://www.intermodalics.eu/join-us", "label": 1, "to": "https://www.intermodalics.eu/join-us#header", "weight": 1}, {"from": "https://www.intermodalics.eu/contact", "label": 1, "to": "https://www.intermodalics.eu/contact#", "weight": 1}, {"from": "https://www.intermodalics.eu/contact", "label": 1, "to": "https://www.intermodalics.eu/contact#header", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

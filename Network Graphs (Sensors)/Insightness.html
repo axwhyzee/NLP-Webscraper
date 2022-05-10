@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://www.insightness.com/", "label": "https://www.insightness.com/", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#content", "label": "https://www.insightness.com/#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#aboutus", "label": "https://www.insightness.com/#aboutus", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#team", "label": "https://www.insightness.com/#team", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#testimonials", "label": "https://www.insightness.com/#testimonials", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#latestnews", "label": "https://www.insightness.com/#latestnews", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#contact", "label": "https://www.insightness.com/#contact", "shape": "dot", "size": 10}, {"id": "http://eepurl.com/_5gy1", "label": "http://eepurl.com/_5gy1", "shape": "dot", "size": 10}, {"id": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "label": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#content", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#aboutus", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#team", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#testimonials", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#latestnews", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "https://www.insightness.com/#contact", "weight": 1}, {"from": "https://www.insightness.com/", "label": 1, "to": "http://eepurl.com/_5gy1", "weight": 1}, {"from": "http://eepurl.com/_5gy1", "label": 1, "to": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

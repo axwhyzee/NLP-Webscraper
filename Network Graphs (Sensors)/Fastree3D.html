@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vis-network@latest/styles/vis-network.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vis-network@latest/dist/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://fastree3d.com/", "label": "https://fastree3d.com/", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/solutions/", "label": "https://fastree3d.com/solutions/", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/solutions/#product", "label": "https://fastree3d.com/solutions/#product", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/solutions/#how-does-it-work", "label": "https://fastree3d.com/solutions/#how-does-it-work", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/solutions/#applications", "label": "https://fastree3d.com/solutions/#applications", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/solutions/#services", "label": "https://fastree3d.com/solutions/#services", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/career/", "label": "https://fastree3d.com/career/", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/career/#why-work-for-us", "label": "https://fastree3d.com/career/#why-work-for-us", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/career/#opportunities", "label": "https://fastree3d.com/career/#opportunities", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/media/", "label": "https://fastree3d.com/media/", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/media/#press", "label": "https://fastree3d.com/media/#press", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/media/#media-downloads", "label": "https://fastree3d.com/media/#media-downloads", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/contact/", "label": "https://fastree3d.com/contact/", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/career/#opportunities", "label": "http://fastree3d.com/career/#opportunities", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/solutions/#applications", "label": "http://fastree3d.com/solutions/#applications", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/solutions/#services", "label": "http://fastree3d.com/solutions/#services", "shape": "dot", "size": 10}, {"id": "http://www.int.studio/", "label": "http://www.int.studio/", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/contact/?l=contact", "label": "http://fastree3d.com/contact/?l=contact", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/solutions/?l=services", "label": "http://fastree3d.com/solutions/?l=services", "shape": "dot", "size": 10}, {"id": "http://fastree3d.com/solutions/?l=product", "label": "http://fastree3d.com/solutions/?l=product", "shape": "dot", "size": 10}, {"id": "https://fastree3d.com/career/?l=opportunities", "label": "https://fastree3d.com/career/?l=opportunities", "shape": "dot", "size": 10}, {"id": "https://www.rts.ch/play/radio/neophiles/audio/la-vision---fastree3d?id=7535146\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "label": "https://www.rts.ch/play/radio/neophiles/audio/la-vision---fastree3d?id=7535146\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "shape": "dot", "size": 10}, {"id": "https://www.rts.ch/play/tv/mise-au-point/video/idees-suisses-pour-une-voiture-autonome?id=9400741\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "label": "https://www.rts.ch/play/tv/mise-au-point/video/idees-suisses-pour-une-voiture-autonome?id=9400741\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "shape": "dot", "size": 10}, {"id": "https://www.int.studio/", "label": "https://www.int.studio/", "shape": "dot", "size": 10}, {"id": "https://vimeo.com/intstudio", "label": "https://vimeo.com/intstudio", "shape": "dot", "size": 10}, {"id": "https://www.int.studio/fr/", "label": "https://www.int.studio/fr/", "shape": "dot", "size": 10}, {"id": "https://vimeo.com/647272982/", "label": "https://vimeo.com/647272982/", "shape": "dot", "size": 10}, {"id": "https://www.ecal.ch/fr/100/homepage", "label": "https://www.ecal.ch/fr/100/homepage", "shape": "dot", "size": 10}, {"id": "https://fragment.in/", "label": "https://fragment.in/", "shape": "dot", "size": 10}, {"id": "https://www.epfl.ch/schools/enac/education/architecture-en/", "label": "https://www.epfl.ch/schools/enac/education/architecture-en/", "shape": "dot", "size": 10}, {"id": "https://2020.giff.ch/giff-pro/", "label": "https://2020.giff.ch/giff-pro/", "shape": "dot", "size": 10}, {"id": "https://www.viennadesignweek.at/", "label": "https://www.viennadesignweek.at/", "shape": "dot", "size": 10}, {"id": "https://www.swiss-innovation.com/", "label": "https://www.swiss-innovation.com/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/interactive-replicas-v.2/", "label": "https://int.studio/works/interactive-replicas-v.2/", "shape": "dot", "size": 10}, {"id": "https://www.hochparterre.ch/diebesten/blog/post/detail/das-sind-die-besten-2020/1606757643/", "label": "https://www.hochparterre.ch/diebesten/blog/post/detail/das-sind-die-besten-2020/1606757643/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/m3-stratorielle/", "label": "https://int.studio/works/m3-stratorielle/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/interface-for-outdoor-interactive-tactile-screen/", "label": "https://int.studio/works/interface-for-outdoor-interactive-tactile-screen/", "shape": "dot", "size": 10}, {"id": "http://montbuet.net/", "label": "http://montbuet.net/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/cometes/", "label": "https://int.studio/works/cometes/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/lcd-lumina-chroma-data/", "label": "https://int.studio/works/lcd-lumina-chroma-data/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/shadow-of-drones/", "label": "https://int.studio/works/shadow-of-drones/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/generative-audioguide/", "label": "https://int.studio/works/generative-audioguide/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/interactive-replicas/", "label": "https://int.studio/works/interactive-replicas/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/stairs/", "label": "https://int.studio/works/stairs/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/fotomat/", "label": "https://int.studio/works/fotomat/", "shape": "dot", "size": 10}, {"id": "http://www.mcah.ch/accueil/", "label": "http://www.mcah.ch/accueil/", "shape": "dot", "size": 10}, {"id": "http://www.ville-ge.ch/meg/en/", "label": "http://www.ville-ge.ch/meg/en/", "shape": "dot", "size": 10}, {"id": "https://www.centrephotogeneve.ch/", "label": "https://www.centrephotogeneve.ch/", "shape": "dot", "size": 10}, {"id": "https://www.antigel.ch/", "label": "https://www.antigel.ch/", "shape": "dot", "size": 10}, {"id": "https://www.centrepompidou.fr/", "label": "https://www.centrepompidou.fr/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/ptyxel/", "label": "https://int.studio/works/ptyxel/", "shape": "dot", "size": 10}, {"id": "https://www.arte.tv/fr/", "label": "https://www.arte.tv/fr/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/the-guard/", "label": "https://int.studio/works/the-guard/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/a16/", "label": "https://int.studio/works/a16/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/mont-buet/", "label": "https://int.studio/works/mont-buet/", "shape": "dot", "size": 10}, {"id": "https://www.stcc.ch/fr/", "label": "https://www.stcc.ch/fr/", "shape": "dot", "size": 10}, {"id": "https://www.sicpa.com/", "label": "https://www.sicpa.com/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/on-running/", "label": "https://int.studio/works/on-running/", "shape": "dot", "size": 10}, {"id": "https://int.studio/works/hermes/", "label": "https://int.studio/works/hermes/", "shape": "dot", "size": 10}, {"id": "https://www.archeotech.ch/", "label": "https://www.archeotech.ch/", "shape": "dot", "size": 10}, {"id": "https://www.qoqa.ch/fr", "label": "https://www.qoqa.ch/fr", "shape": "dot", "size": 10}, {"id": "https://www.24heures.ch/que-les-lumieres-soient-sur-lausanne-846382351813", "label": "https://www.24heures.ch/que-les-lumieres-soient-sur-lausanne-846382351813", "shape": "dot", "size": 10}, {"id": "https://competitions.espazium.ch/fr/concours/decides/identite-de-la-nouvelle-ligne-du-m3-lausanne", "label": "https://competitions.espazium.ch/fr/concours/decides/identite-de-la-nouvelle-ligne-du-m3-lausanne", "shape": "dot", "size": 10}, {"id": "https://www.heidi.news/culture/la-technologie-permet-au-design-suisse-de-briller-par-sa-durabilite", "label": "https://www.heidi.news/culture/la-technologie-permet-au-design-suisse-de-briller-par-sa-durabilite", "shape": "dot", "size": 10}, {"id": "https://www.24heures.ch/culture/arts-visuels/elysee-mudac-parcourent-virtuellement-grce-couleurs/story/24857428?fbclid=IwAR1dNEZ_kIuvRgpqfCQ72JbPSGY9e9FNe7nQkUaYPP4Xy2d-WQ82iO4AOdU", "label": "https://www.24heures.ch/culture/arts-visuels/elysee-mudac-parcourent-virtuellement-grce-couleurs/story/24857428?fbclid=IwAR1dNEZ_kIuvRgpqfCQ72JbPSGY9e9FNe7nQkUaYPP4Xy2d-WQ82iO4AOdU", "shape": "dot", "size": 10}, {"id": "https://www.24heures.ch/culture/arts-visuels/racontons-nouvelles-technologies/story/23924387", "label": "https://www.24heures.ch/culture/arts-visuels/racontons-nouvelles-technologies/story/23924387", "shape": "dot", "size": 10}, {"id": "https://creativemornings.com/talks/david-colombini-marc-dubois/1", "label": "https://creativemornings.com/talks/david-colombini-marc-dubois/1", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/solutions/", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/solutions/#product", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/solutions/#how-does-it-work", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/solutions/#applications", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/solutions/#services", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/career/", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/career/#why-work-for-us", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/career/#opportunities", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/media/", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/media/#press", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/media/#media-downloads", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "https://fastree3d.com/contact/", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "http://fastree3d.com/career/#opportunities", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "http://fastree3d.com/solutions/#applications", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "http://fastree3d.com/solutions/#services", "weight": 1}, {"from": "https://fastree3d.com/", "label": 1, "to": "http://www.int.studio/", "weight": 1}, {"from": "https://fastree3d.com/solutions/", "label": 1, "to": "http://fastree3d.com/contact/?l=contact", "weight": 1}, {"from": "https://fastree3d.com/solutions/", "label": 1, "to": "http://fastree3d.com/solutions/?l=services", "weight": 1}, {"from": "https://fastree3d.com/solutions/", "label": 1, "to": "http://fastree3d.com/solutions/?l=product", "weight": 1}, {"from": "https://fastree3d.com/career/", "label": 1, "to": "https://fastree3d.com/career/?l=opportunities", "weight": 1}, {"from": "https://fastree3d.com/media/", "label": 1, "to": "https://www.rts.ch/play/radio/neophiles/audio/la-vision---fastree3d?id=7535146\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "weight": 1}, {"from": "https://fastree3d.com/media/", "label": 1, "to": "https://www.rts.ch/play/tv/mise-au-point/video/idees-suisses-pour-une-voiture-autonome?id=9400741\u0026station=a9e7621504c6959e35c3ecbe7f6bed0446cdf8da", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.int.studio/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://vimeo.com/intstudio", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.int.studio/fr/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://vimeo.com/647272982/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.ecal.ch/fr/100/homepage", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://fragment.in/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.epfl.ch/schools/enac/education/architecture-en/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://2020.giff.ch/giff-pro/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.viennadesignweek.at/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.swiss-innovation.com/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/interactive-replicas-v.2/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.hochparterre.ch/diebesten/blog/post/detail/das-sind-die-besten-2020/1606757643/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/m3-stratorielle/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/interface-for-outdoor-interactive-tactile-screen/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "http://montbuet.net/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/cometes/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/lcd-lumina-chroma-data/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/shadow-of-drones/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/generative-audioguide/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/interactive-replicas/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/stairs/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/fotomat/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "http://www.mcah.ch/accueil/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "http://www.ville-ge.ch/meg/en/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.centrephotogeneve.ch/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.antigel.ch/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.centrepompidou.fr/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/ptyxel/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.arte.tv/fr/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/the-guard/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/a16/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/mont-buet/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.stcc.ch/fr/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.sicpa.com/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/on-running/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://int.studio/works/hermes/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.archeotech.ch/", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.qoqa.ch/fr", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.24heures.ch/que-les-lumieres-soient-sur-lausanne-846382351813", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://competitions.espazium.ch/fr/concours/decides/identite-de-la-nouvelle-ligne-du-m3-lausanne", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.heidi.news/culture/la-technologie-permet-au-design-suisse-de-briller-par-sa-durabilite", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.24heures.ch/culture/arts-visuels/elysee-mudac-parcourent-virtuellement-grce-couleurs/story/24857428?fbclid=IwAR1dNEZ_kIuvRgpqfCQ72JbPSGY9e9FNe7nQkUaYPP4Xy2d-WQ82iO4AOdU", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://www.24heures.ch/culture/arts-visuels/racontons-nouvelles-technologies/story/23924387", "weight": 1}, {"from": "http://www.int.studio/", "label": 1, "to": "https://creativemornings.com/talks/david-colombini-marc-dubois/1", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": true,
+            "type": "dynamic"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

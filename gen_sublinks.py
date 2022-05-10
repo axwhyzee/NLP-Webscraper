@@ -34,32 +34,31 @@ invalid_sites = [  'youtube.com',
                    'apple.com',
                    'knowable.fyi'
                    'camerapositioning.io',
-                   '/about',
-                   '/team',
-                   '/join-us',
-                   '/contact',
-                   '/support',
-                   '/careers',
-                   '/warranty',
-                   '/shipment',
-                   '/payment-methods',
-                   '/help',
-                   '/privacy-policy'
-                   '/copyright'
                 ]
 
-invalid_ext = ['.jpg', '.jpeg', '.svg', '.png', '.js']
+invalid_ext = ['.jpg', '.jpeg', '.svg', '.png', '.mp4',
+               '.ch', '/ch',
+               '.jp', '/jp',
+               '.zh', '/zh',
+               '.es', '/es',
+               '.de', '/de',
+               '.ko', '/ko',
+               '.fr', '/fr',
+               '/about', '/team', '/join-us', '/jobs', '/careers',
+               '/contact', '/support', '/warranty', '/shipment', '/payment-methods', '/downloads', '/help',
+               '/terms', '/privacy', '/privacy-policy', '/copyright', 
+               ]
 
 def check_link(url, s):
     if not s:
         return ''
-
+    
     if url+'#'==s or url+'/#'==s:
         return ''
     
     if 'http' not in s:
         if (s[0] == '/' or s[0] == '#') and len(s)>1:
-            return (url + s).rstrip('/')
+            return (url + s).rstrip('#').rstrip('/')
         return ''
     
     for inv in invalid_sites:
@@ -70,12 +69,11 @@ def check_link(url, s):
         if s.endswith(ext):
             return ''
 
-    return s.rstrip('/')
+    return s.rstrip('#').rstrip('/')
 
 def get_sublinks(url):
-    driver.get(url)
-     
     try:
+        driver.get(url)
         elems = driver.find_elements_by_tag_name('a')
         for elem in elems:
             href = check_link(url, elem.get_attribute('href'))
@@ -88,22 +86,22 @@ def get_sublinks(url):
 
 driver = webdriver.Chrome(PATH)
 
+# timeout if doesn't load within 20s
+#driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
+
 options = webdriver.ChromeOptions()
 options.add_argument('--enable-javascript')
 options.add_argument('--lang=en') 
 options.add_argument('headless')
 
-
 df = pd.read_excel('companies-sensor.xlsx')
-print(df.shape)
 df.dropna(axis=0, inplace=True)
 df['actual_url'] = df['actual_url'].apply(lambda x:x.rstrip('/'))
-print(df.shape)
-print()
 
-for i, row in df.iloc[2:].iterrows():
+for i, row in df.iloc[11:].iterrows():
     print('##############################')
-    print('Company: {}\nRoot   : {}'.format(row['Company Name'], row['actual_url']))
+    print('Company:', row['Company Name'])
+    print('Root   :', row['actual_url'])
     print('##############################\n')
     url = row['actual_url']
     SITES.append(url)

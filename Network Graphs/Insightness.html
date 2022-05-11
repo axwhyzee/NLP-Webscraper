@@ -1,0 +1,204 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+        #loadingBar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width: 100vw;
+            height: 100vh;
+            background-color:rgba(200,200,200,0.8);
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            transition: all 0.5s ease;
+            opacity:1;
+        }
+
+        #bar {
+            position:absolute;
+            top:0px;
+            left:0px;
+            width:20px;
+            height:20px;
+            margin:auto auto auto auto;
+            border-radius:11px;
+            border:2px solid rgba(30,30,30,0.05);
+            background: rgb(0, 173, 246); /* Old browsers */
+            box-shadow: 2px 0px 4px rgba(0,0,0,0.4);
+        }
+
+        #border {
+            position:absolute;
+            top:10px;
+            left:10px;
+            width:500px;
+            height:23px;
+            margin:auto auto auto auto;
+            box-shadow: 0px 0px 4px rgba(0,0,0,0.2);
+            border-radius:10px;
+        }
+
+        #text {
+            position:absolute;
+            top:8px;
+            left:530px;
+            width:30px;
+            height:50px;
+            margin:auto auto auto auto;
+            font-size:22px;
+            color: #000000;
+        }
+
+        div.outerBorder {
+            position:relative;
+            top:400px;
+            width:600px;
+            height:44px;
+            margin:auto auto auto auto;
+            border:8px solid rgba(0,0,0,0.1);
+            background: rgb(252,252,252); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(252,252,252,1) 0%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(252,252,252,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(252,252,252,1) 0%,rgba(237,237,237,1) 100%); /* W3C */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfcfc', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+            border-radius:72px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        }
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+<div id="loadingBar">
+    <div class="outerBorder">
+        <div id="text">0%</div>
+        <div id="border">
+            <div id="bar"></div>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://www.insightness.com", "label": "https://www.insightness.com", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#content", "label": "https://www.insightness.com/#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#aboutus", "label": "https://www.insightness.com/#aboutus", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#team", "label": "https://www.insightness.com/#team", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#testimonials", "label": "https://www.insightness.com/#testimonials", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#latestnews", "label": "https://www.insightness.com/#latestnews", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#contact", "label": "https://www.insightness.com/#contact", "shape": "dot", "size": 10}, {"id": "http://eepurl.com/_5gy1", "label": "http://eepurl.com/_5gy1", "shape": "dot", "size": 10}, {"id": "http://eepurl.com/bfVEvj", "label": "http://eepurl.com/bfVEvj", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=484", "label": "https://www.insightness.com/?p=484", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=475", "label": "https://www.insightness.com/?p=475", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=472", "label": "https://www.insightness.com/?p=472", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=436", "label": "https://www.insightness.com/?p=436", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=426", "label": "https://www.insightness.com/?p=426", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=417", "label": "https://www.insightness.com/?p=417", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=397", "label": "https://www.insightness.com/?p=397", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=406", "label": "https://www.insightness.com/?p=406", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=401", "label": "https://www.insightness.com/?p=401", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=361", "label": "https://www.insightness.com/?p=361", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/#carousel-homepage-latestnews", "label": "https://www.insightness.com/#carousel-homepage-latestnews", "shape": "dot", "size": 10}, {"id": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "label": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=484#content", "label": "https://www.insightness.com/?p=484#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?author=6", "label": "https://www.insightness.com/?author=6", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/pdf/JobProfile-CVEngineer.pdf", "label": "https://www.insightness.com/files/pdf/JobProfile-CVEngineer.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/pdf/JobProfile-OfficeManager.pdf", "label": "https://www.insightness.com/files/pdf/JobProfile-OfficeManager.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=117", "label": "https://www.insightness.com/?cat=117", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=job", "label": "https://www.insightness.com/?tag=job", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=position", "label": "https://www.insightness.com/?tag=position", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=recruiting", "label": "https://www.insightness.com/?tag=recruiting", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=team", "label": "https://www.insightness.com/?tag=team", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=202004", "label": "https://www.insightness.com/?m=202004", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201907", "label": "https://www.insightness.com/?m=201907", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201901", "label": "https://www.insightness.com/?m=201901", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201804", "label": "https://www.insightness.com/?m=201804", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201712", "label": "https://www.insightness.com/?m=201712", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201709", "label": "https://www.insightness.com/?m=201709", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201707", "label": "https://www.insightness.com/?m=201707", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201703", "label": "https://www.insightness.com/?m=201703", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201701", "label": "https://www.insightness.com/?m=201701", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201610", "label": "https://www.insightness.com/?m=201610", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201609", "label": "https://www.insightness.com/?m=201609", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201604", "label": "https://www.insightness.com/?m=201604", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201602", "label": "https://www.insightness.com/?m=201602", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201601", "label": "https://www.insightness.com/?m=201601", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201512", "label": "https://www.insightness.com/?m=201512", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201511", "label": "https://www.insightness.com/?m=201511", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201508", "label": "https://www.insightness.com/?m=201508", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201507", "label": "https://www.insightness.com/?m=201507", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201505", "label": "https://www.insightness.com/?m=201505", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201504", "label": "https://www.insightness.com/?m=201504", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201503", "label": "https://www.insightness.com/?m=201503", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201501", "label": "https://www.insightness.com/?m=201501", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?m=201410", "label": "https://www.insightness.com/?m=201410", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=12", "label": "https://www.insightness.com/?cat=12", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=20", "label": "https://www.insightness.com/?cat=20", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=46", "label": "https://www.insightness.com/?cat=46", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=38", "label": "https://www.insightness.com/?cat=38", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=78", "label": "https://www.insightness.com/?cat=78", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=90", "label": "https://www.insightness.com/?cat=90", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=24", "label": "https://www.insightness.com/?cat=24", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=67", "label": "https://www.insightness.com/?cat=67", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=4", "label": "https://www.insightness.com/?cat=4", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=138", "label": "https://www.insightness.com/?cat=138", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=62", "label": "https://www.insightness.com/?cat=62", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=135", "label": "https://www.insightness.com/?cat=135", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=109", "label": "https://www.insightness.com/?cat=109", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=1", "label": "https://www.insightness.com/?cat=1", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?cat=158", "label": "https://www.insightness.com/?cat=158", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/wp-login.php", "label": "https://www.insightness.com/wp-login.php", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?feed=rss2", "label": "https://www.insightness.com/?feed=rss2", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?feed=comments-rss2", "label": "https://www.insightness.com/?feed=comments-rss2", "shape": "dot", "size": 10}, {"id": "https://wordpress.org", "label": "https://wordpress.org", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=475#content", "label": "https://www.insightness.com/?p=475#content", "shape": "dot", "size": 10}, {"id": "http://rpg.ifi.uzh.ch/docs/CVPR19workshop/CVPRW19_Insightness.pdf", "label": "http://rpg.ifi.uzh.ch/docs/CVPR19workshop/CVPRW19_Insightness.pdf", "shape": "dot", "size": 10}, {"id": "http://rpg.ifi.uzh.ch/CVPR19_event_vision_workshop.html", "label": "http://rpg.ifi.uzh.ch/CVPR19_event_vision_workshop.html", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=472#content", "label": "https://www.insightness.com/?p=472#content", "shape": "dot", "size": 10}, {"id": "https://www.srf.ch/news/panorama/forschung-an-drohnen-drohne-weicht-fussbaellen-aus-dank-zwei-kamera-augen", "label": "https://www.srf.ch/news/panorama/forschung-an-drohnen-drohne-weicht-fussbaellen-aus-dank-zwei-kamera-augen", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=436#content", "label": "https://www.insightness.com/?p=436#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?author=4", "label": "https://www.insightness.com/?author=4", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/positions/JobProfileBusinessDeveloper_v1-0.pdf", "label": "https://www.insightness.com/files/positions/JobProfileBusinessDeveloper_v1-0.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/positions/JobProfile-DigitalDesignEngineer_v1-0.pdf", "label": "https://www.insightness.com/files/positions/JobProfile-DigitalDesignEngineer_v1-0.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/positions/JobProfile-CVEngineerIntern_v2-1.pdf", "label": "https://www.insightness.com/files/positions/JobProfile-CVEngineerIntern_v2-1.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/positions/JobProfile-ElectronicsEngineer_v1-0.pdf", "label": "https://www.insightness.com/files/positions/JobProfile-ElectronicsEngineer_v1-0.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/positions/JobProfile-ElectronicsIntern_v1-0.pdf", "label": "https://www.insightness.com/files/positions/JobProfile-ElectronicsIntern_v1-0.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=hire", "label": "https://www.insightness.com/?tag=hire", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=jobs", "label": "https://www.insightness.com/?tag=jobs", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=positions", "label": "https://www.insightness.com/?tag=positions", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=426#content", "label": "https://www.insightness.com/?p=426#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?author=1", "label": "https://www.insightness.com/?author=1", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=augmented-reality", "label": "https://www.insightness.com/?tag=augmented-reality", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=eivo", "label": "https://www.insightness.com/?tag=eivo", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=event-based", "label": "https://www.insightness.com/?tag=event-based", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=inside-out-tracking", "label": "https://www.insightness.com/?tag=inside-out-tracking", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=pose-estimation", "label": "https://www.insightness.com/?tag=pose-estimation", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=sees-1", "label": "https://www.insightness.com/?tag=sees-1", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=silicon-eye", "label": "https://www.insightness.com/?tag=silicon-eye", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=slam", "label": "https://www.insightness.com/?tag=slam", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=virtual-reality", "label": "https://www.insightness.com/?tag=virtual-reality", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=417#content", "label": "https://www.insightness.com/?p=417#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=ar", "label": "https://www.insightness.com/?tag=ar", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=holidays", "label": "https://www.insightness.com/?tag=holidays", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=new-year", "label": "https://www.insightness.com/?tag=new-year", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=397#content", "label": "https://www.insightness.com/?p=397#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/pdf/Startup_Champions.pdf", "label": "https://www.insightness.com/files/pdf/Startup_Champions.pdf", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=eth-zurich", "label": "https://www.insightness.com/?tag=eth-zurich", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=learnings", "label": "https://www.insightness.com/?tag=learnings", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=slide-deck", "label": "https://www.insightness.com/?tag=slide-deck", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=slides", "label": "https://www.insightness.com/?tag=slides", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=startup", "label": "https://www.insightness.com/?tag=startup", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=startup-champions", "label": "https://www.insightness.com/?tag=startup-champions", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=talk", "label": "https://www.insightness.com/?tag=talk", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=406#content", "label": "https://www.insightness.com/?p=406#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=klemens", "label": "https://www.insightness.com/?tag=klemens", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=massimo", "label": "https://www.insightness.com/?tag=massimo", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=sophie", "label": "https://www.insightness.com/?tag=sophie", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=401#content", "label": "https://www.insightness.com/?p=401#content", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=address", "label": "https://www.insightness.com/?tag=address", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=altstetten", "label": "https://www.insightness.com/?tag=altstetten", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=location", "label": "https://www.insightness.com/?tag=location", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=max-hogger-str", "label": "https://www.insightness.com/?tag=max-hogger-str", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=office", "label": "https://www.insightness.com/?tag=office", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=361#content", "label": "https://www.insightness.com/?p=361#content", "shape": "dot", "size": 10}, {"id": "http://www.dailymail.co.uk/news/article-4195306/Pilot-overheard-telling-near-miss-DRONE.html", "label": "http://www.dailymail.co.uk/news/article-4195306/Pilot-overheard-telling-near-miss-DRONE.html", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/files/press/17-03-rino2/image-set.zip", "label": "https://www.insightness.com/files/press/17-03-rino2/image-set.zip", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=media", "label": "https://www.insightness.com/?tag=media", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=press-release", "label": "https://www.insightness.com/?tag=press-release", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=rino-2", "label": "https://www.insightness.com/?tag=rino-2", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?tag=video", "label": "https://www.insightness.com/?tag=video", "shape": "dot", "size": 10}, {"id": "https://www.insightness.com/?p=310", "label": "https://www.insightness.com/?p=310", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#content", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#aboutus", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#team", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#testimonials", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#latestnews", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#contact", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "http://eepurl.com/_5gy1", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "http://eepurl.com/bfVEvj", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=484", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=475", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=472", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=436", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=426", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=417", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=397", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=406", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=401", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/?p=361", "weight": 1}, {"from": "https://www.insightness.com", "label": 1, "to": "https://www.insightness.com/#carousel-homepage-latestnews", "weight": 1}, {"from": "http://eepurl.com/_5gy1", "label": 1, "to": "http://www.mailchimp.com/email-referral/?utm_source=freemium_newsletter\u0026utm_medium=email\u0026utm_campaign=referral_marketing\u0026aid=30457a21ecbb934d97bedbeca\u0026afl=1", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?p=484#content", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?author=6", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/files/pdf/JobProfile-CVEngineer.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/files/pdf/JobProfile-OfficeManager.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=117", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?tag=job", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?tag=position", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?tag=recruiting", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?tag=team", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=202004", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201907", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201901", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201804", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201712", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201709", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201707", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201703", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201701", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201610", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201609", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201604", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201602", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201601", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201512", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201511", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201508", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201507", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201505", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201504", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201503", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201501", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?m=201410", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=12", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=20", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=46", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=38", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=78", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=90", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=24", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=67", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=4", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=138", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=62", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=135", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=109", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=1", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?cat=158", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/wp-login.php", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?feed=rss2", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://www.insightness.com/?feed=comments-rss2", "weight": 1}, {"from": "https://www.insightness.com/?p=484", "label": 1, "to": "https://wordpress.org", "weight": 1}, {"from": "https://www.insightness.com/?p=475", "label": 1, "to": "https://www.insightness.com/?p=475#content", "weight": 1}, {"from": "https://www.insightness.com/?p=475", "label": 1, "to": "http://rpg.ifi.uzh.ch/docs/CVPR19workshop/CVPRW19_Insightness.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=475", "label": 1, "to": "http://rpg.ifi.uzh.ch/CVPR19_event_vision_workshop.html", "weight": 1}, {"from": "https://www.insightness.com/?p=472", "label": 1, "to": "https://www.insightness.com/?p=472#content", "weight": 1}, {"from": "https://www.insightness.com/?p=472", "label": 1, "to": "https://www.srf.ch/news/panorama/forschung-an-drohnen-drohne-weicht-fussbaellen-aus-dank-zwei-kamera-augen", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/?p=436#content", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/?author=4", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/files/positions/JobProfileBusinessDeveloper_v1-0.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/files/positions/JobProfile-DigitalDesignEngineer_v1-0.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/files/positions/JobProfile-CVEngineerIntern_v2-1.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/files/positions/JobProfile-ElectronicsEngineer_v1-0.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/files/positions/JobProfile-ElectronicsIntern_v1-0.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/?tag=hire", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/?tag=jobs", "weight": 1}, {"from": "https://www.insightness.com/?p=436", "label": 1, "to": "https://www.insightness.com/?tag=positions", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?p=426#content", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?author=1", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=augmented-reality", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=eivo", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=event-based", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=inside-out-tracking", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=pose-estimation", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=sees-1", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=silicon-eye", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=slam", "weight": 1}, {"from": "https://www.insightness.com/?p=426", "label": 1, "to": "https://www.insightness.com/?tag=virtual-reality", "weight": 1}, {"from": "https://www.insightness.com/?p=417", "label": 1, "to": "https://www.insightness.com/?p=417#content", "weight": 1}, {"from": "https://www.insightness.com/?p=417", "label": 1, "to": "https://www.insightness.com/?tag=ar", "weight": 1}, {"from": "https://www.insightness.com/?p=417", "label": 1, "to": "https://www.insightness.com/?tag=holidays", "weight": 1}, {"from": "https://www.insightness.com/?p=417", "label": 1, "to": "https://www.insightness.com/?tag=new-year", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?p=397#content", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/files/pdf/Startup_Champions.pdf", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=eth-zurich", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=learnings", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=slide-deck", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=slides", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=startup", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=startup-champions", "weight": 1}, {"from": "https://www.insightness.com/?p=397", "label": 1, "to": "https://www.insightness.com/?tag=talk", "weight": 1}, {"from": "https://www.insightness.com/?p=406", "label": 1, "to": "https://www.insightness.com/?p=406#content", "weight": 1}, {"from": "https://www.insightness.com/?p=406", "label": 1, "to": "https://www.insightness.com/?tag=klemens", "weight": 1}, {"from": "https://www.insightness.com/?p=406", "label": 1, "to": "https://www.insightness.com/?tag=massimo", "weight": 1}, {"from": "https://www.insightness.com/?p=406", "label": 1, "to": "https://www.insightness.com/?tag=sophie", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?p=401#content", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?tag=address", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?tag=altstetten", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?tag=location", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?tag=max-hogger-str", "weight": 1}, {"from": "https://www.insightness.com/?p=401", "label": 1, "to": "https://www.insightness.com/?tag=office", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?p=361#content", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "http://www.dailymail.co.uk/news/article-4195306/Pilot-overheard-telling-near-miss-DRONE.html", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/files/press/17-03-rino2/image-set.zip", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?tag=media", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?tag=press-release", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?tag=rino-2", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?tag=video", "weight": 1}, {"from": "https://www.insightness.com/?p=361", "label": 1, "to": "https://www.insightness.com/?p=310", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+        network.on("stabilizationProgress", function(params) {
+      		document.getElementById('loadingBar').removeAttribute("style");
+	        var maxWidth = 496;
+	        var minWidth = 20;
+	        var widthFactor = params.iterations/params.total;
+	        var width = Math.max(minWidth,maxWidth * widthFactor);
+
+	        document.getElementById('bar').style.width = width + 'px';
+	        document.getElementById('text').innerHTML = Math.round(widthFactor*100) + '%';
+	    });
+	    network.once("stabilizationIterationsDone", function() {
+	        document.getElementById('text').innerHTML = '100%';
+	        document.getElementById('bar').style.width = '496px';
+	        document.getElementById('loadingBar').style.opacity = 0;
+	        // really clean the dom element
+	        setTimeout(function () {document.getElementById('loadingBar').style.display = 'none';}, 500);
+	    });
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

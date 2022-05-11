@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://www.starship.xyz", "label": "https://www.starship.xyz", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/company", "label": "https://www.starship.xyz/company", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/business", "label": "https://www.starship.xyz/business", "shape": "dot", "size": 10}, {"id": "http://www.starshipdeliveries.com", "label": "http://www.starshipdeliveries.com", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/follow", "label": "https://www.starship.xyz/follow", "shape": "dot", "size": 10}, {"id": "http://www.medium.com/starshiptechnologies", "label": "http://www.medium.com/starshiptechnologies", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/careers", "label": "https://www.starship.xyz/careers", "shape": "dot", "size": 10}, {"id": "https://starshipdeliveries.com", "label": "https://starshipdeliveries.com", "shape": "dot", "size": 10}, {"id": "http://www.starship.xyz/kit", "label": "http://www.starship.xyz/kit", "shape": "dot", "size": 10}, {"id": "https://starshipdeliveries.com/industry", "label": "https://starshipdeliveries.com/industry", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/accessibility", "label": "https://www.starship.xyz/accessibility", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/contact", "label": "https://www.starship.xyz/contact", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/contact/faq", "label": "https://www.starship.xyz/contact/faq", "shape": "dot", "size": 10}, {"id": "http://www.starship.xyz/legal-terms-of-use", "label": "http://www.starship.xyz/legal-terms-of-use", "shape": "dot", "size": 10}, {"id": "https://starshipdeliveries.com/#content", "label": "https://starshipdeliveries.com/#content", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies", "label": "https://medium.com/starshiptechnologies", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/data-privacy", "label": "https://www.starship.xyz/data-privacy", "shape": "dot", "size": 10}, {"id": "https://medium.com", "label": "https://medium.com", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/how-many-engineers-does-it-take-to-make-a-robot-sing-b9a8e92e55f7?source=collection_home---4------0-----------------------", "label": "https://medium.com/starshiptechnologies/how-many-engineers-does-it-take-to-make-a-robot-sing-b9a8e92e55f7?source=collection_home---4------0-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/exploring-the-unknown-bfa0e9291142?source=collection_home---4------1-----------------------", "label": "https://medium.com/starshiptechnologies/exploring-the-unknown-bfa0e9291142?source=collection_home---4------1-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-kaari-writes-code-to-help-starship-meet-its-goals-192a36677aca?source=collection_home---4------2-----------------------", "label": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-kaari-writes-code-to-help-starship-meet-its-goals-192a36677aca?source=collection_home---4------2-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-karoliina-keeps-our-fleet-of-robots-healthy-ef793b8c9c62?source=collection_home---4------3-----------------------", "label": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-karoliina-keeps-our-fleet-of-robots-healthy-ef793b8c9c62?source=collection_home---4------3-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/motivated-by-the-almost-impossible-80dbebf4c33b?source=collection_home---4------4-----------------------", "label": "https://medium.com/starshiptechnologies/motivated-by-the-almost-impossible-80dbebf4c33b?source=collection_home---4------4-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/values-we-work-by-in-the-starship-product-team-e03528163786?source=collection_home---4------5-----------------------", "label": "https://medium.com/starshiptechnologies/values-we-work-by-in-the-starship-product-team-e03528163786?source=collection_home---4------5-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/from-australia-to-estonia-q-a-with-lindsay-roberts-head-of-autonomous-driving-54f84a554f27?source=collection_home---4------6-----------------------", "label": "https://medium.com/starshiptechnologies/from-australia-to-estonia-q-a-with-lindsay-roberts-head-of-autonomous-driving-54f84a554f27?source=collection_home---4------6-----------------------", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/latest", "label": "https://medium.com/starshiptechnologies/latest", "shape": "dot", "size": 10}, {"id": "https://medium.com/starshiptechnologies/archive", "label": "https://medium.com/starshiptechnologies/archive", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/kit", "label": "https://www.starship.xyz/kit", "shape": "dot", "size": 10}, {"id": "http://www.starship.xyz/press/releases", "label": "http://www.starship.xyz/press/releases", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/wp-content/uploads/2022/03/2022-Press-Kit-3-2.zip", "label": "https://www.starship.xyz/wp-content/uploads/2022/03/2022-Press-Kit-3-2.zip", "shape": "dot", "size": 10}, {"id": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111636/Logo-1.zip", "label": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111636/Logo-1.zip", "shape": "dot", "size": 10}, {"id": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111638/starship_images-1.zip", "label": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111638/starship_images-1.zip", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/privacy-policy", "label": "https://www.starship.xyz/privacy-policy", "shape": "dot", "size": 10}, {"id": "https://www.techworld.com/startups/starship-technologies-reveals-how-guide-dogs-react-delivery-robots-3692342", "label": "https://www.techworld.com/startups/starship-technologies-reveals-how-guide-dogs-react-delivery-robots-3692342", "shape": "dot", "size": 10}, {"id": "https://futurism.com/the-byte/guide-dogs-robots-response", "label": "https://futurism.com/the-byte/guide-dogs-robots-response", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/legal-terms-of-use", "label": "https://www.starship.xyz/legal-terms-of-use", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/estonia-terms-of-service", "label": "https://www.starship.xyz/estonia-terms-of-service", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/privacy-policy-finland", "label": "https://www.starship.xyz/privacy-policy-finland", "shape": "dot", "size": 10}, {"id": "https://www.starship.xyz/questions", "label": "https://www.starship.xyz/questions", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/company", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/business", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "http://www.starshipdeliveries.com", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/follow", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "http://www.medium.com/starshiptechnologies", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/careers", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://starshipdeliveries.com", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "http://www.starship.xyz/kit", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://starshipdeliveries.com/industry", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/accessibility", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/contact", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "https://www.starship.xyz/contact/faq", "weight": 1}, {"from": "https://www.starship.xyz", "label": 1, "to": "http://www.starship.xyz/legal-terms-of-use", "weight": 1}, {"from": "http://www.starshipdeliveries.com", "label": 1, "to": "https://starshipdeliveries.com/#content", "weight": 1}, {"from": "http://www.starshipdeliveries.com", "label": 1, "to": "https://medium.com/starshiptechnologies", "weight": 1}, {"from": "https://www.starship.xyz/follow", "label": 1, "to": "https://www.starship.xyz/data-privacy", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/how-many-engineers-does-it-take-to-make-a-robot-sing-b9a8e92e55f7?source=collection_home---4------0-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/exploring-the-unknown-bfa0e9291142?source=collection_home---4------1-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-kaari-writes-code-to-help-starship-meet-its-goals-192a36677aca?source=collection_home---4------2-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/meet-awesome-women-at-starship-karoliina-keeps-our-fleet-of-robots-healthy-ef793b8c9c62?source=collection_home---4------3-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/motivated-by-the-almost-impossible-80dbebf4c33b?source=collection_home---4------4-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/values-we-work-by-in-the-starship-product-team-e03528163786?source=collection_home---4------5-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/from-australia-to-estonia-q-a-with-lindsay-roberts-head-of-autonomous-driving-54f84a554f27?source=collection_home---4------6-----------------------", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/latest", "weight": 1}, {"from": "http://www.medium.com/starshiptechnologies", "label": 1, "to": "https://medium.com/starshiptechnologies/archive", "weight": 1}, {"from": "http://www.starship.xyz/kit", "label": 1, "to": "https://www.starship.xyz/kit", "weight": 1}, {"from": "http://www.starship.xyz/kit", "label": 1, "to": "http://www.starship.xyz/press/releases", "weight": 1}, {"from": "http://www.starship.xyz/kit", "label": 1, "to": "https://www.starship.xyz/wp-content/uploads/2022/03/2022-Press-Kit-3-2.zip", "weight": 1}, {"from": "http://www.starship.xyz/kit", "label": 1, "to": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111636/Logo-1.zip", "weight": 1}, {"from": "http://www.starship.xyz/kit", "label": 1, "to": "https://s3-eu-west-1.amazonaws.com/ss-public-web/www.starship.xyz/wp-content/uploads/2017/10/23111638/starship_images-1.zip", "weight": 1}, {"from": "https://www.starship.xyz/contact/faq", "label": 1, "to": "https://www.starship.xyz/privacy-policy", "weight": 1}, {"from": "https://www.starship.xyz/contact/faq", "label": 1, "to": "https://www.techworld.com/startups/starship-technologies-reveals-how-guide-dogs-react-delivery-robots-3692342", "weight": 1}, {"from": "https://www.starship.xyz/contact/faq", "label": 1, "to": "https://futurism.com/the-byte/guide-dogs-robots-response", "weight": 1}, {"from": "http://www.starship.xyz/legal-terms-of-use", "label": 1, "to": "https://www.starship.xyz/legal-terms-of-use", "weight": 1}, {"from": "http://www.starship.xyz/legal-terms-of-use", "label": 1, "to": "https://www.starship.xyz/estonia-terms-of-service", "weight": 1}, {"from": "http://www.starship.xyz/legal-terms-of-use", "label": 1, "to": "https://www.starship.xyz/privacy-policy-finland", "weight": 1}, {"from": "http://www.starship.xyz/legal-terms-of-use", "label": 1, "to": "https://www.starship.xyz/questions", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

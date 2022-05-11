@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://neogoma.com", "label": "https://neogoma.com", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#use-case", "label": "https://neogoma.com/#use-case", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#Technology", "label": "https://neogoma.com/#Technology", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#company", "label": "https://neogoma.com/#company", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com/register", "label": "https://stardust.neogoma.com/register", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#videoTutorial", "label": "https://neogoma.com/#videoTutorial", "shape": "dot", "size": 10}, {"id": "https://ar3a.app", "label": "https://ar3a.app", "shape": "dot", "size": 10}, {"id": "https://www.coolhobo.com/en/home", "label": "https://www.coolhobo.com/en/home", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/#contact", "label": "https://neogoma.com/#contact", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com", "label": "https://stardust.neogoma.com", "shape": "dot", "size": 10}, {"id": "https://stardust.neogoma.com/login", "label": "https://stardust.neogoma.com/login", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#page-top", "label": "https://ar3a.app/#page-top", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#download", "label": "https://ar3a.app/#download", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#features", "label": "https://ar3a.app/#features", "shape": "dot", "size": 10}, {"id": "https://ar3a.app/#contact", "label": "https://ar3a.app/#contact", "shape": "dot", "size": 10}, {"id": "https://neogoma.com/privacy.html", "label": "https://neogoma.com/privacy.html", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#use-case", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#Technology", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#company", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://stardust.neogoma.com/register", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#videoTutorial", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://ar3a.app", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://www.coolhobo.com/en/home", "weight": 1}, {"from": "https://neogoma.com", "label": 1, "to": "https://neogoma.com/#contact", "weight": 1}, {"from": "https://stardust.neogoma.com/register", "label": 1, "to": "https://stardust.neogoma.com", "weight": 1}, {"from": "https://stardust.neogoma.com/register", "label": 1, "to": "https://stardust.neogoma.com/login", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#page-top", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#download", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#features", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://ar3a.app/#contact", "weight": 1}, {"from": "https://ar3a.app", "label": 1, "to": "https://neogoma.com/privacy.html", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

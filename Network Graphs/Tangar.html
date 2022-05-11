@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://tangar.io", "label": "https://tangar.io", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#container-main", "label": "https://tangar.io/#container-main", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#product", "label": "https://tangar.io/#product", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#industries", "label": "https://tangar.io/#industries", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#about-us", "label": "https://tangar.io/#about-us", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#investors", "label": "https://tangar.io/#investors", "shape": "dot", "size": 10}, {"id": "https://tangar.io/#contact", "label": "https://tangar.io/#contact", "shape": "dot", "size": 10}, {"id": "https://tangar.io/security", "label": "https://tangar.io/security", "shape": "dot", "size": 10}, {"id": "https://tangar.io/warehouse", "label": "https://tangar.io/warehouse", "shape": "dot", "size": 10}, {"id": "https://tangar.io/hotel", "label": "https://tangar.io/hotel", "shape": "dot", "size": 10}, {"id": "https://tangar.io/retail", "label": "https://tangar.io/retail", "shape": "dot", "size": 10}, {"id": "https://tangar.io/museum", "label": "https://tangar.io/museum", "shape": "dot", "size": 10}, {"id": "https://tangar.io/faq", "label": "https://tangar.io/faq", "shape": "dot", "size": 10}, {"id": "https://tangar.io/open-positions-work-at-tangar", "label": "https://tangar.io/open-positions-work-at-tangar", "shape": "dot", "size": 10}, {"id": "https://tangar.io/pilot-maritime-museum-sjohistoriska-video", "label": "https://tangar.io/pilot-maritime-museum-sjohistoriska-video", "shape": "dot", "size": 10}, {"id": "https://tangar.io/nyteknik-33-list-tangar-one-of-the-best-swedish-startups", "label": "https://tangar.io/nyteknik-33-list-tangar-one-of-the-best-swedish-startups", "shape": "dot", "size": 10}, {"id": "https://tangar.io/tangar-wins-lner-innovation-awards", "label": "https://tangar.io/tangar-wins-lner-innovation-awards", "shape": "dot", "size": 10}, {"id": "https://tangar.io/collaboration-with-lner-london-north-eastern-railway", "label": "https://tangar.io/collaboration-with-lner-london-north-eastern-railway", "shape": "dot", "size": 10}, {"id": "https://tangar.io/featured-at-swedens-biggest-television-news-show-rapport", "label": "https://tangar.io/featured-at-swedens-biggest-television-news-show-rapport", "shape": "dot", "size": 10}, {"id": "https://tangar.io/new-office", "label": "https://tangar.io/new-office", "shape": "dot", "size": 10}, {"id": "https://tangar.io/search-by-voice-tangar-adding-a-vui", "label": "https://tangar.io/search-by-voice-tangar-adding-a-vui", "shape": "dot", "size": 10}, {"id": "https://tangar.io/tangar-winner-of-flir-innovation-challenge", "label": "https://tangar.io/tangar-winner-of-flir-innovation-challenge", "shape": "dot", "size": 10}, {"id": "https://tangar.io/tangar-chosen-to-participate-in-the-flir-challenge", "label": "https://tangar.io/tangar-chosen-to-participate-in-the-flir-challenge", "shape": "dot", "size": 10}, {"id": "https://tangar.io/news", "label": "https://tangar.io/news", "shape": "dot", "size": 10}, {"id": "https://tangar.io/tangar-viewer", "label": "https://tangar.io/tangar-viewer", "shape": "dot", "size": 10}, {"id": "https://tangar.io/press", "label": "https://tangar.io/press", "shape": "dot", "size": 10}, {"id": "https://tangar.io/category/news", "label": "https://tangar.io/category/news", "shape": "dot", "size": 10}, {"id": "https://tangar.io/author/admin_xhtml", "label": "https://tangar.io/author/admin_xhtml", "shape": "dot", "size": 10}, {"id": "https://www.lnerfuturelabs.co.uk", "label": "https://www.lnerfuturelabs.co.uk", "shape": "dot", "size": 10}, {"id": "https://www.lnerfuturelabs.co.uk/betterconnections", "label": "https://www.lnerfuturelabs.co.uk/betterconnections", "shape": "dot", "size": 10}, {"id": "https://developer.flir.com/innovation-challenge", "label": "https://developer.flir.com/innovation-challenge", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#container-main", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#product", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#industries", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#about-us", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#investors", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/#contact", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/security", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/warehouse", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/hotel", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/retail", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/museum", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/faq", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/open-positions-work-at-tangar", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/pilot-maritime-museum-sjohistoriska-video", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/nyteknik-33-list-tangar-one-of-the-best-swedish-startups", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/tangar-wins-lner-innovation-awards", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/collaboration-with-lner-london-north-eastern-railway", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/featured-at-swedens-biggest-television-news-show-rapport", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/new-office", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/search-by-voice-tangar-adding-a-vui", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/tangar-winner-of-flir-innovation-challenge", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/tangar-chosen-to-participate-in-the-flir-challenge", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/news", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/tangar-viewer", "weight": 1}, {"from": "https://tangar.io", "label": 1, "to": "https://tangar.io/press", "weight": 1}, {"from": "https://tangar.io/open-positions-work-at-tangar", "label": 1, "to": "https://tangar.io/category/news", "weight": 1}, {"from": "https://tangar.io/open-positions-work-at-tangar", "label": 1, "to": "https://tangar.io/author/admin_xhtml", "weight": 1}, {"from": "https://tangar.io/collaboration-with-lner-london-north-eastern-railway", "label": 1, "to": "https://www.lnerfuturelabs.co.uk", "weight": 1}, {"from": "https://tangar.io/collaboration-with-lner-london-north-eastern-railway", "label": 1, "to": "https://www.lnerfuturelabs.co.uk/betterconnections", "weight": 1}, {"from": "https://tangar.io/tangar-winner-of-flir-innovation-challenge", "label": 1, "to": "https://developer.flir.com/innovation-challenge", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

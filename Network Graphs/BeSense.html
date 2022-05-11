@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://besense-iot.com", "label": "https://besense-iot.com", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#blog", "label": "https://besense-iot.com/#blog", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#home", "label": "https://besense-iot.com/#home", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#vera", "label": "https://besense-iot.com/#vera", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#pricing", "label": "https://besense-iot.com/#pricing", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#im20", "label": "https://besense-iot.com/#im20", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#ix30", "label": "https://besense-iot.com/#ix30", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#ix32", "label": "https://besense-iot.com/#ix32", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/#parallax-address", "label": "https://besense-iot.com/#parallax-address", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/blog/#more-98", "label": "http://besense-iot.com/blog/#more-98", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/blog/#more-98", "label": "https://besense-iot.com/blog/#more-98", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/vera/#more-572", "label": "http://besense-iot.com/vera/#more-572", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/vera/#more-572", "label": "https://besense-iot.com/vera/#more-572", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/IX30", "label": "https://besense-iot.com/IX30", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/ix30", "label": "http://besense-iot.com/ix30", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/Smartthings/ix30_owner_manual_v2.pdf", "label": "https://besense-iot.com/Smartthings/ix30_owner_manual_v2.pdf", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/ix30", "label": "https://besense-iot.com/ix30", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/IX32", "label": "https://besense-iot.com/IX32", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/ix32", "label": "http://besense-iot.com/ix32", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/Smartthings/ix32_owner_manual_v2.pdf", "label": "https://besense-iot.com/Smartthings/ix32_owner_manual_v2.pdf", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/ix32", "label": "https://besense-iot.com/ix32", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/im20", "label": "https://besense-iot.com/im20", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/im20", "label": "http://besense-iot.com/im20", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/Smartthings/im20_owner_manual_v4A.pdf", "label": "https://besense-iot.com/Smartthings/im20_owner_manual_v4A.pdf", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/wp-content/uploads/2018/03/Design-and-application-guide.pdf", "label": "http://besense-iot.com/wp-content/uploads/2018/03/Design-and-application-guide.pdf", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/blog", "label": "http://besense-iot.com/blog", "shape": "dot", "size": 10}, {"id": "https://home.getvera.com/users/login", "label": "https://home.getvera.com/users/login", "shape": "dot", "size": 10}, {"id": "http://besense-iot.com/vera", "label": "http://besense-iot.com/vera", "shape": "dot", "size": 10}, {"id": "https://besense-iot.com/vera", "label": "https://besense-iot.com/vera", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#blog", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#home", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#vera", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#pricing", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#im20", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#ix30", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#ix32", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/#parallax-address", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/blog/#more-98", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/blog/#more-98", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/vera/#more-572", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/vera/#more-572", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/IX30", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/ix30", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/Smartthings/ix30_owner_manual_v2.pdf", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/ix30", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/IX32", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/ix32", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/Smartthings/ix32_owner_manual_v2.pdf", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/ix32", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/im20", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/im20", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "https://besense-iot.com/Smartthings/im20_owner_manual_v4A.pdf", "weight": 1}, {"from": "https://besense-iot.com", "label": 1, "to": "http://besense-iot.com/wp-content/uploads/2018/03/Design-and-application-guide.pdf", "weight": 1}, {"from": "http://besense-iot.com/blog/#more-98", "label": 1, "to": "http://besense-iot.com/blog", "weight": 1}, {"from": "http://besense-iot.com/vera/#more-572", "label": 1, "to": "https://home.getvera.com/users/login", "weight": 1}, {"from": "http://besense-iot.com/vera/#more-572", "label": 1, "to": "http://besense-iot.com/vera", "weight": 1}, {"from": "https://besense-iot.com/vera/#more-572", "label": 1, "to": "https://besense-iot.com/vera", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

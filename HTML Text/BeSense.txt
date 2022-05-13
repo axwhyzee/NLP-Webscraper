@@ -1,0 +1,1383 @@
+  1
+2
+3
+BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Here are some videos that should help you getting our Sensors to work with SmartThings.
+How to Add a new sensor
+Reset your sensor
+  (more…)
+We’d really love to hear from you so why not drop us an email and we’ll get back to you as soon as we can.
+© 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+  WE Develop Z-Wave Sensors
+1
+2
+3
+BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Here are some videos that should help you getting our Sensors to work with SmartThings.
+How to Add a new sensor
+Reset your sensor
+  (more…)
+We’d really love to hear from you so why not drop us an email and we’ll get back to you as soon as we can.
+© 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+  Reliable Products
+WE Develop Z-Wave Sensors
+1
+2
+3
+BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Here are some videos that should help you getting our Sensors to work with SmartThings.
+How to Add a new sensor
+Reset your sensor
+  (more…)
+We’d really love to hear from you so why not drop us an email and we’ll get back to you as soon as we can.
+© 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+  BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Works Natively With SmartThings
+Here are some videos that should help you getting our Sensors to work with SmartThings.
+How to Add a new sensor
+Reset your sensor
+ 
+VIDEO (40 Seconds) – ADD A NEW SENSOR IN SMARTTHINGS:
+Remember to keep the device within 3 feet away from your hub during inclusion.
+And that should be it! I hope this was helpful in simplifying the process behind custom device handlers. Feel free to contact us if you have any question.
+info@besense-iot.com
+VIDEO (10 Seconds) – RESET SENSOR:
+To reset the device, press 6 times the tamper switch as you can see in the following video:
+© 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+  BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Vera Controller
+Here are some instructions that should help you get our BeSense Sensors  to work with VERA Hub.
+      Inclusion and setup process:
+Include as a generic device
+Push the device button on the device 3 times within 1.5s
+Device will be detected per the Vera and added. Give it a name and room.
+Wake the sensor again once it stops flashing by pushing the device button again 3x within 1.5s
+The device is now configured
+Go to the UI ( https://home.getvera.com/users/login ) , 2 new devices will show: The zwave device shows as a motion sensor. A child device shows as a Zwave icon.
+Use the child device for all your automation
+Go in the device menu, select advanced, change category_num to 4 and subcategory_num to 3 and change both the json and the xml line to D_MotionSensorWithTamper1.json and D_MotionSensor1.xml respectively.
+Reload the luup engine by Settings -> Z-Wave Settings -> “Advanced tab” -> Reload engine
+    Turn Off status LED (Only Ceiling IX32 sensor) :
+Red status LED ON/OFF
+  Go to the UI ( https://home.getvera.com/users/login ) , Select your Ceiling Motion Sensor
+Go to Device Options>> Add configuration setting
+Change Variable to 5, Data Size to 1 Byte Hex and Desired Value to 1 (status LED ON) / Desired Value to 0 (status LED OFF)
+Press Save changes
+Double click on tamper switch to save the changes
+    © 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+  BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+BeSense Z-wave PIR Wall Sensor
+  © 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+ix30
+ 
+Zwave PIR Sensor
+ 
+ 
+I. Introduction  
+X30_ZWAVE wireless PIR sensor adopts latest detection & induction technologies 
+including Energy Accumulation Management, Dynamic Random Time Division 
+Technology etc. And it combines multi-zones comprehensive induction calculation and 
+uses advanced MCU digital processing technology. Besides, it has the advantages of 
+stable & reliable detection, low false alarm and pet immune. 
+ 
+¥
+Special Fresnel lens with patented technology, built-in far infrared wave with above 
+95% transmittance rate  
+¥
+Adopt original imported Heimann sensor from Germany, with high sensitivity & low 
+false alarm  
+¥
+Real anti-visible light technology, no false alarm under 6500LUX strong light 
+interference With sealed induction cavity design, prevent false alarm caused by 
+thermal current interference
+  
+¥
+Configurable detection sensitivity, suitable for variety of detection environments With 
+fuzzy logic algorithm & fuzzy recognition technology, pet-immune Ultra-low power 
+consumption, 2 years of battery working life  
+info@besense-iot.com
+!
+
+
+
+Detection Area 
+info@besense-iot.com
+!
+
+
+
+Name Parameter
+Mode! Re. beau_2Wave
+
+“Communication Pretacal | ZWAVE_RaRNiHs BOEMEZ
+
+Indoor Transmit Distance | 30m
+
+Operating Votane DDC3Y (2FCS RG 1.5V alkaline battery]
+
+Operating Current State currem<16uA;_trensmit current <35mA,
+Detection Distance som @ 250.
+
+Detection Aree See Figure 3
+
+‘Alarm Indicator
+
+LED status indicator
+
+‘Outair Signal Type
+‘Working Humidity &
+
+‘Alarm report, tamper repar, battery level status, heartbeat renart
+
+-1OU~S0'C; <95KRH re condensation
+
+Temperature
+Infrared Aras 112484645 (typical)
+
+‘Max Coverage 000710r (3232 Feet/60
+Installation Helen 2.22.) (8?~108 inet)
+
+‘Antiwisible Light (indoor)
+
+>E5001UX
+
+Dimension
+
+10062 "47mm (LIW"H)
+
+
+ 
+II. Network Inclusion/ Exclusion 
+The sensor must be added to the Zwave network prior to use. To include the sensor in a 
+network both the sensor and the Network controller or HUB must be in inclusion mode 
+at the same time.  
+Add :
+ start by placing the controller in inclusion mode. Activate the inclusion mode at 
+the sensor pressing the tamper switch 3 times, then the door sensor will stay in 
+enrollment state
+. 
+Wait about 15-30 seconds while the sensor and controller finished the inclusion 
+process. 
+!
+Remove:
+ enter the Exclusion Mode on the controller, and press the tamper switch 3 
+times, then the door sensor will be removed after 
+15-30 seconds. 
+III. Restore Factory Settings 
+ 
+Press the tamper switch for 6 times to restore factory settings.
+ 
+ 
+info@besense-iot.com
+!
+
+DB
+
+
+
+|
+runcrana
+
+»
+
+\pswntoat istered
+
+\ ruse cum opine!
+
+ 
+ 
+IX 30 has the following 3 types of pulse optional and 3 operates mode:
+!
+Pulse 1
+: The detector gives an alarm when it checks one pulse. 
+ 
+Pulse 2
+: The detector gives an alarm when it checks two pulses.
+ 
+Pulse 3
+: The detector gives an alarm when it checks three pulses.
+ 
+The pulse count is higher and the sensitivity is lower, but can reduce false alarm. 
+ 
+ 
+ 
+Test Mode (High Battery consumption) 
+: Alarm will be triggered each 5s. 
+ 
+Power-save Mode (Recommended)
+: Alarm will be triggered again with above 3min 
+interval from its first alarm. After triggered, it will send alarm elimination signal to the 
+relevant device in at least 3 minutes. 
+ 
+Code Mode
+: without any function
+ 
+ 
+info@besense-iot.com
+!
+
+
+Jumper Setting:
+
+FULL— Test Mode
+
+NORM— Power Save Mode [(Delauit))
+CODE— Cade Mode
+
+PLUSI— | pulse
+_ PLUS2— 2 pulses
+= PLUS3— 3 pulses
+
+isn
+
+
+Here are some instructions that should help you
+ 
+get our Motion Sensor  device handler  to work 
+in SmartThings. 
+Why update the handler? 
+¥
+Customized to avoid false alarms 
+¥
+Generate Tamper alerts 
+¥
+Battery indicator 
+¥
+Colors and Background improved
+ 
+How to ADD a device Handler for the BeSense 
+Motion Sensor?
+ 
+CHANGE THE DEVICE HANDLER TO ÒZ-WAVE PLUS MOTION SENSORÓ
+ 
+1. Add the devices to your SmartThings hub by clicking on 
+Add thing > + 
+Connect New Device
+ in your app. Press and release the tamper switch button 
+on the 
+sensor three
+ times quickly. 
+info@besense-iot.com
+!
+
+
+@) SmartThings
+
+2.  Log in here with the same username and password you use for your 
+SmartThings app: 
+https://graph.api.smartthings.com/login/auth 
+ 
+ 
+3. Click on 
+My Devices
+ Handlers in the top menu and 
+select your included 
+Device
+. 
+ 
+ 
+4. Next, scroll to the bottom and click Edit 
+info@besense-iot.com
+!
+
+Using these Ae can manage your hubs and
+
+devices, give them unique names, and organize
+tham into cations and groups.
+
+‘Access your developer tools: create your own apps,
+Create your own device types, view your logs, and
+access developer documentation.
+
+
+
+
+ 
+5. Choose 
+ÒZ-Wave Plus Motion/Temp SensorÓ
+  from the TYPE option (in our 
+case is Motion we donÕt sense Temperature but smartThings joined both in the 
+same handler). 
+ 
+ 
+6. Now click 
+Update
+ 
+ 
+info@besense-iot.com
+!
+
+
+
+Py Pains RPSL vp
+‘wave Metering Sten
+
+
+
+
+You should now see this device type in your list of Devices.
+!
+And that should be it! I hope this was helpful in simplifying the process behind 
+custom device handlers. Feel free to share your questions and feedback to 
+info@besense-iot.com 
+BeSense 
+Z-Wave 
+Command Class Specification
+ 
+When the door sensor is opened or recovered, it will send ÒBinary Sensor ReportÓ and 
+ÒNotiÞcation ReportÓ commands to the device under Lifeline group.
+!
+When door sensor is opened:
+!
+Sensor Binary Report, Value = 0xFF, Type = 0x0C 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x08 When door sensor is recovered: 
+Sensor Binary Report, Value = 0x00,Type = 0x0C NotiÞcation Report, NotiÞcation Type = 0x06, 
+Event = 0x16 
+When tamper switch is triggered or recovered, the door sensor will send ÒSensor Binary ReportÓ 
+and ÒNotiÞcation ReportÓ command to the device under Lifelinegroup.
+!
+Tamper Triggered:
+!
+Sensor Binary Report, Value = 0xFF,Type = 0x08 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x00 Tamper recover (press tamper 
+switch for 0.5s):
+!
+Sensor Binary Report, Value = 0x00, Type = 0x08 NotiÞcation Report, NotiÞcation Type = 0x07, 
+Event = 0x00 
+info@besense-iot.com
+!
+
+
+Association Group2 
+If there is any device under Association Group2, the door sensor will send ÒBASIC SETÓ 
+command to control those devices when the door sensor is triggered. For example: when the door 
+sensor is triggered, it sends adjustable parameter ÒBASIC SETÓ command to a lamp under 
+Group2, you can adjust the lampÕs luminance through the parameters of this command; if the set 
+light-up time out (see the ConÞguration Description), the sensor will send ÒBASIC 
+SETÓcommand to turn-off the lamp. 
+When sensor is triggered:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0xFF(default 0xFF, conÞgurable, see the 
+ConÞguration Description)] When light-up time out:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0x00] 
+ConÞguration Description 
+a) ÒBasic SetÓ conÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to control that device when the door sensor is opened. ÒValueÓ conÞguration rule is as 
+below:
+ 
+b) Turn Off Light Time ConÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to Group2, and send ÒBasic Set = 0x00Ó command to turn-off light after ÒtÓ seconds,
+!
+Set value = ÒtÓ, means to send Basic Set command after ÒtÓ seconds.
+ 
+c) PIR Sensor Alarm Elimination Time ConÞguration
+!
+Min set time is 5s. If the conÞguration is 1, that means it will eliminate alarm after 1*5s (5 
+seconds), if t, will eliminate alarm after t*10s.
+ 
+info@besense-iot.com
+!
+
+Tas OF Lew ine
+
+
+
+
+
+Z-Wave Supportive Commands 
+Generic Deice Type = GENERIC_TYPE_SENSOR_BINARY
+!
+SpeciÞc Device Type = SPECIFIC_TYPE_ROUTING_SENSOR_BINARY 
+Support Command Class = 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_V2 
+COMMAND_CLASS_WAKE_UP_V2 
+COMMAND_CLASS_BATTERY 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_GRP_INFO 
+COMMAND_CLASS_NOTIFICATION_V4 
+COMMAND_CLASS_SENSOR_BINARY_V2 
+COMMAND_CLASS_MANUFACTURER_SPECIFIC_V2 
+COMMAND_CLASS_VERSION_V2 
+COMMAND_CLASS_POWERLEVEL 
+COMMAND_CLASS_DEVICE_RESET_LOCALLY 
+Commands to Control Other Devices: COMMAND_CLASS_BASIC
+info@besense-iot.com
+!
+
+
+
+  BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+BeSense Z-Wave 360 Ceiling Sensor
+  © 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+ix32
+ 
+Zwave PLUS Ceiling PIR Sensor 
+ 
+ 
+ 
+I. Introduction  
+X32_ZWAVE wireless PIR sensor adopts latest detection & induction technologies 
+including Energy Accumulation Management, Dynamic Random Time Division 
+Technology etc. And it combines multi-zones comprehensive induction calculation and 
+uses advanced MCU digital processing technology. Besides, it has the advantages of 
+stable & reliable detection, low false alarm and pet immune. 
+ 
+¥
+Special Fresnel lens with patented technology, built-in far infrared wave with above 
+95% transmittance rate  
+¥
+Adopt original imported Heimann sensor from Germany, with high sensitivity & low 
+false alarm  
+¥
+Real anti-visible light technology, no false alarm under 6500LUX strong light 
+interference With sealed induction cavity design, prevent false alarm caused by 
+thermal current interference
+  
+¥
+Configurable detection sensitivity, suitable for variety of detection environments With 
+fuzzy logic algorithm & fuzzy recognition technology, pet-immune Ultra-low power 
+consumption, 2 years of battery working life 
+ 
+info@besense-iot.com
+!
+
+
+
+Detection Area
+ 
+info@besense-iot.com
+!
+
+Name Parameter
+Model Ne. 1ea2_ewave
+
+Commuricatior Protocol | ZWAVE
+
+Frequency Gant / SoRMH
+
+Ireoo" Transmit Distance | 230m
+
+Working Vokage ‘VDC _2°CS LRG IV alkaline aattery
+Working Current Slate current 1bu; rane cure S350
+Detect'on Distance em a2e
+
+Detect'on Aree ‘See the diagram below
+
+Alarm Indicator {LED status indicator
+
+Oulpul Signal Type
+
+‘Aart repor, tamper report, ballory level status, neeribeal report
+
+Working Humidity &
+
+Temperature
+lefrared Arce 121248 _(ypieal
+
+Mex Coverage Diameter &m
+
+lestalation Height 25am (82-134 feet)
+Dimension 1100°100433.5mam (LWA)
+
+
+
+
+II. Network Inclusion/ Exclusion 
+The sensor must be added to the Zwave network prior to use. To include the sensor in a 
+network both the sensor and the Network controller or HUB must be in inclusion mode 
+at the same time.  
+Add :
+ start by placing the controller in inclusion mode. Activate the inclusion mode at 
+the sensor pressing the tamper switch 3 times, then the door sensor will stay in 
+enrollment state
+. 
+Wait about 15-30 seconds while the sensor and controller finished the inclusion 
+process. 
+!
+Remove:
+ enter the Exclusion Mode on the controller, and press the tamper switch 3 
+times, then the door sensor will be removed after 
+15-30 seconds. 
+III. Restore Factory Settings 
+ 
+Press the tamper switch for 6 times to restore factory settings.
+ 
+info@besense-iot.com
+!
+
+\
+
+senery Bea
+
+bicod tons A \
+—/ 1 ess
+
+Bech Shell Front case
+
+
+ 
+ 
+IX 32 has the following 3 types of pulse optional and 3 operates mode:
+!
+Pulse 1
+: The detector gives an alarm when it checks one pulse. 
+ 
+Pulse 2
+: The detector gives an alarm when it checks two pulses.
+ 
+Pulse 3
+: The detector gives an alarm when it checks three pulses.
+ 
+The pulse count is higher and the sensitivity is lower, but can reduce false alarm. 
+ 
+ 
+ 
+Test Mode (High Battery consumption) 
+: Alarm will be triggered each 5s. 
+ 
+Power-save Mode (Recommended)
+: Alarm will be triggered again with above 3min 
+interval from its first alarm. After triggered, it will send alarm elimination signal to the 
+relevant device in at least 3 minutes. 
+ 
+Code Mode
+: without any function
+ 
+ 
+info@besense-iot.com
+!
+
+
+Jumper Setting:
+
+FULL— Test Mode
+
+NORM— Power Save Mode [(Delauit))
+CODE— Cade Mode
+
+PLUSI— | pulse
+_ PLUS2— 2 pulses
+= PLUS3— 3 pulses
+
+isn
+
+
+"
+info@besense-iot.com
+!
+
+
+Don't install the motion
+
+sensor:
+
++ Under Sunshine
+
++ Face to Hot/cold
+Sources
+
++ On unstable place or
+face to movement
+things
+
+Here are some instructions that should help you
+ 
+get our Motion Sensor  device handler  to work 
+in SmartThings. 
+Why update the handler? 
+¥
+Customized to avoid false alarms 
+¥
+Generate Tamper alerts 
+¥
+Battery indicator 
+¥
+Colors and Background improved 
+How to ADD a device Handler for the BeSense 
+Motion Sensor?
+ 
+CHANGE THE DEVICE HANDLER TO ÒZ-WAVE PLUS MOTION SENSORÓ
+ 
+1. Add the devices to your SmartThings hub by clicking on 
+Add thing > + 
+Connect New Device
+ in your app. Press and release the tamper switch button 
+on the 
+sensor three
+ times quickly. 
+info@besense-iot.com
+!
+
+@) SmartThings
+
+
+2.  Log in here with the same username and password you use for your 
+SmartThings app: 
+https://graph.api.smartthings.com/login/auth 
+ 
+ 
+3. Click on 
+My Devices
+ Handlers in the top menu and 
+select your included 
+Device
+. 
+ 
+ 
+4. Next, scroll to the bottom and click Edit 
+info@besense-iot.com
+!
+
+
+Using these Ae can manage your hubs and
+
+devices, give them unique names, and organize
+tham into cations and groups.
+
+‘Access your developer tools: create your own apps,
+Create your own device types, view your logs, and
+access developer documentation.
+
+
+
+ 
+5. Choose 
+ÒZ-Wave Plus Motion/Temp SensorÓ
+  from the TYPE option (in our 
+case is Motion we donÕt sense Temperature but smartThings joined both in the 
+same handler). 
+ 
+ 
+6. Now click 
+Update
+ 
+ 
+info@besense-iot.com
+!
+
+Py Pains RPSL vp
+‘wave Metering Sten
+
+
+
+
+
+
+You should now see this device type in your list of Devices.
+!
+And that should be it! I hope this was helpful in simplifying the process behind 
+custom device handlers. Feel free to share your questions and feedback to 
+info@besense-iot.com 
+BeSense 
+Z-Wave 
+Command Class Specification
+ 
+When the door sensor is opened or recovered, it will send ÒBinary Sensor ReportÓ and 
+ÒNotiÞcation ReportÓ commands to the device under Lifeline group.
+!
+When door sensor is opened:
+!
+Sensor Binary Report, Value = 0xFF, Type = 0x0C 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x08 When door sensor is recovered: 
+Sensor Binary Report, Value = 0x00,Type = 0x0C NotiÞcation Report, NotiÞcation Type = 0x06, 
+Event = 0x16 
+When tamper switch is triggered or recovered, the door sensor will send ÒSensor Binary ReportÓ 
+and ÒNotiÞcation ReportÓ command to the device under Lifelinegroup.
+!
+Tamper Triggered:
+!
+Sensor Binary Report, Value = 0xFF,Type = 0x08 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x00 Tamper recover (press tamper 
+switch for 0.5s):
+!
+Sensor Binary Report, Value = 0x00, Type = 0x08 NotiÞcation Report, NotiÞcation Type = 0x07, 
+Event = 0x00 
+Association Group2 
+info@besense-iot.com
+!
+
+
+If there is any device under Association Group2, the door sensor will send ÒBASIC SETÓ 
+command to control those devices when the door sensor is triggered. For example: when the door 
+sensor is triggered, it sends adjustable parameter ÒBASIC SETÓ command to a lamp under 
+Group2, you can adjust the lampÕs luminance through the parameters of this command; if the set 
+light-up time out (see the ConÞguration Description), the sensor will send ÒBASIC 
+SETÓcommand to turn-off the lamp. 
+When sensor is triggered:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0xFF(default 0xFF, conÞgurable, see the 
+ConÞguration Description)] When light-up time out:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0x00] 
+ConÞguration Description 
+a) ÒBasic SetÓ conÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to control that device when the door sensor is opened. ÒValueÓ conÞguration rule is as 
+below:
+ 
+b) Turn Off Light Time ConÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to Group2, and send ÒBasic Set = 0x00Ó command to turn-off light after ÒtÓ seconds,
+!
+Set value = ÒtÓ, means to send Basic Set command after ÒtÓ seconds.
+ 
+c) PIR Sensor Alarm Elimination Time ConÞguration
+!
+Min set time is 5s. If the conÞguration is 1, that means it will eliminate alarm after 1*5s (5 
+seconds), if t, will eliminate alarm after t*10s.
+ 
+info@besense-iot.com
+!
+
+
+Tas OF Lew ine
+
+
+
+
+Z-Wave Supportive Commands 
+Generic Deice Type = GENERIC_TYPE_SENSOR_BINARY
+!
+SpeciÞc Device Type = SPECIFIC_TYPE_ROUTING_SENSOR_BINARY 
+Support Command Class = 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_V2 
+COMMAND_CLASS_WAKE_UP_V2 
+COMMAND_CLASS_BATTERY 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_GRP_INFO 
+COMMAND_CLASS_NOTIFICATION_V4 
+COMMAND_CLASS_SENSOR_BINARY_V2 
+COMMAND_CLASS_MANUFACTURER_SPECIFIC_V2 
+COMMAND_CLASS_VERSION_V2 
+COMMAND_CLASS_POWERLEVEL 
+COMMAND_CLASS_DEVICE_RESET_LOCALLY 
+Commands to Control Other Devices: COMMAND_CLASS_BASIC
+info@besense-iot.com
+!
+
+
+
+  BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+BeSense Z-Wave PLUS Door/Window Sensor
+  © 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com
+100%
+im
+20
+ 
+Z-Wave Plus Door/Window Sensor 
+Specification
+ 
+ 
+I. Introduction  
+IM20 Z-Wave is a wireless door sensor regarded as an important part of wireless alarm 
+panel. It can immediately detect open or close of door/window, has anti-tamper and 
+battery level real time detection functions. With exquisite design, it will perfectly match 
+up with your home decoration and integrate into installation environment. As it is a 
+separation triggered door sensor, when the magnet part and main body are separate, it 
+will send alarm signal to Control Panel and then Control PanelÕs buzzer rings and will 
+call or send message to Alarm Central Station or user phones.  
+  
+!
+  
+Adopt imported high sensitivity magnetic sensor, with stable and reliable 
+performance 
+!
+  
+!
+  Special magnet position design, assure its high induction property toward 
+metal door/window 
+!
+  
+!
+  Ultra-low power consumption and extra-long standby time, battery life is up to 
+3 years  
+!
+  
+!
+  Low battery alert
+!
+Page 
+!
+1
+info@besense-iot.com
+!
+
+EHS ne=
+
+
+Model No. : IM20 Z-Wave 
+Communication Protocol : Z-Wave Plus. 
+Working Voltage : 3VDC (2PCS AAA alkaline batteries)  
+Working Current : Static current
+"
+9uA; transmit current
+"
+35mA  
+Indoor Transmit Distance : 
+#
+30m  
+Induction Distance : 
+#
+10mm  
+Alarm Indicator : LED status indicator  
+Output Signal Type : Alarm report, tamper report, battery level status. 
+Working Humidity & Temperature : -10¡C~50¡C; 
+"
+95%RH no condensation  
+Dimension : 80*50*20mm (L*W*H)  
+Screw plate and 3M double-sided tape are included.
+ 
+Page 
+!
+2
+info@besense-iot.com
+!
+
+EHS ne=
+
+4
+
+Screw Plate 3M Double-Sided Tape
+
+II. Network Inclusion/ Exclusion 
+The sensor must be added to the Z-Wave network prior to use. To include the sensor in 
+a network both the sensor and the Network controller or HUB must be in inclusion mode 
+at the same time.  
+Add :
+ start by placing the controller in inclusion mode. Activate the inclusion mode at 
+the sensor pressing the tamper switch 3 times, then the door sensor will stay in 
+enrollment state. 
+Wait about 15-30 seconds while the sensor and controller finished the inclusion 
+process. 
+!
+Remove:
+ enter the Exclusion Mode on the controller, and press the tamper switch 3 
+times, then the door sensor will be removed after 15-30 seconds. 
+III. Restore Factory Settings  
+Please use this procedure only when the network primary controller is missing or 
+otherwise inoperable. 
+Press the tamper switch for 6 times to restore factory settings. 
+a) Manual Wake-up
+!
+Quickly press tamper switch once, the door sensor will automatically send wake-up 
+information, and there will be 10s after wake-up to receive gateway setting information. 
+!
+b) Automatic Wake-up
+!
+Default time of automatic wake-up is 24 hours, and there will be 10s after wake-up to 
+receive gateway setting information, the max automatic report time = 24 hours, 
+minimum=30min
+  
+  
+The edge of the magnet must align with the line on the sensor, AND 
+the magnet must locate next to the arrow on the sensor. Maximum 
+gap between the magnet and the sensor is 5/8Ó. If the magnet is not 
+located following these rules, the sensor may not get activated. 
+Page 
+!
+3
+info@besense-iot.com
+!
+
+EHS ne=
+
+
+Here are some instructions that should help you
+ 
+get our Motion Sensor  device handler  to work 
+in SmartThings. 
+Why update the handler? 
+¥
+Customized to avoid false alarms 
+¥
+Generate Tamper alerts 
+¥
+Battery indicator 
+¥
+Colors and Background improved 
+How to ADD a device Handler for the BeSense 
+Motion Sensor? 
+1.
+Log in here with the same username and password you use for your SmartThings 
+app: 
+https://graph.api.smartthings.com/login/auth  
+Page 
+!
+4
+info@besense-iot.com
+!
+
+EHS ne=
+
+Sa
+
+2. Click on My Device Handlers in the top menu 
+ 
+3. In the top right corner, click on 
+Create new device handler
+ and choose 
+From code
+ 
+from the top tab menu. You'll be presented with a blank area where you can copy the 
+code from this link and paste it in (it's always best to use the raw version of the code) 
+https://besense-iot/smartthings/besense_handler.txt
+ 
+ 
+Page 
+!
+5
+info@besense-iot.com
+!
+
+EHS ne=
+
+Using these tools you can manage your hubs and devices, give them
+unique names, and organize them into locations and groups.
+
+‘Access your developer tools: create your own apps, create your own device
+types, view your logs, and access developer documentation.
+
+
+ 
+4. Next, scroll to the bottom and click 
+Create
+. Now click Save, then click 
+Publish > for 
+me.
+ 
+Page 
+!
+6
+info@besense-iot.com
+!
+
+EHS ne=
+
+Bd aL Lc SADE eSATA a ar a Anaad Re STD
+rote New Deo Hane
+
+nS SSE EM Sie
+
+(Create New Device Handler
+
+re dete mi es i pnd ye Si a Sar fn cn Din ct
+‘SSoripe sors yay at orb Raum se pean anes nt ome aa ie
+re
+
+omfom Famcote Fem tenis Fra Dees gent
+
+ai LA Ae SST
+
+‘meen omt) + (ably 200%, serena aerate) fm)
+
+sree acai) +
+‘Samra ebthpcaty = teat
+
+prrserhaonneniin te Bae ST
+
+Boye
+
+
+You should now see this device type in your list of Device Handlers 
+How To assign a custom DEVICE HANDLER to my Z-Wave device 
+Simply exclude the device if you had included it prior to installing the new device 
+handler. Then add the device to your SmartThings hub by clicking on Add thing > + 
+Connect New Device in your app. Press and release the tamper switch three times on 
+the sensor quickly. 
+Remember to keep the device within 3 feet away from your hub during inclusion Ñ the 
+device should be automatically discovered as the BeSense Motion sensor. Then, leave 
+the sensor by the hub for a few hours so it can fully configure. 
+And that should be it! I hope this was helpful in simplifying the process behind custom 
+device handlers. Feel free to contact us if you have any question. 
+Page 
+!
+7
+info@besense-iot.com
+!
+
+EHS ne=
+
+BeSense Z-Wave 
+Command Class Specification 
+Lifeline Group 
+When the door sensor is opened or recovered, it will send ÒBinary Sensor ReportÓ and 
+ÒNotiÞcation ReportÓ commands to the device under Lifeline group.
+!
+When door sensor is opened:
+!
+Sensor Binary Report, Value = 0xFF, Type = 0x0A 
+NotiÞcation Report, NotiÞcation Type = 0x06, Event = 0x17 
+When door sensor is recovered:
+ 
+Sensor Binary Report, Value = 0x00,Type = 0x0A 
+NotiÞcation Report, NotiÞcation Type = 0x06, Event = 0x16 
+When tamper switch is triggered or recovered, the door sensor will send ÒSensor Binary ReportÓ 
+and ÒNotiÞcation ReportÓ command to the device under Lifeline group.
+!
+Tamper Triggered:
+!
+Sensor Binary Report, Value = 0xFF,Type = 0x08 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x03 
+Tamper recover
+ (press tamper switch for 0.5s):
+!
+Sensor Binary Report, Value = 0x00, Type = 0x08 
+NotiÞcation Report, NotiÞcation Type = 0x07, Event = 0x00
+Battery report
+When the door sensor is wake-up it will check the battery status. If the battery status is low it 
+will send the Battery Report to the gateway under Lifeline group every hour.
+Battery Report, Battery Level = 0xFF 
+Association Group2 
+If there is any device under Association Group2, the door sensor will send ÒBASIC SETÓ 
+command to control those devices when the door sensor is triggered. For example: when the door 
+sensor is triggered, it sends adjustable parameter ÒBASIC SETÓ command to a lamp under 
+Page 
+!
+8
+info@besense-iot.com
+!
+
+EHS ne=
+
+Group2, you can adjust the lampÕs luminance through the parameters of this command; if the set 
+light-up time out (see the ConÞguration Description), the sensor will send ÒBASIC 
+SETÓcommand to turn-off the lamp. 
+When sensor is triggered:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0xFF(default 0xFF, conÞgurable, see the 
+ConÞguration Description)] 
+When light-up time out:
+!
+[Command Class Basic
+J_
+Basic Set,Value = 0x00] 
+ConÞguration Description 
+a) ÒBasic SetÓ conÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to control that device when the door sensor is opened. ÒValueÓ conÞguration rule is as 
+below:
+ 
+b) Turn Off Light Time ConÞguration
+!
+If there is any device under Association Group2, the door sensor will send ÒBasic Set = valueÓ 
+command to Group2, and send ÒBasic Set = 0x00Ó command to turn-off light after ÒtÓ seconds,
+!
+Set value = ÒtÓ, means to send Basic Set command after ÒtÓ seconds.
+ 
+c) Door Sensor Status Report
+The Door Sensor will automatically send the tamper status.
+Set value = t, If ÒtÓ >0 means ÒtÓ hours if ÒtÓ= 0 NO status report active.
+Page 
+!
+9
+info@besense-iot.com
+!
+
+EHS ne=
+
+Function
+
+Parameter
+
+Range
+
+Default
+
+Basic Set Level
+
+1-100 or OxFF
+
+OxEF
+
+
+Function
+
+Parameter
+
+Byte
+
+Range
+
+Default
+
+Turn Off Light Time
+
+1-120
+
+
+Auto report Door/Window
+
+Z-Wave Supportive Commands 
+Generic Deice Type = 
+GENERIC_TYPE_SENSOR_BINARY
+!
+SpeciÞc Device Type = 
+SPECIFIC_TYPE_ROUTING_SENSOR_BINARY 
+Support Command Class = 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_V2 
+COMMAND_CLASS_WAKE_UP_V2 
+COMMAND_CLASS_BATTERY 
+COMMAND_CLASS_ZWAVEPLUS_INFO_V2 
+COMMAND_CLASS_ASSOCIATION_GRP_INFO 
+COMMAND_CLASS_NOTIFICATION_V4 
+COMMAND_CLASS_SENSOR_BINARY_V2 
+COMMAND_CLASS_MANUFACTURER_SPECIFIC_V2 
+COMMAND_CLASS_VERSION_V2 
+COMMAND_CLASS_POWERLEVEL 
+COMMAND_CLASS_DEVICE_RESET_LOCALLY 
+Commands to Control Other Devices: COMMAND_CLASS_BASIC
+Page 
+!
+10
+info@besense-iot.com
+!
+
+EHS ne=
+
+
+!
+Design and 
+Application 
+Guide  
+Choosing the right sensor type
+
+Eisenis=
+
+
+ay @ ||
+
+
+
+= .
+
+we
+
+
+BeSense has  developed three kind of sensors  to  cover all the security 
+and automation needs that all todayÕs living  requests. 
+Sensors, which can automatically turn lights on when you enter a room
+ and 
+off when you leave, are a smart and easy way to save energy also they will 
+let you know if someone is walking around where they shouldn
+Õt.  
+This is a quick guide that will help you to understand  the difference 
+between each type of sensor  and which is the best option for your project. 
+An important recommendation for any sensor you choose: 
+Av o
+id mounting sensors close to air vents, as the vibration and air 
+flow can reduce the effectiveness of the sensor (PIR sensors should 
+not be within 4 ft of an air vent
+) 
+IX30 BeSense Z-Wave, Wall PIR Motion 
+Detector
+ 
+P
+et immune motion detectors 
+disregard
+ the 
+motion 
+caused by animals
+ weighing less than 55 pounds. IX30 
+uses
+ passive infrared (PIR) motion detector technology to 
+! 
+Type of BeSense Sensors
+"
+
+ay @ ||
+
+
+monitor heat changes in a designated area. 
+With a traditional motion detector, when your pet enters the coverage area, 
+a sensor is tripped and causes a false alarm. Pet immune motion detectors 
+ignore the motion caused by animals and thus reduce the likelihood of a 
+false alarm.
+ 
+The IX30 Wall sensor works better  in a small and enclosed spaces with 
+high levels of occupancy  movement because it has been developed to be 
+more sensitive to the movement. PIR technology easily detects people 
+walking in and out of a space. 
+ 
+Ideal Uses: 
+-
+Small rooms 
+-
+Low ceilings (less than 7 feet)
+ 
+-
+Presence of animals like dogs or cats. 
+-  High sensitive for people movements.
+ 
+IX32 BeSense ZWave Ceiling Motion Detector
+ 
+T
+he 360¡ Ceiling-Mount Motion Sensor with Passive Infrared 
+(PIR) technology  that does just that in all directions.
+ 
+This type of sensor is ideal for spaces that have tall furniture 
+along a wall.
+ 
+Ideal Uses: 
+-
+Open Offices 
+-
+Recommended for 7Ð12ft (2Ð3.7m) ceilings 
+ 
+
+
+-
+Hallways with more than three entrances 
+-
+Conference rooms 
+
+IM20 BeSense Door/Window Sensor 
+ 
+Of all the security devices out there, contact sensors might seem 
+the least interesting. They're small, simple and unobtrusive, with a 
+single function: to detect the opening and closing of 
+doors, 
+windows, cabinets and drawers
+.
+ 
+From screen doors to cigar humidors, contact sensors can be 
+applied virtually anywhere where you need to know about activity. 
+ 
+Ideal Uses: 
+-
+Front and Back door 
+-
+Garage door 
+-
+Downstairs windows 
+-
+ChildrenÕs windows 
+-
+Closest and cabinets
+!
+
+
+ 
+Open O
+!
+ce 
+ 
+Example 1 
+ 
+In this example, we placed ceiling-mounted sensors along the walkway so the coverage 
+pattern overlaps to avoid dead spots. We also placed the sensors away from air vents in 
+order to avoid reliability issues. 
+Example 2 
+ 
+In this example, a wall-mounted sensor makes the most sense. The desk is close 
+enough to the wall to be within the minor motion coverage area, and using a wall-
+mounted sensor along the same wall as the door prevents the sensor from looking out 
+into the space. Because the door opens into the space, the sensor can see someone 
+entering regardless of the doorÕs position. In terms of the sensorÕs lateral position along 
+ Sensor placement examples 
+ 
+
+
+the wall, we want to keep it close to the desk, but away from any air vents that might be 
+in the ceiling.
+ 
+ 
+Example 3 
+ 
+In this example weÕre using a ceiling-mounted occupancy sensor. This type of sensor is 
+ideal for spaces that have tall furniture along a wall. 
+ 
+When placing the sensor on the ceiling, we want to try to have the desk inside of the 
+minor motion coverage area, but we also want to keep the sensor as close to the wall 
+with the door as possible in order to minimize the sensorÕs view out the door. Any air 
+vents in the space will also affect sensor placement. 
+ 
+
+
+"
+
+Zwave
+Switch
+
+House 
+Living in a house or apartment,  the front and  back doors are two important spots to 
+control at all times
+. 
+We have also installed a Wall Sensor  that  controls the storage room door, so we can 
+keep control of tools and dangerous cleaning chemicals
+ 
+In the kitchen and living area we chose ceiling sensors  to turn on the lights when 
+someone comes in from the outside or from the bedrooms
+ 
+The kitchen sensor should be placed over 8ft high.
+ 
+ 
+
+
+
+

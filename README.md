@@ -10,7 +10,8 @@ Update [10/05/22]
 - [**Companies/companies-software.xlsx**] - actual company websites for sensors (missing for Paracosm)
 
 Update [11/05/22]
-- Added functions to cut down on amount of similar sites visited with the **same content** by comparing md5 hash value of self-generated 'html-id' <length of DOM><first 5 char><middle 9 char><last 5 char> for faster hashing
+- Added functions to cut down on amount of similar sites visited with the **same content** by comparing md5 hash value of self-generated html-id ```<length of DOM><first 5 char><middle 9 char><last 5 char>```
+for quicker hashing
 - Translates websites which are in other languages to english after scrapping the data
 
 Update [12/05/22]

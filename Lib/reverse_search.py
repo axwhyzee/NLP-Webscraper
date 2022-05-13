@@ -27,7 +27,9 @@ class ReverseSearch():
         search_div = self.driver.find_element_by_id('search')
         elems = search_div.find_elements_by_tag_name('span')
         for elem in elems:
-            text += elem.text.strip() + '\n'
+            temp = elem.text.strip()
+            if temp:
+                text += temp + '\n'
 
         self.processed_requests += 1
         self.curr_requests += 1

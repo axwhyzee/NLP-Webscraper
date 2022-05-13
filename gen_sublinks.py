@@ -21,6 +21,7 @@ from gen_unused_path import gen_path
 from reverse_search import ReverseSearch
 from google_translate import GoogleTranslate
 
+
 #####################
 ## Modifiable Vars ##
 #####################
@@ -225,8 +226,6 @@ def html_id(s):
 
 
 def process_site(driver, root, url, expand):
-    global HTML
-
     html_text = ''
     
     try:
@@ -244,13 +243,12 @@ def process_site(driver, root, url, expand):
     if md5_html in CHECKSUMS:
         print('[-]', url, '<--->', CHECKSUMS[md5_html])
         EDGES.pop(url, None)
-        return
+        return ''
 
     if check_img(root, url):
         html_text += get_web_imgs(driver)
 
     CHECKSUMS[md5_html] = url
-    HTML += TRANSLATOR.translate(html_text) + '\n'
 
     if expand:
         for href in get_hrefs(driver):
@@ -259,6 +257,8 @@ def process_site(driver, root, url, expand):
             
             SITES.append(href)
             EDGES[href] = url
+
+    return TRANSLATOR.translate(html_text) + '\n'
             
 
 def crawl_company(driver, root, company, max_depth):
@@ -286,7 +286,7 @@ def crawl_company(driver, root, company, max_depth):
         print('Size:', size-n)
         while n < size:
             print('[+]', SITES[n])
-            process_site(driver, root, SITES[n], d<max_depth-1)
+            HTML += process_site(driver, root, SITES[n], d<max_depth-1)
             n += 1
 
     # create edgelist to plot network graph
@@ -331,5 +331,10 @@ def main():
     
     driver.quit()
     REVERSE_SEARCH.quit()
+    
+##    driver = get_driver()
+##    crawl_company(driver, 'http://www.flexijet.co.il/', 'Flexijet', MAX_DEPTH)
+##    driver.quit()
+##    REVERSE_SEARCH.quit()
 
 main()    

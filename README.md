@@ -16,4 +16,4 @@ for quicker hashing
 
 Update [12/05/22]
 - [**pdf_reader.py**] Reads PDF text + extract text from PDF images using Tesseract OCR
-- [**reverse_search.py**] Exploring automated Google reverse image search on brand images to identify customers
+- [**reverse_search.py**] Exploring automated Google reverse image search on brand images to identify customers which are represented in image form

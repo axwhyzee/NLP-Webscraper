@@ -17,3 +17,23 @@ for quicker hashing
 Update [12/05/22]
 - [**pdf_reader.py**] Reads PDF text + extract text from PDF images using Tesseract OCR
 - [**reverse_search.py**] Exploring automated Google reverse image search on brand images to identify customers which are represented in image form
+
+Update [18/05/22]
+- Revamped reverse search algorithm
+  - Filters results based on number of reverse search hits
+  - Filters out false positives
+- Improved entity detection system
+  - 3 Tiers of detection
+    - Tier 1: Alt text (img meta data) > Header (reverse search) > Body (reverse search)
+    - Tier 2: Identify common words from image file name & reverse search value
+    - Tier 3: Purely file name
+
+Update [20/05/22]
+- Web tree
+  - Motivation: Images, especially brand logos, come in clusters. Being able to identify which cluster to use will help us prune the irrelevant image clusters, thereby improving our client extraction accuracy sharply
+  - Map out web elements in a tree to identify image clusters with a breadth-first approach
+- Logo detection
+  - 2 Convolutionary Neural Networks models
+    - Model A: ~80% accuracy
+    - Model B:  
+  - Filters out irrelevant image clusters so we can accurately extract client data

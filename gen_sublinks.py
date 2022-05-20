@@ -6,8 +6,10 @@ from pyvis.network import Network
 from selenium import webdriver
 import networkx as nx
 import pandas as pd
+import warnings
 import hashlib
 import urllib
+import json
 import sys
 import os
 
@@ -15,9 +17,11 @@ lib_dir = os.path.join(os.getcwd(), 'Lib')
 if lib_dir not in sys.path:
     sys.path.append(lib_dir)
 
+from webtree import WebTree
 from img_processing import *
+from genpath import gen_path
 from pdf_reader import PDFReader
-from gen_unused_path import gen_path
+from logo_detector import LogoDetector
 from reverse_search import ReverseSearch
 from google_translate import GoogleTranslate
 
@@ -29,13 +33,17 @@ from google_translate import GoogleTranslate
 PATH = 'C:\Program Files (x86)\chromedriver.exe'
 MAX_DEPTH = 3
 
-HTML = ''
 SITES = []
 EDGES = {}
+CLIENTS = {}
 CHECKSUMS = {}
-PDF_READER = PDFReader()
-REVERSE_SEARCH = ReverseSearch()
+
+REVERSE_SEARCH = ReverseSearch(PATH)
+WEB_TREE = WebTree(PATH)
+
 TRANSLATOR = GoogleTranslate()
+LOGO_DETECTOR = LogoDetector()
+PDF_READER = PDFReader()
 
 EDGE_LIST_DIR = 'Edgelists'
 HTML_TEXT_DIR = 'HTML Text'
@@ -146,8 +154,8 @@ def check_link(s):
     return s
 
 
-def check_img(root, url):
-    if root == url:
+def check_img(depth, url):
+    if depth == 0:
         return True
     for inv in valid_img_url:
         if inv in url:
@@ -176,23 +184,38 @@ def get_hrefs(driver):
     return hrefs
 
 
-def get_web_imgs(driver):
-    html = ''
-    elems = driver.find_elements_by_tag_name('img')
-    for elem in elems:
-        src = elem.get_attribute('src')
-        if src:        
-            md5 = get_md5(src)
-            if md5 not in CHECKSUMS:
-                CHECKSUMS[md5] = src
-                try:
-                    html += REVERSE_SEARCH.search(src) + '\n'
-                    print('[IMG]', src)
-                except Exception as e:
-                    print(e)
+def get_logos(web_tree, company):
+    generator = web_tree.run_all()
+    for clusters in generator:
+        # sort by decreasing length
+        clusters.sort(key=len, reverse=True)
+        print(len(clusters), 'image clusters')
 
-    return html
-
+        for cluster in clusters:
+            if len(cluster) > 2:
+                # separate alt text from url
+                urls = []
+                alts = []
+                for img in cluster:
+                    if ' ' in img:
+                        idx = img.index(' ')
+                        urls.append(img[:idx])
+                        alts.append(img[idx+1:])
+                
+                scores = LOGO_DETECTOR.predict(urls)
+                if sum([sum(score) for score in scores]) / len(cluster) > 0.5:
+                    for i in range(len(urls)):
+                        md5 = get_md5(urls[i])
+                        
+                        if md5 not in CHECKSUMS:
+                            CHECKSUMS[md5] = urls[i]
+                            rs = REVERSE_SEARCH.search(urls[i], company)
+                            if rs:
+                                rs['alt'] = alts[i]
+                                CLIENTS[md5] = rs
+                        else:
+                            print('[Duplicate]', urls[i])
+                    break
 
 # Returns HTML title text
 def get_title(driver):
@@ -206,7 +229,7 @@ def get_title(driver):
 
 # Returns HTML body text
 def get_body(driver):
-    return driver.find_element_by_css_selector('body').text    
+    return driver.find_element_by_css_selector('body').text 
 
 
 # Generate MD5 hash value to prevent visiting websites with different URLs but same content
@@ -225,7 +248,7 @@ def html_id(s):
     return s
 
 
-def process_site(driver, root, url, expand):
+def process_site(driver, web_tree, url, company, depth, expand):
     html_text = ''
     
     try:
@@ -245,8 +268,8 @@ def process_site(driver, root, url, expand):
         EDGES.pop(url, None)
         return ''
 
-    if check_img(root, url):
-        html_text += get_web_imgs(driver)
+    if check_img(depth, url):
+        web_tree.store(url)
 
     CHECKSUMS[md5_html] = url
 
@@ -258,7 +281,7 @@ def process_site(driver, root, url, expand):
             SITES.append(href)
             EDGES[href] = url
 
-    return TRANSLATOR.translate(html_text) + '\n'
+    return TRANSLATOR.translate(html_text)
             
 
 def crawl_company(driver, root, company, max_depth):
@@ -267,17 +290,17 @@ def crawl_company(driver, root, company, max_depth):
     print('Root   :', root)
     print('##############################\n')
 
-    global HTML
-
     driver.get(root)
 
-    HTML = ''
+    CLIENTS.clear()
     SITES.clear()
     EDGES.clear()
     CHECKSUMS.clear()
-    
     SITES.append(root)
     CHECKSUMS[get_md5(root)] = root
+
+    if company not in os.listdir(HTML_TEXT_DIR):
+        os.mkdir(os.path.join(HTML_TEXT_DIR, company))
 
     # iteratively add on the sublinks to our list
     n = 0
@@ -286,9 +309,25 @@ def crawl_company(driver, root, company, max_depth):
         print('Size:', size-n)
         while n < size:
             print('[+]', SITES[n])
-            HTML += process_site(driver, root, SITES[n], d<max_depth-1)
+            html = process_site(driver, WEB_TREE, SITES[n], company, d, d < max_depth-1)
+            if html:
+                with open(os.path.join(HTML_TEXT_DIR, company, str(n) + '.txt'), 'w', encoding='utf-8') as g:
+                    g.write(SITES[n] + '\n' + html)
             n += 1
 
+    # start up webdrivers
+    WEB_TREE.start()
+    REVERSE_SEARCH.start()
+
+    get_logos(WEB_TREE, company)
+
+    # close webdrivers
+    WEB_TREE.reset()
+    REVERSE_SEARCH.reset()
+    
+    with open(os.path.join(HTML_TEXT_DIR, company, company.lower()+'-clients.json'), 'w') as g:
+        g.write(json.dumps(CLIENTS))
+    '''
     # create edgelist to plot network graph
     df_network = {'Source':[],
                   'Target':[]}
@@ -304,37 +343,33 @@ def crawl_company(driver, root, company, max_depth):
     net = Network('100vh', '100vw')
     net.from_nx(G)
     net.show('{}/{}.html'.format(NETWORK_GRAPH_DIR, company))
-
-    #########################
-    ## Translate HTML here ##
-    #########################
-
-    with open('{}/{}.txt'.format(HTML_TEXT_DIR, company), 'w', encoding='utf-8') as g:
-        g.write(HTML)
-        g.close()
+    '''
 
     print('Crawled:', len(SITES))
     print()
 
 
 def main():
-    df = pd.read_excel('companies-sensor.xlsx')
-    df.dropna(axis=0, inplace=True)
-    df.reset_index(drop=True, inplace=True)
-    df['actual_url'] = df['actual_url'].apply(url_rstrip)
-
-    driver = get_driver()
+    # ignore all warnings
+    warnings.filterwarnings("ignore")
     
-    for i, row in df.iloc[1:].iterrows():
-        crawl_company(driver, row['actual_url'], row['Company Name'], MAX_DEPTH)
-        break
-    
-    driver.quit()
-    REVERSE_SEARCH.quit()
-    
+##    df = pd.read_excel('companies-sensor.xlsx')
+##    df.dropna(axis=0, inplace=True)
+##    df.reset_index(drop=True, inplace=True)
+##    df['actual_url'] = df['actual_url'].apply(url_rstrip)
+##
 ##    driver = get_driver()
-##    crawl_company(driver, 'http://www.flexijet.co.il/', 'Flexijet', MAX_DEPTH)
+##    for i, row in df.iloc[1:].iterrows():
+##        crawl_company(driver, row['actual_url'], row['Company Name'], 1)
+##
 ##    driver.quit()
 ##    REVERSE_SEARCH.quit()
+
+    driver = get_driver()
+    #crawl_company(driver, 'https://www.intermodalics.eu/', 'Intermodalics', 2)
+    crawl_company(driver, 'https://www.photoneo.com/', 'Photoneo', 2)
+    #crawl_company(driver, 'https://www.terabee.com/', 'Terabee', 3)
+    #crawl_company(driver, 'https://www.navvis.com/', 'NavVis', 3)
+    driver.quit()
 
 main()    

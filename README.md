@@ -43,3 +43,4 @@ Update [20/05/22]
 Update [23/05/22]
 - Get surrounding text of keywords
 - Experimenting with Python NLP library gensim to filter text as well
+- Tested client extraction pipeline on all sensor companies

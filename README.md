@@ -35,11 +35,11 @@ Update [20/05/22]
   - Used in conjunction with our CNN logo detection models
 - **Logo detection**
   - Filters out irrelevant image clusters so we can reduce false positives during client extraction
-  - Merges 2 Convolutionary Neural Networks models
-    - Model A: 
-      - ~80% accuracy
-      - Trains on images scraped from 120 company websites
-    - Model B:  
-      - xx% accuracy
-      - Trains on Flick30k dataset
+  - Convolutionary Neural Network model
+  - ~80% accuracy
+  - Trained on images scraped from the given 120 company websites
   - Evaluates the probability of each image cluster being the client logo cluster
+
+Update [23/05/22]
+- Get surrounding text of keywords
+- Experimenting with Python NLP library gensim to filter text as well

@@ -1,0 +1,75 @@
+https://www.photoneo.com//products/motioncam-3d-l
+ ENGLISH
+About
+Products
+Solutions
+Support & Downloads
+Contact
+We're hiring
+34
+HOME MotionCam 3D
+MotionCam-3D L
+
+The L version provides the ultimate scanning range for the largest objects and biggest volumes.
+Datasheet
+Parameter Value
+Scanning range 778 - 3034 mm
+Camera Mode
+Point Size 1.05 mm @z = 1239 mm
+Accuracy < 1.250 mm
+Temporal Noise < 0.150 mm
+Scanner Mode
+Point Size 0.72 mm @z = 1239 mm
+Accuracy < 0.900 mm
+Temporal Noise < 0.100 mm
+General Information
+Depth map resolution (static mode) 1680 x 1200
+Depth map resolution (dynamic mode) 1120 x 800
+Maximum FPS 20 fps
+Data acquisition time 20 ms
+Maximum object / camera speed 40 m/s
+3D point throughput 15 million points per second
+GPU NVIDIA PascalTM Architecture GPU with 256 CUDA cores
+Dimensions 80 x 68 x 627 mm
+Baseline 550 mm
+Weight 1500 g
+Scanning range
+Download Datasheet
+Contact Us
+S
+MotionCam-3D S
+S+
+MotionCam-3D S+
+M
+MotionCam-3D M
+M+
+MotionCam-3D M+
+L
+MotionCam-3D L
+OUR COMPANY
+About us
+Mission, vision & values
+Use Cases
+Testimonials
+Support
+Blog
+News
+Career
+Privacy policy
+PRODUCTS
+PhoXi 3D Scanner
+Bin Picking
+MotionCam-3D
+PhoXi 3D Meshing
+Scanning software
+SOLUTIONS
+Automated warehouse
+Automated Piece Picking
+Depalletization
+Singulator
+Smart factory
+Bin Picking
+Packaging
+Machine Loading
+GET IN TOUCH
+Copyright @ 2022 Photoneo s.r.o. Webdesign & development

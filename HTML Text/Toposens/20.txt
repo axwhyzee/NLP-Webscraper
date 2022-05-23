@@ -1,0 +1,67 @@
+https://toposens.com/2022/03/28/toposens-secures-series-pre-a-funding
+ Products
+Technology
+Applications
+Company
+Downloads
+CONTACT US
+March 28, 2022
+TOPOSENS SECURES SERIES PRE-A FUNDING
+Written by
+Munich-based high-tech startup secures further investments for the market launch of the world’s first 3D Ultrasonic Collision Avoidance Sensor
+  Munich, 28/03/2022. Toposens GmbH has successfully completed its Series Pre-A financing round, intended to support the scaling-up of its proprietary 3D ultrasonic echolocation sensing technology. The round is led by existing investors ALPANA Ventures from Switzerland, Basinghall Partners from the UK and joined by Belgium-based SPDG Ventures.
+The funding for Toposens has thus increased to a total of around €3.9 million since 2018.
+The investment is aimed at financing the market entry into the robotics market, enabling best-in-class 3D collision avoidance, helping Autonomous Guided Vehicle (AGV) manufacturers build safer vehicles. Over the past year, Toposens made significant progress in onboarding well-known brands in the AGV space and piloting its collision avoidance sensing solution.
+  Supporting Mass Market Deployment in Summer 2022
+
+Additionally, the investment will support the mass market deployment and industrialization of the world’s first 3D Ultrasonic Echolocation Sensor “ECHO ONE” for 3D collision avoidance in industrial robotics and automotive projects; next to releasing the Toposens Processing Unit, which will be running the Toposens application software stack enabling a plug and play 3D collision avoidance solution for customers.
+„This new investment helps us deploy 3D ultrasonic sensing to the market together with our lead customers.  Thereby we greatly improve the collision avoidance performance of their AGVs, which currently still suffer from high damage costs, due to undetected collisions other sensing systems fail to detect. After this initial rollout in 2022, we will raise our Series A to scale our products and ramp up the team to expand into additional market opportunities like Automotive. We are thankful for the continued trust in Toposens bringing this disruptive technology to the market” says Toposens CEO Tobias Bahnemann.
+  For any inquiries, visit the company website on https://toposens.com/contact/ or send an Email via info@toposens.com.
+  About Alpana Ventures
+Alpana Ventures is a Swiss Venture Capital firm focusing on digital transformation. Committed to value creation, Alpana Ventures discovers deep tech solutions in Switzerland, Europe and the US. The team invests to embed them into innovative business models. From early to growth stage, Alpana Ventures provides more than capital. The team actively supports startups with a hands-on approach, business and governance mentoring, and through its international network. The three active Alpana funds are backing 40 companies that leverage on new technologies to empower people. https://alpana-ventures.ch/
+About Basinghall Partners
+Basinghall is a European venture fund that invests in early-stage companies with great teams and pioneering technologies. They focus on proven B2B solutions that solve relevant technology and business needs along the value chain. The team does not only provide funding, but also acts as a sparring partner actively helping portfolio companies to enter relevant markets and scale their business. They have long-term relationships with European entrepreneurs, startups, investors, universities and research organizations, industry partners as well as a community of advisors and tech experts. https://www.basinghallpartners.com/index.html
+About SPDG Ventures
+SPDG Ventures invests in and builds platforms of innovative companies that are sustainably improving the future of cities, by making them healthier, safer, and smarter. The Group’s purpose is to build a family of businesses that reinvent industries in search of excellence and meaningful impact. The mission of SPDG is twofold. On the one hand, SPDG takes on the professional management of its strategic shareholding in D’Ieteren. On the other hand, via SPDG Ventures and SDPG Capital, it aims to partner with entrepreneurs in companies that have a lasting impact on society. https://www.spdg.be/spdg-ventures/
+  If you would like to purchase the ECHO ONE DK or for any other inquiries, visit the company website on https://toposens.com/contact/ or send an Email via info@toposens.com.
+______________________________
+About Toposens
+  Toposens GmbH was founded in Munich in 2015 and is made up of experts in embedded systems, hardware development, 3D sensing, digital signal processing and machine vision. Together, they have successfully developed the worlds-first 3D Ultrasonic Sensor based on the principle of bionic, mimicking the echolocation techniques of a bat, to deliver robust, low-cost and precise near-range 3D data points. Unlike existing sensor technologies, which can be negatively impacted by light conditions, reflections, and weather, Toposens created a system using real-time 3D data mapping and object recognition software to guide autonomous systems such as AGVs, even in the most difficult environments. Clients of Toposens include some of the world’s leading companies in robotics and automotive. The company is an active accelerator in the development of safety-critical autonomy and is based in Munich, Germany with presence in Sunnyvale, California.
+Press Contact
+Maria Degmair
+Marketing Manager
+Mobile | +49 163 7411480
+Office GER | +49 89 23751540
+Office US | +1 669 206 2139
+Mail | degmair@toposens.com
+PREVIOUS
+Bionic ultrasonic technology for next-level robotic safety
+NEXT
+Toposens launches new Toposens Processing Unit DK for 3D Collision Avoidance
+Share This Post
+Manufacturers of the world’s first and only 3D Ultrasonic Sensing Technology for advanced 3D Collision Avoidance, based on the bionic principle of echolocation and integrable as well as retrofittable in a wide variety of applications within the robotics and automotive industry.
+Menu
+Products
+Technology
+Applications
+Company
+Downloads
+German Office (Headquarter)
+Toposens GmbH
+Lyonel-Feininger-Str. 28
+80807 Munich
+Germany
++49 89 2375 1540
+US Office
+Toposens
+c/o German Accelerator Inc.
+1250 Borregas Ave,
+Sunnyvale, CA 94089
++1 669 206 2139
+Follow Us
+This website is part of a project that has received funding by the European Union’s Horizon 2020 research and innovation programme under grant agreement number 953716.
+© Copyright 2021 TOPOSENS. All Rights Reserved.
+Career
+Contact
+Privacy Policy
+Cookies

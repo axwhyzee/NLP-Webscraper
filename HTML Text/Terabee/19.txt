@@ -1,0 +1,86 @@
+https://www.terabee.com/stock-level-monitoring-system-for-nan-ho-cooperative-farm-taiwan
+ We use cookies to optimize our website and our service. Cookie Policy
+Accept all
+Reject all
+Preferences
+SUPPORT
+ACCOUNT
+A15F1D8D-51DD-4967-B6FD-6F6B78B52BA3 Created with sketchtool.
+PRODUCTS
+BLOG
+CAREERS
+ABOUT
+CONTACT
+Blog / Real time level monitoring for Nan-Ho Cooperative Farm, Taiwan
+CUSTOMER & PARTNER STORIES - LEVEL MEASUREMENT - LEVEL MONITORING
+Real time level monitoring for Nan-Ho Cooperative Farm, Taiwan
+Effective level control equipment is a fundamental component for liquid, powder and bulk silo and tank storage. Terabee’s Stock Level Monitoring System offers a lightweight, non-intrusive, continuous bin level measurement solution for material level monitoring in silos.
+Created with sketchtool. Created with sketchtool. Created with sketchtool.
+We are delighted that following a three month evaluation of our bin level monitoring system, Nan-Ho Cooperative Farm in Taiwan, will be rolling our Stock Level Monitoring System across its entire facility, incorporating more than 70 grain silos. 
+The requirement
+Nan-Ho Cooperative Farm stores its harvested rice and corn in 16m high silos. Levels within the containers were being monitored by rotary paddle level switches. This system relies on a paddle being impeded by the product being stored within the container. When the paddle comes into contact with the product, the motor stalls and the micro-switch indicates a change of state. 
+The rotary paddle level switch system did not provide accurate and real-time data on container levels. As a result, staff were having to perform regular visual audits to confirm remaining levels within each silo, but also manually control material emptying from the silo. This required staff to climb to the top of each silo – which was not only time consuming, but potentially dangerous. 
+Introducing Terabee’s Stock Level Monitoring System
+Terabee has been working with Nan-Ho Cooperative Farm to deliver a more accurate, reliable and less intrusive bin level monitoring solution. Our silo level monitoring systems are based on optical Time-of-Flight (ToF) sensor technology. The solution we proposed for Nan-Ho included a multi-sensor monitoring system with a single ToF sensor installed at the top of each silo, each of which is connected to a central hub unit (the Supervisor unit). 
+The sensors, which are lightweight (99 grams), can detect level measurements within a range of up to 60 meters and are wired to the Supervisor unit via RS458 interface. The Supervisor unit provides power to each connected sensor and triggers sensors in a sequence in order to collect distance measurements. It also performs real-time computation of the remaining levels, and outputs the data reading to a local PLC unit via Ethernet (Modbus TCP/IP) interface. 
+  Stock level monitoring at Nan-Ho
+Nan-Ho Cooperative Farm trialled a four sensor configuration (connected to a Supervisor unit) on four silos over a three month period. Our system was integrated with a PLC unit that displays remaining bin level data from each silo on the client IoT application software, which is made available via PC and on mobile devices.
+The system delivers real-time data monitoring of silo levels – which can be viewed from multiple devices, anytime, anywhere. This minimizes the need to climb the silos to conduct visual audits of product levels, which is only far safer and has improved the farm’s operations as it leaves staff free to perform other tasks.
+What’s more, because levels are measured every minute, any sudden level changes that might be caused by a leak or by overfilling can be quickly detected and remedied, thereby minimizing damage. Terabee’s ToF sensors deliver further advantages – they are unimpeded by the dust particles within the environment, and they also minimize contamination risk as they do not come into physical contact with the rice or corn within the silos. 
+Wu Chenen, Managing Director, Nan-Ho Cooperative Farm commented, “We have been very impressed with Terabee’s stock level monitoring system. We were able to set-up and trial the system with minimal remote support. The Supervisor unit automatically triggers data collection, and the on-board web application delivers seamless system configuration – making the setup process and integration very easy.”
+Benefits at a glance 
+Improved staff safety and reduced operations costs
+Accurate, real-time bin level monitoring data
+Long-range monitoring capability
+Simple, intuitive system configuration and integration
+Compact, lightweight sensors
+Sensors unimpeded by dusty environment
+Non-intrusive therefore no contamination
+Minimal physical/visual intervention required
+  “Thanks to Terabee we can now monitor the levels in our silos in real-time and with precision accuracy – and with minimized need for physical staff intervention. The system offers superb value as it is extremely competitively priced, and the Terabee team have consistently provided timely and professional advice and support. “ Wu Chenen, Managing Director, Nan-Ho Cooperative Farm 
+NEXT STEPS 
+  Following successful completion of the trial, Nan-Ho is rolling out Terabee’s stock level monitoring system across its entire facility, incorporating more than 70 rice and corn silos. The Cooperative Farm is currently finalising construction of another silo plant which is planned to be equipped with Terabee’s ToF sensors on completion. 
+The system has also received great interest from local authorities in Taiwan, including the Agriculture and Food Agency and the Council of Agriculture, and we look forward to working with these agencies to promote the system and deploy it in other agricultural sites across the country. 
+Contact the Terabee team to discuss your bin level monitoring project or read more about our Stock Level Monitoring System. 
+CONTACT US
+RELATED PRODUCTS
+TERABEE STOCK LEVEL MONITORING SYSTEM
+Contactless, multi-point level and volume measurements with optical ToF technology!
+Find out more
+
+
+
+
+
+
+
+
+
+
+TERABEE STOCK LEVEL TOF SENSOR
+Benefit from continuous fill level measurements in your silos, bins, tanks and vats. Estimate remaining material volume using Terabee optical Time-of-Flight technology.
+Find out more
+
+
+
+
+You may also like:
+11
+JANVeolia uses Terabee industrial-grade thermal camera solution
+27
+OCTTerabee LoRa Level Monitoring XL device joins Monzoon Networks portfolio of Internet of Things sensors
+16
+SEPTerabee collaborates with Multi-robot Systems Group
+NEWSLETTER
+Subscribe to receive our latest news!
+E52ED6C9-64AA-414E-8201-25E8549121E0 Created with sketchtool.
+You’re email address
+FAQ
+Created with sketchtool. Created with sketchtool. Created with sketchtool.
+13508704-E26C-4E65-AD2C-6770035EB459 Created with sketchtool.
+Terabee has performed years of joint projects with CERN on leading-edge physics for sensor-based solutions and is the first company supported by Innogex, the French Business Incubation Centre of CERN Technologies.
+This company has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 850014
+© Terabee, all rights reserved | Legal mentions | Terms & conditions
+Developed with passion by Habefast
+CONTACT NOW
+0

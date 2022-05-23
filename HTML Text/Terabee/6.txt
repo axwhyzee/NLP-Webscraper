@@ -1,0 +1,93 @@
+https://www.terabee.com/products/stock-level-monitoring
+ We use cookies to optimize our website and our service. Cookie Policy
+Accept all
+Reject all
+Preferences
+SUPPORT
+ACCOUNT
+A15F1D8D-51DD-4967-B6FD-6F6B78B52BA3 Created with sketchtool.
+PRODUCTS
+BLOG
+CAREERS
+ABOUT
+CONTACT
+Level Monitoring
+DATA DIRECTLY FROM YOUR SILOS
+Home / Products / Level Monitoring
+APPLICATIONS
+TECHNOLOGY BENEFITS
+LORA LEVEL DEVICE
+LEVEL SENSORS FOR INTEGRATION
+DIGITAL TRANSFORMATION
+CONTACT US
+SOLUTIONS FOR CONTACTLESS AND SAFE LEVEL MONITORING
+How can you know how much material is left in your silos, without actually leaving your office? Do you want to reduce costly and sometimes dangerous physical inspections of silos and other storage units?
+
+Install Terabee devices and obtain real-time level data of solid, powder or liquid materials, directly from your silos and tanks. By using LED Time-of-Flight (ToF) technology we can reach up to 60m range for safe, non-intrusive inventory management of even the largest silos!
+
+Consult with our experienced team to find a suitable solution for your project.
+SPEAK WITH A TERABEE EXPERT
+Markets and applications
+Agriculture
+Animal feed, grains, milk
+Water Management
+Rainwater, treatment plants
+Energy
+Fuel, pellets
+Construction
+Cement, sand, salt, stones
+Waste Management
+Municipality bins, recycling
+WHAT'S YOUR APPLICATION?
+Benefits for the end user
+Improve staff safety. No need to climb silos, reduce exposure to dangerous goods
+Improve planning and optimize stock replenishment
+Cut operational costs. Minimize manual level inspections
+Ensure optimal use of your equipment. Reduce silo downtime
+Eliminate unreliable approximations. Work from accurate level data
+READ CLIENT USE CASE
+Self-powered, LoRaWAN level device
+Obtain level data directly from your silos and tanks, using self-powered, low-energy and contactless Terabee stock monitoring technology. Benefit from cable-free installation, wireless communication with kilometers of range (LoRa), and level measurements in silos up to 60m tall.
+SEE PRODUCT
+ToF Sensor modules for integration
+Terabee offers a range of high-performance, low-cost LED Time-of-Flight distance sensors, used in a number of level measurement applications. Benefit from the plug and play design, easy integration using various interfaces and a small footprint – ideal for design-in and OEM projects.
+
+Order sample modules for testing and evaluation today!
+TOF SENSOR MODULES GUIDE
+TRUSTED BY THE WORLD’S BEST
+123456
+Use case. Terabee partners with Brunata AG for IoT silo level monitoring in Switzerland
+Val Jelinic, Head of Ecosystem and IoT Solutions, Brunata AG, explains: “Valuable to us was quickly getting live data from the device after the installation. This enabled us to immediately show the remaining feed level to the farm manager, who was participating in the installation. His response “Wow! I thought we had more feed left!?” perfectly summed up the exercise.”
+READ CLIENT USE CASE
+We work with..
+IoT solution providers
+in search of ready-to-install, wireless level devices
+Systems integrators
+implementing high-performance level sensors to support their projects
+Equipment providers
+silo manufacturers looking to add value to their existing portfolio through real-time level data
+Partners and agents
+wanting to expand their offering locally, with cost-effective level monitoring solutions from Terabee
+TALK TO US ABOUT YOUR PROJECT
+RELATED PRODUCTS
+TERABEE LORA LEVEL MONITORING XL
+Battery-powered, LoRaWAN, LED ToF, up to 60m
+FLAT MOUNTING FLANGE FOR TERABEE LEVEL MONITORING XL
+All-in-one accessory kit, enabling Terabee device installation on top of silos and tanks
+MOUNTING BRACKET FOR TERABEE LEVEL MONITORING XL
+Install the Terabee level device inside silos, on ceilings and more
+Let’s speak!
+Interested in digitizing your stock levels? Talk to our experienced team about your level sensing needs, by simply outlining your application and any specific requirements you have. Get in touch today!
+NEWSLETTER
+Subscribe to receive our latest news!
+E52ED6C9-64AA-414E-8201-25E8549121E0 Created with sketchtool.
+You’re email address
+FAQ
+Created with sketchtool. Created with sketchtool. Created with sketchtool.
+13508704-E26C-4E65-AD2C-6770035EB459 Created with sketchtool.
+Terabee has performed years of joint projects with CERN on leading-edge physics for sensor-based solutions and is the first company supported by Innogex, the French Business Incubation Centre of CERN Technologies.
+This company has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 850014
+© Terabee, all rights reserved | Legal mentions | Terms & conditions
+Developed with passion by Habefast
+CONTACT NOW
+0

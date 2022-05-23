@@ -1,0 +1,66 @@
+https://www.photoneo.com/depalletization
+ ENGLISH
+About
+Products
+Solutions
+Support & Downloads
+Contact
+We're hiring
+34
+HOME Depalletization
+Depalletization
+Robots unloading pallets - the next revolution in logistics
+The depalletization solution can be fully automatic or semi-automatic. It all starts with a pallet loaded with boxes being placed inside of the range of the robot. This can be done either manually or automatically, depending on the features of the depalletization line. The 3D vision device (PhoXi 3D Scanner) then performs a scan of the pallet and transfers the scan into a 3D texture data set. The advantage of this is that this way the data set is not influenced by light conditions and it can be used for a flawless recreation of the boxes shapes.
+Read more Watch the Webinar
+99,7% accuracy of picking
+UNIVERSAL DEPALLETIZATION
+Boxes do not have to be stacked in a pattern and you can use any type of pallet
+WORKS OUT OF THE BOX
+Algorithm tested & recognizes more than 5000 types of boxes.
+SPEED OF BOX TRANSFER
+We can effectively depalletize the entire pallet of approximately 1000 boxes in 1 hour
+NO HUMAN ERROR OR FATIGUE
+Robots are able to work 24/7/365 without tiring and need of human interaction
+NO BACK PAIN FROM LIFTING HEAVY OBJECTS
+With proper robot and gripper you can pick up to 50 kg
+REDUCTION OF OPERATIONAL COSTS
+With this smart automation you do not need to pay monthly expenses connected to workers. All you do is keep the boxes coming and robot does the rest
+CONSISTENCY
+We guarantee more than 99.7 % pick rate achieved over the implementation. The remaining small 0.3% are diminished over time thanks to the machine learning algorithm that recognizes uncharacteristic boxes and learns how to pick them
+KNOWLEDGE HUNGRY
+The most intelligent depalletization equipped with algorithm that is able to continuously learn and recognize new boxes.
+AI Inside
+Type of pallet does not matter, we can work with any
+Algorithm worked with more than 5000 types of boxes, and it remembers them all
+No patterns - more fun! Do not stack your boxes we can work with them
+Constant learning - each box that the algorithm sees is remembered for the next time
+Consult your case
+Download PDF flyer
+OUR COMPANY
+About us
+Mission, vision & values
+Use Cases
+Testimonials
+Support
+Blog
+News
+Career
+Privacy policy
+PRODUCTS
+PhoXi 3D Scanner
+Bin Picking
+MotionCam-3D
+PhoXi 3D Meshing
+Scanning software
+SOLUTIONS
+Automated warehouse
+Automated Piece Picking
+Depalletization
+Singulator
+Smart factory
+Bin Picking
+Packaging
+Machine Loading
+GET IN TOUCH
+Copyright @ 2022 Photoneo s.r.o. Webdesign & development
+I want to know more

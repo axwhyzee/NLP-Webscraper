@@ -1,0 +1,40 @@
+https://geo-matching.com/content/advantages-of-handheld-lidar-scanning
+ Geo-matching | Your Product Platform for Surveying, Positioning and Machine Guidance
+ADD YOUR PRODUCTS
+ALL PRODUCTS
+APPLICATIONS
+HARDWARE
+SOFTWARE
+RENTAL
+INSIGHTS
+WEBINARS
+PODCASTS
+Sign in
+Home
+Content
+Case Study
+Advantages of Handheld Lidar Scanning
+Advantages of Handheld Lidar Scanning
+CASE STUDY
+By Paracosm
+Whether you’re a laser scanning master or new to the game, now is a great time to adopt a mobile 3D scanning solution. Let’s get down to business and discuss the benefits that can be reaped from handeld laser scanning, see how it compares to tripod-based systems, and address a few misconceptions out there.
+Read more
+Share
+  Paracosm PX-80 iHandheld Lidar Scanner is ~15X faster than tripod-based systems
+In a 3rd party evaluation conducted by the Center for Advanced Construction Information Modeling at the University of Florida, the same 8,000 square foot site was scanned 6X with both a Faro Focus and the PX-80. The total scanning time of the PX-80 proved 9X faster than the Faro Focus and the overall workflow and post-processing time, including registration, was about 16X faster.
+  Lidar Scanning Speed cs Accuracy?
+It’s no secret that we think accuracy is overrated. The laser scanning industry has done a great job making a big fuss about accuracy, however, millimeter accuracy isn’t always needed and for many projects it’s overkill.
+In using a mobile scanner, there’s a trade off: you increase speed and decrease accuracy. It’s simple. You can spend a bunch of time setting up a tripod scanner, getting it positioned just right, and take a super accurate scan -- but with a fixed line of sight, it might take you a while depending on the size and complexity of your project.
+A mobile system is more plug and play. You turn it on, walk through your site, and that’s it. You can cover a lot of ground in a short amount of time. Right now, our relative accuracy comes in around 2-3 cm, which for many, is more than good enough. 
+PX-80 Handheld Lidar Scanner is Harmless to the Eyes
+The LiDAR sensor in PX-80 is the VLP-16 Puck by Velodyne. It’s a Class 1 Laser, which means that it is harmless to the eyes, similar to the laser found in CD-ROM players in terms of safety.
+Lighting is not and Issue
+Scan indoors, outdoors, or in low light conditions. PX-80 can scan a variety of sites in nearly any lighting.
+Retrace Your Lidar Mapping Project
+PX-80’s companion software, RETRACE, allows you to go back in time and retrace your steps from anywhere in the world, in a Google "street-view" style. This is great for remote teams or simply improving your documentation. If you like to take PX-80 for a spin.
+Share
+Questions for Paracosm
+Do you want to get in touch with Paracosm after reading this article?
+Get your answers
+Search and compare Get insights Connect
+PRIVACY COOKIES T&C ADVERTISING USED AND RENTAL NEWSLETTERS JOIN GEO-MATCHING CONTACT US

@@ -1,0 +1,69 @@
+https://www.photoneo.com/products/phoxi-scan-s
+ ENGLISH
+About
+Products
+Solutions
+Support & Downloads
+Contact
+We're hiring
+34
+HOME PhoXi 3D Scanner
+PhoXi 3D Scanner S
+
+Useful especially for inspection & quality check-up. The scanning range is larger than in the case of the XS version. However, the general rule of thumb says it is best used for scanning of objects that fit into one’s hand. This is the first model that can be used also for bin picking of objects from small bins.
+Datasheet
+Parameter Value
+Resolution (3D Points) Up to 3.2 M
+Scanning range 384 – 520 mm
+Optimal scanning distance 442 mm
+Scanning area at sweet spot 360 x 272 mm
+Point to point distance 0.174 mm
+Calibration accuracy (1 σ) 0.050 mm
+Temporal noise (1 σ) 0.050 mm
+Scanning time 250 – 2250 ms
+Dimensions 77 x 68 x 296 mm
+Baseline 230 mm
+Weight 900 g
+3D points throughput 16 Million points per second
+GPU NVIDIA PascalTM Architecture GPU with 256 CUDA cores
+Scanning range
+Download Quick Start Guide
+Download Datasheet
+Contact Us
+XS
+PhoXi 3D Scanner XS
+S
+PhoXi 3D Scanner S
+M
+PhoXi 3D Scanner M
+L
+PhoXi 3D Scanner L
+XL
+PhoXi 3D Scanner XL
+OUR COMPANY
+About us
+Mission, vision & values
+Use Cases
+Testimonials
+Support
+Blog
+News
+Career
+Privacy policy
+PRODUCTS
+PhoXi 3D Scanner
+Bin Picking
+MotionCam-3D
+PhoXi 3D Meshing
+Scanning software
+SOLUTIONS
+Automated warehouse
+Automated Piece Picking
+Depalletization
+Singulator
+Smart factory
+Bin Picking
+Packaging
+Machine Loading
+GET IN TOUCH
+Copyright @ 2022 Photoneo s.r.o. Webdesign & development

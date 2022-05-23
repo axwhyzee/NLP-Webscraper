@@ -1,0 +1,206 @@
+https://geo-matching.com/gnss-receivers
+ Geo-matching | Your Product Platform for Surveying, Positioning and Machine Guidance
+ADD YOUR PRODUCTS
+ALL PRODUCTS
+APPLICATIONS
+HARDWARE
+SOFTWARE
+RENTAL
+INSIGHTS
+WEBINARS
+PODCASTS
+Sign in
+Home
+Product
+GNSS Receivers
+GNSS Receivers
+GNSS Receivers are the core product for satellite positioning. They convert signals from visible satellites into a position on earth. The amount of visible satellites is dependent on the number of constellations the receiver is compatible with, such as GPS, Glonass, Galileo and Beidou.
+We created this complete overview of GNSS Receivers from all key manufacturers and continuously update it. If you want to learn about what factors to consider when selecting and buying a receiver, read our buyers' guide below.
+Not sure which product you need?
+We can help you find the right solution!
+Just ask us!
+Learn more about the E300 Pro
+Filtering
+Reset
+Manufacturer/brand
+4GNSS
+applied acoustics
+BAAM Tech
+Bad Elf, LLC
+Bynav Technology
+Carlson Software
+CHC Navigation | CHCNAV |
+ComNav Ltd
+ComNav Technology
+CompStar
+DATAGRID
+ELNAV
+Eos Positioning Systems
+eSurvey GNSS
+Forsberg Services Ltd
+Galaxy Navigation
+Geo tag engenharia
+geo-FENNEL GmbH
+Geomatics USA
+GINTEC
+Gottlieb Nestle GmbH
+GreenValley International
+Guangzhou Geoland Instrument Co.,Ltd
+Hemisphere GNSS
+Hi-Target
+Horizon
+JAVAD GNSS
+Klau Geomatics
+Kolida Instrument Company
+KQ GEO Technologies Co., Ltd.
+marXact
+Mgb-tech
+NavCom Technology
+North Group
+NovAtel
+Oceaneering C-Nav Positioning Solutions
+REDcatch GmbH
+Robota LLC
+Rokubun
+RUGGED MOBILE Systems Ltd
+RUIDE
+SANDING
+SatLab
+Seabed
+Seamap
+Septentrio
+Settop Survey
+Shanghai HowayGIS Infotech Co., Ltd.
+SingularXYZ Intelligent Technology Ltd.
+Sokkia
+SOUTH
+Spectra Geospatial
+STESALIT SYSTEMS LIMITED
+Stonex
+SunNav Technology Co., Ltd.
+Suzhou FOIF
+Swift Navigation
+SXblue
+Tersus GNSS
+TI Asahi
+Titan Position
+Topcon
+Trimble (Marine)
+Trimble OEM GNSS
+Trimble, Inc.
+Unicore Communications
+Veripos
+General
+Power
+Environment
+Performance
+Communication: general
+Home
+Product
+GNSS Receivers
+Promoted products
+COMPARE
+E300 Pro
+eSurvey GNSS
+E300 Pro is a new generation GNSS Receiver by eSurvey GNSS. The durable IP67 design makes it possible to work in a variety of environments. Multi constellation and f
+Products 307 results
+COMPARE
+C18
+Shanghai HowayGIS Infotech Co., Ltd.
+The C18 Continuous Operation Base Reference System uses a Trimble BD990 OEM board. It can be used in a variety of applications and is compatible with various platfor
+COMPARE
+Integrated Tailbuoy (Libra)
+Seamap
+The Seamap Integrated Tailbuoy consists of a fiberglass hull to provide floatation, a towing bridle to attach to the tow cable, a waterproof connector to connect to
+COMPARE
+Catalyst DA2
+Trimble, Inc.
+Trimble® Catalyst™ is a revolutionary GNSS concept delivering positioning-as-a-service to iOS and Android™ devices. With the addition of the simple, lightweight Trim
+COMPARE
+Arrow Gold
+Eos Positioning Systems
+The Arrow Gold is the first high-accuracy iOS, Android, and Windows Bluetooth GNSS receiver to implement all four global constellations (GPS, Glonass, Galileo, Beido
+COMPARE
+SatLab SL800 GNSS Receiver
+SatLab
+The gnss receiver provides an easy solution for survey professionals who require a portable instrument to collect highly data for various geospatial usage. It allows
+COMPARE
+BuoyLink EX
+Seamap
+Seamap's GPS Tracking System monitors precise locations for gun floats, paravanes, chase boats, forward nav buoys and tail buoys. The system provides up to 32 inputs
+COMPARE
+N5 IMU GNSS Receiver
+ComNav Technology
+Embedded with IMU engine, upgraded with K8-platform for full constellation tracking, and equipped with long range enhanced UHF, user-friendly OLED display, 6800mAh l
+COMPARE
+M1 Monitoring GNSS Receiver
+SingularXYZ Intelligent Technology Ltd.
+The M1 can reach a reliable and stable millimetre-level positioning for precise monitoring. Moreover, the altitude sensor with the MEMS data provides one more guaran
+COMPARE
+BD992-INS Receiver Module
+Trimble OEM GNSS
+The BD992-INS is a triple-frequency, multi-constellation receiver that delivers quick and reliable RTK initializations for centimeter-level positioning.
+COMPARE
+MR-2
+Topcon
+The MR-2 combines futureproof full constellation tracking with HD2/heading capabilities and a comprehensive set of communication interfaces. The MR-2 is able to trac
+Previous
+1
+2
+3
+4
+5
+Next
+8 Things to Consider When Selecting and Buying a GNSS Receiver
+GNSS receivers generally have one main purpose: the providing of an accurate real time position using various satellite constellations. As with all products however, specifications between receivers vary  along with the price. The market for GNSS receivers is competitive with larger and smaller brands providing receivers with a wide range in specifications and added features such as shock and water-resistant housing, Bluetooth connection, built-in interfaces and more. The RTK accuracy and the number of tracked signals in most receivers are up to a high standard. High precision measurements are no longer exclusive to the big-name brands, allowing buyers to sway from these brands and consider more economic investments without compromising the quality of data.
+There are a number of other factors to take into consideration when investing. Buying a receiver with the wrong specs for the job may cost thousands in repair or replacement costs as well as lost measurements. The following factors should be considered when choosing a receiver:
+1. Dimensions
+Depending on the application, the size of the receiver can be the deciding factor for a purchase. More compact receivers will often end up in the higher price range, thus it is important to know the maximum dimension a receiver can have when comparing products.
+2. Weight
+Especially relevant when the receiver is placed on moving objects like drones, UAV's, or even handheld equipment, there are various reasons the weight of a receiver can be of importance. As the weight is often influenced by factors such as power sources, enclosures, antennas, and other components, it is important to define whether there is a weight limit to regard the priority of these components versus their relative weight.
+3. Material and durability
+GNSS receivers are used in many different scenarios and climates. A buyer needs to define the conditions the receiver will be placed in, and for which amount of time. Knowing these conditions not only help to ensure the equipment will be able to withstand the working environment, but also helps the buyer to prevent spending money on a receiver too durable for the job.
+4. Precision and tracked signals
+As mentioned before, many GNSS receivers are already up to a high standard of precision. There are however differences between brands and products, thus a buyer should always check the specifications to be sure. Depending on the region in which the receiver will be used, certain satellite constellation may be more important than others. Here is the list of constellations with the main area of coverage per constellation:
+System
+Owner
+Coverage
+Galileo
+Europe
+Global
+GPS
+North America
+Global
+BeiDou
+China
+Global
+Glonass
+Russia
+Global
+QZSS
+Japan
+Regional
+IRNSS/NavIC
+India
+Regional
+5. Operating power / power supply (internal/external) / battery life
+The battery life and/or power supply of a receiver is a very important consideration, and dependent on the application. Receivers with built in battery packs are practical for many on-the-go purposes, such as handheld devices and UAV's. Additionally, an internal power source can ensure continuation of measurements when there is a failure of an external power source. Different types of power sources can be required for specific applications and are thus also an aspect in which costs can be spared.
+6. Recording
+The information recorded and the frequency at which position and other data is recorded by a GNSS receiver can vary. Recording can be triggered by an event such as the press of a button, but a receiver can also provide constant position updates as are required for UAV's. The required frequency of position updates play an important role in most setups, and thus the fitted receiver should be capable of fulfilling this task. Receivers can record in different file types, and not all receivers allow for internal storage of recorded data.
+7. Storage capacity
+The saving of recorded data may be a required feature, for example when the receiver is not connected to any network or external device. Similarly to internal battery packs, the internal storage of data can prevent the loss of data in case the receiver loses connection with an external storage device.
+The frequency in which measurements are recorded, as well as the maximum storage capacity influence the price of the receiver. The setup in which the receiver will be operational should be analyzed to decide what the minimum recording and storage requirements are.
+The measured data can be delivered in different formats. Before buying, check which formats are compatible with the rest of the equipment and software.
+8. Communication
+A receiver can communicate with external computers, processors, and interfaces in various ways. Wired and wireless (Wi-Fi/Bluetooth) connections are available, and the preferred method of communication is dependent on the type of setup. Knowing which type of communication is required in a setup can save money in an investment, but also space, weight, and consumed energy by the receiver.
+Communication interface
+Some receivers have custom interfaces either built-in, or delivered with accessorizing software to provide an interface on a connected computer. However, an interface will not always be required or practical, and a buyer should not pay extra for such a feature when it is irrelevant.
+Alerts
+A common application on remote receivers is an alert which can be triggered on movement, change in signal, or any other event. Such systems will bring the receiver into a higher price range, as these functionalities are often used in more custom applications and require more built-in processing.
+Conclusion
+GNSS receivers are key components for the majority of remote stations, UAV's, and all other types of measuring set-ups. Geo-measurements are rarely relevant without an accurate position, which makes the investment in the GNSS receiver to provide this position a choice not to be taken lightly. In the current competitive market, high accuracy of measurements is becoming more and more standardized, allowing the buyer the freedom to compare main brand receivers with alternative smaller competing brands. The large selection of receivers ranging from high-end waterproof products to minimalistic sensors gives the opportunity for the buyer to only invest in the necessary features to come with the receiver.
+Further reading
+The Incremental Improvements in GNSS - GIM International
+Why RTK Hardware Is Here to Stay - GIM International
+Search and compare Get insights Connect
+PRIVACY COOKIES T&C ADVERTISING USED AND RENTAL NEWSLETTERS JOIN GEO-MATCHING CONTACT US

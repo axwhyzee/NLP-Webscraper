@@ -1,0 +1,103 @@
+https://www.terabee.com/products/people-counting
+ We use cookies to optimize our website and our service. Cookie Policy
+Accept all
+Reject all
+Preferences
+SUPPORT
+ACCOUNT
+A15F1D8D-51DD-4967-B6FD-6F6B78B52BA3 Created with sketchtool.
+PRODUCTS
+BLOG
+CAREERS
+ABOUT
+CONTACT
+People Counting
+3D TIME-OF-FLIGHT PEOPLE COUNTING SYSTEMS WITH 95%+ ACCURACY FOR SMART BUILDINGS
+Home / Products / People Counting
+DEVICE
+FEATURES
+APPLICATIONS
+SMART BUILDINGS
+SPACE OPTIMIZATION
+ENERGY EFFICIENCY
+CONTACT
+REAL-TIME PEOPLE COUNTING AND EXTRACTABLE METRICS
+Install Terabee’s 3D Time-of-Flight people counting systems for accurate insights as people enter or leave a building, room or space. With over 95% accuracy and embedded counting algorithms, our people counting systems give real-time and accumulative occupancy level data. We enable informed data-based, decision-making in Smart Buildings, offices, shops, higher education and hospitality facilities.
+
+Terabee people counting solutions come ready for discrete installation above conventional to large doors or passageways. They are optimized for easy software and hardware integration with an optional analytics portal.
+SEE OUR PEOPLE COUNTING DEVICE
+People Counting L-XL - Real-time, privacy-protected data for wide entrances and passageways
+Using advanced Time-of-Flight technology, Terabee People Counting L-XL is capable of counting multiple people passing in both directions below the device, as they enter or leave a space. It is GDPR compliant, protects anonymity and maintains 98% people counting accuracy.
+DISCOVER PEOPLE COUNTING L-XL
+People Counting M - Wireless real-time people counter for single doorways and narrow corridors
+Detect and count people over conventional swing doors and passageways. Terabee People Counting M is discrete, compact and can be flexibly deployed via PoE, Ethernet or WiFi connectivity. GDPR-compliant, the device ensures user anonymity with 95% counting accuracy.
+SEE PEOPLE COUNTING M
+Key features of our Time-of-Flight people counter systems
+Personal privacy protection (GDPR-compliant) as standard
+Uses 3D depth sensing (no camera used)
+Easy-to-install and configure via a local web interface
+Reliable data with 95% or better people counting accuracy
+Effective in low light environments
+Direct data integration to Cloud and servers via HTTP or MQTT
+Real-time and on-board computed data
+Remote device management and firmware updates via Device Management Services
+Power supply over Ethernet (PoE 802.3af interface), Ethernet and WiFi data transmission (for People Counting M)
+SEE HOW PEOPLE COUNTING SOFTWARE WORKS
+People Counting applications
+Space optimization
+Meeting room use | Occupancy trends for workforce planning | User experience
+Facility maintenance
+Washroom or office traffic monitoring | Staffing and scheduling
+Real estate and energy efficiency
+Building layout optimization | HVAC systems integration | Lighting control
+Retail and customer analytics
+Visitor flow and footfall patterns | Store performance | Customer experience
+WHAT'S YOUR APPLICATION?
+WHY USE PEOPLE COUNTING SYSTEMS?
+Develop Smart Building solutions via accurate people counting
+Never has there been a greater need or more demand for people counting solutions in Smart Buildings. The ability to count, monitor and track people as they enter and exit buildings, rooms and spaces is now an imperative to maximize facilities’ efficiency, reduce costs and make working environments more comfortable and productive in the post-Covid era.
+READ CLIENT USE CASE
+Enhance customer experience and boost user confidence with real-time people counting data
+A visitor counter system placed at the entrance of any passageway will aggregate occupancy statistics and monitor footfall, giving you accurate data on busy and unoccupied space, occupancy peaks and people flow in specific rooms, offices or retail areas.
+SEE HOW TO OPTIMIZE ROOM OCCUPANCY
+Optimize energy expenditure based on visitor flow and occupancy trends
+Monitor people flow and occupancy in a specific building for clear insights on when visitors arrive and leave. Enable better management of HVAC and lighting, tailored to real-time data and people density. Use Terabee people counting solutions for Smart Buildings to increase building energy efficiency and sustainability.
+SEE HOW TO REDUCE ENERGY CONSUMPTION AND COSTS
+We work with
+Smart Buildings system integrators
+Add value to existing building management solutions portfolio
+IoT solution providers
+Easy-to-integrate people counting devices for IoT platforms
+Software editors
+Develop platforms to support Smart Buildings management
+Service providers
+Gather space use data to optimize service delivery
+OEMs
+Develop IoT devices for Smart Buildings
+TALK TO US ABOUT YOUR PROJECT
+RELATED PRODUCTS
+TERABEE PEOPLE COUNTING L-XL
+GDPR compliant people counting device. Optimize value and reduce costs from your retail operation, smart building or office space
+TERABEE PEOPLE COUNTING M
+Get real-time people counting data for single doorways and narrow corridors via people counter devices
+TERABEE PEOPLE DENSITY CALCULATOR
+Ensure the people density of shops, buildings and other defined indoor areas remains at a level where social distancing measures can be maintained
+TERARANGER EVO PEOPLE COUNTER
+Low-cost sensor module for system integrators
+Let’s talk!
+Our people counting devices and software work across a wide variety of applications. We’d be delighted to understand your people counting challenges and requirements.
+
+Complete the form and a Terabee expert will contact you shortly to get started.
+NEWSLETTER
+Subscribe to receive our latest news!
+E52ED6C9-64AA-414E-8201-25E8549121E0 Created with sketchtool.
+You’re email address
+FAQ
+Created with sketchtool. Created with sketchtool. Created with sketchtool.
+13508704-E26C-4E65-AD2C-6770035EB459 Created with sketchtool.
+Terabee has performed years of joint projects with CERN on leading-edge physics for sensor-based solutions and is the first company supported by Innogex, the French Business Incubation Centre of CERN Technologies.
+This company has received funding from the European Union’s Horizon 2020 research and innovation programme under grant agreement No 850014
+© Terabee, all rights reserved | Legal mentions | Terms & conditions
+Developed with passion by Habefast
+CONTACT NOW
+0

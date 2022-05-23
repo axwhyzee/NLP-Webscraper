@@ -1,0 +1,137 @@
+https://geo-matching.com/hydrographic-processing-software
+ Geo-matching | Your Product Platform for Surveying, Positioning and Machine Guidance
+ADD YOUR PRODUCTS
+ALL PRODUCTS
+APPLICATIONS
+HARDWARE
+SOFTWARE
+RENTAL
+INSIGHTS
+WEBINARS
+PODCASTS
+Sign in
+Home
+Product
+Hydrographic Processing Software
+Hydrographic Processing Software
+Hydrographic Processing Software is a software designed to process hydrographic data, after its acquisition with the aid of hydrographic acquisition software. This software allows for the creation of hydrography maps, target detection, a difference analysis between new and old surveys as well as many other features for a wide variety of applications. Find and compare in our hydrographic processing software overview below or read our buyers' guide and learn how to establish the requirements to find the best software for the job at hand. Read more →
+Not sure which product you need?
+We can help you find the right solution!
+Just ask us!
+More info
+Filtering
+Reset
+Manufacturer/brand
+BeamworX
+Chesapeake Technology
+EIVA
+Eye4Software
+Geomod
+HYPACK, A Xylem Brand
+INNOMAR Technologie
+iXblue
+Leica Geosystems Airborne Solutions
+Moga Software
+OceanWise Ltd
+QPS
+RIEGL
+Stema Systems
+Storm Geomatics Limited
+Teledyne Geospatial
+Teledyne Marine
+Triton Imaging
+General
+Hardware/software requirements
+Visualisation and Editing
+Processing
+Geodetic Functionality
+Product Generation
+Home
+Product
+Hydrographic Processing Software
+Products 33 results
+COMPARE
+Sonar Noise Classifier
+Teledyne Geospatial
+CARIS seeks to significantly reduce the need for manual cleaning and move your data swiftly from acquisition to review. The Sonar Noise Classifier automatically ide
+COMPARE
+Hydromagic Survey
+Eye4Software
+Eye4Software Hydromagic Survey is a cost-effective, easy to use hydrographic data acquisition and processing software package for Windows. The software has a short l
+COMPARE
+SeaView SBP
+Moga Software
+SeaView SBP is a post-processing and interpretation software designed for sub-bottom profilers and single channel seismic. It features navigation processing (trace b
+COMPARE
+PDS Processing Software
+Teledyne Marine
+Teledyne PDS is a multipurpose software platform and supports a wide range of tasks within hydrography, dredge guidance, construction support, search & recovery oper
+COMPARE
+Silas Processing
+Stema Systems
+SILAS is a complete data acquisition, processing and interpretation package to cover a wide range of tasks. It is source independent and can handle analogue or digit
+COMPARE
+NaviSuite Nardoa Advanced 3D pipeline & cable route inspections
+EIVA
+The NaviSuite Nardoa is a cutting-edge, completely integrated 3D software solution for acquisition and processing of data during
+pipeline and cable route inspection
+COMPARE
+RiHYDRO
+RIEGL
+For smooth processing of scan data acquired with RIEGL Hydrography Laser Scanners the Airborne Data Processing Software AddOn RiHYDRO is offered as supplement to RiP
+COMPARE
+Delph Suite
+iXblue
+Delph Suite (including Delph Seismic and Delph Sonar) is a complete and modular software solution with a dedicated acquisition, processing and interpretation compone
+COMPARE
+Qimera
+QPS
+QPS Qimera is an evolution in hydrographic data processing, making it as intuitive and as simple as possible, while still offering the most advanced and cutting edge
+COMPARE
+SeaView MOSAIC
+Moga Software
+SeaView MOSAIC is the first post-processing and interpretation software for side-scan sonar and multibeam backscatter capable of interactive mosaic editing at full r
+Previous
+1
+2
+3
+4
+Next
+How to Choose the Right Hydrographic Processing Software
+Key Considerations Before Investing
+When looking to buy hydrographic processing software, it is important to establish the requirements in order to find the best software for the job at hand. The users’ technical skills, the type of data required and the intended operations on the data will differ depending on the project. This article provides an overview of the most important aspects of hydrographic processing software that a buyer should take into consideration before investing in a solution.
+Operations and Applications
+The core of any hydrographic processing software, sometimes also referred to as bathymetry software or hydrographic software, is the actual processing operations and potential limitations. Some software provides the user more freedom by allowing code imports, while other software is more specialized towards specific hydrography-related ends. A distinction can be made between the initial cleaning and validating of a dataset (smoothening and despiking) and further operations that are more specific per project.
+When it comes to hydrographic data, certain factors play a role that is not relevant for other types of geospatial data, such as:
+Sound velocity correction
+Multibeam calibration methods
+The multibeam backscatter processing functionality
+Multibeam water column imaging support
+Tidal reduction
+Hydrographic processing software may be able to take these factors into account, providing automatic corrections. If the software will be used with unfiltered sonar data, the capability to clean the sounding data is a must-have and available in all hydrographic software.
+Additionally, surveying projects will require an in-depth analysis of the quality of a survey. Hydrographic software can provide this in different ways, with varying parameters on which the user can base the assessment of accuracy.
+Geodetic support functionalities help the user with coordinate systems, datums and ellipsoidal references which can be crucial for large datasets. General operations for things like slope, aspect, contour and volume computations can be useful to have at hand in the software for analytical purposes, but are not always available. The type of interpolation methods and digital terrain model (DTM) transformations available is important for any geospatial data project. A margin of error is present with any interpolation, and the type of interpolation determines the error that will be present in the final model.
+The processing of data to perform such operations and transformations is not equally important for every type of project, user or type of work, so a buyer should consider what the software will be used for, and by whom. For example, highly technical users who are able to code custom algorithms may require the ability for code imports, while less technically skilled users will require more functionalities to be directly available.
+Specialized Software vs Flexibility
+Software for processing hydrographic data is often capable of processing other types of geospatial data as well. Depending on the processing needs, buyers should decide whether specialized software for hydrographic data is desired, or more flexible software that is capable of processing various types of geospatial data. Again, software that allows for code imports is more flexible for other types of data and applications but requires a higher level of technical ability from its users.
+Hydrographic surveys can have many different objectives, and different challenges will occur during the processing of the resulting data. In more specialized cases like pipeline surveying, a specific software has been created to process the bathymetric data obtained. Naturally, it is always important to choose the right tool for the job, and the same goes for software. Time, money, and resources can be saved by choosing the right software, especially for specialized cases.
+Input/Output
+There are numerous types of file formats in which hydrographic data can be delivered, ranging from point clouds in standard XYZ formats to brand-own formats. When choosing software, it is important to be aware of not only the types of formats the software can import, but also which formats can be written as output so that the workflow can be continued in other software or by other parties. Most software will have a maximum input file size which can be hardware-dependent or limited by the software itself.
+System requirements for Hydrographic Processing Software
+Geospatial data processing operations can be quite intensive for the average computer, especially when working with 3D visualizations. Always check the software’s system requirements, such as the required RAM and processor specs, to make sure that the existing hardware does not limit the performance of the software.
+Equipment-based software
+Besides software with standard file input that will often use point cloud input files (obtained using Lidar or single-beam sonar, for instance), there are also software packages that use data acquired with specific instruments (often of the same brand). Since this software is designed to deal with the data provided by certain equipment (e.g. a specific sensor), it is likely to be more efficient and effective for that data than other software.
+User Interface
+The software’s user interface should be easy to work with in order to avoid the user wasting valuable time due to not being able to easily find the required functionalities. While this is largely dependent on the technical level of the end-user and also a matter of personal taste, it is nevertheless an important factor to take into consideration when investing in the processing software. If the main user base of the software will be of a lower technical level, the interface will play a larger role than it would for users with a high level of technical expertise.
+Visualization
+Just as workflows have different types of input data, there are also differences in the types of visualization required. When the output of a workflow contains a strong visual aspect, the buyer should make this a priority. The buyer should take note of whether there are 2D or 3D visualization possibilities as well as ‘fly-through’ options. These allow the user to check the terrain by passing through it with point-of-view (POV) vision and possibly subsequently export this as a video file. Scientific-based workflows will often rely less on visualization as these require less visual and subjective analysis of results.
+Support
+One of the most important factors to consider when buying any software is the available support. This can range from an online Q&A section to online tutorials and courses. Larger software companies offer courses and training, while all the required documentation and information is often available online for free for many commonly used software packages. However, this can depend on the popularity and price of the software, so it is important to check the available customer support and documentation beforehand, along with the associated costs.
+Updates and release notes
+All software contains bugs. What is important is that bugs are fixed promptly and software improvements are made and communicated to users. Clear release notes on software bug fixes and improvements help the users to stay up to date on the latest developments.
+What does hydrographic processing software cost?
+Depending on the software purchase considerations described above, there are various packages from different providers that may be suitable for your purpose of use. The price varies greatly per software supplier and per package.
+Conclusion - What is the best hydrographic processing software for your needs?
+The right hydrographic processing software for a job depends on a wide range of factors. Before investing in a solution, buyers should therefore reflect on the intended operations and applications for the data, the types of inputs and outputs (including the system requirements), the user interface and the users’ level of technical ability, the need for visualization in relation to the type of project, and what kind of support is available to users. These considerations will help to optimize the return on investment in the hydrographic processing software.
+Search and compare Get insights Connect
+PRIVACY COOKIES T&C ADVERTISING USED AND RENTAL NEWSLETTERS JOIN GEO-MATCHING CONTACT US

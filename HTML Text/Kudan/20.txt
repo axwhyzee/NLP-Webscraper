@@ -1,0 +1,50 @@
+https://www.kudan.io/archives/1158
+ About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Showcasing Kudan’s Visual & 3D Lidar SLAM at AUVSI XPONENTIAL 2022
+05.20.2022
+Share on
+Kudan Inc. (headquartered in Shibuya-ku, Tokyo; CEO Daiu Ko, hereafter “Kudan”) along with its group company, Artisense Corp (hereafter “Artisense”) is pleased to announce that on April 25-28 2022, Kudan together with its subsidiary Artisense exhibited at the AUVSI XPONENTIAL conference held in Orlando, Florida. The conference boasted a total of 500 exhibitors and 6,500 attendees, showcasing the latest technological developments within the ground, air and sea robotics industries.
+As a leader in the simultaneous localization and mapping (SLAM) industry, Kudan exhibited at its booth, a demonstration of its indirect and direct visual SLAM offering as well as its 3D Lidar SLAM solution.
+These real-time displays allowed participants to visually experience the capabilities and achievable accuracy of our systems firsthand. On one cart we had presented visual SLAM which is able to infer a pose from camera input. The other cart featured KdLidar, Kudan’s 3D-Lidar based SLAM. KdLidar is robust against scenery changes and dynamic objects while it is compatible with many 3D-Lidar models including both spinning lidar and solid state lidar. The KdLidar demonstration showcased our ability to move through the environment while tracking our position and creating a dense point cloud of the scene.
+Snippet of the ArtiSLAM demo during the Xponential 2022 conference.
+For a more detailed breakdown on how our SLAM works, have a read of ‘Visual SLAM: The Basics’ and ‘3D Lidar SLAM: The Basics’.
+The buzz across the different booths as well as the interest in our SLAM offerings only goes to show the demands of the market to move towards adopting both robotics solutions and autonomous systems. We were able to obtain some tangible project leads through the conversation with the attendees in the autonomous mobile robots and drone applications space. We thank the organisers, participants and our partners for making XPONENTIAL 2022 a success for us, with plenty of insights and opportunities to take away from it.
+About Kudan Inc.
+Kudan (Tokyo Stock Exchange securities code: 4425) is a deep tech research and development company specializing in algorithms for artificial perception (AP). As a complement to artificial intelligence (AI), AP functions allow machines to develop autonomy. Currently, Kudan is using its high-level technical innovation to explore business areas based on its own milestone models established for deep tech which provide wide-ranging impact on several major industrial fields.
+For more information, please refer to Kudan’s website at https://www.kudan.io/.
+■Company Details
+Name: Kudan Inc.
+Securities Code: 4425
+Representative: CEO Daiu Ko
+■For more details, please contact us from here.
+Share on
+Recent Posts
+How to Select the Best 3D Lidar for SLAM
+Blog
+05.09.2022
+Kudan 3D-Lidar SLAM (KdLidar) in action：Long narrow corridors
+Press Release
+05.02.2022
+The Camera Basics for Visual SLAM
+Blog
+04.25.2022
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT

@@ -1,0 +1,97 @@
+https://www.viewar.com
+ This website uses cookies
+We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+Allow all cookies
+Show details
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+Solutions Success Stories Contact
+CONTACT EXPERT
+Login
+All-in-One
+Augmented Reality System
+The only system that provides complete infrastructure to create, manage, test, and publish your Augmented Reality applications.
+.a{fill:#fff;} AR Indoor Navigation
+.a{fill:#fff;} AR Remote Assistance
+.a{fill:#fff;} AR Product Visualization
+.a{fill:#fff;} Industry 4.0 & IoT
+… and much more
+CONTACT EXPERT
+Creating Augmented Reality Apps has never been so convenient
+The ViewAR System lets developers, and inexperienced creators, use cutting-edge AR technologies to create immersive AR experiences across a broad range of domains
+01 Use Templates to Accelerate Your App Creation
+Choose any of our ready-made templates that fit your business needs best. Our template library offers solutions for different scenarios, including indoor navigation, product visualization, remote assistance, IOT data, object tracking and many more. Augmented Reality templates available in the ViewAR System are thoroughly tested and have already been successfully market-proven by numerous international companies. Each template was created from a large number of customer projects, ensuring that all relevant functionality for your business domain is included.
+Solutions
+For Non-Developers
+02 Customize With Our Editor …
+For creators without JavaScript development experience, we offer an intuitive editor. It lets users modify existing template features and easily manipulate UI styles to achieve your corporate design and branding requirements.
+For Developers
+… or with Source Code (via our SDK)
+JavaScript Developers with experience in Angular.js, Vue.js or React.js retain full control over the app creation process. They can use the ViewAR command line interface to develop their own custom application logics, functionalities, app flows, user interfaces and APIs to achieve their business requirements. In addition to adopting existing templates, developers can also create new templates to offer via our platform.
+Documentation
+03 Upload, Edit and Manage Content
+Assets needed for app creation are stored in our content cloud. ViewAR offers a web-based file manager to upload, edit and organize your data. Use our 3D editor to apply PBR materials to your uploaded 3D models. Conversion into Apple’s USDZ file format is free, if required.
+04 Test on Mobile Devices
+All apps created with our system can be previewed live at any time during the creation process. Simply download the ViewAR app from the Apple App Store or Google Play Store. Scan either a provided QR-Code or use an app ID to preview the current state of your project on any AR compatible mobile device.
+05 Publish
+After successful tests and previews, your AR experience is ready to go live and be shared with your customers. Download the Xcode Project for iOS and/or the Studio Project for Android and publish without any additional coding or adjustments.
+Supported Trackings and AR Technologies
+Apple’s tracking system ARKit supports iOS-powered mobile devices and phones only. It is mainly used for marker and markerless object placement.
+Google’s ARCore tracking has all its strength in marker and markerless object placement. It supports Android-powered phones and mobile devices only.
+VisionLib’s model tracking enables highly accurate 3D object tracking for dynamic sceneries and illuminations and offers an automated pipeline for model import.
+Placenote provides point cloud based scene recognition, which enables apps to save, share and reload persistent AR content in real-world spaces.
+The Structure Sensor enables your mobile device to understand and instantly capture the real world in three dimensions.
+Microsoft’s Hololens allows users to navigate through an AR app with sensual and natural interface commands, such as gaze, gesture, and voice.
+Magic Leap’s lightweight HMD lets users see and interact with 3D computer-generated content and supports hand tracking and gesture recognition.
+6D.AI offers SLAM tracking combined with point cloud based re-localization based on GPS position or Wi-Fi name.
+Quuppa provides Bluetooth low energy antenna devices for ceiling mounting which can track smartphones running the application and/or Bluetooth tags. In combination with the ViewAR tracking fusion system, it offers a persistent AR coordinate system.
+Infsoft provides an indoor positioning system based on Bluetooth beacons. Combined with the ViewAR tracking fusion system, it offers a persistent AR coordinate system.
+Proximi.io is an indoor positioning system which offers almost all of the major positioning technologies and a 6° drag pose in combination with the ViewAR tracking fusion system.
+Vuforia offers cutting edge tracking, including tracking of CAD models, 2d images and even large environments.
+Hire an Augmented
+Reality Developer
+If you don’t have your own development resources, contact our team to get in touch with one of our preferred developers.
+Contact us
+Unique Features
+of the ViewAR System
+Multi Platform Support
+Apps created with our system run on iOS or Android devices using the same codebase and styling. This drastically lowers app development effort, cost, and time.
+Style with CSS
+Since our templates are HMTL-based, you can utilize all the features and the flexibility of CSS to style your app. This way we make sure that your AR Application is WebAR ready.
+Web-Browser Support
+Thanks to the JavaScript port of our rendering engine and our HTML-based front end, almost all applications come with a web version. This simplifies development, debugging, and testing.
+Speak with an Expert
+We look forward to helping you to identify the most valuable use case for your business. Contact us, if you want to speak to on of our experts or if you want to schedule a demo call.
+CONTACT EXPERT
+Join the Ranks of
+these Amazing Companies
+Trusted by some of the largest companies in the world, ViewAR™ solutions provide ways to enhance your internal processes. From driving sales in Retail and Real Estate to optimization of internal processes for Industry 4.0, our customers needs always come first. More than 50 published applications have helped us build the system that our clients count on and steadily invest in.
+Read more
+Contact
+Imprint
+Terms of Use
+Privacy Policy
+Solutions
+Success Stories
+Blog
+Documentation
+ViewAR Portal
+USDZ&GLB Converter
+USDZ&GLB Plugin
+Product Visualization
+Indoor Navigation
+Remote AR
+Follow us on
+Subscribe for ViewAR System Updates and News:
+
+©2022 ViewAR GmbH. All rights reserved.

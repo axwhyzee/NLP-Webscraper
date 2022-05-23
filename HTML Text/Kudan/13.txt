@@ -1,0 +1,70 @@
+https://www.ti.com/microcontrollers-mcus-processors/edge-ai.html
+ Login / Register
+Regional preferences
+To view this page, you must select your ship to region and currency in the Regional preferences menu on the right. Click OK to proceed.
+TI.com pages are translated to a limited number of other languages. You will receive a notification if a page is not available in your selected language.
+Menu
+Language
+My cart
+Home
+Microcontrollers (MCUs) & processors
+Edge AI
+Embedded artificial intelligence
+View all products
+Practical embedded processing solutions for edge AI
+Get the most out of your designs with high-performance computer vision, sensor fusion and AI processing with easily-programmable hardware accelerators. Design fast with Python, TensorFlow Lite, ONNX Runtime, TVM, GStreamer, Docker and ROS. Go to market in less time with production-ready solutions from the TI Edge AI ecosystem. 
+Bring smart cameras, robots and intelligent machines to life
+Upgrade your workspace with an 8 TOPS processor starter kit for AI vision and sensor fusion applications. Then explore software demos to find inspiration for your next project.
+Explore smart camera projects
+Image classification
+Object detection
+Semantic segmentation
+Simultaneous multiple inference
+Explore autonomous machine and robot projects
+3D sensing with stereo cameras for human-like perception
+Environmental awareness using deep learning
+3D obstacle detection using computer vision and deep learning
+Deep learning-based visual localization
+Get started today
+8 TOPS edge AI starter kit, software demos, cloud development tools and TI Edge AI Academy— all for $249
+EVALUATION BOARD
+TDA4VM processor starter kit for Edge AI vision systems
+Bring smart cameras, robots and intelligent machines to life with the TDA4VM processor starter kit. With a fast setup process and an assortment of foundational demos and tutorials, you can start prototyping a vision-based application in less than an hour. The kit enables 8 TOPS of deep learning (...)
+Design fast with industry-standard APIs
+Easily deploy AI models and accelerate deep learning, imaging, vision and multimedia functions with Python, TensorFlow Lite, ONNX Runtime, TVM, GStreamer, Docker, ROS and other industry standard APIs.
+Lower-level software tools and middleware simplify development by automatically accelerating imaging, vision, multimedia and AI functions, so you can design fast. 
+  Learn more
+Add embedded intelligence with superior deep learning inference
+TDA4x processors enable some of the highest fixed-point embedded deep learning inference per TOPS in the industry.
+Reduce system power and cost with highly-integrated TDA4x processors
+Deep learning accelerator
+A matrix multiplication accelerator on a programmable DSP enables 4K 8-bit and 2K 16-bit fixed multiply accumulate per cycle and power efficiency (fps/watt) that rivals the best in the industry.
+Computer vision accelerators
+Computationally intensive low-level brute-force pixel processing tasks are offloaded to power-efficient hardware accelerators, enabling smaller system footprints and simplified power designs.
+Smart memory & bus architecture
+A high-bandwidth bus interconnect with a nonblocking infrastructure and large internal memory reduces DDR instances and increases system throughput and power savings.
+Functional safety & security
+Functional Safety-Compliant processors with integrated MCUs help you achieve certifications up to SIL-3, and integrated security features help you reduce system size and cost.
+Designing an efficient Edge AI system with highly integrated processors
+Efficient hardware acceleration for imaging, vision, multimedia and deep learning enable commercially viable edge AI systems optimized for performance, power, size, weight and cost. 
+View whitepaper
+Buy an elite production-ready processor for your design
+TDA4x processors enable one of the highest fixed-point embedded deep learning inference capabilities in the industry.
+TDA4VM
+ARM-BASED PROCESSORS
+TDA4VM
+NEW
+ACTIVE
+This product has been released to the market and is available for purchase. For some products, newer alternatives may be available.
+Dual Arm® Cortex®-A72, C7x DSP, and deep learning, vision and multimedia accelerators
+Go to market in less time with the TI Edge AI ecosystem
+Vendor
+Specialization
+Services
+Phytec System-on-module (SOM) Learn more
+Allied Vision Camera and sensor Learn more
+D3 Engineering Camera, radar, sensor fusion, hardware, drivers and firmware Learn more
+Ignitarium AI services and robotics Learn more
+RidgeRun Linux development, Gstreamer plugins and AI applications Learn more
+Kudan Simultaneous localization and mapping (SLAM) Learn more
+Amazon Web Services Cloud services for machine learning, model management and IoT Learn more

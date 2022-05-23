@@ -1,0 +1,20 @@
+http://besense-iot.com/blog/#more-98
+ BeSense Iot Products
+HOME
+WORKS NATIVELY WITH SMARTTHINGS
+VERA CONTROLLER
+PRODUCTS
+CONTACT US
+Works Natively With SmartThings
+Here are some videos that should help you getting our Sensors to work with SmartThings.
+How to Add a new sensor
+Reset your sensor
+See More
+ 
+VIDEO (40 Seconds) – ADD A NEW SENSOR IN SMARTTHINGS:
+Remember to keep the device within 3 feet away from your hub during inclusion.
+And that should be it! I hope this was helpful in simplifying the process behind custom device handlers. Feel free to contact us if you have any question.
+info@besense-iot.com
+VIDEO (10 Seconds) – RESET SENSOR:
+To reset the device, press 6 times the tamper switch as you can see in the following video:
+© 2016 BeSense IoT Inc., All Rights Reserved USA. info@besense-iot.com

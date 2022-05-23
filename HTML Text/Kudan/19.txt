@@ -1,0 +1,87 @@
+https://www.adlinktech.com/en/ROS2-Solution
+ Language English
+Inquiry List(0)
+Login Register
+Products
+Industries
+Contact & Support
+About
+Home
+ROS 2 Solution
+Synchronizing the
+Perception and Localization
+of Autonomous Mobile Robots
+Contact Us
+New Era AI Robotic Inc. Managed to Develop AMRs Dedicated to the Medical Profession in Conjunction with Intel and ADLINK
+Learn More
+ADLINK Technology Powers the University of Hawaii Autonomous Racing Team
+Learn More
+How AUO Joined Hands with ADLINK
+and Intel to Promote the Overall Evolution
+of the Manufacturing Industry
+Learn More
+Why AMR?
+The automated guided vehicle (AGV) market has become almost saturated but is now stagnated due to the difficulty of developing products for new applications. The next generation of AGV systems need to be smarter and have more flexibility. Autonomous mobile robots (AMR) will become prevalent in several vertical markets such as logistics, medical, agriculture and mining. As labor costs increase, more swarm robotic systems will be developed and deployed to perform repeated tasks.
+Learn More
+Why ADLINK’s ROS 2 Robotics Solutions
+ADLINK robotics solutions allow users to develop complex robotic applications with minimal investment outlay, whereby they enjoy the benefits of various AI engines, development environments, flexible hardware systems, and evolving Data Distribution Service
+Neuron SDK: ADLINK’s Powerful ROS 2 Development Kit
+The ADLINK Neuron SDK, delivering powerful development capabilities, is fully compatible with both ROS and ROS 2, featuring an optimized environment providing full access to hundreds of open source robotic algorithms, achieving rapid development for faster time-to-market.
+Learn More
+Benefits
+Simplified System Integration
+Rich tool/module portfolios and ROS / ROS 2 compatible environment make it easy to integrate application requirements across multiple hardware, software package, and service types.
+Reduced Total Cost of
+Ownership (TCO)
+End-to-end expenditure, from purchase to disposal, including expected costs of service, repair, and warranty can be decreased significantly.
+Enhanced Communications
+System-wide communications connect multiple devices via DDS.
+ADLINK meets every user’s needs
+Seeking speedy entry into the robotics-enabled market ADLINK provides:
+ROScube-X
+AI-based autonomous application
+Powerful AI computing for intelligent robotics development
+Learn More
+ROScube Pico NX/NPN
+SOM-based platform for rapid development of ROS and AI applications
+Affordable solution for rapid development and deployment
+Learn More
+ROScube-I
+Real-time robotics application
+Real-time architecture for robotics development from mainstream to high end
+Learn More
+ROScube Pico TGL
+Embedded Real-time Robotic Controller
+Ruggedized, secure connectivity with locking USB ports
+Learn More
+Visit ADLINK ROS GitHub
+Join the community to help develop your ROS 2 projects faster
+Visit ADLINK ROS GitHub
+Upcoming Events
+Resources
+Previous
+Next
+Partners
+Company Overview
+Mission & Vision
+Social Responsibility
+News & Events
+Careers
+IoT Careers
+IoT Solutions
+Contact Us
+World Wide Offices
+Where to Buy
+Support
+Catalyst Partner Portal
+Partner Center
+eRMA Service
+RMA & Support – Healthcare
+ADLINK DDS Support
+Ask an Expert
+Stay Connected
+                SUBSCRIBE ADLINK NEWSLETTER
+Privacy Policy
+Cookie Policy
+Site Map
+Copyright © 2022 ADLINK Technology Inc. All Rights Reserved.

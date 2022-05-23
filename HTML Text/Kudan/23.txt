@@ -1,0 +1,106 @@
+https://www.kudan.io/archives/1107
+ About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+The Camera Basics for Visual SLAM
+04.25.2022
+Share on
+Figure 1: Camera lens
+So, first, what is Visual SLAM?
+We’ve written about it in detail before, but Xiang Gao and Tao Zhang define this so well[1]:
+“Simultaneous Localization and Mapping usually refer to a robot or a moving rigid body, equipped with a specific sensor, that estimates its motion and builds a model of the surrounding environment, without a priori information [2]. If the sensor referred to here is mainly a camera, it is called Visual SLAM.”
+Visual SLAM technology plays a crucial role in various use-cases such as autonomous driving, autonomous mobile robots, drones, augmented reality, and virtual reality. Most research [3] in the field focuses on improving the algorithm and the software side of things to optimize the performance of the technology.
+Though the algorithmic advancements are essential, the performance is also directly dependent on the hardware (or the sensor) used, in the case of Visual SLAM — the camera.
+Choosing the correct camera is far from a straightforward process. There are plenty of resources detailing the concepts behind SLAM and the algorithms used for the technology. Still, we’re yet to find a detailed resource that provides in-depth detail on the characteristics that matter when choosing the camera for SLAM.
+We certainly understand that with the best specification comes huge costs — we’ll strive to point out the most important features, allowing you to pick the best camera for your application.
+Let’s dive into the specification you need to pay attention to, shall we?
+Frame rate, field of view, and dynamic range — what’s better?
+Let’s start with the basics of any camera.
+Frame rate is the frequency at which consecutive images (frames) are captured every second. As you might have understood from the definition, The faster the movements you want to track, the higher the frame rate you need to have in order to have sufficient overlap and corresponding feature points between frames.
+Figure 2: Comparison of frames per second (fps)
+The ideal frame rate for SLAM can vary from 15 fps to 50 fps based on the application.
+15 fps: for applications with robots that move at a speed of 1~2m/s
+30 fps: for most applications that involve vehicle movements
+50 fps or more: for applications around Extended Reality (XR) especially to avoid motion sickness
+There are ways to increase a camera’s fps, but generally, higher fps cameras are ideal based on the use case.
+Field of View (FoV) is the extent of the observable world seen at any given moment. The broader the camera’s field of view, the more robust and accurate SLAM performance you can expect up to some point.
+Ideally, visual SLAM prefers greater than 100 degrees of horizontal FoV for robust operation in robotics. However, as the FoV increases, the image distortion also becomes stronger; hence if we can’t perform undistortion properly, the benefit of broader FoV is canceled out.
+Figure 3: Comparison of images taken by a normal lens and fisheye lens
+Visual SLAM needs a specific model to undistort images captured by these cameras. Fisheye and omnidirectional lenses could be powerful if undistortion can be done correctly.
+Dynamic range is the contrast ratio between the darkest and brightest color tones that a camera can capture in a single exposure. With a limited dynamic range, everything looks white in bright environments and black in dim environments. This remains one of the significant factors contributing to extracting features from the captured frames. Therefore, the larger the dynamic range is, the better the SLAM performance.
+Figure 4: White-out and black-out images based on the environments
+Global shutter over rolling shutter
+During faster movement of the target, the shutter type of the cameras affects the Visual SLAM performance significantly.
+Let’s take a step back and understand these types of shutters:
+Global shutter: All sensor pixels are read out simultaneously by the camera when exposed to a signal from the target. As a result, the images captured are snapshots of a single point in time.
+Rolling shutter: This type of camera records the frame line by line on an image sensor instead of capturing the entire frame all at once. Here the top of a frame is scanned and recorded slightly earlier than the bottom of the frame.
+Figure 5: Rolling shutter image has distortion for high-speed moving objects (Image from Oxford Instruments)
+This slight lag with rolling shutter cameras can cause distortion and blur in their images. This rolling shutter effect makes it trickier to make it work with SLAM efficiently.
+Therefore, global shutter cameras are highly recommended for handheld, wearables, robotics, and vehicles applications. The consideration is cost, rolling shutter cameras are more affordable than global shutter ones in general.
+Baseline is another important element when you use a stereo camera
+Baseline is the distance between the two lenses of the stereo cameras. This specification is essential for use-cases involving Stereo SLAM using stereo cameras.
+Stereo SLAM uses parallax to estimate the depth of each feature point (please see our “Visual SLAM: The Basics” for more details).
+Figure 6: Short and long-baseline [4]
+
+If the baseline is long, it’s more suitable for open/ outdoor environments as the more extended baseline enables the SLAM system to obtain more parallax than the shorter baseline. On the other hand, the shorter baseline is preferred if use cases focus on small indoor environments because it allows the matching of objects close to the rig.
+10cm is generally preferable to a 5cm baseline for indoor robotics. In that sense, among Intel Realsense, D455 (9cm baseline) is better than D435 (5.5 cm baseline) for robotics SLAM usage.
+Other built-in sensors aid the camera
+We defined Visual SLAM to use the camera as the sensor, but it can additionally fuse other sensors.
+Sensor fusion is when inputs from various supporting sensors are brought together to form a single model of the environment around the target object. This technique is especially effective in the case of Visual SLAM.
+IMU (inertial measurement unit) and the depth sensor are two notable other built-in sensors. Using the camera image along with IMU information, we can perform Visual Inertial SLAM [5], and using a mono RGB camera alongside depth information, we can achieve RGB-D SLAM [6].
+The idea is to look for the availability of these built-in sensors so you could do variations of Visual SLAM using the same camera.
+Typical pitfalls to watch out when you have a camera in hand
+We’d like to share what you want to check when you receive a camera and test it. It could happen that what you see is different from what you read on a spec sheet. Based on our experience, frame skip/drop, noise in images, and IR projection are typical pitfalls to watch out. Frame skip or drop is quite challenging for SLAM to deal with since this reduce the overlapping area between frames and make SLAM easier to get lost. Noise in images also make the feature points selection inconsistent between frames even if there are same scenery in them. If there’s always IR projection (dots or some patterns from IR projector) in camera images, it also confuses Visual SLAM and deteriorate the performance significantly.
+Often people believe all the specifications listed on the camera manual are important. This is a myth. It’s not true, at least not for the performance of Visual SLAM.
+Read on as we list these specifications and reveal why it’s not so important!
+Color image: Greyscale images suffice for most SLAM applications
+Generally speaking, this isn’t one of the priorities when we pick the camera for SLAM use cases.
+This is because almost all Visual SLAM systems use only greyscale images. They can receive RGB images, but they throw away color information since the vital information is the brightness rather than RGB composition.
+Figure 7: Comparing greyscale and RGB images
+The only exception to this rule is that when the use case involves perception, such as image recognition before or inside the SLAM system, RGB could be required.
+Resolution: It may not be as important as you think
+We’ve kept the exciting information for the last — the general myth is that higher resolution cameras can help SLAM performance. It’s not true. Even worse, high resolutions can be detrimental to real-time processing.
+Let us explain to you how. Higher resolution means many pixels to be processed, increasing the time to process the images. This affects the performance when it comes to real-time processing.
+In most use-cases, VGA level resolution is sufficient and higher than that is not necessary from SLAM perspective. Again, if there is another image recognition process before the SLAM, you need to hit a good balance since higher resolution is preferred for image recognition.
+Final words
+Visual SLAM is one of the instrumental technologies across several use-cases involving robotics, drones, autonomous vehicles, and AR/VR.
+We detailed the importance of choosing the right camera and analyzed the ideal characteristics in-depth. We hope this article gave you an idea of how Visual SLAM works and what impact the specifications can have when picking the camera.
+If you’ve followed along till here, this knowledge would be a good starting point for your development of Visual SLAM-related projects — we can’t wait to see what you build.
+And, of course, feel free to reach out to us through the inquiry form if you want to hear more detailed observations about the camera you want to use for SLAM.
+References
+[1] Xiang Gao and Tao Zhang. “Introduction to Visual SLAM” [PDF]
+[2] A. Davison, I. Reid, N. Molton, and O. Stasse, “Monoslam: Real-time single camera SLAM,” IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 29, no. 6, pp. 1052–1067, 2007 [PDF]
+[3] Xia, Linlin & Cui, Jiashuo & Shen, Ran & Xu, Xun & Gao, Yiping & Li, Xinying. (2020). A survey of image semantics-based visual simultaneous localization and mapping: Application-oriented solutions to autonomous navigation of mobile robots. International Journal of Advanced Robotic Systems. 17. 172988142091918. 10.1177/1729881420919185 [PDF]
+[4] Tannoury, Anthony & Darazi, Rony & Makhoul, Abdallah & Guyeux, Christophe. (2018). Wireless multimedia sensor network deployment for disparity map calculation. 1–6. 10.1109/MENACOMM.2018.8371006 [PDF]
+[5] Myriam Servières, Valérie Renaudin, Alexis Dupuis, Nicolas Antigny, “Visual and Visual-Inertial SLAM: State of the Art, Classification, and Experimental Benchmarking,” Journal of Sensors, vol. 2021, Article ID 2054828, 26 pages, 2021 [PDF]
+[6] Endres, Felix & Hess, Jurgen & Engelhard, Nikolas & Sturm, Jurgen & Cremers, Daniel & Burgard, Wolfram. (2012). An evaluation of the RGB-D SLAM system. Proceedings — IEEE International Conference on Robotics and Automation. 1691–1696. 10.1109/ICRA.2012.6225199 [PDF]
+■For more details, please contact us from here.
+Share on
+Recent Posts
+Showcasing Kudan’s Visual & 3D Lidar SLAM at AUVSI XPONENTIAL 2022
+Press Release
+05.20.2022
+How to Select the Best 3D Lidar for SLAM
+Blog
+05.09.2022
+Kudan 3D-Lidar SLAM (KdLidar) in action：Long narrow corridors
+Press Release
+05.02.2022
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT

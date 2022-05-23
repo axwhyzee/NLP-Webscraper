@@ -1,0 +1,40 @@
+https://www.kudan.io/nvidia
+ About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Don't get lost.
+Always know precisely
+where you are.
+Kudan SLAM -
+See the difference commercial grade SLAM brings to your product.
+NVIDIA® JetsonTM modules power a range of applications that require various performance levels. Jetson modules pack unbeatable performance and energy efficiency in a tiny form factor, effectively bringing the power of modern AI, deep learning, and inference to embedded systems at the edge.
+
+Kudan's SLAM software brings spatial awareness to your autonomous machines powered by Jetson, whether you have a single camera, stereo camera, depth camera, or even Lidar.
+
+Whether you have built your own stack or using NVIDIA's Isaac robotics software platform and/or ROS, we can complement your solution with robust, reliable, and efficient spatial awareness.
+Learn More
+Kudan's commercial grade SLAM outperforms
+the competition where it matters the most:
+2x the SLAM processing framerate
+50% of memory usage
+Robust and consistent tracking in various operating environments
+Trusted and proven with partners environments
+* Compared against readily available software solutions like ORB-SLAM
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT

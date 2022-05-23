@@ -1,0 +1,60 @@
+https://www.kudan.io/archives/1134
+ About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+EN
+Kudan 3D-Lidar SLAM (KdLidar) in action：Long narrow corridors
+05.02.2022
+Share on
+Lidar SLAM in long narrow corridors – deceivingly challenging
+Long narrow corridors in office buildings and industrial facilities are quite common environments for robotics and mapping applications. However, they are one of the more challenging environments for Lidar SLAM due to repetitive structural appearances and limited GNSS signals (You can learn how 3D Lidar SLAM works in this blog post). This time, we are showcasing Kudan Lidar SLAM (KdLidar) taking on this challenging environment with ease in this challenging environment using a very simple setup.
+Kudan Lidar SLAM works robustly in these challenging but common environments without any external sensors
+This scan was done only with an Ouster lidar (OS1-32) using its built-in IMU as a handheld scanner shown in the picture below.
+Kudan Lidar SLAM in action: In long narrow corridors in an office building
+(The data credit: UCS in Korea)
+As you may know, Kudan Lidar SLAM will detect and perform loop closure to optimize the point cloud map, and it indeed detected some loops during this scan but the effects are barely noticeable due to the very limited drift generated during the scan. This is a good indicator that Kudan Lidar SLAM is managing this challenging environment with ease.
+This type of environment is challenging yet quite common across various applications.
+Mapping and tracking for autonomous service robots operating within offices and commercial buildings
+Mapping of office buildings for inspection, maintenance, and facilities management
+Progress monitoring and documentation of construction worksites
+Here are some of the details of the environment, and demo parameters.
+Size of the area: Each corridor runs 50m – 60m length
+Sensor: Ouster OS1-32 3D lidar: Only lidar, without further sensor fusion (however, we can utilize other sensors if needed)
+The SLAM video is generated in real-time for progress monitoring and the high-density point cloud map is generated during post-processing
+Please feel free to reach out to us if you operate within these types of environments or have other challenging environments that you need a solution for. See the difference commercial-grade SLAM can make as part of your solution. We are happy to solve the problems together.
+About Kudan Inc.
+Kudan (Tokyo Stock Exchange securities code: 4425) is a deep tech research and development company specializing in algorithms for artificial perception (AP). As a complement to artificial intelligence (AI), AP functions allow machines to develop autonomy. Currently, Kudan is using its high-level technical innovation to explore business areas based on its own milestone models established for deep tech which provide wide-ranging impact on several major industrial fields.
+For more information, please refer to Kudan’s website at https://www.kudan.io/.
+■Company Details
+Name: Kudan Inc.
+Securities Code: 4425
+Representative: CEO Daiu Ko
+■For more details, please contact us from here.
+Share on
+Recent Posts
+Showcasing Kudan’s Visual & 3D Lidar SLAM at AUVSI XPONENTIAL 2022
+Press Release
+05.20.2022
+How to Select the Best 3D Lidar for SLAM
+Blog
+05.09.2022
+The Camera Basics for Visual SLAM
+Blog
+04.25.2022
+About Us
+Our Technology
+Use Cases / Solutions
+News
+IR Info.
+Careers
+Contact
+JP
+EN
+Follow Us
+© Kudan. All Rights Reserved.
+Privacy Policy
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish. Cookie settingsACCEPT

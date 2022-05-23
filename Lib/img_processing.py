@@ -12,11 +12,16 @@ def img_to_text(path):
     return pytesseract.image_to_string(img, lang='eng')
 
 
-def save_img(url, save_path):
-    r = requests.get(url)
+def download_url(url, save_path):
+    try:
+        r = requests.get(url, verify=False)
         
-    with open(save_path, 'wb') as g:
-        g.write(r.content)
+        with open(save_path, 'wb') as g:
+            g.write(r.content)
+        return True
+    except Exception as e:
+        print(e)
+        return False
 
 
 def find_ext(path):

@@ -43,7 +43,7 @@ class ReverseSearch():
         return 0
 
     def rear_strip(self, s):
-        while not s[-1].isalnum():
+        while s and not s[-1].isalnum():
             s = s[:-1]
         return s
 
@@ -97,7 +97,11 @@ class ReverseSearch():
         result['search_value'] = search_value
         
         # get number of results
-        num_results = self.get_num_results(self.driver.find_element_by_id('result-stats').text)
+        try:
+            num_results = self.get_num_results(self.driver.find_element_by_id('result-stats').text)
+        except:
+            return
+        
         result['results'] = num_results
 
         if search_value in self.visited:
@@ -152,10 +156,3 @@ class ReverseSearch():
         
     def reset(self):
         self.driver.quit()
-
-
-##RS = ReverseSearch('C:\Program Files (x86)\chromedriver.exe')
-##RS.start()
-##print(RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229010-8OTTIFHAPQ9DY9IAWNRP/essersB.png?format=500w'))
-##RS.reset()
-##

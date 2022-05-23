@@ -9,16 +9,9 @@ import os
 
 class PDFReader():
     def __init__(self):
-        self.path = gen_path('.pdf')
-        self.pdf_dir = gen_path()
-
-    def download(self, url):
-        if self.path in os.listdir():
-            self.path = gen_path('.pdf')
-            
-        save_img(url, self.path)
-        
-        print('[Download] {} <--- {}'.format(self.path, url))
+        self.pdfs = []
+        self.path = ''
+        self.pdf_dir = ''
 
     def extract_text(self, path):
         output = ''
@@ -37,8 +30,8 @@ class PDFReader():
                     
             os.remove(path)
             shutil.rmtree(self.pdf_dir)
-            
-            print('[Extract] {}'.format(path))
+
+            print()
         else:
             print('[Error] File not found')
                   
@@ -46,6 +39,7 @@ class PDFReader():
 
     def save_imgs(self, path):
         pdf_file = fitz.open(path)
+        self.pdf_dir = gen_path()
 
         # Create a folder to save the images
         try:
@@ -86,8 +80,23 @@ class PDFReader():
                 # save it to local disk
                 image.save(open(f'{self.pdf_dir}/{page_index}/{image_index}.{image_ext}','wb'))
 
-    def read_pdf(self, url):
-        self.download(url)
-        self.save_imgs(self.path)
-        
-        return self.extract_text(self.path)
+    def add(self, url):
+        self.pdfs.append(url)
+
+    def read_all_pdfs(self):
+        for url in self.pdfs:
+            pdf_obj = {}
+
+            self.path = gen_path('.pdf')
+            if download_url(url, self.path):
+                print('[Download] {} <-- {}'.format(self.path, url))
+            
+                self.save_imgs(self.path)
+            
+                pdf_obj['url'] = url
+                pdf_obj['text'] = self.extract_text(self.path)
+
+            yield pdf_obj
+
+    def reset(self):
+        self.pdfs = []

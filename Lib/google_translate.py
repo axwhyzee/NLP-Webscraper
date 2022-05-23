@@ -37,6 +37,9 @@ class GoogleTranslate():
         self.lines = text.split('\n')
 
     def translate(self, text):
+        if not text.strip():
+            return ''
+        
         lang = detect(text)
         self.load_lines(text)
         

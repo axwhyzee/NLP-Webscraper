@@ -40,7 +40,7 @@ class WebTree():
         if not src or not self.is_src(src):
             src = elem.get_attribute('data-src')
         if self.is_src(src):
-            return src + ' ' + alt
+            return (src + ' ' + alt).strip()
         return ''
 
     
@@ -72,6 +72,7 @@ class WebTree():
         paths = [path[2:] for path in paths]
 
         print('[ Solving paths...     ]')
+        print()
         # solve paths
         while paths:
             parent_map = {}
@@ -122,8 +123,8 @@ class WebTree():
                                     tree['img-{}-{}-*'.format(str(depth), str(branch_count))] = src
                             else:
                                 tree['{}-{}-{}'.format(children[i].tag_name, str(depth), str(branch_count))] = branch(children[i], depth+1)
-                        except Exception as e:
-                            print(e)
+                        except:
+                            pass
                     
             return tree
 
@@ -138,11 +139,3 @@ class WebTree():
     def reset(self):
         self.driver.quit()
         self.urls.clear()
-
-##WT = WebTree('C:\Program Files (x86)\chromedriver.exe')
-##WT.start()
-##clusters = WT.get_clusters('https://www.photoneo.com/')
-##for cluster in clusters:
-##    for path in cluster:
-##        print(path)
-##    print()

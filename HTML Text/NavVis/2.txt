@@ -1,0 +1,69 @@
+https://www.navvis.com/m6
+ This website stores cookies on your computer. These cookies are used to improve your website and provide more personalized services to you, both on this website and through other media. To find out more about the cookies we use, see our Privacy Policies.
+We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.
+Cookies settings
+Accept
+Decline
+Talk to an expert
+NavVis M6
+Scalable reality capture
+NavVis M6 is an indoor mobile mapping system on wheels that enables fast scanning with minimal disruption in commercial and industrial environments where every second of downtime counts.
+See NavVis M6 in action!
+Book a demo
+Multi-sensor system
+A combination of single-layer and multi-layer LiDAR strategically positioned for a much broader range of capture compared to a single sensor system. 
+Unrivalled 360° capture
+Six cameras capture images in every direction without obstruction or blind spots. The result is the most comprehensive panorama capture capabilities on the market.
+Expansive display
+See exactly what is being scanned and assess the quality of the data with live feedback displayed on a 10 inch touchscreen display that is built into the device.
+Unprecedented speed
+Mobile scanning on wheels offers a fully scalable solution for large indoor environments. Fast capture with minimal disruption to the surroundings extends the use of 3D scanning to environments that don't allow for downtime.
+Snaps into place
+NavVis M6 requires no tools for on-site set up and dismantling, and can be transported in three mobile cases.
+Compatible with ground control points
+For survey-grade accuracy and automatic dataset alignment, NavVis M6 is compatible with ground control points.
+Book a demo
+NavVis System Software
+NavVis system software features state-of-the-art SLAM technology that delivers survey-grade point cloud quality. Learn more about what sets NavVis system software apart or download NavVis M6 sample data to experience the difference.
+Download sample dataLearn more
+Post-processing in the cloud
+With the Cloud Processing Add-on for NavVis IVION, you can process laser scan data captured by NavVis devices anywhere with an internet connection. Easily set up and start processing multiple datasets on site, ready for when you’re back in the office.
+Learn more
+Industry applications
+Scan-to-BIM / CAD
+Fast capture for scan-to-BIM workflows with the only mobile point cloud quality suitable for modeling. All-in-one reality capture enables virtual as-built verification using NavVis IVION.
+CAD floorplans
+Improve efficiency in CAD floorplan workflows. Our devices quickly capture detailed point clouds of large, complex environments that can be used for CAD drawing.
+Digital twins
+Extend existing projects by offering NavVis IVION as a new deliverable that makes building scans accessible to every stakeholder as a fully immersive, web-based digital twin.
+Scalable scanning of commercial and industrial properties
+A fast, fully scalable mobile mapping system on wheels that captures at the speed of walking through commercial and industrial environments where every second of downtime counts.
+NavVis M6 made it possible for us to apply 3D scanning to manufacturing facilities where both minimal disruption and high-quality data are essential."
+Christoph Wintrup
+Managing Director, Hemminger Ingenieurbüro GmbH & Co. KG
+NavVis M6 resources
+NavVis M6 product brochure
+Download the product brochure for more information on the NavVis M6 indoor mobile mapping system.
+Download
+NavVis M6 accuracy white paper
+Download the accuracy white paper to learn how to asses the accuracy of mobile devices and read the case study on NavVis M6 accuracy.
+Download
+NavVis M6 spec sheet
+Download the full technical specifications of the NavVis M6 Indoor Mobile Mapping System.
+Download
+BIM modeling guide
+Download the complete guide on how to use point clouds captured by NavVis M6 for BIM modeling.
+Download
+Interact with 3D building scans in a new way
+See what NavVis can do for your business
+Book a demo
+REALITY CAPTURE
+DIGITAL FACTORY
+RESOURCES
+PARTNERS
+COMPANY
+CAREERS
+CONTACT
+© 2022 NavVis
+Imprint
+Privacy Policy

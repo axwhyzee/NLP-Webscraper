@@ -1,0 +1,78 @@
+https://www.navvis.com/blog/how-dynamic-object-removal-helps-you-capture-active-sites-with-ease
+ This website stores cookies on your computer. These cookies are used to improve your website and provide more personalized services to you, both on this website and through other media. To find out more about the cookies we use, see our Privacy Policies.
+We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.
+Cookies settings
+Accept
+Decline
+Talk to an expert
+BLOG
+BIM
+Digital Factory
+Laser Scanning
+How dynamic object removal helps you capture active sites with ease
+Sean Higgins
+LASER SCANNING
+REALITY CAPTURE
+MOBILE MAPPING
+30 March 2021
+|
+3 min read
+Dynamic object removal is a simple idea that can have major impact for your mobile mapping business. Here's a few ways it can provide a competitive edge.
+Let’s say you’re bidding on an as-built documentation project at a busy factory, hospital, or construction site—and you have just learned that the site can’t shut down for scanning.
+If you planned to use terrestrial laser scanners (TLS), your bid could be in trouble. Since the scanner captures every person, machine, or car that moves through its field of view, your data set of this busy site would include significant noise and a lot of artifacts. In short, the point cloud would be unacceptable to your company and your customer.
+On the other hand, if you used a mobile scanner with dynamic object removal, the story would be very different. You could avoid these problems entirely and make a much stronger bid.
+What is dynamic object removal?
+This is a function unique to mobile scanners. Dynamic object removal uses advanced data processing to automatically remove the people, objects, cars, machines, and other objects that move through your field of view while you perform a capture. The result is cleaner data, minimal noise, and significantly better coverage.
+Here’s a “before and after” image that shows the effect of dynamic object removal.
+How does it work?
+A mobile scanner captures continuously as you walk, which means it takes every measurement—in other words, captures every point in your final point cloud—a number of times, and from a number of different positions.
+This gives the scanner’s post-processing software the ability to analyze each individual point in the cloud. If a point was captured in one moment, but missing in the next, the software can determine that the point came from a dynamic object like a person or a car. Then, it simply removes this “bad” point from your data set.
+(In fact, this type of processing enables a mobile scanning system to remove a number of other bad points automatically, including artifacts caused by fringing around objects, and errant measurements caused by reflective surfaces like glass windows or mirrors.)
+Why should you care?
+Dynamic object removal is a simple idea, but it can have significant effects on your business. Here are just a few of the ways it can sharpen your competitive edge.
+In addition to producing better, cleaner data, dynamic object removal makes for faster capture workflows. Since the system will automatically remove moving objects, you can capture any site without waiting for activity to die down. You will save yourself the trouble of capturing a room over again simply because someone walked through your scan. You will also reduce the time you spend cleaning up bad points further downstream in your workflow.
+That means you can offer more competitive pricing. Since dynamic object removal offers faster workflows, it reduces your overhead and enables you to charge an extremely competitive rate for your work.
+Lastly, this function offers increased safety for your employees. When a technician can capture an active site faster, that means they’re spending less time in a potentially dangerous environment. The shorter the scan time, the smaller the risk and the safer your workers.
+Real-world examples: Capturing a large, busy factory
+One laser scanning service provider saw the benefits of dynamic object removal firsthand when they used NavVis VLX to capture a factory for a multinational consumer goods brand.
+“It was like a mini city under a roof,” said NavVis partner manager Marek Koltun. “There were so many people moving around—even the surveyors were shocked how difficult it was to place simultaneous localization and mapping anchors, because sometimes they don't have to wait 20 minutes to get a clear line of sight between two different units. There was just so much movement.”
+By using the NavVis VLX and its dynamic object removal functionality, the provider finished the scan in only two days and produced a clean, low-noise deliverable free of moving objects. They said their previous workflows, which relied on terrestrial laser scanners, would have taken days longer for scanning and required significantly more cleanup downstream.
+Real-world examples: Bidding on a construction site
+Other service providers have found dynamic object removal very useful when they are bidding to capture construction sites.
+As Koltun explains, these providers were able to say, “I’ll be there for eight hours. None of your people will need to leave the room like they would with static scanners. You won’t need to stop the whole construction project just so we can scan.”
+Construction clients like bids like this because even the smallest break in their workflow can create a lot of issues. “Maybe someone has to put a tool away and they forget where it is,” Koltun says. “Maybe they stop in the middle of a task and it interrupts their focus. Maybe they’re painting a wall and they get kicked out in the middle, so they miss a spot.”
+“That’s why, there’s a lot you can do for your client by being on the site for a short period of time and not disrupting the workflow by asking everyone to leave.”
+Learn more
+Dynamic object removal is just one of the many benefits of a mobile mapping system. To learn more about the benefits of mobile mapping, read our educational articles explaining the basics of the technology, 7 reasons why it’s ideal for documentation work, and why it’s time to invest.
+Sean Higgins is an independent technology writer, former trade publication editor, and outdoors enthusiast. He believes that clear, buzzword-free writing about 3D technologies is a public service.
+Subscribe now!
+Be on top of the latest trends and news in the Mobile Mapping Systems World
+By submitting this form, I request and agree to receive the respective information via e-mail. I acknowledge that I am entitled to withdraw this consent at any time via the unsubscribe link in the respective e-mail. 
+I further confirm that I agree to the processing of my personal data by NavVis for the purposes stated in this form. I am aware that I am entitled to withdraw my consent to this data processing at any time by sending an e-mail to privacy@navvis.com. More information on how to withdraw consent or unsubscribe, NavVis' privacy practices, and how NavVis is committed to protecting and respecting my privacy can be found in NavVis' Privacy Policy.
+RELATED ARTICLES
+What is lidar? How does it work?
+LASER SCANNING
+3 min read
+Lidar has become a mainstream term - but what exactly does it mean and how does it work? Sean Higgins breaks it down in this post.
+What’s a virtual demo? Why should you care?
+LASER SCANNING
+4 min read
+A virtual demo isn't a webinar, but also isn't the same as an in-person demo. So what is it? Sean Higgins interviews Noah Eckhous from NavVis to find out.
+Are mobile mapping and commercial real estate a perfect match?
+LASER SCANNING
+4 min read
+Mobile mapping is an ideal choice for industries that rely on building documentation. But how does it fit in with commercial real estate? Find out here.
+You might not need a big project to buy a mobile mapping device
+LASER SCANNING
+4 min read
+Think you need to wait for a case-study-worthy, big and impressive project to make the most of a mobile mapping system? Three laser scanning professionals...
+REALITY CAPTURE
+DIGITAL FACTORY
+RESOURCES
+PARTNERS
+COMPANY
+CAREERS
+CONTACT
+© 2022 NavVis
+Imprint
+Privacy Policy

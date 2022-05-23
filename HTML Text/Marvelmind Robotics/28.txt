@@ -1,0 +1,108 @@
+https://marvelmind.com/list
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > List
+List
+A list of companies operating in the fields of autonomous robotics, drones and precise indoor positioning and navigation with the focus on the industrial applications.
+AUTONOMOUS ROBOTS
+Industrial delivery
+https://6river.com/ – robot “Chuck” – boxes delivery in warehouses
+https://clearpathrobotics.com/ – different robots, including, autonomous delivery. Probably, they deliver other people’s robots (Jun.2021)
+https://locusrobotics.com/ – autonomous mobile robot (AMR) for warehouses (Jun.2021)
+https://twinny.ai/home – autonomous delivery robots for logistics/manufacturing. S.Korea (Jun. 2021)
+https://www.vecnarobotics.com – tugs. Not much known (Jun. 2021)
+https://www.forwardx.com/ – very well funded Chinese autonomous delivery company (Dec.2021)
+  Outdoor delivery
+https://eliport.com/ – lesser-known 4-wheeled small grocery delivery robot
+https://www.nuro.ai/ – prominent autonomous 4-wheeled mini-cars for grocery delivery. Uses a LIDAR. (Jun. 2021)
+https://robby.io/ – another small 6-wheeled delivery robot for grocery. We know little about it (Jun.2021)
+https://www.starship.xyz/ – notable player with a small 6-wheeled grocery delivery robots. Estonia/USA (Jun. 2021)
+Research and university
+https://www.leorover.tech/ – a research robot-rover. Also have built-in integration and support of Marvelmind Indoor “GPS” (May. 2022)
+https://www.agilex.ai – different types of autonomous robots and parts (chassis, etc.). China (Jun. 2021)
+https://www.donkeycar.com/ – an opensource DIY self driving platform for small scale cars
+https://www.leorover.tech/ – different kind of research and special (Fukusima) robots. Poland (Jun. 2021)
+https://robotnik.eu/ – several types of robots. But looks like suitable mostly for research
+  Service robotics (cafe, hospitals, advertising and similar)
+http://www.aethon.com – a more traditional and established player with autonomous delivery robots focused on hospitals (Jun. 2021)
+https://promo-bot.ai/ – advertising robot-guide. Russia (Jun.2021)
+https://pudurobotics.uk/ – robots for cafes and restaurants. Uses Intel RealSense. Est. 2016 in Shenzhen (Nov. 2020)
+https://www.savioke.com/ – old friends with hotel delivery robots (Jun. 2021)
+https://www.segwayrobotics.com  – several types of robots from personal mobility to industrial delivery
+  COMPONENTS AND OTHER PARTS
+There are many important components for autonomous robotics: cameras, LIDARs, MEMS, motors, batteries, etc.
+Arms
+https://www.universal-robots.com – well-established robot arms vendor (Jun.2021)
+INS
+https://www.kvh.com – precise inertial solutions for marine, industrial, robotics (Jun.2021)
+Other parts
+https://www.taoglas.com – An interesting provider of antennas for UWB, connectors and other IoT solutions in general (Nov.2020)
+INDOOR POSITIONING
+There are several technologies relevant for precise indoor positioning and autonomous robots, drones for industrial applications. Our highest focus is on the most applicable ones – UWB. Much less – on BLE or WiFi or Lora or ZigBee. We may list some players in those fields as well despite, but mostly because they stand out from the crowd by something.
+BLE, WiFi and other
+https://www.esri.com – large maping player that is buying other IPS companies (Jun.2021)
+Optical
+https://antilatency.com/ – inside-out tracking for VR/AR, filming (Jun.2021)
+https://www.optitrack.com/ – well-known optical tracking (outside-in?) for VR/AR, filming, drones indoor (Jun.2021)
+Other types and special
+– http://magnettrack.ru/en – reels-based positioning for industrial applications (Jun.2021)
+Ultra Wideband (UWB)
+https://www.airfinder.com – not entirely clear what their solution actually is (Jun.2021)
+https://www.decawave.com/ – de facto, the main UWB chip supplier for the majority of the UWB players. Now part of qorvo (Nov.2020)
+https://eliko.ee/ – UWB solutions moving more to general IoT (Jun.2021)
+https://estimote.com/ – A former BLE solution vendor turned to UWB solution vendor as well (Jun. 2021)
+https://www.indoorway.com/ – UWB solutions… Not clear which hardware (Jun.2021)
+https://www.infsoft.com/ – active player in Indoor Navigation and Positioning – UWB and several other technologies (Jun. 2021)
+https://www.inpixon.com/ – mostly BLE and WiFi, but listing UWB as solutions as well (Jun.2021)
+https://kinexon.com – UWB for industry and sport. Not so clear (Jun. 2021)
+https://www.nxp.com/ – Potentially, a very big UWB chip player. But their business model in regards to UWB is not clear (Nov.2020)
+https://pozyx.io/ – popular small UWB player. Arduino-friendly
+https://real-trac.com/en/ –
+https://www.redpointpositioning.com/ – UWB solutions. HW+SW. USA/China/Ukraine (Jun.2021)
+https://rtloc.com/ – A seemingly small UWB player (Jun. 2021)
+https://www.ubitrack.com – UWB solutions with reasonable product prices (Jun. 2021)
+FORUMS, COMMUNITIES, LISTS
+https://www.marketsandmarkets.com – A report on UWB by MarketsandMarkets, an analytics company (Nov.2020)
+https://www.rfcafe.com – A list of Ultra Wideband (UWB) Manufacturers & Services by RF Cafe (Nov.2020)
+https://robohub.org/ – a non-profit online communication platform for robotics (Jun.2021)
+OUTDOOR POSITIONING
+GPS and RTK GPS
+https://www.trimble.com/ – a very large GPS player. Surveying. (Jun.2021)
+https://www.u-blox.com/ – a large GPS (chips, modules) and wireless (BLE modules, etc.) modules provider (Jan.2022)
+SHOPPING
+https://www.getfpv.com/ – an impressive shopping list for drones from ready to flying to tiny boards (Jun.2021)
+https://www.robotshop.com/ – presumably the largest online robotics store and our good long-term partner (Jun.2021)
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+Privacy & Cookies Policy

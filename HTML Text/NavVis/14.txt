@@ -1,0 +1,51 @@
+https://support.navvis.com
+ This website stores cookies on your computer. These cookies are used to improve your website and provide more personalized services to you, both on this website and through other media. To find out more about the cookies we use, see our Privacy Policies.
+We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.
+Cookies settings
+Accept
+Decline
+Toggle navigation
+Welcome to NavVis Support
+Popular Knowledge Articles: How to manage user roles in the NavVis Portal
+How to Install NavVis IndoorViewer on-premise
+How many control points should I take in one mapping?
+NavVis Academy
+Get the most out of your products with our online courses and learning community
+Visit NavVis Academy
+Documentation
+Get more information and step by step instructions for NavVis products
+Access Documentation
+Troubleshooting
+Search our knowledge base to see if your question has already been answered
+Search our Knowledge Base
+Submit a support case
+If you have purchased a support package, you can quickly and easily submit your support cases online
+Submit a Case
+NavVis Forum
+Discuss topics, ideas, and questions with the NavVis team and other NavVis enthusiasts
+Visit the NavVis Forum
+Contact us
+If you can't find the answer you are looking for here, get in touch
+Contact Us
+Browse our Knowledge Base
+Most Popular Knowledge Articles
+How to manage user roles in the NavVis Portal
+How to Install NavVis IndoorViewer on-premise
+How many control points should I take in one mapping?
+Most Recent Knowledge Articles
+May 20, 2022
+Where to place NavVis VLX and M6 license files on an Ubuntu workstation
+May 20, 2022
+Desktop processing error: data authentication failed for file: <certain>.bag
+May 20, 2022
+How to correct a wrong selection of belt hook size before processing
+Top Rated Knowledge Articles
+Dec 17, 2020
+What's the best way to take wall control points with NavVis VLX?
+Sep 7, 2021
+How to make a NavVis IndoorViewer instance public
+Apr 28, 2021
+What is the difference between an Instance and a Site?
+Back to NavVis.com
+© 2022 NAVVIS | Imprint | Privacy Policy
+Feedback

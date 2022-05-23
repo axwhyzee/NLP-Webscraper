@@ -1,0 +1,93 @@
+https://www.navvis.com/vlx
+ This website stores cookies on your computer. These cookies are used to improve your website and provide more personalized services to you, both on this website and through other media. To find out more about the cookies we use, see our Privacy Policies.
+We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.
+Cookies settings
+Accept
+Decline
+Talk to an expert
+NavVis VLX 2nd generation
+Ready for anything
+NavVis VLX is a mobile mapping system designed for laser scanning and AEC professionals that enables high-quality reality capture of complex buildings and construction sites.
+Book a demo
+Software❘
+Hardware❘
+Point clouds❘
+NavVis VLX vs. TLS❘
+1st gen meets 2nd gen❘
+Resources
+Got any questions about NavVis VLX 2nd generation?
+Get in touch
+
+The software makes the difference.
+Dynamic scanning
+Versatility when you need it most. Up to 10 times faster than a terrestrial laser scanner, NavVis VLX 2nd generation can tackle anything from complex indoor spaces with challenging light conditions to outdoor environments and construction sites.
+Superb accuracy
+For accuracy that exceeds industry standards, NavVis VLX is powered by precision SLAM technology that's entirely in a class of its own.
+Download the white paper
+
+The hardware makes it even better
+All-in-one reality capture
+Capture 3D measurements with two multi-layer LiDAR sensors in combination with industry-leading SLAM software to deliver survey-grade point cloud quality. Four cameras positioned on top of the device take high resolution images in every direction for complete 360º capture — all without the operator appearing in the field of view.
+Live mapping feedback
+Monitor your scanning progress in real time with a built-in touchscreen interface, to ensure complete coverage as you move.
+Precision meets ergonomics 
+A first-of-its-kind wearable device which enables operators to comfortably scan at the speed of walking. The forward-facing design allows for targeted scanning, together with a built-in screen for optimal viewing.
+Grip pads
+Shoulder pads
+Built-in screen
+Forward-facing design
+Stabilizing belt
+Geo-registration 
+NavVis VLX is fully compatible with standard tools in the field. It can capture control points in a local site coordinate system measured by Total Stations and GNSS rovers, and also supports national and global coordinates for precise geo-registration and alignment of datasets.
+Folding design
+The unique hinged design folds up and fits into a protective case, so that a single operator can easily transport and set up.
+
+Survey-grade point clouds
+NavVis system software features unique SLAM algorithms that have been specifically developed to overcome the challenges of capturing high-quality point clouds with a mobile system.
+Preserve original details
+
+Point cloud surface reconstruction preserves details while removing noise for more efficient use in 2D drawings and 3D models.
+Highly realistic texturing
+
+Highly detailed point clouds include color and realistic texturing.
+Detect and remove dynamic objects
+Objects that move through the scan are automatically detected and removed from point clouds during post-processing, resulting in less manual work.
+Robust SLAM
+Robust SLAM algorithms can accurately capture the entire building including the facade and surroundings.
+
+Up to 10 times faster than a terrestrial laser scanner
+NavVis VLX vs. TLS 
+Check out the results
+
+Watch the full video
+Download the sample data
+  Ready for today and tomorrow
+With regular software updates to the SLAM algorithm, NavVis VLX 2nd generation is optimized for outdoor environments and will continue to evolve long into the future. It also boasts IP42 for resistance against solid objects larger than 1 mm and vertically dripping water, and a carbon-fiber frame that's super strong and reduces overall weight.
+Other features common to all NavVis VLX devices (both 1st and 2nd generation):
+A more intuitive mapping experience: Edit a control point live during a mapping session. Benefit from multi-floor support which displays a live quality map that fades in and out when the operator changes floors. Use the user interface to pan and zoom captured data while you map. Plus, auto recognition of belt-hook height and improved battery status indication and safe shutdown.
+Panoramas: Now with vignetting compensation, HDR imaging for improved panorama quality, and auto white-balancing for improved coloration (especially outdoors)
+Point cloud image quality: When scanning in poor light conditions, intensity and RGB coloration will step in to compensate. Also benefit from optimized coloration, and improvements to the accuracy of NavVis VLX point clouds as high as 30%.
+A complete reality capture solution
+Taken together, NavVis VLX and NavVis IVION Core offer a complete reality capture solution for the built environment that  makes your digital buildings accessible from everywhere. Benefit from the NavVis IVION Cloud Processing Add-on and take your processing workflows to the next level.
+NavVis Reality Capture Solution
+  NavVis VLX resources
+NavVis VLX product brochure
+Download
+NavVis VLX indoor/ outdoor accuracy white paper
+Download
+BIM modeling guide
+Download
+NavVis VLX data sheet
+Download
+Got any questions about NavVis VLX 2nd generation?
+Get in touch
+REALITY CAPTURE
+DIGITAL FACTORY
+RESOURCES
+PARTNERS
+COMPANY
+CAREERS
+CONTACT
+© 2022 NavVis
+Imprint
+Privacy Policy

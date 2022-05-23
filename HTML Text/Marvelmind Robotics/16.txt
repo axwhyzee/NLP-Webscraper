@@ -1,0 +1,99 @@
+https://marvelmind.com/indoor_positioning_system_planning
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > Downloads > How to design indoor positioning system?
+How to design indoor positioning system?
+Planning phase
+When you plan (or we plan together with you) a precise indoor position and navigation system you shall ask and answer several questions. See them below, think them through and answer them one by one. If needed, let’s sign an NDA and we are happy to help you with your project.
+Remember the most important requirement for any precise positioning system:
+To have tracking the mobile beacon must have a direct line of sight (hearing) to two or more stationary beacons within 30 meters for 2D or three or more – for 3D
+Typical initial basic questions
+Task description:
+What exactly shall be achieved in the project? Existing problems?
+Safety of people? Or productivity? Or both?
+Tracking of forklifts/vehicles for productivity? Cranes?
+Autonomous robots or drones or AGVs or boats?
+Drone landing to a moving vehicle? Parking a boat?
+Helping camera-based systems (positioning or AR/VR)?
+Floorplan:
+We need for the future full project, if available and for the proposed PoC
+It is important to mark on the floor plan by yellow pen where the people/robots/drones/AGVs must be really tracked. Because, if just “everywhere” it could result in too many beacons. For example, do you really want to track people in WCs? Or on the stairs?
+Floorplan doesn’t necessarily mean indoor. Area plan – whatever that gives a clear idea about the size, because it will directly affect on the complexity, the number of stationary beacons required and even the proposed architecture
+Photos/videos:
+Share as many as allowed to share. Walls, ceiling – to see where it is possible to place the stationary beacons
+Obstructions?
+Noise? Videos help to understand the level and type of noise on site and thus are valuable
+Very ideally, to just walk through the site with a camera/mobile phone camera like a typical user whom we need to track would walk – to simulate his/here typical activity so that we would see all the environment around the user and assess the complexity of the environment
+Tracking in 3D or 2D or 1D:
+This clearly affects the number of beacons and, sometimes, confidence of tracking
+We support 3D tracking, 2D, 2D vertical (regular 2D, but instead of XY – XZ or YZ), 2.5D vertical (2D vertical & left or right, for example for aisles in warehouses), 1D (tunnels)
+The video on the right starts with 1D tracking (corridor), then 3D tracking in the room; then – vertical 2D tracking on the stairs
+How many mobiles:
+How many mobile objects will be tracked?
+What type?
+– People?
+– Vehicles?
+– Cranes?
+– Robots?
+– Drones?
+– A combination of them?
+The total number of mobile beacons & required update rate per mobile beacon will directly affect on the proposed architecture. See more: NIA vs. IA vs. MF NIA – how to choose?
+Location update rate per mobile:
+Location update rate per mobile object? It is important to understand the total number of mobile objects and the number of them simultaneously on site or simultaneously tracked
+Often, it is important to update locations and share with the mobile object, because it is using the data, but doesn’t necessarily update the modem/Dashboard, if it affects on the total performance of the system
+There are three architectures: IA, NIA and MF NIA. See more: https://marvelmind.com/pics/architectures_comparison.pdf
+Geofencing zones:
+Types of geofencing zones?
+Static – holes in the ground?
+Or mobile – large vehicles moving around or cranes moving?
+How many and overall description of the requirements? – what shall trigger an alarm? Like, for example, “entering to the zone by 0.5m for more than 2 seconds” – something like that
+Location+Direction:
+Magnetometers/compasses work indoor unreliably
+There is a solution – Paired Beacons
+Inside or outside:
+Rain, dust, other environmental factors?
+Working temperatures:
+Some beacons are designed for office-like environment (0..+40C). Others have a wide range (-40…+50C)
+Notice the performance is provide by design – not verified by thorough testing. Contact us if that is critical
+Power supply:
+Fixed power (~110/220V or +12V or +5V USB or Power over Ethernet, etc.) – recommended
+External battery?
+– How often is the customer ready to recharge them? Charging takes 5-24h depending on the type of chargers and size of batteries
+– Battery lifetime could be nearly any time and affect the size/cost of the external battery
+– The battery lifetime is very much linked with the location update rate
+– Also, may be linked with external temperatures, particularly with negative temperatures
+If anything is unclear, just send us email to info@marvelmind.com
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+Privacy & Cookies Policy

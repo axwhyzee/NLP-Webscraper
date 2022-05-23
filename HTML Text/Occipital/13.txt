@@ -1,0 +1,29 @@
+http://skanect.occipital.com
+ Home
+Features
+Sample Models
+Get Skanect
+Support
+Forum
+Blog
+About
+3D Scanning
+Fast, Easy and Low-Cost
+With Skanect, capturing a full color 3D model of an object, a person or a room has never been so easy and affordable. Skanect transforms your Structure Sensor or Structure Core depth sensor into a low-cost 3D scanner able to create 3D meshes out of real scenes in a few minutes. Enter the world of 3D scanning now!
+Get started
+Get Skanect
+Get started on your Mac or Windows
+Try Now
+Skanect + Structure Core $499
+3D Scanning for Windows and macOS
+Learn More About Structure Core
+Buy Now
+Fast
+Unlike existing technologies, Skanect can acquire dense 3D information about a scene at up to 30 frames per second. Just move around your Structure Sensor or Structure Core to capture a full set of viewpoints, and you will get a 3D mesh in real time.
+Easy to Use
+Skanect makes it easy to 3D scan different kinds of scenes by providing a set of predefined scenarios, suitable for most use cases. You can then share your models online in a few clicks – there’s no need to be a trained professional to start 3D scanning!
+Ultra-Low Cost
+Skanect leverages consumer-grade 3D cameras like the Structure Sensor and Structure Core, limiting the hardware cost to a fraction of previous 3D scanning solutions. For a personal and hobbyist use, you can even download a free version of Skanect!
+© 2022 Skanect 3D Scanning Software By Occipital
+↑
+Responsive Theme powered by WordPress

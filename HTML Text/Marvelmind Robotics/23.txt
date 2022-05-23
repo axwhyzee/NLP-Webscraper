@@ -1,0 +1,89 @@
+https://marvelmind.com/uwb
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > Downloads > Ultra-wideband indoor positioning system
+Ultra-wideband indoor positioning system
+UWB intro:
+Great technology for positioning: unlike BLE or WiFi or LoRa or ZigBee, UWB is designed for positioning. It is a very good and recommended solution for industrial applications. It provides confident sub-meter accuracy of positioning (line of sight). Typical – 10-30cm (with line of sight).
+Use BLE/WiFi and similar RSSI-based solutions with an app in your phone for less demanding applications like finding a gate in the airport or finding a masterpiece in a museum or buying a milk in a mall. But for real industrial applications BLE is simply not precise enough by the physics of the underlying technology – RSSI – even with the help of angle of arrival/transmission.
+UWB technology basics: there are a few dozens of notable suppliers of UWB-based solutions worldwide. See our List: https://marvelmind.com/list. Several of them provided simple UWB technology description. You may check them first, for example:
+https://www.link-labs.com/blog/ultra-wideband-positioning-location-tracking
+https://www.infsoft.com/technology/positioning-technologies/ultra-wideband
+https://eliko.ee/uwb-rtls-ultra-wideband-real-time-location-system
+We focus more on practical aspects of implementation of UWB (or any other precise indoor positioning system), because the devil is in the details.
+Practical recommendations
+Build with line of sight only
+We have discussed this subject multiple of times already and have to keep going:
+Precise indoor positioning systems need line of sight
+UWB can be pretty confusing from this perspective, because it kind of promise a possibility of non-line of sight tracking. No, it can’t. But why some people say that it can?…
+Let’s clearly agree on the terms first. What is line of sight? – it means line of sight for radio waves in GHz band (3-10GHz) where UWB operates. Which means in practice that when you test an UWB system in a fancy office with radio transparent walls (glass, wood, even thin bricks, etc.) everything works very well. But then everything becomes pretty messy in a real warehouse or a factory.
+Why this happen? – because you have a non-line of sight situation: thick concrete walls, metal shelves, palettes. UWB signal doesn’t propagate, scatters, delayed without control. It is the major problem.
+Solution – design and build systems with line of sight requirement in mind. Line of sight between what and what? – between stationary beacons (anchors) when you build the map of beacons and line of sight between stationary beacons tracking the mobile beacons (tags).
+Even your own body can block the UWB signal and distract tracking. It is not a blocking when the signal can’t come through completely – usually, no. But it is a serious distraction for the system that must be understood and taken in account.
+UWB is a time-of-flight based system, i.e. there is an underlying assumption that propagation speed (speed of light) is know. It is true, when the UWB radio wave propagates through the air – nearly the same speed as in vacuum. But that is absolutely not the case, when the UWB propagates through your body not to mention through a concrete wall. Speed of radio in those materials are not known and the excessive delay is not taken into account by the indoor positioning system anyhow. As a result – an uncontrollable error in tracking down to a complete loss of tracking and jumps.
+Solution – install mobile beacons (tag) so that the UWB radio waves would experience minimal chances to through your body. Therefore, install mobile beacons (tags):
+Top of the shoulder – good
+Top of the head – good
+Chest pocket – not recommended
+Wrist – not recommended
+Power supply
+There are two major elements of the system you have to power:
+Stationary UWB beacons (anchors)
+Mobile UWB beacons (tags)
+Often, UWB manufacturers claim 1 year, 3 years, 5 years or even 7 years “battery lifetime”. The correct questions are:
+Battery lifetime of what? – stationary beacons or mobile?
+With what update rate is it?
+Battery lifetime of mobile beacons
+Let’s first address the most basic question – battery lifetime of a mobile beacon. Yes, it can be made very long in UWB system. But why?… It makes sense only, if you can’t charge it for whatever reasons. That is valid, for example, for static objects – palettes or similar – thousands of them scattered over the large territory. For the mobile objects such as forklifts it doesn’t make a real difference, because one can power the mobile beacons from the forklift itself.
+For people tracking – everyone is accustomed to charge devices – headlights, walkie-talkie, phones. Of course, the more rare you charge – the better. But it is not a real advantage to have years of battery lifetime in the mobile beacons, because, usually, they are accessible.
+Battery lifetime of stationary beacons
+There is a lot of misdirecting and misleading messages in such statements, because the real limitation is in stationary beacons (anchors)
+Why is it so?
+Stationary beacons are usually far less accessible than mobile beacons. They are placed somewhere on the ceiling. Often, you can’t reach them physically or without a special permit for works on high grounds.
+Stationary beacons (anchors) in many implementations by other companies consume sometimes up to watts, i.e. nearly impractical to run them from batteries. But running electricity to them often costs more than the beacon itself.  That is the limitation. That is the real point about the battery lifetime.
+Ask your supplier whether their stationary beacons can be battery powered and what the battery lifetime would be. Of course, if the powering or cabling is a potential issue.
+We very much recommend to always power the stationary beacons from the fixed power, because it gives a peace of mind. But, yes, we support internal and external batteries and the lifetime with the external battery can be months or 1-2 years, if the battery is large enough.
+Battery lifetime and "average power consumption"
+As any device of similar time, including mobile phones or computers, beacons sleep most the time and jumps between drastically different power supply modes very quickly. Thus, when sleeps, it doesn’t really consumes – nA or mA – would work for tens of years – the battery self-charging may be higher. But! When the beacon transmits or receives, it consumes 150-200mA – this current would drain typical battery in a few hours.
+It is simply not very correct to talk about average power consumption for systems with such highly irregular power consumption.
+Therefore, it is more correct to measure the battery lifetime not in hours/months/years, but in the number of location updates the battery supports. And then it is up to the end-users to decide when and how to consume the available number of location update events: quickly with 100Hz location update or very slowly with 1 location update per minute.
+Of course, there is also a cumulative standby/sleep current, periodic telemetry update current, but those are mostly the 2nd degree impacting factors. The main one is how many location updates your battery would support.
+Backbone connectivity
+Everything that has been discussed above about power consumption for stationary beacons and practical impact on the cost of the solution is exasperated by requirements to backbone.
+Many UWB system require not only fixed power supply, which is OK… but additional data cabling, for example, Ethernet. That is can be a serious cost. If you go to a explosion prone environment, like oil and gas, for example, that is a very high high cost for each wiring that you require.
+It is very good when the system doesn’t require any additional cabling and everything (synchronization, data exchange, telemetry, etc.) is done wirelessly. It is possible. Just ask for it.
+If anything is unclear, just send us email to info@marvelmind.com
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+Privacy & Cookies Policy

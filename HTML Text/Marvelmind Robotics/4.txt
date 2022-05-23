@@ -1,0 +1,104 @@
+https://marvelmind.com/drones
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > Drones
+How to build autonomous drones indoor
+We explain how to design and build autonomous drones to operate indoor and what systems to use to track drones indoor.
+Recommended Marvelmind configurations for drones
+When you are very new to the Marvelmind Indoor “GPS” system and you are not sure what to choose, just get the Starter Set Super-MP (MP – acronym of multi-purpose) and that would be your safest choice.
+For more specifics, study the recommended options below.
+Starter Set Super-MP-3D + Super-Beacon - Location+Direction on the drone
+
+
+Starter Set NIA-SmallDrone
+Starter Set Super-MP-3D + Super-Beacon - Location+Direction on the drone with Precise-Z
+
+If you want outdoor protection, then we don’t have ready sets. But you can gather the set by replacing Super-Beacons with Super-Beacons-Outdoor and Modem v5.1 with Modem v5.1-Outdoor.
+If you are not sure, just send us an email to info@marvelmind.com with detailed questions and we will be happy to help and advise.
+Using Marvelmind Indoor "GPS" for drones and quadcopters
+Marvelmind indoor positioning system or Marvelmind Indoor “GPS” is widely used for drones or quadcopters in many different ways:
+Guiding autonomous drones indoor and outdoor
+Tracking drones indoor
+Automatic landing or landing assistance
+Drones shows
+Marvelmind Indoor "GPS" supports PixHawk with ArduPilot and PX4
+Marvelmind Indoor “GPS” supports both PixHawk with ArduPilot and PX4:
+ Marvelmind and ArduPilot – link to ArduPilot.org
+Marvelmind and PX4 Integration Manual – step by step guidance with settings and screenshots for Mission Planner, PixHawk and the HW connectivity
+PixHawk and Marvelmind Integration Manual – step by step guide for PixHawk, ArduPilot and Marvelmind integration for drones
+Build indoor positioning system for quadcopters properly
+There are quite many, but rather basic aspects that have to be taken into account to successfully fly indoor:
+ Autonomous copter settings manual – basic and practical recommendations for setting up of Indoor “GPS” system for usage with autonomous copters/drones indoor and outdoor
+Placement Manual – practical advises and examples of how to mount the Marvelmind Indoor “GPS” system to achieve the best performance in different applications and configurations
+– Check the slides about drones
+– Check the slides about Precise Z
+ Help: Z-coordinates for copters – long explanation – YouTube explanation how to place the stationary beacons properly to get good Z accuracy. If you can’t use the advises, because your environment doesn’t let you, use the Precise Z configuration with 4+2 stationary beacons
+  See the Products page for different starter sets options.
+However, just 3 stationary beacons would have little resiliency against obstructions. Any occlusion of any stationary beacon – non-line of sight/hearing situation – will lead to no tracking or erroneous tracking. Very much ike in GPS: “no satellites visibility = no GPS coordinates = no tracking”.
+Thus, we recommend, at least, N+1 redundancy for stationary beacons. And that is why our starter sets for 3D consist of 4 stationary beacons.
+Even better is to have 2N redundancy with fully overlapping 3D submaps. That would be either 3+3 or 4+4 stationary beacons. The system would automatically choose the best submap for tracking. That kind of system is very resilient and with proper placement of the beacons, you can fly even in complex rooms with columns, for example, without issues with tracking.
+The key for the great tracking is to provide proper coverage at any flight point, i.e. the mobile beacons on the drone must have 3 or more stationary beacons belonging to the same submap with clear direct line of sight/hearing within 30m.
+Proper placement is the key usually and particularly important to drones, because they require 3D; the drones are fast; and the mistakes may be particularly costly. What to pay attention to?
+The single most important requirement for good tracking or autonomous flight – provide clear line of sight/hearing visibility from the mobile beacons on the drone to 3 or more stationary beacons
+Don’t rely on magnetometers indoor. Use the Paired Beacons configuration for Location+Direction
+Place stationary beacons so that angles from the mobile beacons to the stationary beacons would be 30 degree or more. See a longer explanation in the video
+Use the Precise-Z configurations when not possible to achieve proper angles to the stationary beacons otherwise
+Examples of precise indoor positioning and navigation for drones
+Precisely (±2cm) tracking DJI Phantom quadcopter indoor in 3D (XYZ)
+Precise tracking in X,Y,Z (XY view + XZ view + YZ view)
+Raw data and post-processed data from Dashboard’s Player – notice, that today the same is available not in the post-processing, but in the Real-Time Player
+The DJI eco-system is closed, at least, the Phantom and Mavic series. Thus, it is possible to track the Phantom, but not fly autonomously indoor (without deeper hacking)
+Precisely (±2cm) tracking DJI Phantom quadcopter outdoor in 3D (XYZ)
+Precise (±2cm) tracking in XYZ (XY view + XZ view + YZ view) – the same as above, but outdoor
+In this demo and in the demo above, the same Precise-Z configuration consisting of 4+2 stationary beacons is used. See more in the Placement Manual
+Fully autonomous flight indoor
+Small copter is flying fully autonomously relying on Marvelmind Indoor “GPS”
+Indoor tracking small and micro-drones
+It is possible to track even micro-drones (less than 100g) with the help of Mini-TX beacons.
+Starter Set NIA-SmallDrone is specifically designed for these kind of drones.
+The minimum configuration for the drone tracking would be any NIA set with 3D capability. For example, 3 stationary beacons + 1 mobile beacon + 1 modem and Non-Inverse Architecture (NIA) or Multi-Frequency NIA (MF NIA) would be already OK for the drone.
+Drones for warehouse inspection
+It is quite popular to use drones for warehouse inspection – finding lost pallets, security, etc. Yes, it is a doable task, but very complex in practice:
+Very challenging environment in general
+Drones fall and break => high cost of error
+Drones are potentially dangerous to fly => difficult to develop and use
+Nevertheless, the solution is very promising. Thus, drone builders or builders of warehouse systems use our indoor positioning system for such solutions. In the video we explain peculiarities of the environment (narrow aisles and high shelves) and how the peculiarities affect accuracy and how to build the system optimally.
+Autonomous landing platform for drones
+It is possible to build an autonomous landing platform for a drone. It can be even a moving one:
+You place 4 stationary Super-Beacons facing up on the edges of the platform. The larger platform – the better accuracy on the distance
+You place 2 mobile Super-Beacons facing down
+Drone flies using regular RTK GPS or even GPS when it is far and then up to 30m distance from the platform it is locked to the Indoor “GPS” coordinates and is landing based on these coordinates. As mentioned, the platform may be static against earth or moving. It doesn’t matter for the drone. So, you can precisely land on a moving vehicle, for example.
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.AcceptReject Read More

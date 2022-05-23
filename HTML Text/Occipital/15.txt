@@ -1,0 +1,115 @@
+https://forums.structure.io
+ Structure Sensor Structure Core Developers Support
+Log In
+This site is in read only mode. Please continue to browse, but replying, likes, and other actions are disabled for now.
+Hello,
+The community forums has been a place for developers, hobbyists, customers and people excited to scan with Structure Sensor to meet since 2015. As our business has changed we have found that we can provide quicker, more complete answers via our support articles, and the direct contact us feature listed on each of our articles.
+We are fully dedicating ourselves to continuing support via those methods, as such we are going retire new content creation on the Community Forums in 30 days (June 11th, 2021). The content, and posts on this site will remain available for a year as we transfer the most viewed, searched, and helpful content to our support articles.
+Thank you to those that have contributed the the Community Forums in the past, we look forward to working with you closely via our support page.
+Thank you,
+The Occipital Team
+all categories
+Categories
+Latest
+Top
+Category Topics
+FAQ
+Occipital customer support team maintains a set of articles, including troubleshooting or other popular topics.
+2
+Structure SDK (iOS)
+This category is for discussion of the Structure SDK for iOS.
+Sample Apps
+701
+Structure SDK (Cross-Platform)
+This category is for discussion of the Structure SDK (Cross-Platform) available for MacOS, Windows, Android and Linux.
+154
+Structure Sensor & Accessories
+This category is for discussion of the Structure Sensor hardware, including the Lightning connector, USB hacker cable, iPad brackets, and the Structure Sensor itself.
+Structure Core
+Original Structure Sensor (Retired)
+Structure Sensor Mark II
+242
+CAD & Custom Attachments
+This category is for discussion of creating custom Structure Sensor attachments and brackets aside from the official ones provided by Occipital, including CAD specs and tutorials. To discuss the official Precision Bracket with Aluminum Latch, see the Structure Sensor Hardware category.
+51
+Latest
+Known Issue Tracker (Bugs, Stability, Crashes)
+Structure SDK (iOS)
+0
+May '21
+Welcome To The Structure Sensor & Structure SDK Forums - Read Me First!
+FAQ
+4
+Feb '14
+Tracking Lost Message during scanning
+Structure SDK (iOS)
+3
+Jun '21
+Measure on AR view
+Structure SDK (iOS)
+0
+Jun '21
+Build error in RoomCapture app
+Structure SDK (iOS)
+0
+May '21
+Community Forums Retirement
+FAQ
+0
+May '21
+Cannot email scans via Scanner app anymore
+Structure SDK (iOS)
+2
+May '21
+Has anyone gotten the Mark II to work?
+Structure Sensor & Accessories
+3
+May '21
+RoomCapture Swift
+Sample Apps
+1
+May '21
+Structure core vs. Structure Sensor
+Structure Sensor & Accessories
+4
+May '21
+Sample output files
+Structure Core
+0
+May '21
+Announcing Structure SDK (Cross-Platform) 0.9
+Structure SDK (Cross-Platform)
+0
+May '21
+How to Integrate Structure Sensor to MATLAB for real time streaming
+Original Structure Sensor (Retired)
+0
+Apr '21
+UVW texture problem
+Structure Sensor & Accessories
+3
+Apr '21
+SDK 0.6 Fix the Cube at a certain distance from the user
+Structure SDK (iOS)
+38
+Apr '21
+Structure SDK OBJ file
+Structure SDK (iOS)
+0
+Apr '21
+AR App Development Newbie - Help Getting Started Please
+3
+Apr '21
+Structure Core Firmware updater Windows 10
+Structure SDK (Cross-Platform)
+1
+Apr '21
+PX-80 software - Retrace, where to download?
+Structure Sensor & Accessories
+4
+Apr '21
+contact info?? need contact info or help
+Structure Core
+4
+Apr '21
+More

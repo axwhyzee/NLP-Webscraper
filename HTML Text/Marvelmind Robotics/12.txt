@@ -1,0 +1,65 @@
+https://marvelmind.com/faq
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > FAQ
+FAQ
+System capabilities
+Do you support 3D (XYZ) tracking?
+Can I have direction?
+Is it possible to get direction from 2 mobile beacons in Inverse Architeture (IA)?
+Can we have accuracy better than ±2cm?
+Maximum distances between the beacons and between the beacons and the modem?
+
+
+Do beacons have IMU onboard?
+Why do you call it Indoor "GPS"? Does it rely on the real GPS?
+Does your system work only indoor or also outdoor?
+
+How to choose
+How to choose between Inverse Architecture (IA), Non-Inverse Architecture (NIA) and Multi-Frequency NIA (MF NIA)?
+Shall I choose 915/868MHz or 433MHz?
+
+Software
+How to update Marvelmind Dashboard?
+Interfaces and integration
+Do you support Arduino?
+Do you support ROS?
+Do you support PixHawk, ArduPilot, PX4?
+Can we use our own GUI? Do you have an API or SDK?
+Ordering
+Can we order on invoice or using wired bank transfer?
+If anything is unclear, contact us via info@marvelmind.com
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+Privacy & Cookies Policy

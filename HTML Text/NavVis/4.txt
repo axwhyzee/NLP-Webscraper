@@ -1,0 +1,66 @@
+https://www.navvis.com/ivion/enterprise
+ This website stores cookies on your computer. These cookies are used to improve your website and provide more personalized services to you, both on this website and through other media. To find out more about the cookies we use, see our Privacy Policies.
+We won't track your information when you visit our site. But in order to comply with your preferences, we'll have to use just one tiny cookie so that you're not asked to make this choice again.
+Cookies settings
+Accept
+Decline
+Talk to an expert
+NavVis IVION Enterprise
+Accelerate time to market
+Now factory planners and engineering departments can better understand, collaborate and make the right decisions, based on actual site conditions they can trust. Empower key stakeholders to explore best practice scenarios, remotely engage suppliers, and reduce time to market.
+Free consultation
+Try it live
+Already a customer? Log in now
+What's new in NavVis IVION Enterprise
+Discover the latest features in NavVis IVION Enterprise, previously known as NavVis IndoorViewer.
+Read more
+Why
+NavVis IVION Enterprise?
+Factory documentation is often inconsistent and only accessible to experts using specialist software. With NavVis IVION Enterprise, stakeholders can interact with realistic digital twins of their factories. 
+Be at any site instantly and easily find information, saving time and reducing travel expenses
+Enhanced industrial engineering productivity through collaboration between stakeholders, based on data that's current and reliable
+Directly access and download the relevant 3D scan data from within the browser to compare the as-is conditions with the plan
+Conceptualize and discuss changes together with suppliers and customers within the virtual factory
+“Thanks to NavVis technology, every SKODA AUTO employee worldwide can collaborate and inspect the most up-to-date virtual representation of the production floor, reducing costs and time-to-market.”
+Leoš Červený
+VR & Digital Factory IT Lead, SKODA AUTO
+What's new video
+A complete digital factory solution
+Professionals in global supply chain, engineering and operations can now digitalize their facilities with unprecedented speed and accuracy. Make decisions with confidence using reliable, detailed visualizations of your factories and production assets.
+Learn more about the Digital Factory Solution
+Product features
+Access all of your projects from one account and easily switch between sites from a central dashboard. Each site has a unique website address and user permissions giving you complete control over site usage. In addition, users can simply search for information, such as points of interest, across all sites where they have access. 
+MULTIPLE SITES
+CROP AND DOWNLOAD POINT CLOUDS
+POINTS OF INTEREST
+MARK & MEASURE
+Maps and custom floorplans
+Give your customers an entirely new way to use and interact with floorplans. NavVis IVION Enterprise automatically generates an AI-based map to give an overview of the entire site. Upload custom maps that have been designed in photo editing software.
+Extend with NavVis IVION Go
+Take your digital twin with you to the shop floor with NavVis IVION Go for mobile devices. The app enables interaction with the data in a digital twin by providing access, the ability to add new content, and sharing directly from the shop floor.
+Mapping enterprise cloud security
+GDPR compliant and secure cloud service, hosted on Amazon data centers in Frankfurt am Main, Germany. The platform uses encrypted file system and data connections as well as restricted access to your network via VPN access.
+Single sign on (SSO)
+Connect your already established user authentication system and user groups by easily mapping NavVis IVION Enterprise user groups via OpenID Connect.
+NavVis IVION Go
+An app for iOS and Android devices that connects the shop floor with the digital world. Powered by industry-leading AR positioning technology, NavVis IVION Go enables operations and maintenance managers to sync up information and tasks with their physical context and location.
+Learn more about NavVis IVION Go
+NavVis IVION Enterprise resources
+NavVis IVION Enterprise product brochure
+Download now
+Presenting NavVis IVION Enterprise blog post
+Read more
+Accelerate time to market
+See what NavVis can do for your business
+Free consultation
+Try it live
+REALITY CAPTURE
+DIGITAL FACTORY
+RESOURCES
+PARTNERS
+COMPANY
+CAREERS
+CONTACT
+© 2022 NavVis
+Imprint
+Privacy Policy

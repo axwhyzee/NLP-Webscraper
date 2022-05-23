@@ -1,0 +1,91 @@
+https://marvelmind.com/vehicles
+ Products Downloads Robots Drones Forklifts People Demos Help About us
+Distributors Presentation Customers Users Manual FAQ Forum
+Shop
+0
+Home > Vehicles
+Precise indoor positioning for forklifts
+It is important to track indoor forklifts, carts, AGVs and other vehicles for various purposes:
+Safety: to prevent collisions, accidents, breaking of vehicles or goods
+Productivity: to assign tasks based on location, to know the routes and optimize driving
+Monitoring: receive data from the vehicle; send data to the vehicle or stop it completely
+Recommended configurations for forklifts and other vehicles
+For indoor only use Starter Set Super-MP-3D
+Overall, it is the best and the safest choice, when you are not sure what to choose or what exact experiments you will run, but you want to have the easiest solution with the greatest flexibility and the greatest performance at the same time.
+Configuration:
+https://marvelmind.com/product/starter-set-super-mp-3d/ – the main set. It may be sufficient for the very first experiments. Then, you could expand with additional Super-Beacons
+https://marvelmind.com/product/super-beacon/ – additional mobile or stationary beacons for expansion. Switching between the mode is just a click in the Dashboard.
+Indoor and outdoor use Super-Beacons-Outdoor + Modem-Outdoor
+The easiest and recommended configuration consists of Super-Beacons-Outdoor and Modem-Outdoor.
+The least expensive configuration:
+2 x Super-Beacon-Outdoor as stationary
+1 x Super-Beacon-Outdoor as mobile (the same Super-Beacon-Outdoor as stationary, but switched to the mobile mode)
+1 x Modem v5.1
+You will get a 2D tracking in one submap with a maximum distance
+For industrial environment indoor and outdoor use Industrial Super-Beacons + Super-Modem
+Industrial Super-Beacons and Super-Modem is recommended, when you have to operate indoor and outdoor, work with temperatures below 0C (Industrial beacons do not have embedded batteries that could fail in sub-zero temperatures) or need industrial connectivity such as RS485 or CAN.
+Recommended minimum configuration:
+2 x Industrial Super-Beacon-Plastic as stationary (for example, 19kHz and 31kHz)
+1 x Industrial Super-Beacon-Plastic as mobile
+1 x Modem v5.1-Outdoor
+Other important aspects to pay attention too
+Modem v5.1 vs. Super-Modem
+Super-Modem is certainly more powerful, having industrial interfaces (RS485) and better protected than Modem v5.1. Super-Modem even has a WiFi inside.
+However, Super-Modem is more complex to use:
+WiFi settings may confuse you
+Instead of basic USB, Super-Modem uses as special USB-to-7p-IP67 connector
+Therefore, particularly, at the beginning, we recommend using Modem v5.1-Outdoor instead of Super-Modem. And later – when you become more familiar – you can easily switch to the Super-Modem.
+Default antenna vs. Full-size antenna
+Industrial environment is often radio propagation unfriendly:
+Multiple metal walls or constructions (shelves, etc.). That leads to heavy multi-path propagation with very deep minimums in radio signal strength
+Large distances – to hundreds of meters or even more
+Potential interference from multiple other sources
+Therefore, we recommend to use full-size antennas. They can’t solve radio problems, but minimize the chances to have them.
+In some cases, special directional antennas on the modem side or on the farther-end beacons can be recommended.
+For even larger cases, we recommend Multi-Modem configurations. Each Super-Modem is responsible for its map. And they send their data to a Super-Super-Modem that units maps into a super-map that is seen by the end user as a seamless map. See more about the Multi-Modem configurations in the Presentation.
+Using Marvelmind Indoor "GPS" for precise tracking of forklifts indoor
+Marvelmind indoor positioning system or Marvelmind Indoor “GPS” is widely used for drones or quadcopters in many different ways:
+Guiding autonomous drones indoor and outdoor
+Tracking drones indoor
+Automatic landing or landing assistance
+Drones shows
+Examples of precise indoor positioning for vehicles
+Precise (±2cm) tracking of 10 forklifts 5,000 miles away
+Setup:
+Warehouse (660’x60′)
+10 forklifts with a Super-Beacon with an Omni-Microphone per forklift
+14 x stationary Super-Beacons to cover the whole warehouse
+1 x Modem v5.1 as a central controller – Inverse Architecture (IA) with fully-overlapping TDMA submaps
+Full remote deployment over TeamViewer
+CONTACTS
+Marvelmind OÜ
+Ahtri tn 12
+Tallinn, 10151
+Estonia
+Phone: +1 (650) 843-9243
+Phone: +372 712 4277
+Email: info@marvelmind.com
+COMMON
+Indoor “GPS” presentation
+Demo videos and tutorials
+Robot v100
+Pricelist
+Distributors
+GET STARTED
+Operating Manual
+Placement Manual
+Architectures Comparison
+FAQ / Forum
+Drones page
+Marvelmind List
+DOWNLOADS
+Marvelmind SW pack
+Marvelmind interfaces
+PixHawk Integration Manual
+OTHER
+About us
+Payment methods
+Shipment
+Warranty
+Help
+This website uses cookies to improve your experience. We'll assume you're ok with this, but you can opt-out if you wish.AcceptReject Read More

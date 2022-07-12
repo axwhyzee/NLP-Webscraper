@@ -108,7 +108,7 @@ print(clusters)
 WT.reset()
 ```
 
-Map out the web trees of "https://www.intermodalics.eu/" and "https://www.intermodalics.eu/visual-positioning-slam-navigation"
+Map out the web trees of https://www.intermodalics.eu/ and https://www.intermodalics.eu/visual-positioning-slam-navigation
 ```
 WT = WebTree(save=True)
 WT.start()
@@ -191,13 +191,13 @@ plot_network('my_network_graph', edges)
 
 ### 6. genpath
 ```gen_path(String: ext="")```
-- Takes in extension ```ext``` (E.g., ".jpg") and outputs a vacant filename of type ```ext```
+- Takes in extension ```ext``` (E.g., ".jpg") and outputs a random vacant filename of type ```ext```
 <!-- -->
 
 ### Usage
 ```
-vacant_path = gen_path(".txt")
-g = open(vacant_path, "w")
+vacant_path = gen_path('.txt') # generated '7309853189508131.txt'
+g = open(vacant_path, 'w')
 g.write("Some text")
 g.close()
 ```

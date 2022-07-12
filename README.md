@@ -202,6 +202,54 @@ g.write("Some text")
 g.close()
 ```
 
+### 7. pdf_reader
+```PDFReader.add(String: url)```
+- Adds PDF URL to ```self.pdfs```
+<!-- -->
+
+```PDFReader.cleanText(String: url)```
+- Adds PDF URL to ```self.pdfs```
+- Cleans text
+- 1) Lowercase
+- 2) Remove non-alphanumeric & underscore chars 
+- 3) Remove consecutive newlines & lines with only 1 character
+<!-- -->
+
+
+```PDFReader.extract_text(String: path)```
+- Converts PDF file at ```path``` to text
+- For every page, read all text + append image_to_text at end
+- Images should be pre-downloaded in ```self.pdf_dir```
+- Once completed, delete PDF
+<!-- -->
+
+```PDFReader.save_imgs(String: path)```
+- Downloads all images from PDF file at ```path``` into ```self.pdf_dir```
+<!-- -->
+
+```PDFReader.read_all_pdfs()```
+- For each url in ```self.pdfs```, downloads PDF at url and saves PDF images in ```self.pdf_dir```
+- Generator. Yields: {\
+      &nbsp;&nbsp;&nbsp;&nbsp;'url': //PDF url\
+      &nbsp;&nbsp;&nbsp;&nbsp;'text': //PDF text (including image_to_text)\
+  }
+<!-- -->
+
+```PDFReader.reset()```
+- Empties ```self.pdfs```
+<!-- -->
+
+### Usage
+```
+PR = PDFReader()
+PR.add('https://www.memoori.com/wp-content/uploads/2017/10/The-Future-Workplace-2017-Synopsis.pdf')
+generator = PR.read_all_pdfs()
+for obj in generator:
+    print(obj['url'])
+    print(obj['text'])
+PR.reset()
+```
+
 ## Updates
 Update [10/05/22]
 - Selenium framework

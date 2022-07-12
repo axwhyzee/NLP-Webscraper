@@ -238,7 +238,66 @@ for obj in generator:
 PR.reset()
 ```
 
-### 7. functions.py
+### 7. company_crawler.py
+`CompanyCrawler(String: dictionary)`
+- `dictionary`: file path of dictionary.json, a keyword store
+<!-- -->
+
+`CompanyCrawler.get_driver()`
+- Start Selenium webdriver
+<!-- -->
+
+`CompanyCrawler.check_link(String: url, String: base)`
+- `url`: an `<a>` element's href
+- `base`: URL of web page from which the `<a>` is taken from
+<!-- -->
+
+`CompanyCrawler.check_img(Integer: depth, String: url)`
+- Check if image is from root URL or in a valid web segment like /customers
+- Return True only if valid because this is for client logo detection
+<!-- -->
+
+`CompanyCrawler.get_hrefs()`
+- Return HREF attribute of all <a> in driver's current webpage
+<!-- -->
+
+`CompanyCrawler.get_logos(String: company)`
+- Get image clusters from WebTree's stored URLs for a particular `company`
+- Run logo detection model & identify image clusters with average logo probability > 0.5
+- Reverse search on filtered images and append results to `self.clients`
+<!-- -->
+
+`CompanyCrawler.process_pdfs()`
+ - Run `read_all_pdfs()` on stored PDF urls in PDFReader() to extract all PDF data
+<!-- -->
+    
+`CompanyCrawler.crawl_site(String: url, Integer: depth, Boolean: expand)`
+- `url`: URL to crawl
+- `depth`: Current web depth from root
+- `expand`: Whether max crawling depth has been reached. If not reached, continue adding sublinks `self.sites` to crawl
+- Crawls `url` to:
+  1. add itself to `self.pdf_reader` if self is PDF
+  2. extract HTML content (translate if applicable)
+  3. store images in `self.web_tree` if they pass `self.check_link()`
+  4. add sublinks to `self.sites` & `self.edges` if expand=True
+   
+`CompanyCrawler.crawl_company(String: root, String: company, String: save_dir, Integer: max_depth)`
+- `root`: Base URL
+- `company`: Name of company being crawled
+- `save_dir`: Directory path to save all crawled data at
+- `max_depth`: Max crawling depth from `root`
+- Process:
+  1. Clear cache
+  2. Collate & crawl all sublinks up to max depth. In the process: 
+     1. Add potential client logos to `self.web_tree` 
+     2. Add PDFs to `self.pdf_reader`
+     3. Save HTML data of all crawled pages as .txt files
+  3. Run `self.get_logos()` to get client data:
+     1. `WebTree.run_all()` to build web trees, solve image clusters
+     2. Pass image clusters to `self.logo_detector` to filter clusters with average logo probability > 0.5
+     3. Conduct reverse search using `self.reverse_search.search()` to acquire client data from image URLs
+    
+### 8. functions.py
 
 `img_to_text(String: path)`
 - Converts image to text of image at `path` using PyTesseract
@@ -259,14 +318,15 @@ PR.reset()
 
 `is_pdf(String: url)`
 - Returns whether file at `url` is PDF
+<!-- -->
 
-### Usage
-```
-vacant_path = gen_path('.txt') # generated '7309853189508131.txt'
-g = open(vacant_path, 'w')
-g.write("Some text")
-g.close()
-```
+`url_rstrip(String: s)`
+- Deletes trailing '/' and '#' from `s`
+<!-- -->
+
+`print_header(String: header)`
+- Prints a decorated header
+<!-- -->
 
 ## Updates
 Update [10/05/22]

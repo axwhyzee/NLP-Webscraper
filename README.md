@@ -52,7 +52,14 @@
 - Close webdriver
 <!-- -->
 
-### 2) webtree
+### Usage
+```
+RS = ReverseSearch()
+RS.start()
+RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w', 'Intermodalics')
+RS.reset()
+```
+### 2. webtree
 ```WebTree(Boolean: save=False)```
 - Save file as <gen_link()>.json if save is True
 <!-- -->
@@ -66,7 +73,7 @@
 <!-- -->
 
 ```WebTree.run_all()```
-- Generator that yields get_cluster() results for each stored URL
+- Generator that yields url, get_cluster(url) for each stored URL
 <!-- -->
 
 ```WebTree.is_src(String: src)```
@@ -89,6 +96,31 @@
 ```WebTree.reset()```
 - Close webdriver
 <!-- -->
+
+### Usage
+Map out the web tree of "https://www.intermodalics.eu/"
+```
+WT = WebTree(save=True)
+WT.start()
+WT.get_clusters('https://www.intermodalics.eu/')
+WT.reset()
+```
+
+Map out the web trees of "https://www.intermodalics.eu/" and "https://www.intermodalics.eu/visual-positioning-slam-navigation"
+```
+WT = WebTree(save=True)
+WT.start()
+WT.store('https://www.intermodalics.eu/')
+WT.store('https://www.intermodalics.eu/visual-positioning-slam-navigation')
+
+generator = WT.run_all()
+for page, clusters in generator:
+    print('Image clusters of', page)
+    for image_url in clusters:
+        print(image_url)
+        
+WT.reset()
+```
 
 ## Updates
 Update [10/05/22]

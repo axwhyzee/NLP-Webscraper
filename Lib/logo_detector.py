@@ -7,7 +7,7 @@ import os
 
 class LogoDetector():
     def __init__(self):
-        self.model = keras.models.load_model(os.path.join(os.getcwd(),'Lib', 'saved_model'))
+        self.model = keras.models.load_model(os.path.join(os.getcwd(), 'Lib', 'saved_model'))
         self.dims = (100, 100, 3) # i/p dimensions
         
     def prepare_img(self, src):

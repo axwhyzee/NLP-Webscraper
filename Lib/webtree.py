@@ -5,6 +5,7 @@ from selenium import webdriver
 from functions import gen_path
 import json
 
+
 class WebTree():
     def __init__(self, save=False):
         self.driver = None
@@ -38,7 +39,7 @@ class WebTree():
         src = elem.get_attribute('src')
         alt = ''
         try:
-            alt = elem.get_attribute('alt')
+            alt = elem.get_attribute('alt').replace(' ', '_')
         except:
             print('No alt text')
             
@@ -75,7 +76,6 @@ class WebTree():
         print('[ Building branches... ]')
         paths = build_branches(tree['root-0-0'], 'root-0-0')
         paths = [path[2:] for path in paths]
-        print(paths)
         print('[ Solving paths...     ]')
         print()
         # solve paths

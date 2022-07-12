@@ -62,9 +62,7 @@ class ReverseSearch():
             s = s.replace('%20', ' ') # %20 is space encoded in url 
             s = re.sub(r'[^.\w\s]|_', ' ', s)
             s = [w for w in s.split() if w.replace('.', '').isalpha()]
-
             return ' '.join(s)
-        
         return ''            
     
     def search(self, url, company=''):
@@ -79,7 +77,6 @@ class ReverseSearch():
 
         ext = find_ext(url)
         result['url_tail'] = self.clean_str(url.split(ext)[0].split('/')[-1])
-
         if self.curr_requests >= self.max_requests:
             self.curr_requests = 0
             self.driver.quit()
@@ -90,7 +87,6 @@ class ReverseSearch():
         self.random_wait()
         self.processed_requests += 1
         self.curr_requests += 1
-        
         self.driver.get('https://www.google.com/searchbyimage?&image_url=' + url)
         
         # get value inside search bar
@@ -119,10 +115,6 @@ class ReverseSearch():
 
         if len(self.driver.find_elements(By.CLASS_NAME, 'xpdopen')) > 0:
             return result
-
-##        # if number of results falls within (results_min, results_max), then results are probably irrelevant
-##        if self.results_min < num_results < self.results_max:
-##            return result
 
         # take first search results
         headers = self.driver.find_elements(By.CSS_SELECTOR, 'div[data-header-feature="0"]')[:1]

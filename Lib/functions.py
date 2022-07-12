@@ -43,5 +43,22 @@ def find_ext(path):
                 for idx in [x.end() for x in re.finditer(ext, lower)]:
                     if idx < len(lower) and not lower[idx].isalnum():
                         return ext
-
     return ''
+
+def is_pdf(url):
+    if url.endswith('.pdf'):
+        return True
+    elif '.pdf' in url:
+        for idx in [x.end() for x in re.finditer('.pdf', url)]:
+            if idx < len(url) and not url[idx].isalnum():
+                return True
+    return False
+
+# Deletes trailing '/' and '#'
+def url_rstrip(s):
+    return s.rstrip('#').rstrip('/')
+
+def print_header(header):
+    print('+-' + len(header)*'-' + '-+')
+    print('|', header, '|')
+    print('+-' + len(header)*'-' + '-+')

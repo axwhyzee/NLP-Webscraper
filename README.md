@@ -2,38 +2,38 @@
 
 ## Packages & Methods
 ### 1. reverse_search
-```ReverseSearch.get_driver()```
+`ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
 <!-- -->
 
-```ReverseSearch.start()```
+`ReverseSearch.start()`
 - Start Selenium webdriver
 <!-- -->
 
-```ReverseSearch.filter_search_value(str: search_value)``` 
-- Return False if ```search_value``` contains an invalid word like "dictionary", "horizontal"
+`ReverseSearch.filter_search_value(str: search_value)`
+- Return False if `search_value` contains an invalid word like "dictionary", "horizontal"
 <!-- -->
 
-```ReverseSearch.filter_header(str: header)``` 
+`ReverseSearch.filter_header(str: header)` 
 - Return False if title of 1st search result contains invalid word (usually company names like "LinkedIn", "FontAwesome")
 <!-- -->
 
-```ReverseSearch.rear_strip(String: s)``` 
+`ReverseSearch.rear_strip(String: s)`
 - Removes non-alphanumeric characters from the rear, like "..."
 <!-- -->
 
-```ReverseSearch.get_num_results(String: s)``` 
+`ReverseSearch.get_num_results(String: s)` 
 - Returns number of reverse search results based on text of DOM element #result-stats
 <!-- -->
 
-```ReverseSearch.clean_str(String: s)```
+`ReverseSearch.clean_str(String: s)`
 - Lowercase
 - Replaces escape character "%20" commonly found in URLs
 - Remove non-alphanumeric & underscore characters
 - Removes numerals & floats
 <!-- -->
 
-```ReverseSearch.search(String: url, String: company="")```
+`ReverseSearch.search(String: url, String: company="")`
 - Returns {\
     &nbsp;&nbsp;&nbsp;&nbsp;'url': //image url\
     &nbsp;&nbsp;&nbsp;&nbsp;'url_tail': //cleaned image filename\
@@ -44,11 +44,11 @@
   }
 <!-- -->
 
-```ReverseSearch.random_wait(Float: lower=0.5, Float: upper=2)```
-- Wait for a random duration between ```lower``` & ```upper```
+`ReverseSearch.random_wait(Float: lower=0.5, Float: upper=2)`
+- Wait for a random duration between `lower` & `upper`
 <!-- -->
 
-```ReverseSearch.reset()```
+`ReverseSearch.reset()`
 - Close webdriver
 <!-- -->
 
@@ -61,40 +61,40 @@ print(results)
 RS.reset()
 ```
 ### 2. webtree
-```WebTree(Boolean: save=False)```
+`WebTree(Boolean: save=False)`
 - Save file as <gen_link()>.json if save is True
 <!-- -->
 
-```WebTree.start()```
+`WebTree.start()`
 - Start Selenium webdriver
 <!-- -->
 
-```WebTree.store(String: url)```
+`WebTree.store(String: url)`
 - Store URL in list to crawl all at once
 <!-- -->
 
-```WebTree.run_all()```
+`WebTree.run_all()`
 - Generator that yields url, get_cluster(url) for each stored URL
 <!-- -->
 
-```WebTree.is_src(String: src)```
+`WebTree.is_src(String: src)`
 - Returns if src is image
 <!-- -->
 
-```WebTree.get_src(Object: elem)```
-- Return ```"<image_url> <image_alt>"```
+`WebTree.get_src(Object: elem)`
+- Return `"<image_url> <image_alt>"`
 <!-- -->
 
-```WebTree.get_clusters(String: url)```
+`WebTree.get_clusters(String: url)`
 - Detect & return image clusters (list of list of image URLs) from a web page
 <!-- -->
 
-```WebTree.build_tree(String: url)```
+`WebTree.build_tree(String: url)`
 - Map out web tree of a web page
 - If self.save, save web tree as JSON file
 <!-- -->
 
-```WebTree.reset()```
+`WebTree.reset()`
 - Close webdriver
 <!-- -->
 
@@ -124,15 +124,15 @@ for page, clusters in generator:
 WT.reset()
 ```
 ### 3. logo_detector
-```LogoDetector.prepare_img(String: src)```
+`LogoDetector.prepare_img(String: src)`
 - 1) Download image
 - 2) Convert image to RGB
 - 3) Resize according to self.dims (100,100,3)
 - 4) Return image data, download path (so it can be deleted after detection model runs)
 <!-- -->
 
-```LogoDetector.predict(List: srcs)```
-- Runs CNN logo detection model on each image in ```srcs```
+`LogoDetector.predict(List: srcs)`
+- Runs CNN logo detection model on each image in `srcs`
 - Returns 1D list of probabilities of each image being a logo
 <!-- -->
 
@@ -148,15 +148,15 @@ print(predictions) # [0.8967107, 0.07239765]
 
 ### 4. google_translate
 
-```GoogleTranslate.get_chunk()```
+`GoogleTranslate.get_chunk()`
 - Return chunk of string of length self.max_char
 <!-- -->
 
-```GoogleTranslate.load_lines(String: text)```
-- Store ```text``` as sentences in self.lines
+`GoogleTranslate.load_lines(String: text)`
+- Store `text` as sentences in self.lines
 <!-- -->
 
-```GoogleTranslate.translate(String: text)```
+`GoogleTranslate.translate(String: text)`
 - Detect language. If not EN, translate chunk by chunk using gooogletrans API
 <!-- -->
 
@@ -171,9 +171,9 @@ print(translation)
 ```
 
 ### 5. plot_network
-```plot_network(String: filename, Object: edges)```
-- ```filename```: Save as network graph as ```filename```.html & edge list as ```filename```.csv
-- ```edges```: \<target\>:\<source\> key pairs where \<target\> = sublink found on \<source\> page
+`plot_network(String: filename, Object: edges)`
+- `filename`: Save as network graph as `filename`.html & edge list as `filename`.csv
+- `edges`: \<target\>:\<source\> key pairs where \<target\> = sublink found on \<source\> page
 <!-- -->
 
 ### Usage
@@ -190,8 +190,8 @@ plot_network('my_network_graph', edges)
 <img width="446" alt="image" src="https://user-images.githubusercontent.com/34325457/178471141-cbf18006-67ff-47b0-a100-daba8daf9bdf.png">
 
 ### 6. genpath
-```gen_path(String: ext="")```
-- Takes in extension ```ext``` (E.g., ".jpg") and outputs a random vacant filename of type ```ext```
+`gen_path(String: ext="")`
+- Takes in extension `ext` (E.g., ".jpg") and outputs a random vacant filename of type `ext`
 <!-- -->
 
 ### Usage
@@ -203,12 +203,12 @@ g.close()
 ```
 
 ### 7. pdf_reader
-```PDFReader.add(String: url)```
-- Adds PDF URL to ```self.pdfs```
+`PDFReader.add(String: url)`
+- Adds PDF URL to `self.pdfs`
 <!-- -->
 
-```PDFReader.cleanText(String: url)```
-- Adds PDF URL to ```self.pdfs```
+`PDFReader.cleanText(String: url)`
+- Adds PDF URL to `self.pdfs`
 - Cleans text
 - 1) Lowercase
 - 2) Remove non-alphanumeric & underscore chars 
@@ -216,27 +216,27 @@ g.close()
 <!-- -->
 
 
-```PDFReader.extract_text(String: path)```
-- Converts PDF file at ```path``` to text
+`PDFReader.extract_text(String: path)`
+- Converts PDF file at `path` to text
 - For every page, read all text + append image_to_text at end
-- Images should be pre-downloaded in ```self.pdf_dir```
+- Images should be pre-downloaded in `self.pdf_dir`
 - Once completed, delete PDF
 <!-- -->
 
-```PDFReader.save_imgs(String: path)```
-- Downloads all images from PDF file at ```path``` into ```self.pdf_dir```
+`PDFReader.save_imgs(String: path)`
+- Downloads all images from PDF file at `path` into `self.pdf_dir`
 <!-- -->
 
-```PDFReader.read_all_pdfs()```
-- For each url in ```self.pdfs```, downloads PDF at url and saves PDF images in ```self.pdf_dir```
+`PDFReader.read_all_pdfs()`
+- For each url in `self.pdfs`, downloads PDF at url and saves PDF images in `self.pdf_dir`
 - Generator. Yields: {\
       &nbsp;&nbsp;&nbsp;&nbsp;'url': //PDF url\
       &nbsp;&nbsp;&nbsp;&nbsp;'text': //PDF text (including image_to_text)\
   }
 <!-- -->
 
-```PDFReader.reset()```
-- Empties ```self.pdfs```
+`PDFReader.reset()`
+- Empties `self.pdfs`
 <!-- -->
 
 ### Usage
@@ -261,7 +261,7 @@ Update [10/05/22]
 - [**Companies/companies-software.xlsx**] - actual company websites for sensors (missing for Paracosm)
 
 Update [11/05/22]
-- Added functions to cut down on amount of similar sites visited with the **same content** by comparing md5 hash value of self-generated html-id ```<length of DOM><first 5 char><middle 9 char><last 5 char>```
+- Added functions to cut down on amount of similar sites visited with the **same content** by comparing md5 hash value of self-generated html-id `<length of DOM><first 5 char><middle 9 char><last 5 char>`
 for quicker hashing
 - Translates websites which are in other languages to english after scrapping the data
 

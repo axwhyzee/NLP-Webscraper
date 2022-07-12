@@ -1,7 +1,7 @@
 # NLP-Webscraper
 
 ## Packages & Methods
-### 1. reverse_search
+### 1. reverse_search.py
 `ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
 <!-- -->
@@ -60,7 +60,7 @@ results = RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f877
 print(results)
 RS.reset()
 ```
-### 2. webtree
+### 2. webtree.py
 `WebTree(Boolean: save=False)`
 - Save file as <gen_link()>.json if save is True
 <!-- -->
@@ -123,7 +123,7 @@ for page, clusters in generator:
         
 WT.reset()
 ```
-### 3. logo_detector
+### 3. logo_detector.py
 `LogoDetector.prepare_img(String: src)`
 - 1) Download image
 - 2) Convert image to RGB
@@ -131,9 +131,10 @@ WT.reset()
 - 4) Return image data, download path (so it can be deleted after detection model runs)
 <!-- -->
 
-`LogoDetector.predict(List: srcs)`
+`LogoDetector.predict(List: srcs, Boolean: verbose)`
 - Runs CNN logo detection model on each image in `srcs`
 - Returns 1D list of probabilities of each image being a logo
+- Print scores if verbose
 <!-- -->
 
 ### Usage
@@ -146,7 +147,7 @@ predictions = LD.predict([
 print(predictions) # [0.8967107, 0.07239765]
 ```
 
-### 4. google_translate
+### 4. google_translate.py
 
 `GoogleTranslate.get_chunk()`
 - Return chunk of string of length self.max_char
@@ -170,7 +171,7 @@ translation = GT.translate(text)
 print(translation)
 ```
 
-### 5. plot_network
+### 5. plot_network.py
 `plot_network(String: filename, Object: edges)`
 - `filename`: Save as network graph as `filename`.html & edge list as `filename`.csv
 - `edges`: \<target\>:\<source\> key pairs where \<target\> = sublink found on \<source\> page
@@ -189,20 +190,7 @@ plot_network('my_network_graph', edges)
 ```
 <img width="446" alt="image" src="https://user-images.githubusercontent.com/34325457/178471141-cbf18006-67ff-47b0-a100-daba8daf9bdf.png">
 
-### 6. genpath
-`gen_path(String: ext="")`
-- Takes in extension `ext` (E.g., ".jpg") and outputs a random vacant filename of type `ext`
-<!-- -->
-
-### Usage
-```
-vacant_path = gen_path('.txt') # generated '7309853189508131.txt'
-g = open(vacant_path, 'w')
-g.write("Some text")
-g.close()
-```
-
-### 7. pdf_reader
+### 6. pdf_reader.py
 `PDFReader.add(String: url)`
 - Adds PDF URL to `self.pdfs`
 <!-- -->
@@ -248,6 +236,36 @@ for obj in generator:
     print(obj['url'])
     print(obj['text'])
 PR.reset()
+```
+
+### 7. functions.py
+
+`img_to_text(String: path)`
+- Converts image to text of image at `path` using PyTesseract
+<!-- -->
+
+`gen_path(String: ext="")`
+- Takes in extension `ext` (E.g., ".jpg") and outputs a random vacant filename of type `ext`
+<!-- -->
+
+`download_url(String: url, String: save_path)`
+- Downloads file at `url` to `save_path`
+- PDFs, images...
+<!-- -->
+
+`find_ext(String: path)`
+- Returns extension if file at path is an image
+<!-- -->
+
+`is_pdf(String: url)`
+- Returns whether file at `url` is PDF
+
+### Usage
+```
+vacant_path = gen_path('.txt') # generated '7309853189508131.txt'
+g = open(vacant_path, 'w')
+g.write("Some text")
+g.close()
 ```
 
 ## Updates

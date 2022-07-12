@@ -1,5 +1,96 @@
 # NLP-Webscraper
 
+## Packages & Methods
+### 1. reverse_search
+```ReverseSearch.get_driver()```
+- Set Selenium webdriver options & returns webdriver object
+<!-- -->
+
+```ReverseSearch.start()```
+- Start Selenium webdriver
+<!-- -->
+
+```ReverseSearch.filter_search_value(str: search_value)``` 
+- Return False if search_value contains an invalid word like "dictionary", "horizontal"
+<!-- -->
+
+```ReverseSearch.filter_header(str: header)``` 
+- Return False if header contains invalid word (usually company names like "LinkedIn", "FontAwesome")
+<!-- -->
+
+```ReverseSearch.rear_strip(String: s)``` 
+- Removes non-alphanumeric characters from the rear, like "..."
+<!-- -->
+
+```ReverseSearch.get_num_results(String: s)``` 
+- Returns number of reverse search results based on DOM element #result-stats
+<!-- -->
+
+```ReverseSearch.clean_str(String: s)```
+- Lowercase
+- Replaces escape character "%20" commonly found in URLs
+- Remove non-alphanumeric & underscore characters
+- Removes numerals & floats
+<!-- -->
+
+```ReverseSearch.search(String: url, String: company="")```
+- Returns {\
+    &nbsp;&nbsp;&nbsp;&nbsp;'url': //image url\
+    &nbsp;&nbsp;&nbsp;&nbsp;'url_tail': //cleaned image filename\
+    &nbsp;&nbsp;&nbsp;&nbsp;'header': //title of first search result\
+    &nbsp;&nbsp;&nbsp;&nbsp;'body': //body text of 1st search result\
+    &nbsp;&nbsp;&nbsp;&nbsp;'search_value': //value in search box as interpreted by Google\
+    &nbsp;&nbsp;&nbsp;&nbsp;'results': //number of search results\
+  }
+<!-- -->
+
+```ReverseSearch.random_wait(Float: lower=0.5, Float: upper=2)```
+- Wait for a random duration between lower & upper
+<!-- -->
+
+```ReverseSearch.reset()```
+- Close webdriver
+<!-- -->
+
+### 2) webtree
+```WebTree(Boolean: save=False)```
+- Save file as <gen_link()>.json if save is True
+<!-- -->
+
+```WebTree.start()```
+- Start Selenium webdriver
+<!-- -->
+
+```WebTree.store(String: url)```
+- Store URL in list to crawl all at once
+<!-- -->
+
+```WebTree.run_all()```
+- Generator that yields get_cluster() results for each stored URL
+<!-- -->
+
+```WebTree.is_src(String: src)```
+- Returns if src is image
+<!-- -->
+
+```WebTree.get_src(Object: elem)```
+- Return ```"<image_url> <image_alt>"```
+<!-- -->
+
+```WebTree.get_clusters(String: url)```
+- Detect & return image clusters (list of list of image URLs) from a web page
+<!-- -->
+
+```WebTree.build_tree(String: url)```
+- Map out web tree of a web page
+- If self.save, save web tree as JSON file
+<!-- -->
+
+```WebTree.reset()```
+- Close webdriver
+<!-- -->
+
+## Updates
 Update [10/05/22]
 - Selenium framework
 - [**get_sublinks.py**] extracts all sublinks up to a specified depth from the root node
@@ -44,3 +135,6 @@ Update [23/05/22]
 - Get surrounding text of keywords
 - Experimenting with Python NLP library gensim to filter text as well
 - Tested client extraction pipeline on all sensor companies
+
+Update [12/07/22]
+- Replaced deprecated Selenium code with updated versions

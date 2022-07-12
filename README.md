@@ -11,11 +11,11 @@
 <!-- -->
 
 ```ReverseSearch.filter_search_value(str: search_value)``` 
-- Return False if search_value contains an invalid word like "dictionary", "horizontal"
+- Return False if ```search_value``` contains an invalid word like "dictionary", "horizontal"
 <!-- -->
 
 ```ReverseSearch.filter_header(str: header)``` 
-- Return False if header contains invalid word (usually company names like "LinkedIn", "FontAwesome")
+- Return False if title of 1st search result contains invalid word (usually company names like "LinkedIn", "FontAwesome")
 <!-- -->
 
 ```ReverseSearch.rear_strip(String: s)``` 
@@ -23,7 +23,7 @@
 <!-- -->
 
 ```ReverseSearch.get_num_results(String: s)``` 
-- Returns number of reverse search results based on DOM element #result-stats
+- Returns number of reverse search results based on text of DOM element #result-stats
 <!-- -->
 
 ```ReverseSearch.clean_str(String: s)```
@@ -45,7 +45,7 @@
 <!-- -->
 
 ```ReverseSearch.random_wait(Float: lower=0.5, Float: upper=2)```
-- Wait for a random duration between lower & upper
+- Wait for a random duration between ```lower``` & ```upper```
 <!-- -->
 
 ```ReverseSearch.reset()```
@@ -56,7 +56,8 @@
 ```
 RS = ReverseSearch()
 RS.start()
-RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w', 'Intermodalics')
+results = RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w', 'Intermodalics')
+print(results)
 RS.reset()
 ```
 ### 2. webtree
@@ -102,7 +103,8 @@ Map out the web tree of "https://www.intermodalics.eu/"
 ```
 WT = WebTree(save=True)
 WT.start()
-WT.get_clusters('https://www.intermodalics.eu/')
+clusters = WT.get_clusters('https://www.intermodalics.eu/')
+print(clusters)
 WT.reset()
 ```
 
@@ -120,6 +122,84 @@ for page, clusters in generator:
         print(image_url)
         
 WT.reset()
+```
+### 3. logo_detector
+```LogoDetector.prepare_img(String: src)```
+- 1) Download image
+- 2) Convert image to RGB
+- 3) Resize according to self.dims (100,100,3)
+- 4) Return image data, download path (so it can be deleted after detection model runs)
+<!-- -->
+
+```LogoDetector.predict(List: srcs)```
+- Runs CNN logo detection model on each image in ```srcs```
+- Returns 1D list of probabilities of each image being a logo
+<!-- -->
+
+### Usage
+```
+LD = LogoDetector()
+predictions = LD.predict([
+    'https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w',
+    'https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1522415419883-R8K5KQVMGX48TPWP58X0/b49602d4-9b0a-24f3-8260-933b31b8d160_COM_6calibrations_2018-01-24-13-55-00+-+dev+room.png?format=500w'\
+])
+print(predictions) # [0.8967107, 0.07239765]
+```
+
+### 4. google_translate
+
+```GoogleTranslate.get_chunk()```
+- Return chunk of string of length self.max_char
+<!-- -->
+
+```GoogleTranslate.load_lines(String: text)```
+- Store ```text``` as sentences in self.lines
+<!-- -->
+
+```GoogleTranslate.translate(String: text)```
+- Detect language. If not EN, translate chunk by chunk using gooogletrans API
+<!-- -->
+
+### Usage
+```
+GT = GoogleTranslate()
+f = open(text_file, 'r', encoding='utf-8')
+text = f.read()
+f.close()
+translation = GT.translate(text)
+print(translation)
+```
+
+### 5. plot_network
+```plot_network(String: filename, Object: edges)```
+- ```filename```: Save as network graph as ```filename```.html & edge list as ```filename```.csv
+- ```edges```: \<target\>:\<source\> key pairs where \<target\> = sublink found on \<source\> page
+<!-- -->
+
+### Usage
+```
+# target:source
+edges = {
+    'https://www.intermodalics.eu/what-we-do': 'https://www.intermodalics.eu/',
+    'https://www.intermodalics.eu/join-us': 'https://www.intermodalics.eu/',
+    'https://www.intermodalics.eu/team': 'https://www.intermodalics.eu/',
+    'https://www.intermodalics.eu/senior-software-developer-robotics': 'https://www.intermodalics.eu/join-us'
+}
+plot_network('my_network_graph', edges)
+```
+<img width="446" alt="image" src="https://user-images.githubusercontent.com/34325457/178471141-cbf18006-67ff-47b0-a100-daba8daf9bdf.png">
+
+### 6. genpath
+```gen_path(String: ext="")```
+- Takes in extension ```ext``` (E.g., ".jpg") and outputs a vacant filename of type ```ext```
+<!-- -->
+
+### Usage
+```
+vacant_path = gen_path(".txt")
+g = open(vacant_path, "w")
+g.write("Some text")
+g.close()
 ```
 
 ## Updates

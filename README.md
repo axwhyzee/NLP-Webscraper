@@ -99,7 +99,7 @@ RS.reset()
 <!-- -->
 
 ### Usage
-Map out the web tree of "https://www.intermodalics.eu/"
+Map out the web tree of https://www.intermodalics.eu/
 ```
 WT = WebTree(save=True)
 WT.start()

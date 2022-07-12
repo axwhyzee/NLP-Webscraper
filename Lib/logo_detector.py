@@ -32,7 +32,7 @@ class LogoDetector():
         
         return img_data, path
 
-    def predict(self, srcs):
+    def predict(self, srcs, verbose=False):
         preds = []
         for src in srcs:
             img_data, path = self.prepare_img(src)
@@ -41,7 +41,7 @@ class LogoDetector():
             if len(img_data) > 0:
                 pred = self.model.predict(np.array([img_data]))[0][0]
                 preds.append(pred)
-                
                 print('[{:.2f}] {}'.format(pred, src))
-
+            else:
+                print('[X]', src)
         return preds

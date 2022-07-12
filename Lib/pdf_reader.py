@@ -99,10 +99,3 @@ class PDFReader():
 
     def reset(self):
         self.pdfs = []
-
-PR = PDFReader()
-PR.add('https://geo-matching.com/uploads/default/p/x/px-80-specifications.pdf')
-generator = PR.read_all_pdfs()
-for obj in generator:
-    print(obj['url'])
-    print(obj['text'])

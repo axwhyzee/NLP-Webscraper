@@ -124,6 +124,9 @@ for page, clusters in generator:
 WT.reset()
 ```
 ### 3. logo_detector.py
+*Note: Filepath of saved_model is set with the assumption that main.py is 1 directory higher.
+To be safe, replace `self.model`'s filepath with absolute path to Lib/saved_model
+
 `LogoDetector.prepare_img(String: src)`
 - 1) Download image
 - 2) Convert image to RGB
@@ -296,6 +299,13 @@ PR.reset()
      1. `WebTree.run_all()` to build web trees, solve image clusters
      2. Pass image clusters to `self.logo_detector` to filter clusters with average logo probability > 0.5
      3. Conduct reverse search using `self.reverse_search.search()` to acquire client data from image URLs
+<!-- -->
+    
+### Usage
+```
+CC = CompanyCrawler(dictionary='/json/dictionary.json') # Adjust filepath depending on relative location of parent process
+CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../', max_depth=2)
+```
     
 ### 8. functions.py
 

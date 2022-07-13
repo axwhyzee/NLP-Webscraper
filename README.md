@@ -124,6 +124,10 @@ for page, clusters in generator:
 WT.reset()
 ```
 ### 3. logo_detector.py
+`LogoDetector(String: saved_model)`
+- `saved_model`: path to saved CNN model relative to where this object is being called from
+<!-- -->
+
 `LogoDetector.prepare_img(String: src)`
 - 1) Download image
 - 2) Convert image to RGB
@@ -238,9 +242,9 @@ for obj in generator:
 PR.reset()
 ```
 
-### 7. company_crawler.py
+### 7. crawler.py
 `CompanyCrawler(String: dictionary="companycrawler/json/dictionary.json")`
-- `dictionary`: file path of dictionary.json, a keyword store
+- `dictionary`: file path of dictionary.json, a keyword store, relative to where this object is being called from
 <!-- -->
 
 `CompanyCrawler.get_driver()`

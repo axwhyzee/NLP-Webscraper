@@ -1,5 +1,46 @@
 # NLP-Webscraper
 
+## Usage
+Crawl single company
+```python
+# import companycrawler package
+from companycrawler.crawler import CompanyCrawler
+    
+CC = CompanyCrawler(save_webtree=False, save_network_graph=True)
+CC.crawl_company(
+    root='https://www.intermodalics.eu/', 
+    company='intermodalics', 
+    save_dir='saved_data',
+    max_depth=2
+)
+```
+
+Crawl list of companies in excel ([main.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/main.py))
+```python
+from companycrawler.crawler import CompanyCrawler
+import pandas as pd
+
+# define variables
+save_dir = 'saved_data'
+max_depth = 2
+
+CC = CompanyCrawler(save_webtree=False, save_network_graph=True)
+
+# load & clean excel data from 'companies-software.xlsx'
+df = pd.read_excel('companies-software.xlsx')
+df.dropna(axis=0, inplace=True, subset=['actual_url'])
+df.reset_index(drop=True, inplace=True)
+
+# enumerate rows in excel
+for i, row in df.iterrows():
+    CC.crawl_company(
+        root=row['actual_url'], 
+        company=row['Company Name'], 
+        save_dir=save_dir,
+        max_depth=max_depth
+    )
+```
+
 ## Submodules
 ### companycrawler.reverse_search
 `ReverseSearch.get_driver()`
@@ -53,7 +94,7 @@
 <!-- -->
 
 ### Usage
-```
+```python
 RS = ReverseSearch()
 RS.start()
 results = RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w', 'Intermodalics')
@@ -100,7 +141,7 @@ RS.reset()
 
 ### Usage
 Map out the web tree of https://www.intermodalics.eu/
-```
+```python
 WT = WebTree(save=True)
 WT.start()
 clusters = WT.get_clusters('https://www.intermodalics.eu/')
@@ -109,7 +150,7 @@ WT.reset()
 ```
 
 Map out the web trees of https://www.intermodalics.eu/ and https://www.intermodalics.eu/visual-positioning-slam-navigation
-```
+```python
 WT = WebTree(save=True)
 WT.start()
 WT.store('https://www.intermodalics.eu/')
@@ -142,7 +183,7 @@ WT.reset()
 <!-- -->
 
 ### Usage
-```
+```python
 LD = LogoDetector()
 predictions = LD.predict([
     'https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w',
@@ -166,7 +207,7 @@ print(predictions) # [0.8967107, 0.07239765]
 <!-- -->
 
 ### Usage
-```
+```python
 GT = GoogleTranslate()
 f = open(text_file, 'r', encoding='utf-8')
 text = f.read()
@@ -182,7 +223,7 @@ print(translation)
 <!-- -->
 
 ### Usage
-```
+```python
 # target:source
 edges = {
     'https://www.intermodalics.eu/what-we-do': 'https://www.intermodalics.eu/',
@@ -232,7 +273,7 @@ plot_network('my_network_graph', edges)
 <!-- -->
 
 ### Usage
-```
+```python
 PR = PDFReader()
 PR.add('https://www.memoori.com/wp-content/uploads/2017/10/The-Future-Workplace-2017-Synopsis.pdf')
 generator = PR.read_all_pdfs()
@@ -307,14 +348,14 @@ PR.reset()
 <!-- -->
     
 ### Usage
-```
+```python
 CC = CompanyCrawler(dictionary='/json/dictionary.json') # Adjust filepath depending on relative location of parent process
 CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../', max_depth=2)
 ```
     
 ### 8. companycrawler.functions
 
-`img_to_text(String: path)`
+`img_to_text(string: path)`
 - Converts image to text of image at `path` using PyTesseract
 <!-- -->
 
@@ -342,20 +383,6 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 `print_header(String: header)`
 - Prints a decorated header
 <!-- -->
-
-## Package Usage (example at [main.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/main.py))
-```
-# import companycrawler package
-from companycrawler.crawler import CompanyCrawler
-    
-CC = CompanyCrawler()
-CC.crawl_company(root='https://www.intermodalics.eu/', 
-                 company='intermodalics', 
-                 save_dir='saved_data',
-                 max_depth=2,
-                 save_webtree=False, 
-                 save_network_graph=True)
-```
     
 # Updates
 ### Update [10/05/22]

@@ -1,5 +1,37 @@
 # NLP-Webscraper
 
+## Installation
+Python 3.9
+
+### Dependencies
+- selenium==4.3.0
+- webdriver-manager==3.8.0
+- googletrans==4.0.0rc1
+- langdetect==1.0.9
+- pandas==1.3.1
+- hashlib
+- pytesseract==0.3.9
+- requests==2.27.1
+- Pillow==9.1.0
+- numpy==1.19.5
+- opencv-python==4.5.3
+- tensorflow==2.6.0
+- shutil
+- PyPDF2==1.27.12
+- fitz
+- pyvis==0.2.0
+- networkx==2.8
+
+**Windows**
+```console
+pip install -r requirements.txt
+```
+
+### Pytesseract setup
+- Download [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
+- Run installer to install Tesseract-OCR executable
+- Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/Lib/json/functions-config.json)
+
 ## Company Crawler Package Usage
 Crawl single company
 ```python
@@ -355,7 +387,7 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 ### 8. companycrawler.functions
 
 `img_to_text(string: path)`
-- Converts image to text of image at `path` using PyTesseract
+- Converts image to text of image at local `path` using PyTesseract
 <!-- -->
 
 `gen_path(String: ext="")`

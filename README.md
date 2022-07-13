@@ -1,6 +1,5 @@
 # NLP-Webscraper
-
-## Installation
+## Company Crawler 
 Python 3.9
 
 ### Dependencies
@@ -29,9 +28,9 @@ pip install -r requirements.txt
 ### Pytesseract setup
 - Download [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
 - Run installer to install Tesseract-OCR executable
-- Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/Lib/json/functions-config.json)
+- Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/companycrawler/json/functions-config.json)
 
-## Company Crawler Package Usage
+## Usage
 Crawl single company
 ```python
 from companycrawler.crawler import CompanyCrawler

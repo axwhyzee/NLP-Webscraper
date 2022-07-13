@@ -45,7 +45,7 @@ CC.crawl_company(
 )
 ```
 
-Crawl list of companies in excel ([main.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/main.py))
+Crawl list of companies in excel
 ```python
 from companycrawler.crawler import CompanyCrawler
 import pandas as pd
@@ -413,7 +413,42 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 `print_header(String: header)`
 - Prints a decorated header
 <!-- -->
-    
+
+## Client Extraction
+
+### Usage
+```python
+import os
+
+# set variables
+data_path = 'saved_data' # directory containing all scraped client data
+companies = os.listdir(data_path) # list of companies to extract clients from. Requires existing <data_path>/<company>/clients.json
+client_output_path = 'clients.csv' # output file
+
+results = {
+    'url': [],
+    'page': [],
+    'alt': [],
+    'url_tail': [],
+    'common': []
+}
+
+# for each company data folder found in data_path, 
+# extract client data from each company's clients.json
+for company in companies:
+    clients = clients_from_json(os.path.join(data_path, company, 'clients.json'), company)
+    results['url'].extend(clients['url'])
+    results['page'].extend(clients['page'])
+    results['alt'].extend(clients['alt'])
+    results['url_tail'].extend(clients['url_tail'])
+    results['common'].extend(clients['common'])
+    #print_clients(clients)
+
+# save client data to csv at client_output_path
+client_df = pd.DataFrame(results)
+client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
+```
+
 # Updates
 ### Update [10/05/22]
 - Selenium framework

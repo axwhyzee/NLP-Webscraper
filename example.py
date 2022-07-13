@@ -1,5 +1,5 @@
 from companycrawler.crawler import CompanyCrawler
-from clientextraction.json_extraction import clients_from_json, print_clients
+from clientextraction.heuristic_extraction import clients_from_json, print_clients
 import pandas as pd
 import os
 

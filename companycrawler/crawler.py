@@ -266,7 +266,7 @@ class CompanyCrawler():
         
         # save PDF data if have
         if self.pdf_reader.pdfs:
-            with open(os.path.join(save_dir, company, company.lower()+'-pdfs.json'), 'w') as g:
+            with open(os.path.join(save_dir, company, 'pdfs.json'), 'w') as g:
                 g.write(json.dumps(self.process_pdfs()))
 
         # close webdrivers
@@ -274,7 +274,7 @@ class CompanyCrawler():
         self.driver.quit()
 
         # save data from detected clients into JSON file
-        with open(os.path.join(save_dir, company, company.lower()+'-clients.json'), 'w') as g:
+        with open(os.path.join(save_dir, company, 'clients.json'), 'w') as g:
             g.write(json.dumps(self.clients))
 
         # network graph

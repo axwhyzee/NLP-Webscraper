@@ -1,6 +1,6 @@
 # NLP-Webscraper
 
-## Usage
+## Company Crawler Package Usage
 Crawl single company
 ```python
 from companycrawler.crawler import CompanyCrawler

@@ -1,5 +1,4 @@
 # NLP-Webscraper
-## Company Crawler 
 Python 3.9
 
 ### Dependencies
@@ -30,6 +29,9 @@ pip install -r requirements.txt
 - Download [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
 - Run installer to install Tesseract-OCR executable
 - Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/companycrawler/json/functions-config.json)
+<!-- -->
+
+# Company Crawler 
 
 ## Usage
 Crawl single company
@@ -71,7 +73,7 @@ for i, row in df.iterrows():
     )
 ```
 
-## Submodules
+## Company Crawler submodules
 ### companycrawler.reverse_search
 `ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
@@ -411,13 +413,15 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 <!-- -->
 
 `print_header(String: header)`
-- Prints a decorated header
+- Displays `header` with styling
 <!-- -->
 
-## Client Extraction
+# Client Extraction
 
-### Usage
+## Usage
 ```python
+from clientextraction.json_extraction import clients_from_json, print_clients
+import pandas as pd # for saving client data to csv
 import os
 
 # set variables
@@ -449,6 +453,50 @@ client_df = pd.DataFrame(results)
 client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
 ```
 
+## Client Extraction submodules
+### clientextraction/json_extraction.py
+`clean(String: s)`
+- 1) Lowercase
+- 2) Remove chars that are (non-alphanumeric && not spaces && not periods) OR (underscores) // r'[^.\w\s]|_'
+- 3) Remove excess spaces
+<!-- -->
+    
+`form_sentences(String: s, Integer: min_tokens=3, Integer: min_token_len=1)`
+- Split `s` by \n
+- Remove sentences where number of words < `min_tokens`
+- Remove words where length of word < `min_token_len`
+<!-- -->
+    
+`find_ext(String: path)`
+- Return extension if file at `path` is image, else ""
+<!-- -->
+    
+`get_url_tail(String: s)`    
+- Return cleaned, tail segment of a URL
+- Mainly for getting image filename from a URL
+<!-- -->
+    
+`exclude_words(String: words, List: exclude_list)`    
+- Remove words from a list that are found inside exclude_list
+<!-- -->
+
+`print_header(String: header)`
+- Displays header with styling
+<!-- -->
+
+`print_clients(Object: results)`
+- Displays list of clients with styling
+<!-- -->
+    
+`clients_from_json(String: file, String: company)`
+- Extracts clients based on client data at `file` based on:
+  1. Reverse search results
+  2. Reverse search value
+  3. Alt text
+  4. Image filename (or URL tail)
+  5. Frequency list of keywords (including bigrams & trigrams)
+<!-- -->
+    
 # Updates
 ### Update [10/05/22]
 - Selenium framework

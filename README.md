@@ -504,7 +504,7 @@ client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
   5. Frequency list of keywords (including bigrams & trigrams)
 <!-- -->
     
-### clientextraction/nlp_extraction  
+### 2. clientextraction/nlp_extraction  
 `get_orgs(String: file)`  
 - `file` path to .txt file to carry out NLP extraction on
 <!-- -->

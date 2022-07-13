@@ -3,7 +3,6 @@
 ## Usage
 Crawl single company
 ```python
-# import companycrawler package
 from companycrawler.crawler import CompanyCrawler
     
 CC = CompanyCrawler(save_webtree=False, save_network_graph=True)

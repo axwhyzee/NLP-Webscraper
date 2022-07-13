@@ -1,7 +1,78 @@
 # NLP-Webscraper
 
-## Packages & Methods
-### 1. reverse_search.py
+## Installation
+Python 3.9
+
+### Dependencies
+```
+selenium==4.3.0
+webdriver-manager==3.8.0
+googletrans==4.0.0rc1
+langdetect==1.0.9
+pandas==1.3.1
+pytesseract==0.3.9
+requests==2.27.1
+Pillow==9.1.0
+numpy==1.19.5
+opencv-python==4.5.3
+tensorflow==2.6.0
+PyPDF2==1.27.12
+fitz
+pyvis==0.2.0
+networkx==2.8
+```
+**Windows**
+```console
+pip install -r requirements.txt
+```
+
+### Pytesseract setup
+- Download [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
+- Run installer to install Tesseract-OCR executable
+- Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/Lib/json/functions-config.json)
+
+## Company Crawler Package Usage
+Crawl single company
+```python
+from companycrawler.crawler import CompanyCrawler
+    
+CC = CompanyCrawler(save_webtree=False, save_network_graph=True)
+CC.crawl_company(
+    root='https://www.intermodalics.eu/', 
+    company='intermodalics', 
+    save_dir='saved_data',
+    max_depth=2
+)
+```
+
+Crawl list of companies in excel ([main.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/main.py))
+```python
+from companycrawler.crawler import CompanyCrawler
+import pandas as pd
+
+# define variables
+save_dir = 'saved_data'
+max_depth = 2
+
+CC = CompanyCrawler(save_webtree=False, save_network_graph=True)
+
+# load & clean excel data from 'companies-software.xlsx'
+df = pd.read_excel('companies-software.xlsx')
+df.dropna(axis=0, inplace=True, subset=['actual_url'])
+df.reset_index(drop=True, inplace=True)
+
+# enumerate rows in excel
+for i, row in df.iterrows():
+    CC.crawl_company(
+        root=row['actual_url'], 
+        company=row['Company Name'], 
+        save_dir=save_dir,
+        max_depth=max_depth
+    )
+```
+
+## Submodules
+### companycrawler.reverse_search
 `ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
 <!-- -->
@@ -53,14 +124,14 @@
 <!-- -->
 
 ### Usage
-```
+```python
 RS = ReverseSearch()
 RS.start()
 results = RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w', 'Intermodalics')
 print(results)
 RS.reset()
 ```
-### 2. webtree.py
+### companycrawler.webtree
 `WebTree(Boolean: save=False)`
 - Save file as <gen_link()>.json if save is True
 <!-- -->
@@ -99,8 +170,8 @@ RS.reset()
 <!-- -->
 
 ### Usage
-Map out the web tree of "https://www.intermodalics.eu/"
-```
+Map out the web tree of https://www.intermodalics.eu/
+```python
 WT = WebTree(save=True)
 WT.start()
 clusters = WT.get_clusters('https://www.intermodalics.eu/')
@@ -109,7 +180,7 @@ WT.reset()
 ```
 
 Map out the web trees of https://www.intermodalics.eu/ and https://www.intermodalics.eu/visual-positioning-slam-navigation
-```
+```python
 WT = WebTree(save=True)
 WT.start()
 WT.store('https://www.intermodalics.eu/')
@@ -123,9 +194,10 @@ for page, clusters in generator:
         
 WT.reset()
 ```
-### 3. logo_detector.py
-*Note: Filepath of saved_model is set with the assumption that main.py is 1 directory higher.
-To be safe, replace `self.model`'s filepath with absolute path to Lib/saved_model
+### companycrawler.logo_detector
+`LogoDetector(String: saved_model)`
+- `saved_model`: path to saved CNN model relative to where this object is being called from
+<!-- -->
 
 `LogoDetector.prepare_img(String: src)`
 - 1) Download image
@@ -141,7 +213,7 @@ To be safe, replace `self.model`'s filepath with absolute path to Lib/saved_mode
 <!-- -->
 
 ### Usage
-```
+```python
 LD = LogoDetector()
 predictions = LD.predict([
     'https://images.squarespace-cdn.com/content/v1/5ab393009f87708addd204e2/1523980229490-KB8R24FUGXC8X6DDZ7EC/colruyt_groupB.png?format=300w',
@@ -150,7 +222,7 @@ predictions = LD.predict([
 print(predictions) # [0.8967107, 0.07239765]
 ```
 
-### 4. google_translate.py
+### companycrawler.google_translate
 
 `GoogleTranslate.get_chunk()`
 - Return chunk of string of length self.max_char
@@ -165,7 +237,7 @@ print(predictions) # [0.8967107, 0.07239765]
 <!-- -->
 
 ### Usage
-```
+```python
 GT = GoogleTranslate()
 f = open(text_file, 'r', encoding='utf-8')
 text = f.read()
@@ -174,14 +246,14 @@ translation = GT.translate(text)
 print(translation)
 ```
 
-### 5. plot_network.py
+### 5. companycrawler.plot_network
 `plot_network(String: filename, Object: edges)`
 - `filename`: Save as network graph as `filename`.html & edge list as `filename`.csv
 - `edges`: \<target\>:\<source\> key pairs where \<target\> = sublink found on \<source\> page
 <!-- -->
 
 ### Usage
-```
+```python
 # target:source
 edges = {
     'https://www.intermodalics.eu/what-we-do': 'https://www.intermodalics.eu/',
@@ -193,7 +265,7 @@ plot_network('my_network_graph', edges)
 ```
 <img width="446" alt="image" src="https://user-images.githubusercontent.com/34325457/178471141-cbf18006-67ff-47b0-a100-daba8daf9bdf.png">
 
-### 6. pdf_reader.py
+### 6. companycrawler.pdf_reader
 `PDFReader.add(String: url)`
 - Adds PDF URL to `self.pdfs`
 <!-- -->
@@ -231,7 +303,7 @@ plot_network('my_network_graph', edges)
 <!-- -->
 
 ### Usage
-```
+```python
 PR = PDFReader()
 PR.add('https://www.memoori.com/wp-content/uploads/2017/10/The-Future-Workplace-2017-Synopsis.pdf')
 generator = PR.read_all_pdfs()
@@ -241,9 +313,13 @@ for obj in generator:
 PR.reset()
 ```
 
-### 7. company_crawler.py
-`CompanyCrawler(String: dictionary)`
-- `dictionary`: file path of dictionary.json, a keyword store
+### 7. companycrawler.crawler
+`CompanyCrawler(String:  dictionary="companycrawler/json/dictionary.json", 
+                Boolean: save_webtree=False, 
+                Boolean: save_network_graph=True)`
+- `dictionary`:         file path of dictionary.json, a keyword store, relative to where this object is being called from
+- `save_webtree`:       save webtree data as JSON if True
+- `save_network_graph`: save network graph as <company_name>.HTML & <company_name>.csv if True
 <!-- -->
 
 `CompanyCrawler.get_driver()`
@@ -302,15 +378,15 @@ PR.reset()
 <!-- -->
     
 ### Usage
-```
+```python
 CC = CompanyCrawler(dictionary='/json/dictionary.json') # Adjust filepath depending on relative location of parent process
 CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../', max_depth=2)
 ```
     
-### 8. functions.py
+### 8. companycrawler.functions
 
-`img_to_text(String: path)`
-- Converts image to text of image at `path` using PyTesseract
+`img_to_text(string: path)`
+- Converts image to text of image at local `path` using PyTesseract
 <!-- -->
 
 `gen_path(String: ext="")`
@@ -318,7 +394,7 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 <!-- -->
 
 `download_url(String: url, String: save_path)`
-- Downloads file at `url` to `save_path`
+- Download file at `url` to `save_path`
 - PDFs, images...
 <!-- -->
 
@@ -337,9 +413,9 @@ CC.crawl_company(root='http://aisle411.com/', company='Aisle411', save_dir='../'
 `print_header(String: header)`
 - Prints a decorated header
 <!-- -->
-
-## Updates
-Update [10/05/22]
+    
+# Updates
+### Update [10/05/22]
 - Selenium framework
 - [**get_sublinks.py**] extracts all sublinks up to a specified depth from the root node
 - [**Network Graphs/\*.html**] Plots the sublinks in a network graph (download **Network Graphs/\*.html** and run it on localhost)
@@ -348,16 +424,16 @@ Update [10/05/22]
 - [**Companies/companies-sensor.xlsx**] - actual company websites for software
 - [**Companies/companies-software.xlsx**] - actual company websites for sensors (missing for Paracosm)
 
-Update [11/05/22]
+### Update [11/05/22]
 - Added functions to cut down on amount of similar sites visited with the **same content** by comparing md5 hash value of self-generated html-id `<length of DOM><first 5 char><middle 9 char><last 5 char>`
 for quicker hashing
 - Translates websites which are in other languages to english after scrapping the data
 
-Update [12/05/22]
+### Update [12/05/22]
 - [**pdf_reader.py**] Reads PDF text + extract text from PDF images using Tesseract OCR
 - [**reverse_search.py**] Exploring automated Google reverse image search on brand images to identify customers which are represented in image form
 
-Update [18/05/22]
+### Update [18/05/22]
 - Revamped **reverse search** algorithm
   - Filters results based on number of reverse search hits
   - Filters out false positives
@@ -367,7 +443,7 @@ Update [18/05/22]
     - Tier 2: Identify common words from image file name & reverse search value
     - Tier 3: Purely file name
 
-Update [20/05/22]
+### Update [20/05/22]
 - **Web tree**
   - Map out web elements in a tree to identify image clusters with a breadth-first approach
   - Motivation: Images, especially brand logos, come in clusters. By pruning irrelevant image clusters, we can sharply improve our client extraction accuracy
@@ -379,10 +455,10 @@ Update [20/05/22]
   - Trained on images scraped from the given 120 company websites
   - Evaluates the probability of each image cluster being the client logo cluster
 
-Update [23/05/22]
+### Update [23/05/22]
 - Get surrounding text of keywords
 - Experimenting with Python NLP library gensim to filter text as well
 - Tested client extraction pipeline on all sensor companies
 
-Update [12/07/22]
+### Update [12/07/22]
 - Replaced deprecated Selenium code with updated versions

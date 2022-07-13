@@ -1,11 +1,11 @@
+import random
+import time
+import re
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from selenium import webdriver
-from functions import find_ext
-import random
-import time
-import re
+from .functions import find_ext
 
 
 class ReverseSearch():

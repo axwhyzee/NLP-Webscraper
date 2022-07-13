@@ -461,7 +461,7 @@ client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
 ```
 
 ## Client Extraction submodules
-### 1. clientextraction/json_extraction
+### 1. clientextraction/heuristic_extraction
 `clean(String: s)`
 - 1) Lowercase
 - 2) Remove chars that are (non-alphanumeric && not spaces && not periods) OR (underscores) // r'[^.\w\s]|_'
@@ -508,7 +508,9 @@ client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
 `get_orgs(String: file)`  
 - `file` path to .txt file to carry out NLP extraction on
 <!-- -->
-  
+ 
+<img width="662" alt="image" src="https://user-images.githubusercontent.com/34325457/178716553-e45c5d53-905a-4a4b-b9d7-2d1f1487b0b6.png">
+ 
 # Updates
 ### Update [10/05/22]
 - Selenium framework

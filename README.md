@@ -3,7 +3,7 @@
 Python 3.9
 
 ### Dependencies
-```
+```text
 selenium==4.3.0
 webdriver-manager==3.8.0
 googletrans==4.0.0rc1

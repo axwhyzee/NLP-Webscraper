@@ -279,4 +279,4 @@ class CompanyCrawler():
 
         # network graph
         if self.save_network_graph:
-            plot_network(os.path.join(save_dir, company, company.lower()), self.edges)
+            plot_network(os.path.join(save_dir, company, 'network-graph'), self.edges)

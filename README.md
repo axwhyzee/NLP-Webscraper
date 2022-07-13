@@ -124,9 +124,6 @@ for page, clusters in generator:
 WT.reset()
 ```
 ### 3. logo_detector.py
-*Note: Filepath of saved_model is set with the assumption that main.py is 1 directory higher.
-To be safe, replace `self.model`'s filepath with absolute path to Lib/saved_model
-
 `LogoDetector.prepare_img(String: src)`
 - 1) Download image
 - 2) Convert image to RGB
@@ -242,7 +239,7 @@ PR.reset()
 ```
 
 ### 7. company_crawler.py
-`CompanyCrawler(String: dictionary)`
+`CompanyCrawler(String: dictionary="companycrawler/json/dictionary.json")`
 - `dictionary`: file path of dictionary.json, a keyword store
 <!-- -->
 

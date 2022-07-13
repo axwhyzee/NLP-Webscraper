@@ -31,6 +31,7 @@ pip install -r requirements.txt
 - Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/companycrawler/json/functions-config.json)
 <!-- -->
 
+
 # Company Crawler 
 
 ## Usage
@@ -74,7 +75,7 @@ for i, row in df.iterrows():
 ```
 
 ## Company Crawler submodules
-### companycrawler.reverse_search
+### 1. companycrawler.reverse_search
 `ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
 <!-- -->
@@ -133,7 +134,7 @@ results = RS.search('https://images.squarespace-cdn.com/content/v1/5ab393009f877
 print(results)
 RS.reset()
 ```
-### companycrawler.webtree
+### 2. companycrawler.webtree
 `WebTree(Boolean: save=False)`
 - Save file as <gen_link()>.json if save is True
 <!-- -->
@@ -196,7 +197,7 @@ for page, clusters in generator:
         
 WT.reset()
 ```
-### companycrawler.logo_detector
+### 3. companycrawler.logo_detector
 `LogoDetector(String: saved_model)`
 - `saved_model`: path to saved CNN model relative to where this object is being called from
 <!-- -->
@@ -224,7 +225,7 @@ predictions = LD.predict([
 print(predictions) # [0.8967107, 0.07239765]
 ```
 
-### companycrawler.google_translate
+### 4. companycrawler.google_translate
 
 `GoogleTranslate.get_chunk()`
 - Return chunk of string of length self.max_char
@@ -454,7 +455,7 @@ client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
 ```
 
 ## Client Extraction submodules
-### clientextraction/json_extraction.py
+### 1. clientextraction/json_extraction.py
 `clean(String: s)`
 - 1) Lowercase
 - 2) Remove chars that are (non-alphanumeric && not spaces && not periods) OR (underscores) // r'[^.\w\s]|_'

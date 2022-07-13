@@ -4,24 +4,23 @@
 Python 3.9
 
 ### Dependencies
-- selenium==4.3.0
-- webdriver-manager==3.8.0
-- googletrans==4.0.0rc1
-- langdetect==1.0.9
-- pandas==1.3.1
-- hashlib
-- pytesseract==0.3.9
-- requests==2.27.1
-- Pillow==9.1.0
-- numpy==1.19.5
-- opencv-python==4.5.3
-- tensorflow==2.6.0
-- shutil
-- PyPDF2==1.27.12
-- fitz
-- pyvis==0.2.0
-- networkx==2.8
-
+```
+selenium==4.3.0
+webdriver-manager==3.8.0
+googletrans==4.0.0rc1
+langdetect==1.0.9
+pandas==1.3.1
+pytesseract==0.3.9
+requests==2.27.1
+Pillow==9.1.0
+numpy==1.19.5
+opencv-python==4.5.3
+tensorflow==2.6.0
+PyPDF2==1.27.12
+fitz
+pyvis==0.2.0
+networkx==2.8
+```
 **Windows**
 ```console
 pip install -r requirements.txt

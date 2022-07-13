@@ -75,6 +75,8 @@ for i, row in df.iterrows():
 ```
 
 ## Company Crawler submodules
+<img width="722" alt="image" src="https://user-images.githubusercontent.com/34325457/178706735-72929625-6da9-4fcf-a3df-4c2b3edc9b49.png">
+
 ### 1. companycrawler.reverse_search
 `ReverseSearch.get_driver()`
 - Set Selenium webdriver options & returns webdriver object
@@ -455,7 +457,7 @@ client_df.to_csv(client_output_path, index=False, encoding='utf-8-sig')
 ```
 
 ## Client Extraction submodules
-### 1. clientextraction/json_extraction.py
+### 1. clientextraction/json_extraction
 `clean(String: s)`
 - 1) Lowercase
 - 2) Remove chars that are (non-alphanumeric && not spaces && not periods) OR (underscores) // r'[^.\w\s]|_'

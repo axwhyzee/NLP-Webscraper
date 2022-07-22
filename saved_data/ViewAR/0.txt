@@ -1,0 +1,332 @@
+https://www.viewar.com
+ This website uses cookies
+We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+Allow all cookies
+Show details
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+Most popular
+Industrial
+Educational
+Others
+AR solutions that solve key business challenges
+Find the right augmented reality solution for your use case.
+INDOAR
+Benefit from the worlds most advanced indoor navigation system and transform your location into an immersive experience.
+Learn more
+SERVICE AR
+Optimize your service and maintenance processes to increase the efficiency, service quality and safety of your workforce.
+Learn more
+Supported Tracking and AR Technologies
+Apple’s tracking system ARKit supports iOS-powered mobile devices and phones only. It is mainly used for marker and marker-less object placement.
+Google’s ARCore tracking has all its strength in marker and marker-less object placement. It supports Android-powered phones and mobile devices only.
+VisionLib’s model tracking enables highly accurate 3D object tracking for dynamic sceneries and illuminations and offers an automated pipeline for model import.
+Placenote provides point cloud based scene recognition, which enables apps to save, share and reload persistent AR content in real-world spaces.
+The Structure Sensor enables your mobile device to understand and instantly capture the real world in three dimensions.
+Microsoft’s Hololens allows users to navigate through an AR app with sensual and natural interface commands, such as gaze, gesture, and voice.
+Magic Leap’s lightweight HMD lets users see and interact with 3D computer-generated content and supports hand tracking and gesture recognition.
+6D.AI offers SLAM tracking combined with point cloud based re-localization based on GPS position or Wi-Fi name.
+Quuppa provides Bluetooth low energy antenna devices for ceiling mounting. In combination with the VIEWAR tracking fusion system, it offers a persistent AR coordinate system.
+Infsoft provides an indoor positioning system based on Bluetooth beacons. Combined with the VIEWAR tracking fusion system, it offers a persistent AR coordinate system.
+Proximi.io is an indoor positioning system which offers almost all of the major positioning technologies and a 6° drag pose in combination with the VIEWAR tracking fusion system.
+Vuforia offers cutting edge tracking, including tracking of CAD models, 2d images and even large environments.
+Join the ranks of our amazing clients
+Contact expert
+We look forward to helping you to identify the most valuable use case for your business. Please complete the form if you want to speak to one of our experts or if you want to schedule a demo call.
+FIRST NAME *
+COMPANY
+LAST NAME *
+COUNTRY *
+     — Please select —
+     Afghanistan
+     Aland Islands
+     Albania
+     Algeria
+     American Samoa
+     Andorra
+     Angola
+     Anguilla
+     Antarctica
+     Antigua and Barbuda
+     Argentina
+     Armenia
+     Aruba
+     Australia
+     Austria
+     Azerbaijan
+     Bahamas
+     Bahrain
+     Bangladesh
+     Barbados
+     Belarus
+     Belgium
+     Belize
+     Benin
+     Bermuda
+     Bhutan
+     Bolivia
+     Bonaire, Sint Eustatius and Saba
+     Bosnia and Herzegovina
+     Botswana
+     Bouvet Island
+     Brazil
+     British Indian Ocean Territory
+     Brunei
+     Bulgaria
+     Burkina Faso
+     Burundi
+     Côte d'Ivoire
+     Cambodia
+     Cameroon
+     Canada
+     Cape Verde
+     Cayman Islands
+     Central African Republic
+     Chad
+     Chile
+     China
+     Christmas Island
+     Cocos (Keeling) Islands
+     Colombia
+     Comoros
+     Congo
+     Cook Islands
+     Costa Rica
+     Croatia
+     Cuba
+     Curacao
+     Cyprus
+     Czech Republic
+     Denmark
+     Djibouti
+     Dominica
+     Dominican Republic
+     East Timor
+     Ecuador
+     Egypt
+     El Salvador
+     Equatorial Guinea
+     Eritrea
+     Estonia
+     Ethiopia
+     Falkland Islands (Malvinas)
+     Faroe Islands
+     Fiji
+     Finland
+     France
+     French Guiana
+     French Polynesia
+     French Southern Territories
+     Gabon
+     Gambia
+     Georgia
+     Germany
+     Ghana
+     Gibraltar
+     Greece
+     Greenland
+     Grenada
+     Guadeloupe
+     Guam
+     Guatemala
+     Guernsey
+     Guinea
+     Guinea-Bissau
+     Guyana
+     Haiti
+     Heard Island and McDonald Islands
+     Holy See
+     Honduras
+     Hong Kong
+     Hungary
+     Iceland
+     India
+     Indonesia
+     Iran
+     Iraq
+     Ireland
+     Isle of Man
+     Israel
+     Italy
+     Jamaica
+     Japan
+     Jersey
+     Jordan
+     Kazakhstan
+     Kenya
+     Kiribati
+     Kosovo
+     Kuwait
+     Kyrgyzstan
+     Laos
+     Latvia
+     Lebanon
+     Lesotho
+     Liberia
+     Libya
+     Liechtenstein
+     Lithuania
+     Luxembourg
+     Macao
+     Macedonia
+     Madagascar
+     Malawi
+     Malaysia
+     Maldives
+     Mali
+     Malta
+     Marshall Islands
+     Martinique
+     Mauritania
+     Mauritius
+     Mayotte
+     Mexico
+     Micronesia
+     Moldova
+     Monaco
+     Mongolia
+     Montenegro
+     Montserrat
+     Morocco
+     Mozambique
+     Myanmar
+     Namibia
+     Nauru
+     Nepal
+     Netherlands
+     New Caledonia
+     New Zealand
+     Nicaragua
+     Niger
+     Nigeria
+     Niue
+     Norfolk Island
+     North Korea
+     Northern Mariana Islands
+     Norway
+     Oman
+     Pakistan
+     Palau
+     Palestine
+     Panama
+     Papua New Guinea
+     Paraguay
+     Peru
+     Philippines
+     Pitcairn
+     Poland
+     Portugal
+     Puerto Rico
+     Qatar
+     Reunion
+     Romania
+     Russia
+     Rwanda
+     Saint Barthelemy
+     Saint Helena, Ascension and Tristan da Cunha
+     Saint Kitts and Nevis
+     Saint Lucia
+     Saint Martin (French part)
+     Saint Pierre and Miquelon
+     Saint Vincent and the Grenadines
+     Samoa
+     San Marino
+     Sao Tome and Principe
+     Saudi Arabia
+     Senegal
+     Serbia
+     Seychelles
+     Sierra Leone
+     Singapore
+     Sint Maarten (Dutch part)
+     Slovakia
+     Slovenia
+     Solomon Islands
+     Somalia
+     South Africa
+     South Georgia and the South Sandwich Islands
+     South Korea
+     South Sudan
+     Spain
+     Sri Lanka
+     Sudan
+     Suriname
+     Svalbard and Jan Mayen
+     Swaziland
+     Sweden
+     Switzerland
+     Syria
+     Taiwan
+     Tajikistan
+     Tanzania
+     Thailand
+     Timor-Leste
+     Togo
+     Tokelau
+     Tonga
+     Trinidad and Tobago
+     Tunisia
+     Turkey
+     Turkmenistan
+     Turks and Caicos Islands
+     Tuvalu
+     Uganda
+     Ukraine
+     United Arab Emirates
+     United Kingdom
+     United States
+     United States Minor Outlying Islands
+     Uruguay
+     Uzbekistan
+     Vanuatu
+     Vatican City
+     Venezuela
+     Vietnam
+     Virgin Islands, British
+     Virgin Islands, U.S.
+     Wallis and Futuna
+     Western Sahara
+     Yemen
+     Zambia
+     Zimbabwe
+    E-MAIL *
+PHONE NUMBER
+MESSAGE
+My personal details will be processed in accordance with VIEWAR’s privacy policy and that they may be used for the promotion of VIEWAR’s products and associated services.*
+Send request
+Products
+INDOAR
+SERVICE AR
+Integrations
+Matterport
+Industries
+Museums
+Libraries
+Retail
+Manufacturing
+Facility management
+Universities
+General
+Blog
+Success stories
+Become a partner
+Contact us
+Login
+Währinger Strasse 12/10
+1090 Vienna
+AUSTRIA
+
+Follow us on
+.a{fill:#9a9a9a;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;}
+© 2022 ViewAR GmbH. All rights reserved.
+ImprintTerms & conditionsPrivacy policy

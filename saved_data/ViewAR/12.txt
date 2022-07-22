@@ -1,0 +1,59 @@
+https://www.viewar.com/success-stories
+ This website uses cookies
+We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+Allow all cookies
+Show details
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+Your Success is our passion
+We are thankful for the trust in our company and proud of all our clients who upgraded their business with VIEWAR’s solutions
+Herning Library
+The complexity of library buildings makes it difficult to find the right book conveniently. Navigation becomes increasingly difficult not only for patrons but for visitors and staff alike. Effective communication of information is not possible through signs alone. The Herning Library in Denmark contains five kilometers of shelving with four hundred and fifty thousand items on around sixty-five-thousand square feet. Their mission is to provide education in a convenient and new way.
+The Herning Library therefore wanted an easy solution for indoor navigation.Within two days the Herning Library scanned one third of their whole facility with a Matterport 3D scanner.  INDOAR was set up as the augmented reality indoor navigation app of their choice, providing a convenient wayfinding solution for patrons and borrowers alike, making their stay more enjoyable and efficient too – and it clearly shows!
+Technical Museum Vienna
+The Technical Museum Vienna has over 12.000 exhibition objects on display. Visitors need personal guided tours that are accustomed / suited to their own needs. We scanned the location with a Matterport Pro3D Scanner, in order to produce a digital twin. The scan of the entire floor space of about 24.000m2 took five days.
+Also, a 2D museum plan on the website of the museum, shows POIs, exhibitions as well as separate objects and important checkpoints at the museum. With INDOAR the visitors can now use their smart-devices to accurately locate specific objects and precisely find their way around the museum. Each item is linked with additional information like text, images and videos, etc. which can be displayed on the personal smartphone of the visitor. All contents are automatically retrieved from the TMW’s own ‘Museum Collection Management System’ called Adlib.
+Reed Expo
+When organizing a trade fair, customers want to check out the location before booking their booth. This is why Reed Exhibitions Austria implemented INDOAR and are using virtual reality as a state-of-the-art digital visualization and planning tool. This allows a variety of variables and options to be configured in terms of design and technology, so that room sizes and equipment can be precisely adapted to the individual needs of the event organizers.
+Reed Exhibitions now offers trade fair participants the possibility to visualize their conferences, congresses, trade fairs and events in advance with the help of INDOAR. This allows a wide range of variables and options to be configured in terms of design and technology. The visualization application increases optimal planning and handling during all project phases. The organizer can now interactively walk through the rooms, view them from any angle, and rearrange or change furnishing elements. The concrete 3-D simulation of all areas and rooms in the Congress Center, including the complete equipment, helps significantly in making the right decisions.
+Hilti
+When assembling mounting systems, clients, construction workers, and project managers alike need to have a good idea of the assembly. Hilti came to us because they were looking for a simple solution to visualize the CAD data of their assembly systems.
+With the help of PRODUCTS LIVE, Hilti has a product visualization tool in use that allows them to visualize assembly systems and steel structures. During acceptance and installation, visualization can be used to better represent the whole scene. This gives their client a better idea from the beginning of the deal until the final completion. It is also possible to see live on site how the steel structure will look like, as the 3D objects are embedded with the help of augmented reality.
+Join the ranks of these amazing companies
+Trusted by some of the largest companies in the world, VIEWAR solutions provide ways to enhance and optimize your internal processes. From driving sales in Retail and Real Estate to optimization of internal processes for Industry 4.0, our customers needs always come first. More than 60 published applications have helped us build the products that our clients count on and steadily invest in.
+Products
+INDOAR
+SERVICE AR
+Integrations
+Matterport
+Industries
+Museums
+Libraries
+Retail
+Manufacturing
+Facility management
+Universities
+General
+Blog
+Success stories
+Become a partner
+Contact us
+Login
+Währinger Strasse 12/10
+1090 Vienna
+AUSTRIA
+
+Follow us on
+.a{fill:#9a9a9a;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;}
+© 2022 ViewAR GmbH. All rights reserved.
+ImprintTerms & conditionsPrivacy policy

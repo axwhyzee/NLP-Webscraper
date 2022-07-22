@@ -1,0 +1,357 @@
+https://www.viewar.com/products/service-ar
+ This website uses cookies
+We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.
+Allow all cookies
+Show details
+
+
+
+
+
+
+
+
+
+
+
+Skip to content
+SERVICE AR
+Increase efficiency and safety of your workforce.
+SERVICE AR is a unique all-in-one application to optimize crucial service and maintenance processes. Visualize data and information wherever you need them. Benefit from a wide range of cutting edge features like maintenance tours, remote assistance, work instructions, etc. to prevent down times and increase quality of service.
+Features
+Prepared for all eventualities.
+Reduce time for orientation and help your workers to find the fastest way to any service point.
+SERVICE AR helps your workers to find any service points by calculating the most efficient route even in the most complex building. Navigation can be enhanced with additional features to visualize data and information along the way. Critical areas or danger zones are visualized accordingly, making clear where more attention is required. Workers’ safety is increased and productivity doubled.
+Get work and training done more quickly, accurately and consistently.
+Let your workers perform jobs by following step-by-step procedures enabling flawless workflows. Easily capture the knowledge of your experts by digitizing procedures and create work instructions accordingly. Augment steps of a procedure by capturing 3D highlight points, videos, audios and photos.
+Improve maintenance checks with standardized and interactive checklists and ensure that essential tasks get done.
+Digital checklists provide an efficient and consistent way to perform maintenance procedures. By providing standardized digital step-by-step lists, you cannot miss a single check and reduce the possibility of forgetting to do something. Additionally they improve workers engagement and avoid distractions. Have your digital toolbox always ready and available at your fingertips.
+Solve issues remotely with over the shoulder-guidance powered by augmented reality.
+SERVICE AR remote assistance is a powerful collaborative solution for remote guidance, which combines live video streaming with augmented reality technology. Like in conventional remote assistance applications, videos and images are broadcast in real time between users. In addition, Augmented Reality superimposes the user’s camera image with computer-generated content that allows interactions and visual markings. Instead of explaining each step of a procedure with voice broadcast, users can visually show what to do.
+Use digital annotations to capture defects in any physical environment and make their relocation easier.
+With SERVICE AR you can mark defects and make them easier to relocate later. Your workers can use any mobile device for capturing. Record coordinates, add descriptions, make photos, and save everything within your existing database or ticket management system. Specific objects with indistinctive similarities like tubes, valves, walls, etc. can also be located more easily. This makes it possible for technicians to relocate damaged objects more efficiently. All saved data can be combined with any available ticket management software, creating a connected eco-system for better issue management.
+Reduce time for wayfinding and guide your workers along the fastest route through their maintenance tour.
+SERVICE AR calculates the most efficient routes for even the most complex facility. Save time navigating through the maintenance tour without missing any of the service points. You will finish your maintenance tour more efficiently. Predefined routes are also used for onboarding and educating new workers, navigating them around the building and to their respective service points.
+AR and VR training helps to simulate several situations while staying safe.
+Practice safely in high-risk or complex areas or train orientation skills in different situations. In a virtual environment, you can endlessly simulate any scenario and make mistakes without consequences. Measure important data and results of learning sessions (duration, sequence and number of errors). An important building block for the future of digital learning!
+Make data visible and accessible where it is needed.
+Link live data with a physical object and visualize live data on its exact coordinates. Detect outliers and trends faster and derive specific actions accordingly. By augmenting data into the environment you gain a more insightful understanding of ongoing processes. Make complex data more accessible for all workers.
+Automatically create labels by recognizing text and recording its coordinates.
+Creating a service point within your facility has never been easier. Scan any text with a simple touch and automatically create a digital label linked to the recorded coordinates. Save time by cataloging physical objects this way. Additionally, any data stored in existing databases can be easily linked through an API to any new service point.
+Use deep links to start any SERVICE AR task from your internal ticket system.
+Upgrade your existing ticket system with SERVICE AR and start any task without manually browsing for it. Start navigation to a specific service point or access a predefined workflow with a simple click on a deep link. Save time and money by combining your existing systems with SERVICE AR.
+SERVICE AR offers benefits for a wide range of industries. Learn where SERVICE AR can support your business and how you can benefit from it.
+Facility management
+Improve facility management with innovative technology.
+Read more
+Manufacturing
+Increase productivity with innovative technology.
+Read more
+Supported devices
+Built for all AR capable devices.
+Mobile
+SERVICE AR runs on all augmented reality capable mobile devices. The advantage of mobile devices is obvious. They are ubiquitous and familiar. Their possible uses are very diverse and range from indoor navigation to workflows. Our applications are optimized for a variety of devices, both new and old.
+Desktop
+All SERVICE AR desktop applications are cloud / browser based and don’t need any local installation. They are mainly used for administrative tasks like setting up area scans, adding service points or creating workflows. However, some features such as remote assistance can also be conveniently used on a desktop computer.
+AR glasses (TBA)
+SERVICE AR is going to support the Microsoft HoloLens 2 and NReal glasses soon. All available and upcoming SERVICE AR features will be ported and optimized for a gesture control usage.
+Smart glasses (TBA)
+Assistant reality headsets like the RealWear HMT-1 are going to be support by SERVICE AR soon. A selection of features such as worklfows, remote assistance, etc. will be ported and optimized for 2D UI control.
+Contact expert
+We look forward to helping you to identify the most valuable use case for your business. Please complete the form if you want to speak to one of our experts or if you want to schedule a demo call.
+FIRST NAME *
+COMPANY
+LAST NAME *
+COUNTRY *
+     — Please select —
+     Afghanistan
+     Aland Islands
+     Albania
+     Algeria
+     American Samoa
+     Andorra
+     Angola
+     Anguilla
+     Antarctica
+     Antigua and Barbuda
+     Argentina
+     Armenia
+     Aruba
+     Australia
+     Austria
+     Azerbaijan
+     Bahamas
+     Bahrain
+     Bangladesh
+     Barbados
+     Belarus
+     Belgium
+     Belize
+     Benin
+     Bermuda
+     Bhutan
+     Bolivia
+     Bonaire, Sint Eustatius and Saba
+     Bosnia and Herzegovina
+     Botswana
+     Bouvet Island
+     Brazil
+     British Indian Ocean Territory
+     Brunei
+     Bulgaria
+     Burkina Faso
+     Burundi
+     Côte d'Ivoire
+     Cambodia
+     Cameroon
+     Canada
+     Cape Verde
+     Cayman Islands
+     Central African Republic
+     Chad
+     Chile
+     China
+     Christmas Island
+     Cocos (Keeling) Islands
+     Colombia
+     Comoros
+     Congo
+     Cook Islands
+     Costa Rica
+     Croatia
+     Cuba
+     Curacao
+     Cyprus
+     Czech Republic
+     Denmark
+     Djibouti
+     Dominica
+     Dominican Republic
+     East Timor
+     Ecuador
+     Egypt
+     El Salvador
+     Equatorial Guinea
+     Eritrea
+     Estonia
+     Ethiopia
+     Falkland Islands (Malvinas)
+     Faroe Islands
+     Fiji
+     Finland
+     France
+     French Guiana
+     French Polynesia
+     French Southern Territories
+     Gabon
+     Gambia
+     Georgia
+     Germany
+     Ghana
+     Gibraltar
+     Greece
+     Greenland
+     Grenada
+     Guadeloupe
+     Guam
+     Guatemala
+     Guernsey
+     Guinea
+     Guinea-Bissau
+     Guyana
+     Haiti
+     Heard Island and McDonald Islands
+     Holy See
+     Honduras
+     Hong Kong
+     Hungary
+     Iceland
+     India
+     Indonesia
+     Iran
+     Iraq
+     Ireland
+     Isle of Man
+     Israel
+     Italy
+     Jamaica
+     Japan
+     Jersey
+     Jordan
+     Kazakhstan
+     Kenya
+     Kiribati
+     Kosovo
+     Kuwait
+     Kyrgyzstan
+     Laos
+     Latvia
+     Lebanon
+     Lesotho
+     Liberia
+     Libya
+     Liechtenstein
+     Lithuania
+     Luxembourg
+     Macao
+     Macedonia
+     Madagascar
+     Malawi
+     Malaysia
+     Maldives
+     Mali
+     Malta
+     Marshall Islands
+     Martinique
+     Mauritania
+     Mauritius
+     Mayotte
+     Mexico
+     Micronesia
+     Moldova
+     Monaco
+     Mongolia
+     Montenegro
+     Montserrat
+     Morocco
+     Mozambique
+     Myanmar
+     Namibia
+     Nauru
+     Nepal
+     Netherlands
+     New Caledonia
+     New Zealand
+     Nicaragua
+     Niger
+     Nigeria
+     Niue
+     Norfolk Island
+     North Korea
+     Northern Mariana Islands
+     Norway
+     Oman
+     Pakistan
+     Palau
+     Palestine
+     Panama
+     Papua New Guinea
+     Paraguay
+     Peru
+     Philippines
+     Pitcairn
+     Poland
+     Portugal
+     Puerto Rico
+     Qatar
+     Reunion
+     Romania
+     Russia
+     Rwanda
+     Saint Barthelemy
+     Saint Helena, Ascension and Tristan da Cunha
+     Saint Kitts and Nevis
+     Saint Lucia
+     Saint Martin (French part)
+     Saint Pierre and Miquelon
+     Saint Vincent and the Grenadines
+     Samoa
+     San Marino
+     Sao Tome and Principe
+     Saudi Arabia
+     Senegal
+     Serbia
+     Seychelles
+     Sierra Leone
+     Singapore
+     Sint Maarten (Dutch part)
+     Slovakia
+     Slovenia
+     Solomon Islands
+     Somalia
+     South Africa
+     South Georgia and the South Sandwich Islands
+     South Korea
+     South Sudan
+     Spain
+     Sri Lanka
+     Sudan
+     Suriname
+     Svalbard and Jan Mayen
+     Swaziland
+     Sweden
+     Switzerland
+     Syria
+     Taiwan
+     Tajikistan
+     Tanzania
+     Thailand
+     Timor-Leste
+     Togo
+     Tokelau
+     Tonga
+     Trinidad and Tobago
+     Tunisia
+     Turkey
+     Turkmenistan
+     Turks and Caicos Islands
+     Tuvalu
+     Uganda
+     Ukraine
+     United Arab Emirates
+     United Kingdom
+     United States
+     United States Minor Outlying Islands
+     Uruguay
+     Uzbekistan
+     Vanuatu
+     Vatican City
+     Venezuela
+     Vietnam
+     Virgin Islands, British
+     Virgin Islands, U.S.
+     Wallis and Futuna
+     Western Sahara
+     Yemen
+     Zambia
+     Zimbabwe
+    E-MAIL *
+PHONE NUMBER
+MESSAGE
+My personal details will be processed in accordance with VIEWAR’s privacy policy and that they may be used for the promotion of VIEWAR’s products and associated services.*
+Send request
+Technical specifications
+Built for all AR capable devices.
+Minimum requirements
+OPERATING SYSTEMS iOS 11, Android 7.0
+BUILD IN TECHNOLOGY ARKit or ARCore
+Recommended
+OPERATING SYSTEMS iOS 12 or later, Android 11 or later
+BUILD IN TECHNOLOGY ARKit or ARCore
+* Devices underlined were tested by the ViewAR development team. All other devices untested but should be able to run our solution smoothly.
+Products
+INDOAR
+SERVICE AR
+Integrations
+Matterport
+Industries
+Museums
+Libraries
+Retail
+Manufacturing
+Facility management
+Universities
+General
+Blog
+Success stories
+Become a partner
+Contact us
+Login
+Währinger Strasse 12/10
+1090 Vienna
+AUSTRIA
+
+Follow us on
+.a{fill:#9a9a9a;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;} .a{fill:#9a9a9a;}.b{fill-rule:evenodd;}
+© 2022 ViewAR GmbH. All rights reserved.
+ImprintTerms & conditionsPrivacy policy

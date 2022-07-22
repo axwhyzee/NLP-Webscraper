@@ -1,0 +1,108 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+
+<style type="text/css">
+
+        #mynetwork {
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            border: 1px solid lightgray;
+            position: relative;
+            float: left;
+        }
+
+        
+
+        
+
+        
+</style>
+
+</head>
+
+<body>
+<div id = "mynetwork"></div>
+
+
+<script type="text/javascript">
+
+    // initialize global variables.
+    var edges;
+    var nodes;
+    var network; 
+    var container;
+    var options, data;
+
+    
+    // This method is responsible for drawing the graph, returns the drawn network
+    function drawGraph() {
+        var container = document.getElementById('mynetwork');
+        
+        
+
+        // parsing and collecting nodes and edges from the python
+        nodes = new vis.DataSet([{"id": "https://www.viewar.com", "label": "https://www.viewar.com", "shape": "dot", "size": 10}, {"id": "https://www.cookiebot.com", "label": "https://www.cookiebot.com", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/products/indoar", "label": "https://www.viewar.com/products/indoar", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/products/service-ar", "label": "https://www.viewar.com/products/service-ar", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/integrations/matterport", "label": "https://www.viewar.com/integrations/matterport", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/museum", "label": "https://www.viewar.com/industries/museum", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/library", "label": "https://www.viewar.com/industries/library", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/retail", "label": "https://www.viewar.com/industries/retail", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/manufacturing", "label": "https://www.viewar.com/industries/manufacturing", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/facility-management", "label": "https://www.viewar.com/industries/facility-management", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/industries/university", "label": "https://www.viewar.com/industries/university", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/success-stories", "label": "https://www.viewar.com/success-stories", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/become-a-partner", "label": "https://www.viewar.com/become-a-partner", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/imprint", "label": "https://www.viewar.com/imprint", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/#uagb-tabs__tab0", "label": "https://www.viewar.com/#uagb-tabs__tab0", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/indoar", "label": "https://www.viewar.com/indoar", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/service-ar", "label": "https://www.viewar.com/service-ar", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/increase-sales-by-adding-augmented-reality-to-your-matterport-scan", "label": "https://www.viewar.com/increase-sales-by-adding-augmented-reality-to-your-matterport-scan", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/enhance-museum-with-innovative-technology", "label": "https://www.viewar.com/enhance-museum-with-innovative-technology", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/blog", "label": "https://www.viewar.com/blog", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/your-success-is-our-passion", "label": "https://www.viewar.com/your-success-is-our-passion", "shape": "dot", "size": 10}, {"id": "https://www.viewar.com/terms-and-conditions", "label": "https://www.viewar.com/terms-and-conditions", "shape": "dot", "size": 10}]);
+        edges = new vis.DataSet([{"from": "https://www.viewar.com", "label": 1, "to": "https://www.cookiebot.com", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/products/indoar", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/products/service-ar", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/integrations/matterport", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/museum", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/library", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/retail", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/manufacturing", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/facility-management", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/industries/university", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/success-stories", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/become-a-partner", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/imprint", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/#uagb-tabs__tab0", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/indoar", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/service-ar", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/increase-sales-by-adding-augmented-reality-to-your-matterport-scan", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/enhance-museum-with-innovative-technology", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/blog", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/your-success-is-our-passion", "weight": 1}, {"from": "https://www.viewar.com", "label": 1, "to": "https://www.viewar.com/terms-and-conditions", "weight": 1}]);
+
+        // adding nodes and edges to the graph
+        data = {nodes: nodes, edges: edges};
+
+        var options = {
+    "configure": {
+        "enabled": false
+    },
+    "edges": {
+        "color": {
+            "inherit": true
+        },
+        "smooth": {
+            "enabled": false,
+            "type": "continuous"
+        }
+    },
+    "interaction": {
+        "dragNodes": true,
+        "hideEdgesOnDrag": false,
+        "hideNodesOnDrag": false
+    },
+    "physics": {
+        "enabled": true,
+        "stabilization": {
+            "enabled": true,
+            "fit": true,
+            "iterations": 1000,
+            "onlyDynamicEdges": false,
+            "updateInterval": 50
+        }
+    }
+};
+        
+        
+
+        
+
+        network = new vis.Network(container, data, options);
+	 
+        
+
+
+        
+
+        return network;
+
+    }
+
+    drawGraph();
+
+</script>
+</body>
+</html>

@@ -145,11 +145,6 @@ wsproto==1.1.0
 zipp==3.8.1
 ```
 
-### Manual Installation
-```
-pip install selenium
-```
-
 ### Windows
 ```console
 pip install -r requirements.txt

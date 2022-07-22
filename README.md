@@ -1,7 +1,4 @@
 # NLP-Webscraper
-1. Clone repository
-2. Install dependencies (follow section below)
-3. Run [example.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/example.py)
 
 ### Virtual Environment Setup
 

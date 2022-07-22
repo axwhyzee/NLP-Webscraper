@@ -3,6 +3,32 @@
 2. Install dependencies (follow section below)
 3. Run [example.py](https://github.com/axwhyzee/NLP-Webscraper/blob/main/example.py)
 
+### Virtual Environment Setup
+
+1) Create Python virtual environment & move into the directory
+```
+python -m venv nlp_webscraper
+cd nlp_webscraper
+```
+2) Download [**clientextraction**](https://github.com/axwhyzee/NLP-Webscraper/tree/main/clientextraction), [**companycrawler**](https://github.com/axwhyzee/NLP-Webscraper/tree/main/companycrawler) & [**requirements.txt**](https://github.com/axwhyzee/NLP-Webscraper/blob/main/requirements.txt) into nlp_webscraper folder
+
+3) Start virtual environment inside nlp_webscraper folder by running activate.bat
+```
+scripts\activate.bat
+```
+
+4) Install dependencies
+```
+pip install -r requirements.txt
+```
+
+5) Run example.py
+```
+python example.py
+```
+
+**clients.csv** will be outputted, containing client data
+
 Python 3.9
 
 ### Dependencies
@@ -145,12 +171,7 @@ wsproto==1.1.0
 zipp==3.8.1
 ```
 
-### Windows
-```console
-pip install -r requirements.txt
-```
-
-### Pytesseract setup
+### Pytesseract setup (optional)
 - Download [Tesseract installer](https://github.com/UB-Mannheim/tesseract/wiki)
 - Run installer to install Tesseract-OCR executable
 - Modify `"pytesseract-path"` in [companycrawler/json/functions-config.json](https://github.com/axwhyzee/NLP-Webscraper/blob/main/companycrawler/json/functions-config.json)
